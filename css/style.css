@@ -90,10 +90,9 @@
     line-height: 64px;
     position: relative;
     transition: all .4s ease;
-    background-color: var(--primary);
+    background-color: #ffaa00;
     overflow: hidden;
-}
-
+    }
 
 /*** Navbar ***/
 .sticky-top {
@@ -224,7 +223,7 @@
 
 /*** About ***/
 .about {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/banner/banner1.png) left center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/banner/banner2.png) left center no-repeat;
     background-size: cover;
 }
 
