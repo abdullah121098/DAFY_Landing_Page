@@ -45,15 +45,16 @@
     
    
     <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0">
-            <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-3 m-0">
-                <img src="img/logo/logo-1.png" style="width: height:10%; width:10%;" alt="icon" srcset="">
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <nav class="navbar navbar-expand-lg bg-white navbar-dark shadow sticky-top p-0 m-0">
+     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" width="25%">
+            <h2 class="m-0 text-primary" ><img src="img/logo/dafy-logo.png" width="15%" height="12%" alt="" srcset=""></h2>
+        </a>   
+        
+            <button type="button" class="navbar-toggler me-4 bg-primary" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse nav-link" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="collapse navbar-collapse nav-link px-10 align-items-right" id="navbarCollapse" >
+                <div class="navbar-nav ms-auto p-2 p-lg-0 ">
                     <a href="index.php" class="nav-item nav-link active">Home</a>
                 
                             <!-- Drop down menu start-->
@@ -82,12 +83,13 @@
                             <a href="#testimonial" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                </div>
-                <div class="ms-auto d-none d-lg-block col-sm-4 text-start col-10 ">
+                
+                <div class="ms-auto d-none d-lg-block col-sm-4 text-start">
                     <a href="https://play.google.com/store/apps/details?id=com.dafy" 
                     class="btn btn-warning rounded-pill py-3 px-3 text-dark"> <b> Download App</b></a>
                 </div>
             </div>
+        </div>
         </nav>
 </div>
     <!-- Navbar End -->
@@ -212,38 +214,43 @@
 <!-- Carousel End -->
 
 <!--------------------------------------------------  Slider End       ----------------------------------->
-
+<!--------------------------------------------------  Service intro start -------------------------------------->
 <div class="container-xxl py-5" id="service">
-    <div class="container">
+    <div class="container align-items-centre" >
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width: 500px;">
             <!--p class="fs-5 fw-medium" style="color: #ffae00;">Our Services</p-->
             <h1 class="display-5 mb-5">Our Services</h1>
         </div>
-        <div class="row g-4">
+        <div class="row g-6">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item position-relative h-100">
-                    <div class="service-text rounded p-5">
-                        <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                            style="width: 64px; height: 64px;">
-                            <img class="img-fluid" src="img/png/car.png" alt="Icon">
+                    <div class="service-text rounded p-6">
+                        <div class="btn-square bg-none rounded-circle mx-auto mb-4"
+                            style="width: 320px; height: 240px;">
+                            <img class="img-fluid" src="img/icon/wheels2.png" alt="Icon">
                         </div>
                         <h5 class="mb-3">Professional Drivers</h4>
-                            <p class="mb-0">We providing a seamless and hassle-free experience from point A to point B.
-                                Whether you need to travel for work or simply want to get around town.
+                            <p ><i class="fa fa-arrow-right text-primary me-3"></i>
+                            Hire the professionals, Experience a smooth and stress-free 
+                                journey. </p>                                
+                            <p><i class="fa fa-arrow-right text-primary me-3"></i>
+                                    We'll take care of everything, from pick-up 
+                                to drop-off, ensuring you arrive at your destination on time and in style.
                             </p>
                     </div>
-                    <div class="service-btn rounded-0 rounded-bottom bg-dark">
-                        <a class="text-warning fw-medium" href=""
+                    <div class="service-btn  bg-dark"><b><h5>
+                        <a class="text-primary fw-medium" href=""
                         data-bs-toggle="modal" data-bs-target="#book1">Book Now
-                            <i class="bi bi-chevron-double-right ms-2"></i></a>
+                            <i class="bi bi-chevron-double-right ms-2"></i></a></h5></b>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <!--
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="service-item position-relative h-100">
                     <div class="service-text rounded p-5">
                         <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                            style="width: 64px; height: 64px;">
+                            style="width: 320px; height: 240px;">
                             <img class="img-fluid" src="img/png/road.png" alt="Icon">
                         </div>
                         <h5 class="mb-3">On Demand Service</h4>
@@ -251,30 +258,33 @@
                                 we are here to ensure that 
                                 you have a seamless and enjoyable round-trip experience.</p>
                     </div>
-                    <div class="service-btn rounded-0 rounded-bottom bg-dark">
-                        <a class="text-warning fw-medium" href="" 
+                    <div class="service-btn rounded-0 rounded-bottom bg-dark"><b><h5>
+                        <a class="text-primary fw-medium" href="" 
                         data-bs-toggle="modal" data-bs-target="#book2">Book Now
-                            <i class="bi bi-chevron-double-right ms-2"></i></a>
+                            <i class="bi bi-chevron-double-right ms-2"></i></a></h5></b>  
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                </div>
+            -->
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item position-relative h-100">
-                    <div class="service-text rounded p-5">
-                        <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                            style="width: 64px; height: 64px;">
+                    <div class="service-text rounded p-6">
+                          <div class="btn-square  rounded-circle mx-auto mb-4"
+                            style="width: 320px; height: 240px;">
                             <img class="img-fluid" src="img/png/assistance.png" alt="Icon">
                         </div>
-                        <h5 class="mb-3">Health and Well-being</h4>
-                            <p class="mb-0">We prioritize the physical and emotional well-being 
-                                of seniors and supportive 
-                                environment during their hospitalization.
+                        <h5 class="mb-3">Hospital Assistance</h4>
+                            <p><i class="fa fa-arrow-right text-primary me-3"></i>
+                                Our driver assistants also act as an assistant who provides support for personal care.</p>
+                            <p><i class="fa fa-arrow-right text-primary me-3"></i>
+                            the functions within the hospital as well as taking them for the tests, helping them like paying bills.
                             </p>
                     </div>
-                    <div class="service-btn rounded-0 rounded-bottom bg-dark">
-                        <a class="text-warning fw-medium" href="" 
+                    <div class="service-btn rounded-0 rounded-bottom bg-dark"><b><h5>
+                        <a class="text-primary fw-medium" href="" 
                         data-bs-toggle="modal" data-bs-target="#book3">Book Now
-                        <i class="bi bi-chevron-double-right ms-2"></i></a>
+                        <i class="bi bi-chevron-double-right ms-2"></i></a></h5></b>
                     </div>
                 </div>
             </div>
@@ -294,20 +304,31 @@
         </div>
         <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s">
             <div class="col-lg-4">
-                <div class="nav w-100 nav-pills me-4 p-0">
-                    <button class="nav-link w-70 d-flex align-items-center  p-3 mb-3 active"
+                <div class="nav w-70 nav-pills me-4 p-0">
+                    <button class="nav-link w-70 d-flex align-items-center  p-2 mb-1  active"
                     data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                        <i class="fa fa-car-side fa-2x me-3" style="color:black;" ></i>
+                    <div class="btn-square bg-none rounded-circle mx-auto mb-1"
+                            style="width: 90px; height: 90px;">
+                            <img class="img-fluid" src="img/icon/wheels.png" alt="Icon">
+                        </div>
                         <h4 class="m-0">Professional Drivers </h4>
                     </button>
-                    <button class="nav-link w-70 d-flex align-items-center  p-3 mb-3" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                        <i class="fa fa-car-side fa-2x me-3"  style="color:black;"></i>
+<!--
+                    <button class="nav-link w-70 d-flex align-items-center  p-2 mb-1" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                    <div class="btn-square bg-none rounded-circle mx-auto mb-1"
+                            style="width: 90px; height: 90px;">
+                            <img class="img-fluid" src="img/icon/wheels.png" alt="Icon">
+                        </div>
                     
                         <h4 class="m-0">On Demand Service </h4>
                     </button>
-                    <button class="nav-link w-70 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                        <i class="fa fa-car-side fa-2x me-3"  style="color:black;"></i>
-                        <h4 class="m-0">Health and Well-being</h4>
+-->
+                    <button class="nav-link w-70 d-flex align-items-center text-start p-2 mb-1 " data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                    <div class="btn-square bg-none rounded-circle mx-auto mb-1"
+                            style="width: 90px; height: 90px;">
+                            <img class="img-fluid" src="img/icon/wheels.png" alt="Icon">
+                        </div>
+                        <h4 class="m-0">Hospital Assistance</h4>
                     </button>
                 </div>
             </div>
@@ -341,6 +362,7 @@
 
 
 <!--  Round Trip Ride -->
+<!--
     <div class="tab-pane fade" id="tab-pane-2">
         <div class="row g-4">
             <div class="col-md-6" style="min-height: 350px;">
@@ -364,20 +386,20 @@
                 </div>
         </div>
     </div>
+-->
 
-
-<!-- Health and well-being-->
+<!-- Hospital Assistance-->
 <div class="tab-pane fade" id="tab-pane-3">
         <div class="row g-4">
             <div class="col-md-6" style="min-height: 350px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid" src="img/png/8.png"
+                    <img class="position-absolute img-fluid" src="img/icon/wheel.webp"
                         style="object-fit: cover;" alt="">
                 </div>
             </div>
             <div class="col-md-6">
-                <h3 class="mb-3">Health & Wellbeing</h3>
-                <p class="mb-4">We understand that navigating healthcare can be challenging, especially for seniors.</p>
+                <h3 class="mb-3">Hospital Assistance</h3>
+                <p class="mb-4">Our driver assistants also act as an assistant who provides support for seniors.</p>
                 <p><i class="fa fa-check text-success me-3"></i>you can trust that your loved ones are in capable and caring hands.</p>
                 <p><i class="fa fa-check text-success me-3"></i>We prioritize the physical and emotional well-being of seniors</p>
                 <p><i class="fa fa-check text-success me-3"></i>our experienced drivers are here to 
@@ -440,14 +462,15 @@
 </div>
 <!-- Round Trip -->
 
-<!-- Modal -->
+<!-- On Demand Service -->
+<!--
 <div class="modal fade" id="book2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <form id="subscribe2" action="" method="post"> 
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">On Demand Services</h5>
-        <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button-->
+        <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <div class="md-form mb-5">
@@ -473,13 +496,13 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" href="#">Book Now</button>
+        <button type="submit" class="btn btn-warning" href="#">Book Now</button>
       </div>
     </div>
   </div>
   </form>
 </div>
-
+-->
 <!------------------ Health and Wealth ---------------------------------->
 
 <!-- Modal -->
@@ -488,7 +511,7 @@
         <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Health Well Begin service</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Hospital Assistance</h5>
         <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button-->
       </div>
       <div class="modal-body">
@@ -515,7 +538,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Book Now</button>
+        <button type="submit" class="btn btn-warning">Book Now</button>
       </div>
     </div>
   </div>
@@ -545,31 +568,32 @@ function book() {
             <div class="col-md-6 col-lg-3 wow fadeIn animated slideInRight" data-wow-delay="0.1s">
                 <div class="feature-item border h-100 p-5 ">
                     <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                        <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                        <img class="img-fluid" src="img/icon/personal.jpeg" alt="Icon">
                     </div>
                     <h5 class="mb-3">Personalized Service</h5>
-                    <p class="mb-0"><i>We emphasize our commitment to understanding our clients'
-                         individual needs and preferences, and tailoring our services accordingly.</i> </p>
+                    <p class="mb-0"><i>Our commitment lies in understanding our client’s unique requirement
+                         and interest, ensuring and providing customized service to meet all their expectations.</i> </p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn animated slideInUp" data-wow-delay="0.3s">
                 <div class="feature-item border h-100 p-5 ">
                     <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                        <img class="img-fluid" src="img/icon/in-city-rides.jpg" alt="Icon">
+                        <img class="img-fluid" src="img/icon/city.jpeg" alt="Icon">
                     </div>
                     <h5 class="mb-3">In-City Rides</h5>
-                    <p class="mb-0"> <i>our goal of exceeding our clients' expectations and creating a memorable 
-                        and enjoyable experience for them.</i></p>
+                    <p class="mb-0"> <i>Ensure that your drivers are familiar with the city's roads and traffic patterns.
+                         Optimize routing to minimize travel time and provide efficient and timely rides.</i></p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn animated slideInDown" data-wow-delay="0.5s">
                 <div class="feature-item border h-100 p-5 ">
                     <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                        <img class="img-fluid" src="img/icon/security.png" alt="Icon">
+                        <img class="img-fluid" src="img/icon/outstation.jpeg" alt="Icon">
                     </div>
                     <h5 class="mb-3">Outstation Rides</h5>
                     <p class="mb-0"><i>
-                        We emphasize our commitment to maintaining our clients' privacy and confidentiality.
+                    Reliable and Professional Drivers, hire experienced and professional 
+                    drivers who are familiar with long-distance travel and have excellent customer service skills. 
                     </i></p>
                 </div>
             </div>
@@ -577,11 +601,13 @@ function book() {
             <div class="col-md-6 col-lg-3 wow fadeIn animated slideInLeft" data-wow-delay="0.7s">
                 <div class="feature-item border h-100 p-5 ">
                     <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                        <img class="img-fluid" src="img/icon/support.png" alt="Icon">
+                        <img class="img-fluid" src="img/icon/bar.jpeg" alt="Icon">
                     </div>
                     <h5 class="mb-3">Bar Pickup</h5>
                     <p class="mb-0"><i >
-                        Anytime , Anywhere We are available to support our clients.</i></p>
+                    Bar pick-up driver services offer convenience to customers by offering a designated driver, 
+                    it helps prevent drunk driving accidents and promotes responsible drinking. 
+                    Patrons can enjoy a night out without worrying about getting home safely.</i></p>
                 </div>
             </div>
         </div>
@@ -590,7 +616,7 @@ function book() {
 <!-- Features End -->
 
   <!--------------------------------------------------- Feactures End ------------------------------------->
- <!-- About Start -->
+ <!--------------------------------------- About Start ------------------------------------------------->
  <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width: 500px;">
             <!--p class="fs-5 fw-medium" style="color: #ffae00;">Our Services</p-->
             <h1 class="display-5 mb-5">About Us</h1>
@@ -609,7 +635,7 @@ function book() {
                 </div>
                 <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="bg-white rounded-top p-5 mt-lg-5 animated slideInRight">
-                        <p class="fs-5 fw-medium text-warning">About Us</p>
+                        <p class="fs-5 fw-medium text-primary">About Us</p>
                         <h1 class="display-6 mb-4">DAFY Online Pvt. Ltd.</h1>
                         <p class="mb-4"><i class="fa fa-check text-success me-2"></i>At DAFY Online, we understand that your time is valuable, and 
                             our services are designed to cater to your unique needs. </p>
@@ -671,7 +697,7 @@ function book() {
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <!--p class="fs-5 fw-medium text-warning">Get A Quote</p-->
+                <!--p class="fs-5 fw-medium text-primary">Get A Quote</p-->
                 <h1 class="display-5 mb-4">Need Our Expert Help? We're Here!</h1>
                 <p> Our user-friendly platform makes booking our services quick and easy. 
                     We are dedicated to provide convenient and reliable assistants to help you</p>
@@ -725,7 +751,7 @@ function book() {
     <div class="container">
         <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
             style="max-width: 500px;">
-            <!--p class="fs-5 fw-medium text-warning">Team</p-->
+            <!--p class="fs-5 fw-medium text-primary">Team</p-->
             <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -733,7 +759,7 @@ function book() {
             <div class="team-item overflow-hidden pb-4 rounded p-lg-5 mb-5">
                 <img class="mb-4" src="img/team/team-1.jpg" alt="">
                 <h5>Manikandan Ak</h5>
-                <span class="text-warning">CEO</span>
+                <span class="text-primary">CEO</span>
             
                     <ul class="team-social">
                         <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -747,7 +773,7 @@ function book() {
                 <div class="team-item overflow-hidden pb-4 rounded p-lg-5 mb-5">
                 <img class="mb-4" src="img/team/team-2.jpg" alt="">
                 <h5>Arun Chandrasekaran</h5>
-                <span class="text-warning">COO</span>
+                <span class="text-primary">COO</span>
                 
                 <ul class="team-social">
                         <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -761,7 +787,7 @@ function book() {
             <div class="team-item overflow-hidden pb-4 rounded p-lg-5 mb-5">
                 <img class="mb-4" src="img/team/team-3.jpg" alt="">
                 <h5>Arun Chandrasekaran</h5>
-                <span class="text-warning">COO</span>
+                <span class="text-primary">COO</span>
                 
                 <ul class="team-social">
                         <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -783,7 +809,7 @@ function book() {
     <div class="container">
         <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
             style="max-width: 500px;">
-            <!--p class="fs-5 fw-medium text-warning">Testimonial</p-->
+            <!--p class="fs-5 fw-medium text-primary">Testimonial</p-->
             <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -792,28 +818,28 @@ function book() {
                 <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                     sit, sed stet lorem sit clita duo justo</p>
                 <h5>Client Name</h5>
-                <span class="text-warning">Profession</span>
+                <span class="text-primary">Profession</span>
             </div>
             <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                 <img class="mb-4" src="img/client/testimonial-2.jpg" alt="">
                 <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                     sit, sed stet lorem sit clita duo justo</p>
                 <h5>Client Name</h5>
-                <span class="text-warning">Profession</span>
+                <span class="text-primary">Profession</span>
             </div>
             <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                 <img class="mb-4" src="img/client/testimonial-3.jpg" alt="">
                 <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                     sit, sed stet lorem sit clita duo justo</p>
                 <h5>Client Name</h5>
-                <span class="text-warning">Profession</span>
+                <span class="text-primary">Profession</span>
             </div>
             <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                 <img class="mb-4" src="img/client/testimonial-4.jpg" alt="">
                 <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                     sit, sed stet lorem sit clita duo justo</p>
                 <h5>Client Name</h5>
-                <span class="text-warning">Profession</span>
+                <span class="text-primary">Profession</span>
             </div>
         </div>
     </div>
@@ -861,7 +887,7 @@ function book1() {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a type="submit" class="btn btn-primary" href="#" onclick=book1()>Subscribe</a>
+        <a type="submit" class="btn btn-warning" href="#" onclick=book1()>Subscribe</a>
       </div>
     </div>
   </div>
