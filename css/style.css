@@ -367,7 +367,7 @@
 }
 
 
-/*** Project ***/
+/*** Project 
 .project-item {
     position: relative;
     border-radius: 8px;
@@ -516,11 +516,12 @@
 .owl-item.center .testimonial-item,
 .testimonial-item:hover {
     background: var(--primary);
+   
 }
 
 .owl-item.center .testimonial-item *,
 .testimonial-item:hover * {
-    color: #FFFFFF !important;
+    color: black !important;
 }
 
 .testimonial-item img {
@@ -554,7 +555,7 @@
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
-    color: #FFFFFF;
+    color: black;
 }
 
 @media (max-width: 768px) {
