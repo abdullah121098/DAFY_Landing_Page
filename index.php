@@ -97,147 +97,232 @@
     <!----------------------------- slider Start ------------------------------------------------>
 <!-- Carousel Start -->
 
+
 <div class="container-fluid px-0 mb-2">
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100 h-60" src="img/slider/luxury-car3.png" alt="Image">
-                <div class="carousel-caption">
+                 <img class="w-50" src="img/slider/welcome-to-dafy1.png" alt="Image" >
+                <div class="carousel-caption ">
                     <div class="container">
-                    <div class="row justify-content-center">
-        
-                        <div class="col-lg-7 text-end col-10 ">
+                        <div class="row  justify-content-end">
+                            <div class="col-lg-7 text-end col-8">
+                                <p class="fs-4 text-white animated slideInDown">Welcome to
+                                    <strong>DAFY</strong>
+                                </p> 
+                                <h1 class="display-1 text-white mb-4 animated slideInLeft">
+                                    Most reliable and economical driver on demand
+                                </h1>
+                                    <a href="#book2" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
+                                    data-bs-toggle="modal" data-bs-target="#book2"
+                                    >Book Now</a>
+                                <a href="#round" data-bs-target="#tab-pane-3"
+                                    class="btn btn-warning rounded-pill py-3 px-5 animated slideInUp">Read
+                                    More</a>
+                            </div>
+                                <!--div class="col-lg-5 d-none d-lg-flex animated zoomInDown">
+                                    <img class="img-fluid"  src="img/slider/b3.png" height="100px" alt="">
+                                </div-->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                           
-                            <h1 class="display-1 text-white mb-4 animated slideInRight animated slideInLeft">
-                            <strong>Do Dafy </strong></h1>
-                            <h2 class="display- text-white mb-4 animated slideInRight">
-                             Get Your private Driver Now
-                        </h2>
-                            <!--
-                            <h1 class="display-1 text-white mb-4 animated slideInRight">
-                                   Do Dafy & Get Your Driver Now</h1>
-                                -->       
-                            <a href="" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
+                        <div class="carousel-item">
+                        <img class="w-50" src="img/slider/your-car-our-driver.jpg" alt="Image" >
+                    <div class="carousel-caption ">
+                        <div class="container">
+                            <div class="row  justify-content-end">
+                                <div class="col-lg-7 text-end col-8">
+                                    <!--p class="fs-4 text-white animated slideInDown">Welcome to
+                                        <strong>DAFY</strong>
+                                    </p--> 
+                                    <h1 class="display-1 text-white mb-4 animated slideInLeft">
+                                        Verified & Trained drivers for your car
+                                    </h1>
+                                        <a href="#book2" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
+                                        data-bs-toggle="modal" data-bs-target="#book2"
+                                        >Book Now</a>
+                                    <a href="#round" data-bs-target="#tab-pane-3"
+                                        class="btn btn-warning rounded-pill py-3 px-5 animated slideInUp">Read
+                                        More</a>
+                                </div>
+                                <!--div class="col-lg-5 d-none d-lg-flex animated zoomInDown">
+                                    <img class="img-fluid"  src="img/slider/b3.png" height="100px" alt="">
+                                </div-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                <img class="w-50" src="img/slider/navigation.jpg" alt="Image">
+                <div class="carousel-caption">
+                <div class="container">
+                    <div class="row  justify-content-end">
+
+                        <div class="col-lg-7 text-end col-10">
+                            <!--p class="fs-4 text-white animated slideInDown">Welcome to <strong>Professional Drivers</strong>
+                            </p-->
+
+                        
+                            <h1 class="display-1 text-white mb-5 animated slideInUp">
+                                AnyWhere , Anytime
+                            </h1>
+
+                            <a href="#book1" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
                             data-bs-toggle="modal" data-bs-target="#book1"
                             >Book Now</a>
-                            <a href="" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown">Read
-                            More</a>
-                            </div>
-                            <!--div class="col-lg-5 d-none d-lg-flex animated zoomInUp">
-                        <img class="img-fluid"  src="img/slider/b1.webp" height="100px" alt="">
-                    </div-->
+                            <a  class="btn btn-warning rounded-pill  py-3 px-5 animated slideInUp"
+                            href="tel:917592933933"><b>Call Now</b></a>
+                        </div>
+
+                        <!--div class="col-lg-5 d-none d-lg-flex animated zoomInRight">
+                            <img class="img-fluid img2"  src="img/slider/b2.png" height="100px" alt="">
+                        </div-->
+                    </div>
                 </div>
-        </div>
-    </div>
-</div>
-<div class="carousel-item">
-<img class="w-100" src="img/slider/stan1.png" alt="Image">
-<div class="carousel-caption">
-    <div class="container">
-        <div class="row  justify-content-end">
+                </div>
+                </div>
+                        <div class="carousel-item ">
+                            <img class="w-50" src="img/slider/luxury-car3.png" alt="Image" style="" style="object-fit: fill;">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                <div class="row justify-content-end">
+                    
+                                    <div class="col-lg-7 text-end col-10">
 
-            <div class="col-lg-7 text-end col-10">
-                <p class="fs-4 text-white animated slideInDown">Welcome to <strong>Professional Drivers</strong>
-                </p>
+                                    
+                                        <!--p class="fs-4 text-white mb-5 animated slideInRight " style="font-size:32px;">
+                                        Do Dafy </p-->
+                                        <h2 class="display-1 text-white mb-5 animated slideInRight">
+                                        Do DAFY <br>Get Your private Driver Now
+                                    </h2>
+                                        <!--
+                                        <h1 class="display-1 text-white mb-4 animated slideInRight">
+                                            Do Dafy & Get Your Driver Now</h1>
+                                            -->       
+                                        <a href="" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
+                                        data-bs-toggle="modal" data-bs-target="#book1"
+                                        >Book Now</a>
+                                        <a href="" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown">Read
+                                        More</a>
+                                        </div>
+                                        <!--div class="col-lg-5 d-none d-lg-flex animated zoomInUp">
+                                    <img class="img-fluid"  src="img/slider/b1.webp" height="100px" alt="">
+                                </div-->
+                            </div>
+                    </div>
+                </div>
+                </div>
 
-                <!--
-                <h1 class="display-1 text-white mb-5 animated slideInUp">Whether you need to travel for work</h1>
-                -->
-                <a href="#book1" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
-                data-bs-toggle="modal" data-bs-target="#book1"
-                >Book Now</a>
-                <a href="#tab-pane-1"
-                    class="btn btn-warning rounded-pill py-3 px-5 animated slideInUp">Read
-                    More</a>
-            </div>
+                <div class="carousel-item">
+                    <img class="w-50" src="img/slider/Dafy-Banner-02.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row  justify-content-end">
+                                <div class="col-lg-7 text-end col-10">
+                                    <!--p class="fs-4 text-white animated slideInDown">Welcome to
+                                        <strong>Round34 Trip Service</strong0>
+                                    </p--> 
+                                    <h1 class="display-1 text-white mb-4 animated slideInLeft">
+                                        Affordable Rides Premimum Experience
+                                    </h1>
+                                        <a href="#book2" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
+                                        data-bs-toggle="modal" data-bs-target="#book2"
+                                        >Book Now</a>
+                                    <a href="#round" data-bs-target="#tab-pane-3"
+                                        class="btn btn-warning rounded-pill py-3 px-5 animated slideInUp">Read
+                                        More</a>
+                                </div>
+                                <!--div class="col-lg-5 d-none d-lg-flex animated zoomInDown">
+                                    <img class="img-fluid"  src="img/slider/b3.png" height="100px" alt="">
+                                </div-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Additional Slider start-->
+                <div class="carousel-item">
+                    <img class="w-50" src="img/slider/stan.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row  justify-content-end">
+                                <div class="col-lg-7 text-end col-10">
+                                    <p class="fs-4 text-white animated slideInDown">Welcome to
+                                        <strong>Round Trip Service</strong>
+                                    </p> 
+                                    <h1 class="display-1 text-white mb-4 animated slideInLeft">
 
-            <!--div class="col-lg-5 d-none d-lg-flex animated zoomInRight">
-                <img class="img-fluid img2"  src="img/slider/b2.png" height="100px" alt="">
-            </div-->
-        </div>
-    </div>
-</div>
-</div>
+                                    Hassle Free Ride <span class="text-warning rounded-pill animated slideInUp"> @299</span>
+                                    </h1>
+                                        <a href="#book2" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
+                                        data-bs-toggle="modal" data-bs-target="#book2"
+                                        >Book Now</a>
+                                    <a href="#round" data-bs-target="#tab-pane-3"
+                                        class="btn btn-warning rounded-pill py-3 px-5 animated slideInUp">Read
+                                        More</a>
+                                </div>
+                                <!--div class="col-lg-5 d-none d-lg-flex animated zoomInDown">
+                                    <img class="img-fluid"  src="img/slider/b3.png" height="100px" alt="">
+                                </div-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="carousel-item">
+                        <img class="w-50" src="img/slider/8.png" alt="Image">
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="row justify-content-end">
+                                    <div class="col-lg-7 text-end col-10">
+                                        <p class="fs-4 text-white animated slideInLeft">Welcome to <strong>Hospital Assistance</strong>
+                                        </p>
+                                        <h1 class="display-1 text-white mb-5 animated slideInLeft">Hospital Emergencies</h1>
+                                            <a href=""  data-bs-toggle="modal" data-bs-target="#book3"
+                                            class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft">
+                                        Book now
+                                        </a>
+                                        <a href=""
+                                            class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft">Read
+                                            More</a>
+                                    </div>
+                                    <!--div class="col-lg-5 d-none d-lg-flex animated zoomInDown">
+                                        <img class="img-fluid"  src="img/slider/b4.png" height="100px" alt="">
+                                    </div-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Additional Slider start-->
-<div class="carousel-item">
-<img class="w-100" src="img/slider/Dafy-Banner-03.png" alt="Image">
-<div class="carousel-caption">
-    <div class="container">
-        <div class="row  justify-content-end">
-            <div class="col-lg-7 text-end col-10">
-                <p class="fs-4 text-white animated slideInDown">Welcome to
-                    <strong>Round Trip Service</strong>
-                </p> <!--
-                <h1 class="display-1 text-white mb-4 animated slideInLeft">providing service 
-                    for your specific needs</h1>
--->
-                    <a href="#book2" class="btn btn-warning rounded-pill py-3 px-5 animated slideInDown"
-                    data-bs-toggle="modal" data-bs-target="#book2"
-                    >Book Now</a>
-                <a href="#round" data-bs-target="#tab-pane-3"
-                    class="btn btn-warning rounded-pill py-3 px-5 animated slideInUp">Read
-                    More</a>
-            </div>
-            <!--div class="col-lg-5 d-none d-lg-flex animated zoomInDown">
-                <img class="img-fluid"  src="img/slider/b3.png" height="100px" alt="">
-            </div-->
-        </div>
-    </div>
-</div>
-</div>
-<div class="carousel-item">
-<img class="w-100" src="img/slider/Dafy-Banner-02.png" alt="Image">
-<div class="carousel-caption">
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-lg-7 text-end col-10">
-                <p class="fs-4 text-white animated slideInLeft">Welcome to <strong>Hospital Assistance</strong>
-                </p><!--
-                <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your
-                    Business</h1>-->
-                    <a href=""  data-bs-toggle="modal" data-bs-target="#book3"
-                    class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft">
-                Book now
-                </a>
-                <a href=""
-                    class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft">Read
-                    More</a>
-            </div>
-            <!--div class="col-lg-5 d-none d-lg-flex animated zoomInDown">
-                <img class="img-fluid"  src="img/slider/b4.png" height="100px" alt="">
-            </div-->
-        </div>
-    </div>
-</div>
-</div>
-</div>
 <!-- Additional Slider End-->
 
 
 
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
-</div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+    </div>
 </div>
 <!-- Carousel End -->
 
 <!--------------------------------------------------  Slider End       ----------------------------------->
 
    <!--------------------------------------- About Start ------------------------------------------------->
-   <div class="container-xxl my-5" id="service">
-    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" >
+
+        <div class="container-xxl my-5" >
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" >
         <!--p class="fs-5 fw-medium" style="color: #ffae00;">Our Services</p-->
         <div class="container">
-            <h4 class="display-5 mb-4">Our Services</h4>        </div>
+            <h4 class="display-5 mb-4">Our Services</h4>        
+        </div>
 
         
             <div class="row g-0">
@@ -258,7 +343,7 @@
                 <p class="mb-1"><i class="fa fa-check text-success me-2"></i>
                 Well take care of everything, from pick-up to
                 drop-off, ensuring you arrive at your destination on time and in style.</p><br>
-               
+               <br>
                 
                 <a class="btn btn-warning rounded-pill py-3 px-5"  data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
             </div>
@@ -286,7 +371,7 @@
             </div>
         </div>
     </div>
-</div>
+ </div>
 <!-- About End -->
 
 <!--------------------------------------------------  Service intro start -------------------------------------->
@@ -430,12 +515,9 @@
         <!--  One-side Ride -->
         <div class="col-md-6">
         <h3 class="mb-3">Professional Drivers </h3>
-        <p class="mb-4">We offer one-way rides that are tailored to your needs, providing a seamless and hassle-free 
-            experience from point A to point B.</p>
-        <p><i class="fa fa-check text-success me-3"></i>Whether you need to travel for work</p>
-        <p><i class="fa fa-check text-success me-3"></i>need asisstance drive</p>
-        <p><i class="fa fa-check text-success me-3"></i>simply want to get around town</p>
-        <p><i class="fa fa-check text-success me-3"></i>our dedicated team of drivers are here to assist you</p>
+        <p ><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the husstle of driving</p>
+        <p><i class="fa fa-check text-success me-3"></i>No more driving in heavy traffic and locating parking spot</p>
+        <p><i class="fa fa-check text-success me-3"></i>Hire drivers for airport pickup or drop off services</p>
         <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
         
         </div>
@@ -455,15 +537,14 @@
         </div>
         <div class="col-md-6">
         <h3 class="mb-3">Round Trip</h3>
-        <p class="mb-4">Our user-friendly platform allows you to easily book.
-        we take pride in providing exceptional 
-            service that meets your specific needs.</p>
-        <p><i class="fa fa-check text-success me-3"></i>customize your travel itinerary, and enjoy reliable 
-            pickups and drop-offs at your desired locations.</p>
-        <p><i class="fa fa-check text-success me-3"></i>Whether you're traveling for work, 
-            leisure, or any other purpose,</p>
-        <p><i class="fa fa-check text-success me-3"></i>our experienced drivers are here to ensure that 
-            you have a seamless and enjoyable round-trip experience.</p>
+        <p><i class="fa fa-check text-success me-3"></i>
+        Hire Professional drivers to commute your vehicle.
+     </p>
+        <p><i class="fa fa-check text-success me-3"></i>
+        Simply Get around in town for midnight cravings, shopping and night parties.</p>
+        <p><i class="fa fa-check text-success me-3"></i>Make a quick stop at any stores/pharmacies on your rides</p>
+        <p><i class="fa fa-check text-success me-3"></i>No more delay on your meeting schedules</p>
+             
             <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book2" href="">Book Now</a>
         </div>
         </div>
@@ -481,7 +562,7 @@
         </div>
         <div class="col-md-6">
         <h3 class="mb-3">Hospital Assistance</h3>
-        <p class="mb-4">Our driver assistants also act as an assistant who provides support for seniors.</p>
+        <!--p class="mb-4">Our driver assistants also act as an assistant who provides support for seniors.</p-->
         <p><i class="fa fa-check text-success me-3"></i>you can trust that your loved ones are in capable and caring hands.</p>
         <p><i class="fa fa-check text-success me-3"></i>We prioritize the physical and emotional well-being of seniors</p>
         <p><i class="fa fa-check text-success me-3"></i>our experienced drivers are here to 
@@ -554,59 +635,6 @@
                                                 <input class="form-control" type="date" required>
                                             </div>
                                         </div>
-                                        <!--div class="col-sm-7">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <span class="form-label">Hour</span>
-                                                        <select class="form-control">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                            <option>4</option>
-                                                            <option>5</option>
-                                                            <option>6</option>
-                                                            <option>7</option>
-                                                            <option>8</option>
-                                                            <option>9</option>
-                                                            <option>10</option>
-                                                            <option>11</option>
-                                                            <option>12</option>
-                                                        </select>
-                                                        <span class="select-arrow"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <span class="form-label">Min</span>
-                                                        <select class="form-control">
-                                                            <option>05</option>
-                                                            <option>10</option>
-                                                            <option>15</option>
-                                                            <option>20</option>
-                                                            <option>25</option>
-                                                            <option>30</option>
-                                                            <option>35</option>
-                                                            <option>40</option>
-                                                            <option>45</option>
-                                                            <option>50</option>
-                                                            <option>55</option>
-                                                        </select>
-                                                        <span class="select-arrow"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <span class="form-label">AM/PM</span>
-                                                        <select class="form-control">
-                                                            <option>AM</option>
-                                                            <option>PM</option>
-                                                        </select>
-                                                        <span class="select-arrow"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div-->
                                     </div>
                                     <div class="form-btn">
                                         <button class="submit-btn">Book Now</button>
@@ -634,14 +662,14 @@
 <div class="modal fade" id="book2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <!--form id="subscribe2" action="" method="post"--> 
 <div class="modal-dialog">
-<div class="modal-content">
-<!--div class="modal-header">
+<div class="modal-content bg-red">
+<div class="modal-header">
 <h5 class="modal-title" id="exampleModalLabel">Round Trip Services</h5>
 <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button-->
 </div>
 <div class="modal-body"><!--
 <div id="booking" class="section"-->
-		<div class="section-center">
+		<div class="section-center bg-dark">
 			
 				<div class="row">
 					<div class="booking-form">
@@ -682,59 +710,7 @@
 										<input class="form-control" type="date" required>
 									</div>
 								</div>
-								<!--div class="col-sm-7">
-									<div class="row">
-										<div class="col-sm-4">
-											<div class="form-group">
-												<span class="form-label">Hour</span>
-												<select class="form-control">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-													<option>10</option>
-													<option>11</option>
-													<option>12</option>
-												</select>
-												<span class="select-arrow"></span>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group">
-												<span class="form-label">Min</span>
-												<select class="form-control">
-													<option>05</option>
-													<option>10</option>
-													<option>15</option>
-													<option>20</option>
-													<option>25</option>
-													<option>30</option>
-													<option>35</option>
-													<option>40</option>
-													<option>45</option>
-													<option>50</option>
-													<option>55</option>
-												</select>
-												<span class="select-arrow"></span>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group">
-												<span class="form-label">AM/PM</span>
-												<select class="form-control">
-													<option>AM</option>
-													<option>PM</option>
-												</select>
-												<span class="select-arrow"></span>
-											</div>
-										</div>
-									</div->
-								</div-->
+							
 							</div>
 							<div class="form-btn">
 								<button class="submit-btn">Book Now</button>
@@ -767,14 +743,14 @@
 <h5 class="modal-title" id="exampleModalLabel">Round Trip Services</h5>
 <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button-->
 </div>
-<div class="modal-body"><!--
-<div id="booking" class="section"-->
-		<div class="section-center">
-			
+<div class="modal-body ">
+<div id="booking" class="section">
+<div class="section-center">
+			<div class="container">
 				<div class="row">
 					<div class="booking-form">
 						<div class="form-header">
-							<h2 class="text-primary">Hospital Assistance Service</h2>
+							<h1>Book a car</h1>
 						</div>
 						<form>
 							<div class="row">
@@ -810,69 +786,19 @@
 										<input class="form-control" type="date" required>
 									</div>
 								</div>
-								<!--div class="col-sm-7">
-									<div class="row">
-										<div class="col-sm-4">
-											<div class="form-group">
-												<span class="form-label">Hour</span>
-												<select class="form-control">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-													<option>10</option>
-													<option>11</option>
-													<option>12</option>
-												</select>
-												<span class="select-arrow"></span>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group">
-												<span class="form-label">Min</span>
-												<select class="form-control">
-													<option>05</option>
-													<option>10</option>
-													<option>15</option>
-													<option>20</option>
-													<option>25</option>
-													<option>30</option>
-													<option>35</option>
-													<option>40</option>
-													<option>45</option>
-													<option>50</option>
-													<option>55</option>
-												</select>
-												<span class="select-arrow"></span>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group">
-												<span class="form-label">AM/PM</span>
-												<select class="form-control">
-													<option>AM</option>
-													<option>PM</option>
-												</select>
-												<span class="select-arrow"></span>
-											</div>
-										</div>
-									</div>
-								</div-->
+								
 							</div>
 							<div class="form-btn">
-								<button class="submit-btn" onclick=book()>Book Now</button>
+								<button class="submit-btn">Book Now</button>
 							</div>
 						</form>
-					
+					</div>
 				</div>
 			</div>
 		</div>
-	</div-->
+			</div>
+		</div>
+	</div>
 
 </div>
 <!--div class="modal-footer">
@@ -1092,7 +1018,7 @@ aria-hidden="true">
             <!--p class="fs-5 fw-medium text-warning">Team</p-->
             <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
         </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" >
             <!--div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s"-->
             <div class="team-item overflow-hidden pb-4 rounded p-lg-5 mb-5">
                 <img class="mb-4" src="img/team/ceo1.jpg" alt="">
@@ -1180,7 +1106,7 @@ aria-hidden="true">
             <!--p class="fs-5 fw-medium text-primary">Testimonial</p-->
             <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
         </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s">
+        <div class="owl-carousel testimonial-carousel wow fadeInUp ">
             <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
                 <!--img class="mb-4" src="img/client/testimonial-1.jpg" alt=""-->
                 <h3 >SUJITH E R </h3>
@@ -1192,55 +1118,6 @@ aria-hidden="true">
                       I highly recommend DAFY's service based on my positive experience. I am grateful for their assistance 
                       and would not hesitate to utilize their services again if needed in the future.</p>
                       <input type="checkbox" class="expand-btn text-primary"> 
-                
-
-                          <style>
-                            .limitline {
-                                    --max-lines: 5;
-                                --line-height: 1.4;
-                                   max-height: calc(var(--max-lines)*1em*var(--line-height));
-                                    line-height: var(--line-height);
-                                    display: flex;
-                                    overflow: hidden;
-                                    position: relative;
-                                    justify-content: space-around;
-                                    align-content: stretch;
-                                    flex-: ;
-                                    align-items: stretch;
-                                    flex-direction: row;
-                                        }/*
-                                     .line::before{
-                                        content: "";
-                                        position: absolute;
-                                        height: calc(1em * var(--line-height));
-                                        width: 100%;
-                                        bottom: 0;
-                                        pointer-events: none;
-                                        background: linear-gradient(to bottom,transparent,white);
-                                    }
-                                */
-                                .expand-btn{
-                                    appearance: none;
-                                    border: transparent;
-                                    padding: .5em;
-                                    border-radius: .25em;
-                                    cursor: pointer;
-                                    margin-top: 1rem;
-                                }
-                                .expand-btn:hover{
-                                    background-color:none;
-                                }
-                                .expand-btn::before{
-                                    content: "Read more";
-                                }
-                                .expand-btn:checked::before{
-                                    content: "Read less";
-                                }
-                                .limitline:has(+ .expand-btn:checked){
-                                    max-height: none;
-                                }
-                                </style>
-
 
             </div>
             <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
@@ -1294,7 +1171,7 @@ aria-hidden="true">
             </div>
             <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
                 <!--img class="mb-4" src="img/client/testimonial-4.jpg" alt=""-->
-                <h3>LADY REVIEW</h3>
+                <h3>Nancy Jack</h3>
                 <!--span class="text-primary">Review :</span-->
                 <p class="mb-4 limitline">I recently experienced the professional driver assistance service provided by DAFY,
                      and I am delighted to share my positive experience. 
@@ -1308,6 +1185,54 @@ aria-hidden="true">
     </div>
 </div>
 
+<style>
+                            .limitline {
+                                    --max-lines: 5;
+                                --line-height: 1.4;
+                                   max-height: calc(var(--max-lines)*1em*var(--line-height));
+                                    line-height: var(--line-height);
+                                    display: flex;
+                                    overflow: hidden;
+                                    position: relative;
+                                    justify-content: space-around;
+                                    align-content: stretch;
+                                    flex-: ;
+                                    align-items: stretch;
+                                    flex-direction: row;
+                                        }/*
+                                     .line::before{
+                                        content: "";
+                                        position: absolute;
+                                        height: calc(1em * var(--line-height));
+                                        width: 100%;
+                                        bottom: 0;
+                                        pointer-events: none;
+                                        background: linear-gradient(to bottom,transparent,white);
+                                    }
+                                */
+                                .expand-btn{
+                                    appearance: none;
+                                    border: transparent;
+                                    padding: .5em;
+                                    border-radius: .25em;
+                                    cursor: pointer;
+                                    margin-top: 1rem;
+                                }
+                                .expand-btn:hover{
+                                    background-color:none;
+                                }
+                                .expand-btn::before{
+                                    content: "Read more";
+                                }
+                                .expand-btn:checked::before{
+                                    content: "Read less";
+                                }
+                                .limitline:has(+ .expand-btn:checked){
+                                    max-height: none;
+                                }
+                                </style>
+
+
 <!--------------------------------------------------- Testimonial  end ------------------------------------->
 
 <script>
@@ -1319,14 +1244,14 @@ function book1() {
 <!----   Subscribe US button          ---->
 <!-- Modal -->
 <div class="modal fade" id="book4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form id="subscribe4" action="" method="post"> 
+    <!--form id="subscribe4" action="" method="post"--> 
     <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <!--div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Subscribe Us</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button-->
+      <!--/div-->
+      <div class="modal-body"><!--
       <div class="md-form mb-5">
     <i class="fas fa-user prefix grey-text"></i>
     <input type="text" id="name3" class="form-control validate" minlength="10"
@@ -1355,7 +1280,65 @@ function book1() {
       </div>
     </div>
   </div>
-  </form>
+  </form-->
+  <!--div id="booking" class="section">
+		<div class="section-center">
+			<div class="container"-->
+				<div class="row">
+					<div class="booking-form">
+						<!--div class="form-header">
+							<h1>Book a car</h1>
+						</div-->
+						<form>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Name</span>
+										<input class="form-control" type="text" placeholder="Enter your name">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Email</span>
+										<input class="form-control" type="email" placeholder="Enter your email">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<span class="form-label">Phone</span>
+								<input class="form-control" type="tel" placeholder="Enter your phone number">
+							</div>
+							<div class="form-group">
+								<span class="form-label">Pickup Location</span>
+								<input class="form-control" type="text" placeholder="Enter ZIP/Location">
+							</div>
+							<div class="form-group">
+								<span class="form-label">Destination</span>
+								<input class="form-control" type="text" placeholder="Enter ZIP/Location">
+							</div>
+							<div class="row">
+								<div class="col-sm-5">
+									<div class="form-group">
+										<span class="form-label">Pickup Date</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+								
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			<!--/div>
+		</div-->
+	</div>
+  
+
+</div>
+</div>
+</div></div>
 </div>
 
 <!-- term & condition -->
@@ -1447,11 +1430,11 @@ function book1() {
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     &copy; <a class="fw-medium text-light" href="#">2023</a>, All Right Reserved.
                 </div>
-                <div class="col-md-6 text-center text-md-end">
+                <!--div class="col-md-6 text-center text-md-end">
 
                     Designed By <a class="fw-medium text-light" href="#team">Dafy Team</a>
                     Distributed By <a class="fw-medium text-light" href="#about">Dafy Online pvt. ltd.</a>
-                </div>
+                </div-->
             </div>
         </div>
     </div>
