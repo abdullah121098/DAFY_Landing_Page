@@ -8,7 +8,8 @@
 }
 
 .back-to-top {
-    position: fixed;
+    position:fixed;
+    
     display: none;
     right: 30px;
     bottom: 30px;
@@ -119,7 +120,7 @@
     border: none;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: 800;
     vertical-align: middle;
     margin-left: 8px;
 }
@@ -522,6 +523,7 @@
 .owl-item.center .testimonial-item *,
 .testimonial-item:hover * {
     color: black !important;
+    
 }
 
 .testimonial-item img {
@@ -574,7 +576,6 @@
         font-size: 20px;
     }
 }
-
 
 /*** Footer ***/
 .footer {
