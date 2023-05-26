@@ -449,6 +449,8 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
 }
 
+
+
 .team-item .team-social {
     position: absolute;
     padding: 0;
@@ -551,7 +553,8 @@
     border-radius: 55px;
     box-shadow: 0 0 45px rgba(0, 0, 0, .15);
     font-size: 25px;
-    transition: .5s;
+    transition: .15s;
+    
 }
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
