@@ -513,7 +513,7 @@
 
 .owl-item .testimonial-item,
 .testimonial-item * {
-    transition: .5s;
+    transition: 1.60s;
 }
 
 .owl-item.center .testimonial-item,
@@ -553,7 +553,7 @@
     border-radius: 55px;
     box-shadow: 0 0 45px rgba(0, 0, 0, .15);
     font-size: 25px;
-    transition: .15s;
+    transition: 1.15s;
     
 }
 
