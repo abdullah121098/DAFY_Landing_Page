@@ -150,7 +150,8 @@
                                                
                                                 <h1 class="display-1 text-white mb-4 animated slideInDown" style="font-family: 'Lato', sans-serif;">
                                                      Hire a Driver Anytime to anywhere!</h1>
-                                                    <a href="" class="btn btn-warning rounded-pill py-3 px-5 animated slideInRight">Book Now</a>
+                                                    <a href="" class="btn btn-warning rounded-pill py-3 px-5 animated slideInRight"
+                                                    data-bs-toggle="modal" data-bs-target="#book2">Book Now</a>
                                                 <a href="" class="btn btn-warning rounded-pill py-3 px-5 animated slideInLeft"
                                                     href="tel:917592933933">Call Now</a>
                                             </div>
@@ -270,8 +271,8 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item position-relative h-100">
                             <div class="service-text rounded p-5"style="font-family: 'Lato', sans-serif;">
-                                <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                    style="width: 64px; height: 64px;">
+                                <div class="btn-square bg-white rounded-circle mx-auto mb-4"
+                                    style="width: 124px; height: 124px;">
                                     <img class="img-fluid" src="img/icon/wheels2.png" alt="Icon">
                                 </div>
                                 <h5 class="mb-3">Professional Drivers</h4>
@@ -293,8 +294,8 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="service-item position-relative h-100">
                             <div class="service-text rounded p-5" style="font-family: 'Lato', sans-serif;">
-                                <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                    style="width: 64px; height: 64px;">
+                                <div class="btn-square bg-white rounded-circle mx-auto mb-4"
+                                    style="width: 124px; height: 104px;">
                                     <img class="img-fluid" src="img/png/assistance.png" alt="Icon">
                                 </div>
                                 <h5 class="mb-3">Hospital Assistance</h4>
@@ -926,157 +927,131 @@
 <!-- ===========================Modal Pop-Up ==============================================================-->
 
              <!---------------------------- One-Ride Modal ----------------------------------->
-    <div class="modal fade" id="book1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-       
-        <div class="modal-dialog">
-        <div class="modal-content">
-     
-        <div class="modal-body bg-dark">
-                       <div class="row">
-                           <div class="booking-form">
-                               <div class="form-header">
-                                   <h2 class="text-primary"> One-ride Trip Service</h2>
-                               </div>
-                               <form>
-							
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" id="name3" pattern=[A-Z\sa-z]{3,20} required>
-                                            <span class="form-label">Name</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" id="email3" required>
-                                            <span class="form-label">E-mail</span>
-                                        </div></div>
-                                        <div class="col-5">
-                                        <div class="form-group">
-                                            <input class="form-control" type="tel"  id="phone3" pattern=(\d{3})?\s?(\d{3})?\s?(\d{4}) maxlength="10" required>
-                                            <span class="form-label">Phone</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group"  aria-required="true">
-                                    <div class="form-checkbox">
-                                        <!--label for="One-Ride">
-                                            <input type="radio" id="One-Ride" name="car-type" checked>
-                                            <span></span>One-Ride Trip
-                                        </label>
-                                        <label for="Round-Trip">
-                                            <input type="radio" id="Round-Trip" name="car-type">
-                                            <span></span>Round-Trip
-                                        </label>
-                                        <label for="Hospital">
-                                            <input type="radio" id="Hospital" name="car-type">
-                                            <span></span>Hospital
-                                        </label-->
-                                        <select class="form-control" id="v-type3" required>
-                                            <option value="">One-ride</option>
-                                            <option>round</option>
-                                            <option>hospital</option>
-                                        </select>
-                                        <span class="select-arrow"></span>
-                                            <span class="form-label">Trip-Type</span>
-                                    </div>
-                                    <div>
-                                        <p id="out" class="bg-dark"></p>
-                                        <time></time>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" id="pick3" required>
-                                            <span class="form-label"> current location</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input class="form-control" type="text" id="drop3" required>
-                                                <span class="form-label">Drop location</span>
+        <div class="modal fade" id="book1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+           <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body bg-none">
+                                        <div class="row">
+                                            <div class="booking-form">
+                                                <div class="form-header">
+                                                    <h1>Booking Services</h1>
+                                                </div>
+                                                <form method="POST" id="send" action="notes/mail.php">
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-10">
+                                                            <div class="form-group">
+                                                                <input class="form-control " type="text" id="name3" name="name3" pattern=[A-Z\sa-z]{3,20} 
+                                                                placeholder="Name" required>
+                                                                <span class="form-label">Name</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" id="email3" name="email3" 
+                                                                placeholder="Email" required>
+                                                                <!--span class="form-label">E-mail</span-->
+                                                            </div>
+                                                        </div>
+                                                            <div class="col-10">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="tel"  id="phone3" name="phone3" pattern=(\d{3})?\s?(\d{3})?\s?(\d{4})
+                                                                 maxlength="10"  placeholder="Mobile No." required>
+                                                                <!--span class="form-label">Phone</span-->
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="col-10">
+                                                            <div class="form-group col-10" aria-required="true">
+                                                                <div class="form-checkbox">
+                                                                    <select class="form-control " id="r-type3" name="r-type3"  placeholder="Ride-Type" required>
+                                                                        <option>One-ride</option>
+                                                                        <option>round</option>
+                                                                        <option>hospital</option>
+                                                                    </select>
+                                                                    <span class="select-arrow"></span>
+                                                                    <!--span class="form-label">Trip-Type</span-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-10">
+                                                            <div class="form-group ">
+                                                                <input class="form-control" type="text" id="pick3" name="pick3"  placeholder="current location" required>
+                                                                <!--span class="form-label"> current location</span-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-10">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" type="text" id="drop3" name="drop3" placeholder="Drop location" required>
+                                                                    <!--span class="form-label">Drop location</span-->
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="datetime-local" id="date3"  name="date3"  placeholder="Date"required>
+                                                                
+                                                                <!--span class="form-label">Pick-up Date</span-->
+                                                            
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                
+                                                                <select class="form-control " id="v-name3"  name="v-name3" placeholder="Vechile Name" required>
+                                                                    <option >Hatchback</option>
+                                                                    <option>Sedan</option>
+                                                                    <option>SUV</option>
+                                                                    <option>MUV</option>
+                                                                
+                                                                </select>
+                                                            <span class="select-arrow"></span>
+                                                                <!--span class="form-label">Vechile Name</span-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <select class="form-control" id="v-type3" name="v-type3" Vechile Name="Vechile Type" required>
+                                                                   
+                                                                    <option>Manaual</option>
+                                                                    <option>Both</option>
+                                                                </select>
+                                                                <span class="select-arrow"></span>
+                                                                <!--span class="form-label">Vechile Type</span-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-btn">
+                                                                <button class="submit-btn" id="book" name="one-book">Book Now</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-btn">
+                                                                <button class="submit-btn" id="pick" name="one-pick">Pick-Up Now</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="datetime-local" id="date3"  required>
-                                            <input type="checkbox" name="" id="" value="pickup">
-                                            <span class="form-label">Pick-up Date</span>
-                                        
-                                        </div>
-                                    </div>
-                                    <!--div class="col-md-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="time" id="time3" required>
-                                            <span class="form-label">Pick-up Time</span>
-                                        </div>
-                                    </div-->
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            
-                                            <select class="form-control" id="v-name3" required>
-                                                <option >--Select--</option>
-                                                <option>Business class</option>
-                                                <option>First class</option>
-                                            </select>
-                                            <!--input class="form-control"list="Vechile" name="myBrowser"id="v-name3" required />
-                                            <datalist id="Vechile">
-                                              <option value="HatchBack"></option>
-                                              <option value="Sedan"></option>
-                                              <option value="SUV"></option>
-                                              <option value="Luxury"></option>
-                                            </datalist-->
-                                            <span class="select-arrow"></span>
-                                            <span class="form-label">Vechile Name</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select class="form-control" id="v-type3" required>
-                                                <option deselected>-Select-</option>
-                                                <option>Manaual</option>
-                                                <option>Both</option>
-                                            </select>
-                                            <!--input class="form-control"list="vehicle-type" name="myBrowser"id="v-type3" required />
-                                            <datalist id="vehicle-type">
-                                              <option value="Manual"></option>
-                                              <option value="Automatic"></option>
-                                            </datalist-->
-                                            <span class="select-arrow"></span>
-                                            <span class="form-label">Vechile Type</span>
-                                        </div>
                                     </div>
                                 </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-btn">
-                                            <button class="submit-btn" id="book">Book Now</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-btn">
-                                            <button class="submit-btn" id="pick">Pick-Up Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                           
-                       </div>
-                   </div>
-               </div>
-           </div-->
-
+                            </div>
+                        </div>
+                            </div>
+                       <!--/div-->
+                    </div>
+                </div>
            </div>
 
-         </div>
-
-    </div>
    <!--------------------------- Round Trip ------------------------------------------->
   
    <div class="modal fade" id="book2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
