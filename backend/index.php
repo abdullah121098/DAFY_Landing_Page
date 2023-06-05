@@ -163,7 +163,6 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -243,46 +242,45 @@
                       <tr>
                         <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
                         <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
-                            <span class="fw-normal">Web Designer</span>                          
+                            <h6 class="fw-semibold mb-1" id="b-name">Sunil Joshi</h6>                     
                         </td>
                         <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">09876543211</p>
+                          <p class="mb-0 fw-normal" id="b-phone">09876543211</p>
                         </td>
                         <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Sunil@gmail.com</p>
+                          <p class="mb-0 fw-normal" id="b-mail">Sunil@gmail.com</p>
                         </td>
                         <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">current-loc</p>
+                          <p class="mb-0 fw-normal" id="b-pick">current-loc</p>
                         </td>
                         <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">drop-loc</p>
+                          <p class="mb-0 fw-normal" id="b-drop">drop-loc</p>
                         </td>
                         <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">01-06-23 & 10:40am</p>
+                          <p class="mb-0 fw-normal" id="b-time">01-06-23 & 10:40am</p>
                         </td>
                         <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">SUV</p>
+                          <p class="mb-0 fw-normal" id="b-v-name">SUV</p>
                         </td>
                         <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Automatic</p>
+                          <p class="mb-0 fw-normal" id="b-v-type">Automatic</p>
                         </td>
+                        <!-- table row data -->
                         <td class="border-bottom-0">
                           <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-warning rounded-3 fw-semibold">Waiting</span>
+                            <label class="badge bg-warning rounded-3 fw-semibold" id="status"></label>
                           </div>
                         </td>
                         <td class="border-bottom-0">
-                          <select name="" id=""class="badge bg-primary fw-semibold">
-                            <option value="">Confirm</option>
-                            <option value="">Driver Assigned</option>
-                            <option value="">Drive Started</option>
-                            <option value="">Completed</option>
-                            <option value="">Cancel</option>
+                          <select name="" id="action" class="badge bg-primary fw-semibold" onchange="color(this)">
+                            <option value="1">Confirm</option>
+                            <option value="2">Driver Assigned</option>
+                            <option value="3">Drive Started</option>
+                            <option value="4">Completed</option>
+                            <option value="5">Cancel</option>
                           </select>
                         </td>
                       </tr> 
-                                        
                     </tbody>
                   </table>
                 </div>
@@ -290,7 +288,39 @@
             </div>
           </div>
         </div>
-   
+<script>
+  $(document).ready(function color() {
+    // Handle dropdown value change event
+    $('#action').change(function() {
+      var selectedValue = $(this).val(); // Get the selected value
+
+      // Update status value based on the selected value
+      switch (selectedValue) {
+        case '1':
+          $('#status').text('Confirm');
+          $('#status').removeClass().addClass('badge bg-primary rounded-3 fw-semibold');
+          break;
+        case '2':
+          $('#status').text('Driver Assigned');
+          $('#status').removeClass().addClass('badge bg-info rounded-3 fw-semibold');
+          break;
+        case '3':
+          $('#status').text('Drive Started');
+          $('#status').removeClass().addClass('badge bg-warning rounded-3 fw-semibold');
+          break;
+        case '4':
+          $('#status').text('Completed');
+          $('#status').removeClass().addClass('badge bg-success rounded-3 fw-semibold');
+          break;
+        case '5':
+          $('#status').text('Cancel');
+          $('#status').removeClass().addClass('badge bg-danger rounded-3 fw-semibold');
+          break;
+      }
+    });
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <!-- ============== ==================== Pending Start- ======================================================================= -->
         <!--  Row 2 -->
         <div class="row">
@@ -464,7 +494,7 @@
             </div>
           </div>
         </div>
-
+ 
         <!-- ================================================== Footer  =======================================-->
         <div class="py-6 px-6 text-center">
             <p class="mb-0 fs-4"> &copy; <a class="fw-medium" href="#">2023</a>, All Right Reserved.</p>
