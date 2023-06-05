@@ -1706,6 +1706,109 @@
                     $("#"+$(this).val()).fadeIn(700)
                 }).change();
             });</script>
+   <!-- <script>
+        function showFormSection(element) {
+            var selectedType = element.value;
+            $(".data1").hide();
+            $("#" + selectedType).show();
+        }
+    </script> -->
+
+<!-- <script>
+    $(document).ready(function changevalue() {
+        // Initially hide all data sections
+        $(".data1").hide();
+        $("#date3").hide();
+        $("#drop3").show();
+
+        // Show the appropriate data section based on the selected value in the "Type" dropdown
+        $("#b-type3").change(function changevalue() {
+            var selectedType = $(this).val();
+            $(".data1").hide();
+            $("#" + selectedType).show();
+
+            // Reset the form when the type changes
+            $("#send")[0].reset();
+        });
+
+        // Show or hide elements based on the selected options
+        $("#b-type3, #t-type3").change(function changevalue() {
+            var selectedType = $("#b-type3").val();
+            var selectedRideType = $("#t-type3").val();
+
+            // Show all elements if b-type3 is n-one and t-type3 is i-one
+            if (selectedType === "n-one" && selectedRideType === "i-one") {
+                $("#date3").show();
+                $("#drop3").show();
+            }
+            // Hide date and drop3 if b-type3 is n-two and t-type3 is i-one
+            else if (selectedType === "n-two" && selectedRideType === "i-one") {
+                $("#date3").show();
+                $("#drop3").hide();
+            }
+            // Hide date, drop3, and auto-select current datetime if t-type3 is i-two
+            else if (selectedRideType === "i-two") {
+                $("#date3").hide();
+                $("#drop3").hide();
+
+                var currentDate = new Date().toISOString().slice(0, 16);
+                $("#date3").val(currentDate);
+            }
+        });
+    });
+</script> -->
+
+    <!-- <script>
+            $(document).ready(function changevalue() {
+                  // Initially hide all data sections
+                    $(".data1").hide();
+
+                    //     Show the appropriate data section based on the selected value in the "Type" dropdown
+                    $("#b-type3").change(function changevalue() {
+                        var selectedType = $(this).val();
+                        $(".data1").hide();
+                        $("#" + selectedType).show();
+                       
+                    });
+
+             // Show specific elements when "n-one" and "i-two" are selected
+                $("#b-type3, #t-type3").change(function changevalue() {
+                    var selectedType = $("#b-type3").val();
+                    var selectedRideType = $("#t-type3").val();
+                    $(".data1").hide();
+                    if (selectedType === "n-one") {
+                        if (selectedRideType === "i-one") {
+                          $("#pick3,#drop3, #v-name3, #v-type3, #book, #date3").show();
+                        } else {
+                            $("#date3").hide();
+                        }
+                    } else if (selectedType === "n-two") {
+                        if (selectedRideType === "i-one") {
+                            $("#pick3, #v-name3, #v-type3, #book, #date3").show();
+                        } else {
+                            $("#pick3,#drop3, #v-name3, #v-type3, #book, #date3").hide();
+                        }
+                    } else if (selectedType === "n-three") {
+                        if (selectedRideType === "i-one") {
+                            $("#pick3, #v-name3, #v-type3, #book, #date3").show();
+                        } else {
+                            $("#pick3, #v-name3, #v-type3, #book, #date3").hide();
+                        }
+                    }
+                });
+
+                // Auto-select current date and time when "n-one" and "i-two" are selected
+                $("#t-type3").change(function() {
+                    var selectedType = $("#b-type3").val();
+                    var selectedRideType = $(this).val();
+
+                    if (selectedType === "n-one" && selectedRideType === "i-two") {
+                        var currentDate = new Date().toISOString().slice(0, 16);
+                        $("#date3").val(currentDate);
+                    }
+                });
+            });
+    </script>    -->
 
    <!------------------ Health and Wealth ---------------------------------->
 
