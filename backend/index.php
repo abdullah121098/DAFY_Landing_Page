@@ -268,11 +268,12 @@
                         <!-- table row data -->
                         <td class="border-bottom-0">
                           <div class="d-flex align-items-center gap-2">
-                            <label class="badge bg-warning rounded-3 fw-semibold" id="status"></label>
+                            <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res"></label>
                           </div>
                         </td>
-                        <td class="border-bottom-0">
-                          <select name="" id="action" class="badge bg-primary fw-semibold" onchange="color(this)">
+                        <td class="border-bottom-0" >
+                          <select name="" id="sel"class="badge bg-primary fw-semibold">
+                            <option value="" selected disabled>Select</option>
                             <option value="1">Confirm</option>
                             <option value="2">Driver Assigned</option>
                             <option value="3">Drive Started</option>
@@ -288,39 +289,15 @@
             </div>
           </div>
         </div>
-<script>
-  $(document).ready(function color() {
-    // Handle dropdown value change event
-    $('#action').change(function() {
-      var selectedValue = $(this).val(); // Get the selected value
-
-      // Update status value based on the selected value
-      switch (selectedValue) {
-        case '1':
-          $('#status').text('Confirm');
-          $('#status').removeClass().addClass('badge bg-primary rounded-3 fw-semibold');
-          break;
-        case '2':
-          $('#status').text('Driver Assigned');
-          $('#status').removeClass().addClass('badge bg-info rounded-3 fw-semibold');
-          break;
-        case '3':
-          $('#status').text('Drive Started');
-          $('#status').removeClass().addClass('badge bg-warning rounded-3 fw-semibold');
-          break;
-        case '4':
-          $('#status').text('Completed');
-          $('#status').removeClass().addClass('badge bg-success rounded-3 fw-semibold');
-          break;
-        case '5':
-          $('#status').text('Cancel');
-          $('#status').removeClass().addClass('badge bg-danger rounded-3 fw-semibold');
-          break;
-      }
-    });
-  });
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+          <script>
+            let selection =document.querySelector('#sel');
+            let result=document.querySelector('#res');
+            selection.addEventListener('change',()=>{
+                result.innerText=selection.options[selection.selectedIndex].text;
+                console.log(selection.selectedIndex);
+            });
+          </script>
       <!-- ============== ==================== Pending Start- ======================================================================= -->
         <!--  Row 2 -->
         <div class="row">
