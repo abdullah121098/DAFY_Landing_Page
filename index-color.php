@@ -45,7 +45,7 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top p-0 m-0 w-100" id="navbar"  style="background-color:silver;">
+        <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top p-0 m-0 w-100" id="navbar"  style="background-color:silver;">
             <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-3 m-0">
                 <img src="assert/img/logo/dafy-logo-1.png" style="width:25%;" alt="icon" srcset="">
             </a>
@@ -140,7 +140,7 @@
         </nav> -->
 
     <!-- Navbar End -->
-
+   
     <!----------------------------- slider Start ------------------------------------------------>
     <!-- Carousel Start -->
 
@@ -301,29 +301,29 @@
 
     <div class="container-fluid px-0 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="w-100" src="assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image" style="height: 100%;">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row justify-content-end">
-                                    <div class="col-lg-7 text-end col-10 ">
-                                        <p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
-                                        <strong>Dafy Online Service</strong>
-                                        </p>
-                                        <h1 class="display-1 text-white mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
-                                            Most reliable and economical driver on demand</h1>  
-                                        <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
-                                        data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
-                                        <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                            Read More</a>
-                                </div>
+            <div class="carousel-inner" style="height:100%;">
+                <div class="carousel-item active">
+                    <img class="w-100" src="assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-end">
+                                <div class="col-lg-7 text-end col-10 ">
+                                    <p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
+                                    <strong>Dafy Online Service</strong>
+                                    </p>
+                                    <h1 class="display-1 text-white mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
+                                        Most reliable and economical driver on demand</h1>  
+                                    <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
+                                    data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
+                                    <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
+                                        Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInLeft" src="assert/img/slider/your-car-our-driver.jpg" alt="Image" style="height: 100%;">
+                    <img class="w-100 animated slideInLeft" src="assert/img/slider/your-car-our-driver.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row  justify-content-end">
@@ -343,7 +343,7 @@
                 </div>
                 <!-- Additional Slider items -->
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInRight" src="assert/img/slider/navigation.jpg" alt="Image" style="height: 100%;">
+                    <img class="w-100 animated slideInRight" src="assert/img/slider/navigation.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -360,7 +360,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInLeft" src="assert/img/slider/luxury-car3.png" alt="Image" style="height: 100%;">
+                    <img class="w-100 animated slideInLeft" src="assert/img/slider/luxury-car3.png" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -380,7 +380,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="assert/img/slider/Dafy-Banner-03-1.jpg" alt="Image" style="height: 100%;">
+                    <img class="w-100" src="assert/img/slider/Dafy-Banner-03-1.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -397,7 +397,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInRight" src="assert/img/slider/stan.jpg" alt="Image" style="height: 100%;">
+                    <img class="w-100 animated slideInRight" src="assert/img/slider/stan.jpg" alt="Image" >
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -419,7 +419,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInLeft" src="assert/img/slider/8.png" alt="Image" style="height: 100%;">
+                    <img class="w-100 animated slideInLeft" src="assert/img/slider/8.png" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -696,9 +696,8 @@
                                 </button>
                             </div>
                         </div>
-        
                         <!-- One-side Ride -->
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 ">
                             <div class="tab-content w-100">
                                 <div class="tab-pane fade show active" id="tab-pane-1" >
                                     <div class="row g-4" >
@@ -708,12 +707,17 @@
                                                     style="object-fit: cover; border-radius: 50% 0 50% 0 ;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6" style="color:wheat;">
-                                            <h3 class="mb-3 text-primary">One-Side Service</h3>
-                                            <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the hustle of driving</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> No more driving in heavy traffic and locating a parking spot</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Hire drivers for airport pickup or drop-off services</p>
-                                            <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                            
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.8s" style="color:wheat;" >
+                                            <div class="collapsed-content d-none d-lg-block">
+                                                <h3 class="mb-3 text-primary">One-Side Service</h3>
+                                                <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the hustle of driving</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> No more driving in heavy traffic and locating a parking spot</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Hire drivers for airport pickup or drop-off services</p>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                            </div>
+                                            <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
+                                            <input type="checkbox" class=" d-lg-none .d-xl-block btn btn-link read-more btn-warning w-100" id="read-more">  
                                         </div>
                                     </div>
                                 </div>
@@ -727,13 +731,18 @@
                                                     style="object-fit: cover;border-radius: 0 50% 0 50%  ;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6" style="color:wheat;">
-                                            <h3 class="mb-3 text-primary">Round-Trip Service</h3>
-                                            <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to commute your vehicle.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Simply get around in town for midnight cravings, shopping, and night parties.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Make a quick stop at any stores/pharmacies on your rides</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> No more delays on your meeting schedules</p>
-                                            <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.8s" style="color:wheat;">
+                                            <div class="collapsed-content d-none d-lg-block">
+                                                <h3 class="mb-3 text-primary">Round-Trip Service</h3>
+                                                <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to commute your vehicle.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Simply get around in town for midnight cravings, shopping, and night parties.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Make a quick stop at any stores/pharmacies on your rides</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> No more delays on your meeting schedules</p>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                            </div>
+                                             <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
+                                             <input type="checkbox" class=" d-lg-none .d-xl-block btn btn-link read-more  py-3 px-10" id="read-more">  
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -747,12 +756,16 @@
                                                     style="object-fit: cover; border-radius:50% 30% 70% 40%;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6" style="color:wheat;">
-                                            <h3 class="mb-3 text-primary">Hospital Assistance</h3>
-                                            <p><i class="fa fa-check text-success me-3"></i> You can trust that your loved ones are in capable and caring hands.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> We prioritize the physical and emotional well-being of seniors.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Our experienced drivers are here to provide a comfortable and supportive environment during their hospitalization.</p>
-                                            <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.8s" style="color:wheat;">
+                                            <div class="collapsed-content d-none d-lg-block">
+                                                <h3 class="mb-3 text-primary">Hospital Assistance</h3>
+                                                <p><i class="fa fa-check text-success me-3"></i> You can trust that your loved ones are in capable and caring hands.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> We prioritize the physical and emotional well-being of seniors.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Our experienced drivers are here to provide a comfortable and supportive environment during their hospitalization.</p>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                            </div>
+                                             <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
+                                             <input type="checkbox" class=" d-lg-none .d-xl-block btn btn-link read-more  py-3 px-10" id="read-more">  
                                         </div>
                                     </div>
                                 </div>
@@ -762,12 +775,112 @@
                 </div>
             </div>
         </section>
-        
+        <!-- <section id="service-type"><br><br>
+            <div class="container-xxl service py-5">
+                <div class="container">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <h1 class="mb-5">Explore Our Services</h1>
+                    </div>
+                    <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-lg-4" >
+                            <div class="nav w-100 nav-pills me-4 p-0">
+                                <button class="nav-link w-100 d-flex align-items-center p-3 mb-3 active" data-bs-toggle="pill"
+                                    data-bs-target="#tab-pane-1" type="button" style=" border-radius: 50% 50% 0 0;">
+                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <h4 class="m-0">One-Side Service</h4>
+                                </button>
+                                <button class="nav-link w-100 d-flex align-items-center p-3 mb-3" data-bs-toggle="pill"
+                                    data-bs-target="#tab-pane-2" type="button" style=" border-radius: 0 0 0 0;">
+                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <h4 class="m-0">Round-Trip Service</h4>
+                                </button>
+                                <button class="nav-link w-100 d-flex align-items-center p-4 mb-4" data-bs-toggle="pill"
+                                    data-bs-target="#tab-pane-3" type="button" style=" border-radius: 0 0 50% 50% ;">
+                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <h4 class="m-0">Hospital Assistance</h4>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- One-side Ride ->
+                        <div class="col-lg-8">
+                            <div class="tab-content w-100">
+                                <div class="tab-pane fade show active" id="tab-pane-1">
+                                    <div class="row g-4">
+                                        <div class="col-md-6" style="min-height: 350px;">
+                                            <div class="position-relative h-100">
+                                                <img class="position-absolute img-fluid" src="assert/img/slider/Dafy-Single-Trip.gif"
+                                                    style="object-fit: cover; border-radius: 50% 0 50% 0 ;" alt="">
+                                            </div>
+                                        </div>
+                                            <div class="col-md-6 wow fadeInRight" data-wow-delay="0.8s" style="color:wheat;" id="one-side">
+                                            
+                                                    
+                                                    <div class="collapsed-content d-none d-lg-block">
+                                                        <h3 class="mb-3 text-primary">One-Side Service</h3>
+                                                        <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the hustle of driving</p>
+                                                        <p><i class="fa fa-check text-success me-3"></i> No more driving in heavy traffic and locating a parking spot</p>
+                                                        <p><i class="fa fa-check text-success me-3"></i> Hire drivers for airport pickup or drop-off services</p>
+                                                        </div>
+                                                <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> ->
+                                                <input type="checkbox" class="btn btn-link read-more  py-3 px-5" id="read-more">
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        $('.read-more').on('click', function () {
+                            var content = $(this).siblings('.collapsed-content');
+                            content.toggleClass('d-none d-lg-block');
+
+                            var icon = $(this).find('.fa');
+                            icon.toggleClass('fa-angle-down fa-angle-up');
+                        }); });
+                </script>
+                <style>
+                     .read-more{
+                        appearance: none;
+                        border: transparent;
+                        padding: .5em;
+                        border-radius: .25em;
+                        cursor: pointer;
+                        margin-top: 1rem;
+                        
+                    }
+                    .read-more:hover{
+                        background-color:none;
+                        grid-auto-rows: auto;
+                        
+                    }
+                    .read-more::before{
+                        content: "↓";
+                    }
+                    .read-more:checked::before{
+                        content: "↑";
+                    }
+                </style>
+
+
+
+
+
+
+
+
+
     <!--  About Service End-->
     <!--------------------------------------------------- Service End ------------------------------------->
-
-
-
     <!--------------------------------------------- Features Start ------------------------------------------------->
  
      <section id="feature"> <br><br>
@@ -778,7 +891,7 @@
                     <!--p class="fs-5 fw-medium" style="color: #ffae00;">Features Service</p-->
                     <h1 class="display-5 mb-5">   Explore Our Features </h1>
                 </div>
-                <div class="row g-0 feature-row"  style="background-image: url('assert/img/slider/banner4.png'); animation: fadeOut 5s 1; color:#ffff">
+                <div class="row g-0 feature-row"  style="background-image: url('assert/img/slider/banner4.png'); animation: fade-in-out 5s infinite; color:#ffff">
                     <div class="col-md-6 col-lg-3 wow fadeIn animated " data-wow-delay="0.1s" >
                         <div class="feature-item border h-100 p-5 " style="animation: fadeIn  15s infinite;">
                             <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">

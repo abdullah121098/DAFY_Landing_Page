@@ -42,9 +42,9 @@
     <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0 w-100" id="navbar">
             <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-1 m-0">
-                <img src="assert/img/logo/dafy.jpeg" style="height: 10%; width: 6%;" alt="icon" srcset="">
+                <img src="assert/img/logo/dafy.jpeg" style="width: 5%;" alt="icon" srcset="">
             </a>
-            <button type="button" class="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
@@ -227,14 +227,14 @@
                     </div>
                 </div>
                 <!-- Additional Slider End -->
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                </button> -->
+                </button>
             </div>
         </div>
     <!--------------------------------------------------  Slider End       ----------------------------------->
@@ -249,7 +249,7 @@
                 <div class="row g-4"> 
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item position-relative h-100">
-                            <div class="service-text rounded p-5"style="font-family: 'Lato', sans-serif; animation: fadeIn 5s 1;">
+                            <div class="service-text rounded p-5"style="font-family: 'Lato', sans-serif;">
                                 <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 124px; height: 124px;">
                                     <img class="img-fluid w-100 h-100" src="assert/img/icon/wheels3.png" alt="Icon" >
                                 </div>
@@ -295,16 +295,15 @@
     </section>
     <!-- ================================================ Service End ========================================== -->
     <!-- =====================================Explore Service Start =================================================== -->
-          
-        <section id="service-type"><br><br>
+    <section id="service-type"><br><br>
             <div class="container-xxl service py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
                         <h1 class="mb-5">Explore Our Services</h1>
                     </div>
                     <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="col-lg-4" >
-                            <div class="nav w-100 nav-pills me-4 p-0 rounded">
+                        <div class="col-lg-4" >
+                            <div class="nav w-100 nav-pills me-4 p-0">
                                 <button class="nav-link w-100 d-flex align-items-center p-3 mb-3 active" data-bs-toggle="pill"
                                     data-bs-target="#tab-pane-1" type="button" style=" border-radius: 50% 50% 0 0;">
                                     <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
@@ -322,9 +321,8 @@
                                 </button>
                             </div>
                         </div>
-        
-                          <!-- One-side Ride -->
-                          <div class="col-lg-8">
+                        <!-- One-side Ride -->
+                        <div class="col-lg-8 ">
                             <div class="tab-content w-100">
                                 <div class="tab-pane fade show active" id="tab-pane-1" >
                                     <div class="row g-4" >
@@ -334,12 +332,17 @@
                                                     style="object-fit: cover; border-radius: 50% 0 50% 0 ;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <h3 class="mb-3 text-primary">One-Side Service</h3>
-                                            <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the hustle of driving</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> No more driving in heavy traffic and locating a parking spot</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Hire drivers for airport pickup or drop-off services</p>
-                                            <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                            
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s" >
+                                            <div class="collapsed-content d-none d-lg-block">
+                                                <h3 class="mb-3 text-primary">One-Side Service</h3>
+                                                <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the hustle of driving</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> No more driving in heavy traffic and locating a parking spot</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Hire drivers for airport pickup or drop-off services</p>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                            </div>
+                                            <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
+                                            <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100  py-3 px-10" id="read-more">  
                                         </div>
                                     </div>
                                 </div>
@@ -353,13 +356,18 @@
                                                     style="object-fit: cover;border-radius: 0 50% 0 50%  ;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <h3 class="mb-3 text-primary">Round-Trip Service</h3>
-                                            <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to commute your vehicle.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Simply get around in town for midnight cravings, shopping, and night parties.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Make a quick stop at any stores/pharmacies on your rides</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> No more delays on your meeting schedules</p>
-                                            <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+                                            <div class="collapsed-content d-none d-lg-block">
+                                                <h3 class="mb-3 text-primary">Round-Trip Service</h3>
+                                                <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to commute your vehicle.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Simply get around in town for midnight cravings, shopping, and night parties.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Make a quick stop at any stores/pharmacies on your rides</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> No more delays on your meeting schedules</p>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                            </div>
+                                             <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
+                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">  
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -373,12 +381,16 @@
                                                     style="object-fit: cover; border-radius:50% 30% 70% 40%;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <h3 class="mb-3 text-primary">Hospital Assistance</h3>
-                                            <p><i class="fa fa-check text-success me-3"></i> You can trust that your loved ones are in capable and caring hands.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> We prioritize the physical and emotional well-being of seniors.</p>
-                                            <p><i class="fa fa-check text-success me-3"></i> Our experienced drivers are here to provide a comfortable and supportive environment during their hospitalization.</p>
-                                            <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+                                            <div class="collapsed-content d-none d-lg-block">
+                                                <h3 class="mb-3 text-primary">Hospital Assistance</h3>
+                                                <p><i class="fa fa-check text-success me-3"></i> You can trust that your loved ones are in capable and caring hands.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> We prioritize the physical and emotional well-being of seniors.</p>
+                                                <p><i class="fa fa-check text-success me-3"></i> Our experienced drivers are here to provide a comfortable and supportive environment during their hospitalization.</p>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                            </div>
+                                             <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
+                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">
                                         </div>
                                     </div>
                                 </div>
@@ -388,6 +400,39 @@
                 </div>
             </div>
         </section>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        $('.read-more').on('click', function () {
+                            var content = $(this).siblings('.collapsed-content');
+                            content.toggleClass('d-none d-lg-block');
+
+                            var icon = $(this).find('.fa');
+                            icon.toggleClass('fa-angle-down fa-angle-up');
+                        }); });
+                </script>
+                <style>
+                     .read-more{
+                        appearance: none;
+                        border: transparent;
+                        padding: .5em;
+                        border-radius: .25em;
+                        cursor: pointer;
+                        margin-top: 1rem;
+                        
+                    }
+                    .read-more:hover{
+                        background-color:none;
+                        grid-auto-rows: auto;
+                        
+                    }
+                    .read-more::before{
+                        content: "↓ more";
+                    }
+                    .read-more:checked::before{
+                        content: "↑ less";
+                    }
+                </style>
     <!--------------------------------------------------- Service End ------------------------------------->
     <!--------------------------------------------- Features Start ------------------------------------------------->
  
@@ -395,11 +440,11 @@
         <div class="container-xxl py-5">
             
             <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width: 500px;">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width:500px; max-height:100px;">
                     <!--p class="fs-5 fw-medium" style="color: #ffae00;">Features Service</p-->
                     <h1 class="display-5 mb-5">Explore Our Features</h1>
                 </div>
-                <div class="row g-0 feature-row"  style="background-image: url('assert/img/slider/assistancetrip.jpeg'); height:10%; animation: fadeIn 5s 1;">
+                <div class="row g-0 feature-row"  style="background-image: url('assert/img/logo/dafy-banner.png'); height:fit-content; animation: fade-in-out 5s 3;">
                     <div class="col-md-6 col-lg-3 wow fadeIn animated " data-wow-delay="0.1s" >
                         <div class="feature-item border h-100 p-5 " style="animation: fadeIn  5s 2;">
                             <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
@@ -1113,9 +1158,14 @@
                         $("#b-type3,#t-type3").change(function() {
                             var selectedType = $("#b-type3").val();
                             var selectedRide = $("#t-type3").val();
-                            if (selectedType === "n-one" && selectedRide ==="i-one"){
+                            if (selectedType === "n-one"){ 
+                                if( selectedRide ==="i-one"){
                                 $(".data1").hide();
                                 $("#" + selectedType).show();
+                            }else{
+                                $(".data1").hide();
+                                $("#date3, #drop3, #pick3"+ selectedRide).show();
+                            }
                             }
                             else if (selectedType === "n-two" && selectedRide ==="i-one"){
                                 $(".data1").hide();
@@ -1126,8 +1176,7 @@
                                 $("#" + selectedType).show();
                             }
                             else{
-                                $(".data1").hide();
-                                $(".data1"+"#pick3,#v-name3,#v-type3" + selectedType).show();
+                                
                             
                             }
                         });

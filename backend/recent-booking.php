@@ -44,7 +44,7 @@
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu"></span>
             </li>
-            <li class="sidebar-item">
+            <li class="sidebar-item active">
               <a class="sidebar-link" href="recent-booking.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
@@ -267,18 +267,20 @@
                         <td class="border-bottom-0">
                           <p class="mb-0 fw-normal">Automatic</p>
                         </td>
-                        <td class="border-bottom-0">
+                           <!-- table row data -->
+                           <td class="border-bottom-0">
                           <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-warning rounded-3 fw-semibold">Waiting</span>
+                            <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res"></label>
                           </div>
                         </td>
-                        <td class="border-bottom-0">
-                          <select name="" id=""class="badge bg-primary fw-semibold">
-                            <option value="">Confirm</option>
-                            <option value="">Driver Assigned</option>
-                            <option value="">Drive Started</option>
-                            <option value="">Completed</option>
-                            <option value="">Cancel</option>
+                        <td class="border-bottom-0" >
+                          <select name="" id="sel"class="badge bg-primary fw-semibold">
+                            <option value="" selected disabled>Select</option>
+                            <option value="1">Confirm</option>
+                            <option value="2">Driver Assigned</option>
+                            <option value="3">Drive Started</option>
+                            <option value="4">Completed</option>
+                            <option value="5">Cancel</option>
                           </select>
                         </td>
                       </tr> 
@@ -290,6 +292,15 @@
             </div>
           </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+          <script>
+            let selection =document.querySelector('#sel');
+            let result=document.querySelector('#res');
+            selection.addEventListener('change',()=>{
+                result.innerText=selection.options[selection.selectedIndex].text;
+                console.log(selection.selectedIndex);
+            });
+          </script>
       
 
 
