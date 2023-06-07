@@ -10,9 +10,11 @@
 </head>
 
 <body>
+  
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
+    
     <!-- Sidebar Start -->
     <aside class="left-sidebar">
       <!-- Sidebar scroll-->
@@ -68,7 +70,7 @@
                 <span class="hide-menu">Completed-Booking</span>
               </a>
             </li>
-            <!--li class="sidebar-item">
+            <li class="sidebar-item">
               <a class="sidebar-link" href="./ui-forms.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-file-description"></i>
@@ -83,7 +85,7 @@
                 </span>
                 <span class="hide-menu">Typography</span>
               </a>
-            </li-->
+            </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">AUTH</span>
@@ -123,19 +125,19 @@
                 </span>
                 <span class="hide-menu">Sample Page</span>
               </a>
-            </li-->
+            </li>-->
           </ul>
-          <!--div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+          <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
             <div class="d-flex">
-              <div class="unlimited-access-title me-3">
+              <!--div class="unlimited-access-title me-3">
                 <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
                 <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" class="btn btn-primary fs-2 fw-semibold lh-sm">Buy Pro</a>
               </div>
               <div class="unlimited-access-img">
                 <img src="assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
-              </div>
+              </div-->
             </div>
-          </div-->
+          </div>
         </nav>
         <!-- End Sidebar navigation -->
       </div>
@@ -146,7 +148,7 @@
     <!--  Main wrapper -->
     <div class="body-wrapper">
       <!--  Header Start -->
-      <header class="app-header">
+      <!-- <header class="app-header">
         <nav class="navbar navbar-expand-lg navbar-light">
           <ul class="navbar-nav">
             <li class="nav-item d-block d-xl-none">
@@ -190,7 +192,7 @@
             </ul>
           </div>
         </nav>
-      </header>
+      </header> -->
       <!--  Header End -->
       <!-- ============== ==================== Main -Body Start- ======================================================================= -->
       <div class="container-fluid">
@@ -282,10 +284,10 @@
 
 
         <!-- ================================================== Footer  =======================================-->
-        <div class="py-6 px-6 text-center">
+         <div class="py-6 px-6 text-center">
             <p class="mb-0 fs-4"> &copy; <a class="fw-medium" href="#">2023</a>, All Right Reserved.</p>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
   <script src="assets/libs/jquery/dist/jquery.min.js"></script>

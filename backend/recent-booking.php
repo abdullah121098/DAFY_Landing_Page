@@ -13,9 +13,9 @@
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
-    <!-- Sidebar Start -->
+    <!-- Sidebar Start ->
     <aside class="left-sidebar">
-      <!-- Sidebar scroll-->
+      <!-- Sidebar scroll->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="./index.php" class="text-nowrap logo-img">
@@ -25,8 +25,8 @@
             <i class="ti ti-x fs-8"></i>
           </div>
         </div>
-        <!-- Sidebar navigation-->
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+        <!-- Sidebar navigation->
+        <!-- <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
@@ -67,7 +67,7 @@
                 </span>
                 <span class="hide-menu">Completed-Booking</span>
               </a>
-            </li>
+            </li> 
             <!--li class="sidebar-item">
               <a class="sidebar-link" href="./ui-forms.php" aria-expanded="false">
                 <span>
@@ -84,7 +84,7 @@
                 <span class="hide-menu">Typography</span>
               </a>
             </li-->
-            <li class="nav-small-cap">
+            <!-- <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">AUTH</span>
             </li>
@@ -115,7 +115,7 @@
                 </span>
                 <span class="hide-menu">History</span>
               </a>
-            </li>
+            </li> 
             <!--li class="sidebar-item">
               <a class="sidebar-link" href="./sample-page.php" aria-expanded="false">
                 <span>
@@ -123,7 +123,7 @@
                 </span>
                 <span class="hide-menu">Sample Page</span>
               </a>
-            </li-->
+            </li>
           </ul>
           <!--div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
             <div class="d-flex">
@@ -135,18 +135,18 @@
                 <img src="assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
               </div>
             </div>
-          </div-->
+          </div>
         </nav>
-        <!-- End Sidebar navigation -->
+        <!-- End Sidebar navigation ->
       </div>
-      <!-- End Sidebar scroll-->
+      <!-- End Sidebar scroll->
     </aside>
     <!--  Sidebar End -->
     <!--======================================================== ============== ============================================== ==========================-->
-    <!--  Main wrapper -->
+    <!--  Main wrapper ->
     <div class="body-wrapper">
       <!--  Header Start -->
-      <header class="app-header">
+      <!-- <header class="app-header">
         <nav class="navbar navbar-expand-lg navbar-light">
           <ul class="navbar-nav">
             <li class="nav-item d-block d-xl-none">
@@ -190,7 +190,7 @@
             </ul>
           </div>
         </nav>
-      </header>
+      </header> -->
       <!--  Header End -->
       <!-- ============== ==================== Main -Body Start- ======================================================================= -->
       <div class="container-fluid">
@@ -234,9 +234,13 @@
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Status</h6>
                         </th>
+                        <!-- <th class="border-bottom-0 data5">
+                          <h6 class="fw-semibold mb-0">Driver Name</h6>
+                        </th> -->
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Action</h6>
                         </th>
+                        
                       </tr>
                     </thead>
                     <tbody>
@@ -273,6 +277,16 @@
                             <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res"></label>
                           </div>
                         </td>
+                        <!-- <td class="border-bottom-0 data5" >
+                          <select name="" id=""class="badge bg-primary fw-semibold">
+                            <option value="" selected disabled>Select</option>
+                            <option value="a">Amal</option>
+                            <option value="b">jijo</option>
+                            <option value="c">Drive Started</option>
+                            <option value="d">siva</option>
+                            <option value="e">Cancel</option>
+                          </select>
+                        </td> -->
                         <td class="border-bottom-0" >
                           <select name="" id="sel"class="badge bg-primary fw-semibold">
                             <option value="" selected disabled>Select</option>
@@ -283,6 +297,7 @@
                             <option value="5">Cancel</option>
                           </select>
                         </td>
+                       
                       </tr> 
                                         
                     </tbody>
@@ -292,23 +307,38 @@
             </div>
           </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
           <script>
-            let selection =document.querySelector('#sel');
-            let result=document.querySelector('#res');
-            selection.addEventListener('change',()=>{
-                result.innerText=selection.options[selection.selectedIndex].text;
-                console.log(selection.selectedIndex);
-            });
-          </script>
-      
+                let selection =document.querySelector('#sel');
+                let result=document.querySelector('#res');
+                selection.addEventListener('change',()=>{
+                    result.innerText=selection.options[selection.selectedIndex].text;
+                    console.log(selection.selectedIndex);
+                });
+            </script>
+            <script>
+                  // $(document).ready(function() {
+                  //   // Initially hide all data sections
+                  //   $(".data5").hide();
+
+                  //   // Show the appropriate data section based on the selected value in the "Type" dropdown
+                  //   $("#sel").change(function() {
+                  //     var selectedType = $(this).val();
+                  //     $(".data5").hide();
+                      
+                  //     if (selectedType === "2") {
+                  //       $(".data5").show();
+                  //     }
+                  //   });
+                  // });
+            </script>
 
 
         <!-- ================================================== Footer  =======================================-->
-        <div class="py-6 px-6 text-center">
+        <!-- <div class="py-6 px-6 text-center">
             <p class="mb-0 fs-4"> &copy; <a class="fw-medium" href="#">2023</a>, All Right Reserved.</p>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
   <script src="assets/libs/jquery/dist/jquery.min.js"></script>
