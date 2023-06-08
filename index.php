@@ -89,152 +89,156 @@
     <!----------------------------- slider Start ------------------------------------------------>
         <div class="container-fluid px-0 mb-5">
             <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
+                
+                    <div class="carousel-inner">
+                        <!-- <form action="" method="post"> -->
                         <div class="carousel-item active">
-                            <img class="w-100" src="assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image" style="height: 100%;">
+                                <img class="w-100" src="assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image" style="height: 100%;">
+                                <div class="carousel-caption">
+                                    <div class="container">
+                                        <div class="row justify-content-end">
+                                            <div class="col-lg-7 text-end col-10 ">
+                                                <p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
+                                                <strong>Dafy Online Service</strong>
+                                                </p>
+                                                <h1 class="display-1 text-white mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
+                                                    Most reliable and economical perfessional driver on demand</h1>  
+                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
+                                                data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
+                                                <a href="#service-type" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
+                                                    Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                <!-- </form> -->
+                        <div class="carousel-item">
+                            <img class="w-100 animated slideInLeft" src="assert/img/slider/your-car-our-driver.jpg" alt="Image" style="height: 100%;">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row  justify-content-end">
+                                        <div class="col-lg-7 text-end col-10">
+                                            <!--p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
+                                                <strong>Dafy Online Service</strong></p-->
+                                            <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
+                                                Verified & Trained drivers for your car</h1>
+                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;"
+                                            data-bs-toggle="modal" data-bs-target="#book1">Book Now</a>
+                                            <a href="#feature" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
+                                                Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Slider items -->
+                        <!-- <div class="carousel-item">
+                            <img class="w-100 animated slideInRight" src="assert/img/slider/navigation.jpg" alt="Image" style="height: 100%;">
                             <div class="carousel-caption">
                                 <div class="container">
                                     <div class="row justify-content-end">
-                                        <div class="col-lg-7 text-end col-10 ">
-                                            <p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
-                                            <strong>Dafy Online Service</strong>
-                                            </p>
-                                            <h1 class="display-1 text-white mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
-                                                Most reliable and economical perfessional driver on demand</h1>  
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
-                                            data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
-                                            <a href="#service-type" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                                Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="carousel-item">
-                        <img class="w-100 animated slideInLeft" src="assert/img/slider/your-car-our-driver.jpg" alt="Image" style="height: 100%;">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row  justify-content-end">
-                                    <div class="col-lg-7 text-end col-10">
-                                        <!--p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
-                                            <strong>Dafy Online Service</strong></p->
-                                        <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                            Verified & Trained drivers for your car</h1>
-                                        <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;"
-                                        data-bs-toggle="modal" data-bs-target="#book1">Book Now</a>
-                                        <a href="#feature" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                            Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- Additional Slider items -->
-                    <!-- <div class="carousel-item">
-                        <img class="w-100 animated slideInRight" src="assert/img/slider/navigation.jpg" alt="Image" style="height: 100%;">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row justify-content-end">
-                                    <div class="col-lg-7 text-end col-10">
-                                    
-                                        <h1 class="display-1 text-white mb-4 animated slideInRight" style="font-family: 'Lato', sans-serif;">
-                                            Hire a Driver Anytime to anywhere!</h1>
+                                        <div class="col-lg-7 text-end col-10">
+                                        
+                                            <h1 class="display-1 text-white mb-4 animated slideInRight" style="font-family: 'Lato', sans-serif;">
+                                                Hire a Driver Anytime to anywhere!</h1>
+                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight"
+                                                data-bs-toggle="modal" data-bs-target="#book1">Book Now</a>
                                             <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight"
-                                            data-bs-toggle="modal" data-bs-target="#book1">Book Now</a>
-                                        <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight"
-                                            href="tel:917592933933">Call Now</a>
+                                                href="tel:917592933933">Call Now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="w-100 animated slideInLeft" src="assert/img/slider/luxury-car3.png" alt="Image" style="height: 100%;">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row justify-content-end">
-                                    <div class="col-lg-7 text-end">
-                                        <p class="fs-4 text-whiteanimated slideInLeft" style="font-family: 'Lato', sans-serif;font-size: medium;"><strong>Do DAFY</strong>
-                                            </p>
-                                        <h1 class="display-1 text-white mb-5 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
-                                            Get your private driver now</h1>
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft" 
-                                            data-bs-toggle="modal" data-bs-target="#book1">Book now</a>
-                                        <a href="#service"
-                                            class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft">Read
-                                            More</a>
+                        <div class="carousel-item">
+                            <img class="w-100 animated slideInLeft" src="assert/img/slider/luxury-car3.png" alt="Image" style="height: 100%;">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-end">
+                                        <div class="col-lg-7 text-end">
+                                            <p class="fs-4 text-whiteanimated slideInLeft" style="font-family: 'Lato', sans-serif;font-size: medium;"><strong>Do DAFY</strong>
+                                                </p>
+                                            <h1 class="display-1 text-white mb-5 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
+                                                Get your private driver now</h1>
+                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft" 
+                                                data-bs-toggle="modal" data-bs-target="#book1">Book now</a>
+                                            <a href="#service"
+                                                class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft">Read
+                                                More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="w-100" src="assert/img/slider/Dafy-Banner-03.png" alt="Image" style="height: 100%;">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row justify-content-end">
-                                    <div class="col-lg-7 text-bottom-end">
+                        <div class="carousel-item">
+                            <img class="w-100" src="assert/img/slider/Dafy-Banner-03.png" alt="Image" style="height: 100%;">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-end">
+                                        <div class="col-lg-7 text-bottom-end">
+                                            
+                                            <h1 class="display-1 text-white mb-5" style="font-family: 'Lato', sans-serif;">
+                                                Affordable Rides Premimum Experience</h1>
+                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4" data-bs-toggle="modal" data-bs-target="#book1">
+                                            Book now</a>
+                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 animated slideInRight" src="assert/img/slider/stan.jpg" alt="Image" style="height: 100%;">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-end">
+                                        <div class="col-lg-7 text-end">
                                         
-                                        <h1 class="display-1 text-white mb-5" style="font-family: 'Lato', sans-serif;">
-                                            Affordable Rides Premimum Experience</h1>
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4" data-bs-toggle="modal" data-bs-target="#book1">
-                                        Book now</a>
-                                        <a href="" class="btn btn-warning rounded-pill py-3 px-4">Read More</a>
+                                            <h1 class="display-1 text-white mb-5 animated slideInRight" style="font-family: 'Lato', sans-serif;">
+                                                Hassle Free Rides <br><span class="animated slideInRight text-primary">₹ 299*</span>
+                                            </h1>
+                                                <a href=""data-bs-toggle="modal" data-bs-target="#book1"
+                                                class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight">
+                                            Book now
+                                            </a>
+                                            <a href=""
+                                                class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight">Read
+                                                More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="carousel-item">
+                            <img class="w-100 animated slideInLeft" src="assert/img/slider/8.png" alt="Image" style="height: 100%;">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-end">
+                                        <div class="col-lg-7 text-end">
+                                            
+                                            <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
+                                                Hospital Emergencies</h1>
+                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft" 
+                                                data-bs-toggle="modal" data-bs-target="#book1">Book now</a>
+                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
+                                                href="tel:917592933933">Call Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
-                    <div class="carousel-item">
-                        <img class="w-100 animated slideInRight" src="assert/img/slider/stan.jpg" alt="Image" style="height: 100%;">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row justify-content-end">
-                                    <div class="col-lg-7 text-end">
-                                    
-                                        <h1 class="display-1 text-white mb-5 animated slideInRight" style="font-family: 'Lato', sans-serif;">
-                                            Hassle Free Rides <br><span class="animated slideInRight text-primary">₹ 299*</span>
-                                        </h1>
-                                            <a href=""data-bs-toggle="modal" data-bs-target="#book1"
-                                            class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight">
-                                        Book now
-                                        </a>
-                                        <a href=""
-                                            class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight">Read
-                                            More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="w-100 animated slideInLeft" src="assert/img/slider/8.png" alt="Image" style="height: 100%;">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row justify-content-end">
-                                    <div class="col-lg-7 text-end">
-                                        
-                                        <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                            Hospital Emergencies</h1>
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft" 
-                                            data-bs-toggle="modal" data-bs-target="#book1">Book now</a>
-                                        <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
-                                            href="tel:917592933933">Call Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
+                
                 <!-- Additional Slider End -->
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                </button> -->
+                </button>
             </div>
         </div>
     <!--------------------------------------------------  Slider End       ----------------------------------->
@@ -590,46 +594,48 @@
                 <section id="expert"><br><br>
                     <div class="container-xxl py-5" >
                         <div class="container">
-                            <div class="row g-5">
-                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <!--p class="fs-5 fw-medium text-warning">Get A Quote</p-->
-                                    <h1 class="display-5 mb-4">Need Our Expert Help? We're Here!</h1>
-                                    <p> Our user-friendly platform makes booking our services quick and easy. 
-                                        We are dedicated to provide convenient and reliable assistants to help you</p>
-                                    <p class="mb-4">Whether you need a reliable driver for your daily commute, 
-                                        a professional chauffeur for a special occasion, or 
-                                        assistance with transportation logistics, we have you covered.</p>
-                                    <a class="d-inline-flex align-items-center rounded overflow-hidden border border-warning"
-                                    href="tel:917592933933">
-                                        <span class="btn-lg-square bg-warning" style="width: 55px; height: 55px;">
-                                            <i class="fa fa-phone-alt text-white"></i>
-                                        </span>
-                                        <span class="fs-5 fw-medium mx-4" style="color:black;">+91 7592933933</span>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="mapouter">
-                                        <div class="gmap_canvas">
-                                            <iframe class="gmap_iframe" width="100%" frameborder="0" 
-                                            scrolling="no" marginheight="0" marginwidth="0" 
-                                            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=kochin&amp;
-                                            t=p&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="min-height: 450px; border:0;" 
-                                            allowfullscreen="" aria-hidden="false"
-                                            tabindex="0">
-                                        </iframe><a href="https://capcuttemplate.org/">
-                                            Capcut Template</a></div>
-                                            <style>.mapouter{position:relative;
-                                                text-align:right;
-                                                width:100%;height:400px;}
-                                                .gmap_canvas {overflow:hidden;
-                                                background:none!important;
-                                                width:100%;height:400px;}
-                                                .gmap_iframe {height:400px!important;}
-                                            </style>
+                            <form action="" method="post">
+                                <div class="row g-5">
+                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <!--p class="fs-5 fw-medium text-warning">Get A Quote</p-->
+                                        <h1 class="display-5 mb-4">Need Our Expert Help? We're Here!</h1>
+                                        <p> Our user-friendly platform makes booking our services quick and easy. 
+                                            We are dedicated to provide convenient and reliable assistants to help you</p>
+                                        <p class="mb-4">Whether you need a reliable driver for your daily commute, 
+                                            a professional chauffeur for a special occasion, or 
+                                            assistance with transportation logistics, we have you covered.</p>
+                                        <a class="d-inline-flex align-items-center rounded overflow-hidden border border-warning"
+                                        href="tel:917592933933">
+                                            <span class="btn-lg-square bg-warning" style="width: 55px; height: 55px;">
+                                                <i class="fa fa-phone-alt text-white"></i>
+                                            </span>
+                                            <span class="fs-5 fw-medium mx-4" style="color:black;">+91 7592933933</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="mapouter">
+                                            <div class="gmap_canvas">
+                                                <iframe class="gmap_iframe" width="100%" frameborder="0" 
+                                                scrolling="no" marginheight="0" marginwidth="0" 
+                                                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=kochin&amp;
+                                                t=p&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="min-height: 450px; border:0;" 
+                                                allowfullscreen="" aria-hidden="false"
+                                                tabindex="0">
+                                            </iframe><a href="https://capcuttemplate.org/">
+                                                Capcut Template</a></div>
+                                                <style>.mapouter{position:relative;
+                                                    text-align:right;
+                                                    width:100%;height:400px;}
+                                                    .gmap_canvas {overflow:hidden;
+                                                    background:none!important;
+                                                    width:100%;height:400px;}
+                                                    .gmap_iframe {height:400px!important;}
+                                                </style>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </section>
@@ -645,55 +651,58 @@
                         <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="project-item mb-5">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
+                        <!-- <form action="" method="post"> -->
+                            <div class="project-item mb-5">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <a class="d-block h5 text-center" href="">Manikandan Ak <br>
+                                    <span class="text-warning">CEO</span></a>
+                                </div>
                             </div>
-                            <div class="p-4">
-                                <a class="d-block h5 text-center" href="">Manikandan Ak <br>
-                                <span class="text-warning">CEO</span></a>
+                        <!-- </form> -->
+                            <div class="project-item mb-5">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="assert/img/team/team-2.jpg" alt="">
+                                    
+                                </div>
+                                <div class="p-4">
+                                    <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
+                                    <span class="text-warning">COO</span></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-item mb-5">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/team-2.jpg" alt="">
-                                
+                            <div class="project-item mb-5">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="assert/img/team/team-1.jpg" alt="">
+                                    
+                                </div>
+                                <div class="p-4">
+                                    <a class="d-block h5 text-center" href="">Jijo Louis <br>
+                                    <span class="text-warning">Human Resource's Head</span></a>
+                                </div>
                             </div>
-                            <div class="p-4">
-                                <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
-                                <span class="text-warning">COO</span></a>
+                            <div class="project-item mb-5">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="assert/img/team/account.jpg" alt="">
+                                    
+                                </div>
+                                <div class="p-4">
+                                    <a class="d-block h5 text-center" href="">Stephin Jose <br>
+                                    <span class="text-warning">Account's Head</span></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-item mb-5">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/team-1.jpg" alt="">
-                                
+                            <div class="project-item mb-5">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="assert/img/team/team-3.jpg" alt="">
+                                    
+                                </div>
+                                <div class="p-4">
+                                    <a class="d-block h5 text-center" href="">Josen Kuriakose <br>
+                                        <span class="text-warning">Operational's Head</span></a>
+                                </div>
                             </div>
-                            <div class="p-4">
-                                <a class="d-block h5 text-center" href="">Jijo Louis <br>
-                                <span class="text-warning">Human Resource's Head</span></a>
-                            </div>
-                        </div>
-                        <div class="project-item mb-5">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/account.jpg" alt="">
-                                
-                            </div>
-                            <div class="p-4">
-                                <a class="d-block h5 text-center" href="">Stephin Jose <br>
-                                <span class="text-warning">Account's Head</span></a>
-                            </div>
-                        </div>
-                        <div class="project-item mb-5">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/team-3.jpg" alt="">
-                                
-                            </div>
-                            <div class="p-4">
-                                <a class="d-block h5 text-center" href="">Josen Kuriakose <br>
-                                    <span class="text-warning">Operational's Head</span></a>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -710,7 +719,7 @@
                         <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
                     </div>
                     <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s" >
-                           
+                        <!-- <form action="" method="post"> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">SUJITH E R</h5>
                                 <p class="mb-3 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
@@ -723,6 +732,7 @@
                                 
 
                             </div>
+                        <!-- </form> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">ANANDHU S </h5>
                                 <p class="mb-3 limitline">The efficiency and punctuality of the drivers provided by
@@ -779,7 +789,7 @@
                                 
                                 
                             </div>
-                    
+                      
                     </div>
                 </div>
             </div>
@@ -1103,10 +1113,10 @@
     </div>
 
         <script>
-        function showConfirmation() {
-            alert("Confirm booking");
-            return true; // Allow the form submission to proceed
-        }
+            function showConfirmation() {
+                alert("Confirm booking");
+                return true; // Allow the form submission to proceed
+            }
         </script>
         <style>
             .data1, .data2{
