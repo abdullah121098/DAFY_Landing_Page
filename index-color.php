@@ -1486,13 +1486,13 @@
                                         </div>
                                
 
-                                        <!--    <div class="col-sm-6">
+                                           <div class="col-sm-6">
                                             <div class="form-group" >
                                                 <input class="form-control" type="text" id="drop3" required>
                                                 <span class="form-label">Drop location</span>
                                             </div>
                                             </div>
-                                        -->
+                                       
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <select class="form-control" id="v-name3" required>
@@ -1519,7 +1519,7 @@
                                                 <span class="form-label">Vechile Type</span>
                                             </div>
                                         </div>
-                                        <!--
+                                        
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <input class="form-control" type="datetime-local" id="date3"  required>
@@ -1528,7 +1528,7 @@
                                                     
                                                     </div>
                                                 </div>
-                                        -->
+                                       
                                         <div class="col-10">
                                             <div class="form-btn">
                                                 <button class="submit-btn" id="book">Book Now</button>
@@ -1600,75 +1600,83 @@
             </div>
         </div>
     </div>
-                
-    <script src="assert/js/jquery.min.js"></script> 
+       
+<!--     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+
     <script>
-            $(document).ready(function() {
-                  // Initially hide all data sections
-                    $(".data1").hide();
-
-                    //     Show the appropriate data section based on the selected value in the "Type" dropdown
-                    $("#b-type3").change(function() {
-                        var selectedType = $(this).val();
-                        $(".data1").hide();
-                        $("#" + selectedType).show();
-                       
-                    });
-
-             // Show specific elements when "n-one" and "i-two" are selected
-                $("#b-type3, #t-type3").change(function() {
-                    var selectedType = $("#b-type3").val();
-                    var selectedRideType = $("#t-type3").val();
-                    // $(".data1").hide();
-                    if (selectedType === "n-one") {
-                        if (selectedRideType === "i-one") {
-                          $("#pick3, #v-name3, #v-type3, #book, #date3").show();
-                        } else {
-                            $("#pick3, #v-name3, #v-type3, #book, #date3").hide();
-                        }
-                    } else if (selectedType === "n-two") {
-                        if (selectedRideType === "i-one") {
-                            $("#pick3, #v-name3, #v-type3, #book, #date3").show();
-                        } else {
-                            $("#").hide();
-                        }
-                    } else if (selectedType === "n-three") {
-                        if (selectedRideType === "i-one") {
-                            $("#pick3, #v-name3, #v-type3, #book, #date3").show();
-                        } else {
-                            $("#pick3, #v-name3, #v-type3, #book, #date3").hide();
-                        }
-                    }
-                });
-
-                // Auto-select current date and time when "n-one" and "i-two" are selected
-                $("#t-type3").change(function() {
-                    var selectedType = $("#b-type3").val();
-                    var selectedRideType = $(this).val();
-
-                    if (selectedType === "n-one" && selectedRideType === "i-two") {
-                        var currentDate = new Date().toISOString().slice(0, 16);
-                        $("#date3").val(currentDate);
-                    }
-                });
-            });
-    </script>   
-
-    <!-- <script>
         $(document).ready(function() {
-                    // Initially hide all data sections
-                    $(".data1").hide();
+            // Initially hide all data sections
+            $(".data1").hide();
 
-                    // Show the appropriate data section based on the selected value in the "Type" dropdown
-                    $("#b-type3").change(function() {
-                        var selectedType = $(this).val();
-                        $(".data1").hide();
-                        $("#" + selectedType).show();
-                    });
-                    });
-         
+            // Show the appropriate data section based on the selected value in the "Type" dropdown
+            $("#b-type3, #t-type3").change(function() {
+            var selectedType = $("#b-type3").val();
+            var selectedRide = $("#t-type3").val();
+
+            // Reset all data sections to hide them
+            $(".data1").hide();
+
+            if (selectedType === "n-one") {
+                if (selectedRide === "i-one") {
+                $("#pick3, #drop3, #date3, #v-type3, #v-name3, #book").show();
+                } else if (selectedRide === "i-two") {
+                $("#pick3, #drop3, #v-type3, #v-name3, #book").show();
+                $("#date3").val(""); // Clear the value of the date field
+                }
+            }
+            });
+
+            // Print current date and time in the date field when n-one = i-two is selected
+            $("#b-type3").change(function() {
+            var selectedType = $("#b-type3").val();
+            var selectedRide = $("#t-type3").val();
+
+            if (selectedType === "n-one" && selectedRide === "i-two") {
+                $("#date3").val(new Date().toISOString().slice(0, 16));
+            }
+            });
+    });
     </script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+
+<script>
+            $(document).ready(function() {
+                        // Initially hide all data sections
+                        $(".data1").hide();
+
+                        // Show the appropriate data section based on the selected value in the "Type" dropdown
+                        $("#b-type3,#t-type3").change(function() {
+                            var selectedType = $("#b-type3").val();
+                            var selectedRide = $("#t-type3").val();
+                            if (selectedType === "n-one"){ 
+                                if( selectedRide ==="i-one"){
+                                $(".data1").hide();
+                                $("#" + selectedType).show();
+                            }else if (selectedRide === "i-two") {
+                                $("#pick3, #drop3, #v-type3, #v-name3, #book").show();
+                                $("#date3").val(new Date().toISOString().slice(0, 16));
+                            }
+                            }else if (selectedType === "n-two"){ if (selectedRide ==="i-one"){
+                                $(".data1").hide();
+                                $("#" + selectedType).show();
+                            } else if (selectedRide === "i-two") {
+                                $("#pick3, #v-type3, #v-name3, #book").show();
+                                $("#date3").val(new Date().toISOString().slice(0, 16));
+                            }
+                            } else if (selectedType === "n-three"){ if( selectedRide ==="i-one"){
+                                $(".data1").hide();
+                                $("#" + selectedType).show();
+                            }else if (selectedRide === "i-two") {
+                                $("#pick3,#drop3, #v-type3, #v-name3, #book").show();
+                                $("#date3").val(new Date().current());
+                            }
+                            }
+                        });
+                    });
+            
+        </script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
         <script>
             $('.form-control').each(function () {
                 floatedLabel($(this));
