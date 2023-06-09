@@ -1,198 +1,5 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dafy Online Pvt ltd</title>
-  <link rel="shortcut icon" type="image/png" href="assets/images/logos/loader.png" />
-  <link rel="stylesheet" href="assets/css/styles.min.css" />
-</head>
-
-<body>
-  <!--  Body Wrapper -->
-  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    <!-- Sidebar Start ->
-    <aside class="left-sidebar">
-      <!-- Sidebar scroll->
-      <div>
-        <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.php" class="text-nowrap logo-img">
-            <img src="assets/images/logos/loader.png" width="180" alt="" />
-          </a>
-          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-            <i class="ti ti-x fs-8"></i>
-          </div>
-        </div>
-        <!-- Sidebar navigation->
-        <!-- <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
-          <ul id="sidebarnav">
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu"></span>
-            </li>
-            <li class="sidebar-item active">
-              <a class="sidebar-link" href="recent-booking.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-article"></i>
-                </span>
-                <span class="hide-menu">Recent-Booking</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="pending-booking.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Cancelled Bookings</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="completed-booking.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Completed-Booking</span>
-              </a>
-            </li> 
-            <!--li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-forms.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-file-description"></i>
-                </span>
-                <span class="hide-menu">Forms</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-typography.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-typography"></i>
-                </span>
-                <span class="hide-menu">Typography</span>
-              </a>
-            </li-->
-            <!-- <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">AUTH</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                <span class="hide-menu">Register</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">EXTRA</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./icon-tabler.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                <span class="hide-menu">History</span>
-              </a>
-            </li> 
-            <!--li class="sidebar-item">
-              <a class="sidebar-link" href="./sample-page.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-aperture"></i>
-                </span>
-                <span class="hide-menu">Sample Page</span>
-              </a>
-            </li>
-          </ul>
-          <!--div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
-            <div class="d-flex">
-              <div class="unlimited-access-title me-3">
-                <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
-                <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" class="btn btn-primary fs-2 fw-semibold lh-sm">Buy Pro</a>
-              </div>
-              <div class="unlimited-access-img">
-                <img src="assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </nav>
-        <!-- End Sidebar navigation ->
-      </div>
-      <!-- End Sidebar scroll->
-    </aside>
-    <!--  Sidebar End -->
-    <!--======================================================== ============== ============================================== ==========================-->
-    <!--  Main wrapper ->
-    <div class="body-wrapper">
-      <!--  Header Start -->
-      <!-- <header class="app-header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <ul class="navbar-nav">
-            <li class="nav-item d-block d-xl-none">
-              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
-                <i class="ti ti-menu-2"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
-                <i class="ti ti-bell-ringing"></i>
-                <div class="notification bg-primary rounded-circle"></div>
-              </a>
-            </li>
-          </ul>
-          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
-            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
-              <li class="nav-item dropdown">
-                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <img src="assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
-                </a>
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
-                  <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-user fs-6"></i>
-                      <p class="mb-0 fs-3">My Profile</p>
-                    </a>
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-mail fs-6"></i>
-                      <p class="mb-0 fs-3">My Account</p>
-                    </a>
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-list-check fs-6"></i>
-                      <p class="mb-0 fs-3">My Task</p>
-                    </a>
-                    <a href="./authentication-login.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header> -->
-      <!--  Header End -->
-      <!-- ============== ==================== Main -Body Start- ======================================================================= -->
+<?php require_once "header.php"; ?>
+<!-- ============== ==================== Main -Body Start- ======================================================================= -->
       <div class="container-fluid">
         <!--  Row 1 -->
         <div class="row">
@@ -223,6 +30,9 @@
                           <h6 class="fw-semibold mb-0">Drop-in</h6>
                         </th>
                         <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Ride-type</h6>
+                        </th>
+                        <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Date and Time</h6>
                         </th>
                         <th class="border-bottom-0">
@@ -234,9 +44,9 @@
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Status</h6>
                         </th>
-                        <!-- <th class="border-bottom-0 data5">
+                        <th class="border-bottom-0 data5">
                           <h6 class="fw-semibold mb-0">Driver Name</h6>
-                        </th> -->
+                        </th>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Action</h6>
                         </th>
@@ -263,6 +73,9 @@
                           <p class="mb-0 fw-normal">drop-loc</p>
                         </td>
                         <td class="border-bottom-0">
+                          <p class="mb-0 fw-normal">one-side Trip</p>
+                        </td>
+                        <td class="border-bottom-0">
                           <p class="mb-0 fw-normal">01-06-23 & 10:40am</p>
                         </td>
                         <td class="border-bottom-0">
@@ -277,7 +90,7 @@
                             <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res"></label>
                           </div>
                         </td>
-                        <!-- <td class="border-bottom-0 data5" >
+                        <td class="border-bottom-0 data5" >
                           <select name="" id=""class="badge bg-primary fw-semibold">
                             <option value="" selected disabled>Select</option>
                             <option value="a">Amal</option>
@@ -286,7 +99,7 @@
                             <option value="d">siva</option>
                             <option value="e">Cancel</option>
                           </select>
-                        </td> -->
+                        </td>
                         <td class="border-bottom-0" >
                           <select name="" id="sel"class="badge bg-primary fw-semibold">
                             <option value="" selected disabled>Select</option>
@@ -302,11 +115,147 @@
                                         
                     </tbody>
                   </table>
+                          <?php  $conn = new mysqli('localhost', 'root', '', 'file');
+                                  if ($conn->connect_error) {
+                                      die("Connection failed: " . $conn->connect_error);
+                                  }
+                                // Fetch data from the 'review' table
+                                  $sql = "SELECT * FROM review ORDER BY id DESC";
+                                  $result = $conn->query($sql); ?>
+
+                  <table class="table text-nowrap mb-0 align-middle">
+                    <thead class="text-dark fs-4">
+                        <tr>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Id</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Name</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Phone</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Email</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Pick-up</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Drop-in</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Ride-type</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">service-type</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Date</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Time</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Vehicle name</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Vehicle Type</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Status</h6>
+                            </th>
+                            <th class="border-bottom-0 data5">
+                                <h6 class="fw-semibold mb-0">Driver Name</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Action</h6>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                          if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                // Display each row of data
+                                echo '<tr>';
+                                echo '<td class="border-bottom-0"><h6 class="fw-semibold mb-0">' . $row['id'] . '</h6></td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<h6 class="fw-semibold mb-1">' . $row['name'] . '</h6>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['phone'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['email'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['pick_up'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['drop_in'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['ride_type'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['time_ride'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['date'] . '</p>';
+                                echo '</td>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['time'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['v_name'] . '</p>';
+                                echo '</td>';
+                                echo '<td class="border-bottom-0">';
+                                echo '<p class="mb-0 fw-normal">' . $row['v_type'] . '</p>';
+                                echo '</td>';
+                              }
+                            } else {
+                                echo '<tr><td colspan="12">No data found.</td></tr>';
+                          }?><?php
+                          $conn->close();
+                            ?>
+
+                        <!-- table row data -->
+                        <td class="border-bottom-0">
+                          <div class="d-flex align-items-center gap-2">
+                            <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res"></label>
+                          </div>
+                        </td>
+                        <td class="border-bottom-0 data5" >
+                          <select name="" id=""class="badge bg-primary fw-semibold">
+                            <option value="" selected disabled>Select</option>
+                            <option value="a">Amal</option>
+                            <option value="b">jijo</option>
+                            <option value="c">Drive Started</option>
+                            <option value="d">siva</option>
+                            <option value="e">Cancel</option>
+                          </select>
+                        </td>
+                        <td class="border-bottom-0" >
+                          <select name="" id="sel"class="badge bg-primary fw-semibold">
+                            <option value="" selected disabled>Select</option>
+                            <option value="1">Confirm</option>
+                            <option value="2">Driver Assigned</option>
+                            <option value="3">Drive Started</option>
+                            <option value="4">Completed</option>
+                            <option value="5">Cancel</option>
+                          </select>
+                        </td> 
+                      </tr> 
+                    </tbody>
+                  </table>
                 </div>
-              </div>
             </div>
           </div>
         </div>
+      </div>
+      
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
           <script>
                 let selection =document.querySelector('#sel');
@@ -317,37 +266,21 @@
                 });
             </script>
             <script>
-                  // $(document).ready(function() {
-                  //   // Initially hide all data sections
-                  //   $(".data5").hide();
+                  $(document).ready(function() {
+                    // Initially hide all data sections
+                    $(".data5").hide();
 
-                  //   // Show the appropriate data section based on the selected value in the "Type" dropdown
-                  //   $("#sel").change(function() {
-                  //     var selectedType = $(this).val();
-                  //     $(".data5").hide();
+                    // Show the appropriate data section based on the selected value in the "Type" dropdown
+                    $("#sel").change(function() {
+                      var selectedType = $(this).val();
+                      $(".data5").hide();
                       
-                  //     if (selectedType === "2") {
-                  //       $(".data5").show();
-                  //     }
-                  //   });
-                  // });
+                      if (selectedType === "2") {
+                        $(".data5").show();
+                      }
+                    });
+                  });
             </script>
 
 
         <!-- ================================================== Footer  =======================================-->
-        <!-- <div class="py-6 px-6 text-center">
-            <p class="mb-0 fs-4"> &copy; <a class="fw-medium" href="#">2023</a>, All Right Reserved.</p>
-        </div>
-      </div>-->
-    </div>
-  </div>
-  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/sidebarmenu.js"></script>
-  <script src="assets/js/app.min.js"></script>
-  <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-  <script src="assets/libs/simplebar/dist/simplebar.js"></script>
-  <script src="assets/js/dashboard.js"></script>
-</body>
-
-</html>
