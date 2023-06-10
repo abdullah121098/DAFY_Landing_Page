@@ -1,5 +1,5 @@
 <form method="POST" action="insert_data.php">
-<div class="row">
+    <div class="row">
                 <div class="col-10">
                   <div class="form-group">
                     <label class="form-label">Name</label><br>
@@ -110,7 +110,7 @@
                 <div class="row" id="book">
                     <div class="col-10">
                         <div class="form-btn">
-                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addData">Add Data</button>
+                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addData">Book </button>
                         </div>
                     </div>
                 </div>
@@ -119,12 +119,12 @@
         <div class="row data2">
                     <div class="col-10">
                         <div class="form-btn">
-                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addDataWithDateTime">Add Data with Current Date and Time</button>
+                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addDataWithDateTime">book</button>
                         </div>
                     </div>
                 </div>
 </form>
-<script>
+        <script>
             function showConfirmation() {
                 alert("Confirm booking");
                 return true; // Allow the form submission to proceed
@@ -158,9 +158,8 @@
                                 $(".data2").hide();
                                 $(".data1").show();
                             } else if (selectedRide === "immediate_trip") {
-                                $(".data1").hide();
-                               
-                                $(".data2").show();
+                                $(".data2, .data1").show();
+                                $('#date3, #time3, #book').hide();
 
                             }
                             } else if (selectedType === "hospital_trip"){ if( selectedRide ==="schedule_trip"){
@@ -168,8 +167,8 @@
                                 $(".data1").show();
                                 $(".data2").hide();
                             }else if (selectedRide === "immediate_trip") {
-                                $(".data2").show();
-                                $(".data1").hide();
+                                $(".data2, .data1").show();
+                                $('#date3, #time3, #book').hide();
                                
                             }
                             }else{

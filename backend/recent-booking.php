@@ -1,5 +1,12 @@
 <?php require_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
+    <?php  $conn = new mysqli('localhost', 'root', '', 'file');
+                                      if ($conn->connect_error) {
+                                      die("Connection failed: " . $conn->connect_error);
+                                  }
+                                // Fetch data from the 'review' table
+$sql = "SELECT * FROM review ORDER BY id DESC";
+                                  $result = $conn->query($sql); ?>
       <div class="container-fluid">
         <!--  Row 1 -->
         <div class="row">
@@ -30,10 +37,16 @@
                           <h6 class="fw-semibold mb-0">Drop-in</h6>
                         </th>
                         <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Ride-type</h6>
+                          <h6 class="fw-semibold mb-0">Ride-Type</h6>
                         </th>
                         <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Date and Time</h6>
+                          <h6 class="fw-semibold mb-0">Time-Ride</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Date</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Time</h6>
                         </th>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Vechicle name</h6>
@@ -41,11 +54,17 @@
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Vechicle Type</h6>
                         </th>
+                        <th class="border-bottom-0 ">
+                          <h6 class="fw-semibold mb-0">Driver Name</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">payment Type</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">payment</h6>
+                        </th>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Status</h6>
-                        </th>
-                        <th class="border-bottom-0 data5">
-                          <h6 class="fw-semibold mb-0">Driver Name</h6>
                         </th>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Action</h6>
@@ -54,7 +73,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <!-- <tr>
                         <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
                         <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
@@ -84,7 +103,7 @@
                         <td class="border-bottom-0">
                           <p class="mb-0 fw-normal">Automatic</p>
                         </td>
-                           <!-- table row data -->
+                           <!-- table row data ->
                            <td class="border-bottom-0">
                           <div class="d-flex align-items-center gap-2">
                             <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
@@ -113,8 +132,96 @@
                           </select>
                         </td>
                        
-                      </tr> 
-                                        
+                      </tr>  -->
+                      <?php
+                          if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                // Display each row of data?>
+                              <tr>
+                                <td class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6></td>
+                                <td class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['phone'];?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['email']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['pick_up']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['drop_in']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['ride_type']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['time_ride']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['date']; ?></p>
+                                </td>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['time']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['v_name']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['v_type']; ?></p>
+                                </td>
+                                <td class="border-bottom-0 " >
+                                <select name="assign" id=""class="badge bg-primary fw-semibold">
+                                    <option selected disabled>Select</option>
+                                    <option>Amal</option>
+                                    <option>jijo</option>
+                                    <option>Drive Started</option>
+                                    <option>siva</option>
+                                    <option>Cancel</option>
+                                </select>
+                                </td>
+                                <td class="border-bottom-0">
+                                <select name="pay_type" id=""class="badge bg-primary fw-semibold">
+                                    <option selected disabled>Select</option>
+                                    <option >G-pay</option>
+                                    <option >paytm</option>
+                                    <option >phonepe</option>
+                                    <option >direct_Cash</option>
+                                    <option >Cancel</option>
+                                </select>
+                                </td>
+                                <td class="border-bottom-0">
+                                <input type="text" name="payment" id="" placeholder="Amount" value="<?php echo $row['payment']; ?>">
+                                </td>
+                                <td class="border-bottom-0">
+                                <div class="d-flex align-items-center gap-2">
+                                    <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
+                                    <?php echo $row['status']; ?>
+                                    </label>
+                                </div>
+                                </td>
+                                <td class="border-bottom-0" >
+                                <select name="status" id="sel"class="badge bg-primary fw-semibold">
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Confirm</option>
+                                    <option value="2">Driver Assigned</option>
+                                    <option value="3">Drive Started</option>
+                                    <option value="4">Completed</option>
+                                    <option value="5">Cancel</option>
+                                </select>
+                                </td> 
+                              </tr> 
+                                <?php
+                              }
+                            } else {
+                               echo '<tr><td colspan="12">No data found.</td></tr>';
+                          }
+                          $conn->close();
+                            ?>             
                     </tbody>
                   </table>
                        

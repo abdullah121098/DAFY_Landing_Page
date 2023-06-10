@@ -93,16 +93,19 @@
                     <div class="carousel-inner">
                         <!-- <form action="" method="post"> -->
                         <div class="carousel-item active">
-                                <img class="w-100" src="assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image" style="height: 100%;">
+                                <img class="w-100" src="assert/img/banner/a.jpg" alt="breeze-street-image" style="height: 100%;">
                                 <div class="carousel-caption">
                                     <div class="container">
                                         <div class="row justify-content-end">
-                                            <div class="col-lg-7 text-end col-10 ">
-                                                <p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
-                                                <strong>Dafy Online Service</strong>
-                                                </p>
-                                                <h1 class="display-1 text-white mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
-                                                    Most reliable and economical perfessional driver on demand</h1>  
+                                            <div class="col-lg-7 text-end col-6">
+                                                <h1 class="fs-4   animated slideInLeft" style="font-family: 'Lato', sans-serif;">
+                                                <span class="highlight">Welcome to<strong>Dafy Online Service</strong></span></h1>
+                                                <h1 class="display-3  mb-4 animated slideInLeft" style="font-family:'Lato', sans-serif;">
+                                                    <span class="highlight">Most reliable and </span></h1>
+                                                    <h1 class="display-3  mb-4 animated slideInLeft" style="font-family:'Lato', sans-serif;">
+                                                    <span class="highlight">economical professional </span></h1>
+                                                    <h1 class="display-4  mb-4 animated slideInLeft" style="font-family:'Lato', sans-serif;">
+                                                    <span class="highlight">driver on demand</span></h1>  
                                                 <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
                                                 data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
                                                 <a href="#service-type" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
@@ -112,15 +115,22 @@
                                 </div>
                             </div>
                         </div>
+                        <style> .highlight{
+                                        background-color: #ffd300; 
+                                        border-radius:4px; 
+                                        padding: 2px 3px;
+                        }
+                        </style>
+
                                 <!-- </form> -->
-                        <div class="carousel-item">
-                            <img class="w-100 animated slideInLeft" src="assert/img/slider/your-car-our-driver.jpg" alt="Image" style="height: 100%;">
+                        <!-- <div class="carousel-item">
+                            <img class="w-100 animated slideInLeft" src="assert/img/banner/a.jpg" alt="Image" style="height: 100%;">
                             <div class="carousel-caption">
                                 <div class="container">
                                     <div class="row  justify-content-end">
                                         <div class="col-lg-7 text-end col-10">
-                                            <!--p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
-                                                <strong>Dafy Online Service</strong></p-->
+                                            p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
+                                                <strong>Dafy Online Service</strong></p>
                                             <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
                                                 Verified & Trained drivers for your car</h1>
                                             <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;"
@@ -131,7 +141,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Additional Slider items -->
                         <!-- <div class="carousel-item">
                             <img class="w-100 animated slideInRight" src="assert/img/slider/navigation.jpg" alt="Image" style="height: 100%;">
@@ -231,14 +241,14 @@
                     </div>
                 
                 <!-- Additional Slider End -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                </button>
+                </button> -->
             </div>
         </div>
     <!--------------------------------------------------  Slider End       ----------------------------------->
@@ -381,8 +391,8 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute img-fluid" src="assert/img/icon/assistance.webp"
-                                                    style="object-fit: cover; border-radius:50% 30% 70% 40%;" alt="">
+                                                <img class="position-absolute img-fluid" src="assert/img/banner/b.jpeg"
+                                                    style="object-fit: cover; border-radius:30% 30% 30% 30%;" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
@@ -448,7 +458,7 @@
                     <!--p class="fs-5 fw-medium" style="color: #ffae00;">Features Service</p-->
                     <h1 class="display-5 mb-5">Explore Our Features</h1>
                 </div>
-                <div class="row g-0 feature-row"  style="background-image: url('assert/img/slider/banner4.png'); height:fit-content; animation: fadeInRight 5s 1;color:white;">
+                <div class="row g-0 feature-row"  style="background-color:black; height:fit-content; animation: fadeInRight 5s 1;color:white;">
                     <div class="col-md-6 col-lg-3 wow fadeIn animated " data-wow-delay="0.1s" >
                         <div class="feature-item border h-100 p-5 " style="animation: fadeInRight  5s 1;">
                             <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
@@ -929,14 +939,12 @@
                                 <h2 class="text-primary">Booking Service</h2>
                             </div>
                         <div class="modal-body">
-                            <form method="post" id="send" action="" onsubmit="return showConfirmation()">
+                            <form method="POST" action="database/insert_data.php" onsubmit="showConfirmation()">
                                 <div class="row">
                                     <div class="col-10">
                                         <div class="form-group">
-
                                             <label class="form-label">Name</label><br>
-                                            <input class="form-control" type="text" name="name3" pattern=[A-Z\sa-z]{3,20} required>
-                                            
+                                            <input class="form-control" type="text" name="name3" pattern="[A-Z\sa-z]{3,20}" required>
                                         </div>
                                     </div>
                                     <div class="col-10">
@@ -957,13 +965,12 @@
                                     </div>
                                     <div class="col-10">
                                         <div class="form-group">
-
-                                            <label class="form-label">Type</label><br>
-                                            <select class="form-control" name="b-type3" id="b-type3" required >
+                                                <label class="form-label">Type</label><br>
+                                            <select class="form-control"  name="ride-type3" id="b-type3" required >
                                             <option  selected>Select</option>
-                                            <option value="n-one">One-Side-Trip</option>
-                                            <option value="n-two">Round-Trip</option>
-                                            <option value="n-three">Hospital-Assistance</option>
+                                            <option value="one_trip">One-Side-Trip</option>
+                                            <option value="round_trip">Round-Trip</option>
+                                            <option value="hospital_trip">Hospital-Assistance</option>
                                             </select>
                                             <span class="select-arrow"></span>
                                             
@@ -971,139 +978,92 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-10" id="round">
-                                        <div class="form-group" name="ride-type">
-                                            <label class="form-label" for="select">Choose Ride</label><br>
-                                            <select class="form-control" name="t-type3" id="t-type3"  required >
-                                            <option active>Select</option>
-                                            <option value="i-one">Schedule Ride</option>
-                                            <option value="i-two">Immediate Pick-up</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                            
-                                        </div>
+                                <div class="col-10" id="round">
+                                    <div class="form-group">
+                                        <label class="form-label" for="select">Choose Ride</label><br>
+                                        <select class="form-control" name="t-type3" id="t-type3"  required >
+                                        <option active>Select</option>
+                                        <option value="schedule_trip">Schedule Ride</option>
+                                        <option value="immediate_trip">Immediate Pick-up</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                        
                                     </div>
                                 </div>
+                                </div>
+
+
                                 <div class="data1">
                                     <div class="row">	
                                         <div class="col-md-6 ">
                                             <div class="form-group">
                                             <label class="form-label">Pick-up Location</label><br>
-                                            <input class="form-control" type="text" id="pick3" required>
+                                            <input class="form-control" type="text" name="pick_up3" id="pick3" required>
 
                                             </div>
                                         </div>							
                                         <div class="col-md-6" >
-                                                <div class="form-group" >
+                                            <div class="form-group" >
                                                 <label class="form-label">Drop location</label><br>
-                                                    <input class="form-control" type="text" name="drop3" id="drop3" required>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                <label class="form-label">Vechile Name</label><br>
-                                                    <select class="form-control" id="v-name3" required>
-                                                    <option active>Select</option>
-                                                    <option>HatchBack</option>
-                                                    <option>Sedan</option>
-                                                    <option>SUV</option>
-                                                    <option>Luxury</option>
-                                                    </select>
-                                                    
-                                                    <span class="select-arrow"></span>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                <label class="form-label">Vechile Type</label><br>
-                                                <select class="form-control" id="v-type3" required>
-                                                        <option active>Select</option>
-                                                        <option >Automatic</option>
-                                                        <option>Manaual</option>
-                                                        <option>Both</option>
-                                                    </select>
-                                                    <span class="select-arrow"></span>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-10 ">
-                                                <div class="form-group">
-                                                <label class="form-label"> Date and Time</label><br>
-                                                <input class="form-control" type="datetime-local" id="date3"  min="<?=date('Y-m-d\TH:i');?>" required>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="form-btn">
-                                                    <!-- <a type="button" href=""  class="submit-btn rounded-pill text-center py-2 px-3" id="book" >Book Now </a> -->
-                                                    <button type="submit" class="submit-btn" id="book">Book Now</button>
-                                                </div>
+                                            <input class="form-control" type="text" name="drop_in3" id="drop3" required>
                                             </div>
                                     </div>
-                                </div>
-                              
-        <!-- ++++++++++++++ Data 2 ++++++++++++++++++++++++++++ ++++++++++++-->                        
-                                <div class="data2">
-                                    <div class="row">	
-                                        <div class="col-md-6 ">
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                            <label class="form-label">Pick-up Location</label><br>
-                                            <input class="form-control" type="text" id="pick3" required>
-
+                                            <label class="form-label">Vechile Name</label><br>
+                                                <select class="form-control" id="v-name3" name="v_name3"required>
+                                                <option active>Select</option>
+                                                <option>HatchBack</option>
+                                                <option>Sedan</option>
+                                                <option>SUV</option>
+                                                <option>Luxury</option>
+                                                </select>
+                                                <span class="select-arrow"></span>
                                             </div>
-                                        </div>							
-                                        <div class="col-md-6" id="drop3">
-                                                <div class="form-group" >
-                                                <label class="form-label">Drop location</label><br>
-                                                    <input class="form-control" type="text" name="drop3" required>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                <label class="form-label">Vechile Name</label><br>
-                                                    <select class="form-control" id="v-name3" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                            <label class="form-label">Vechile Type</label><br>
+                                            <select class="form-control" id="v-type3" name="v_type3" required>
                                                     <option active>Select</option>
-                                                    <option>HatchBack</option>
-                                                    <option>Sedan</option>
-                                                    <option>SUV</option>
-                                                    <option>Luxury</option>
-                                                    </select>
-                                                    
-                                                    <span class="select-arrow"></span>
+                                                    <option >Automatic</option>
+                                                    <option>Manaual</option>
+                                                    <option>Both</option>
+                                                </select>
+                                                <span class="select-arrow"></span>
 
-                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                <label class="form-label">Vechile Type</label><br>
-                                                <select class="form-control" id="v-type3" required>
-                                                        <option active>Select</option>
-                                                        <option >Automatic</option>
-                                                        <option>Manaual</option>
-                                                        <option>Both</option>
-                                                    </select>
-                                                    <span class="select-arrow"></span>
-
-                                                </div>
+                                        </div>
+                                        <div class="col-10 "id="date3">
+                                            <div class="form-group">
+                                                <label class="form-label"> Date </label><br>
+                                                <input class="form-control" type="date"  name="date_in3"  min="<?=date('Y-m-d\TH:i');?>" >
                                             </div>
-                                            <div class="col-10">
-                                                <div class="form-group">
-                                                <label class="form-label"> Date and Time</label><br>
-                                                <input class="form-control" type="datetime-local" id="date3" value="<?= date('Y-m-d\TH:i'); ?>" disabled>
-
-                                                </div>
+                                        </div>
+                                        <div class="col-10 " id="time3">
+                                            <div class="form-group">
+                                                <label class="form-label"> Time</label><br>
+                                                <input class="form-control" type="time" name="time_in3" >
                                             </div>
+                                        </div>
+                                        </div>
+                            
+                                        <div class="row" id="book">
                                             <div class="col-10">
                                                 <div class="form-btn">
-                                                    <button  type="submit" class="submit-btn rounded-pill text-center py-2 px-3" id="book">Book Now</button>
-                                                    <!-- <a type="button"  class="submit-btn rounded-pill text-center py-2 px-3" id="book" >Book Now </a> -->
+                                                <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addData">Book </button>
                                                 </div>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
+                                    <div class="row data2">
+                                                <div class="col-10">
+                                                    <div class="form-btn">
+                                                    <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addDataWithDateTime">book</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                             </form>
                         </div>
                     </div>
@@ -1112,83 +1072,7 @@
         </div>
     </div>
 
-        <script>
-            function showConfirmation() {
-                alert("Confirm booking");
-                return true; // Allow the form submission to proceed
-            }
-        </script>
-        <style>
-            .data1, .data2{
-                display: none;
-            }
-        </style>
-        <script src="assert/js/jquery.min.js"></script>
-
-        <script>
-            $(document).ready(function() {
-                        // Initially hide all data sections
-                        $(".data1").hide();
-                        $(".data2").hide();
-                        // Show the appropriate data section based on the selected value in the "Type" dropdown
-                        $("#b-type3,#t-type3").change(function() {
-                            var selectedType = $("#b-type3").val();
-                            var selectedRide = $("#t-type3").val();
-                            if (selectedType === "n-one"){ 
-                                if( selectedRide ==="i-one"){
-                                $(".data2").hide();
-                                $(".data1").show();
-                            }else if (selectedRide === "i-two") {
-                                $(".data1").hide();
-                                $(".data2").show();
-                            }
-                            }else if (selectedType === "n-two"){ if (selectedRide ==="i-one"){
-                                $(".data2").hide();
-                                $(".data1").show();
-                            } else if (selectedRide === "i-two") {
-                                $(".data1").hide();
-                               
-                                $(".data2").show();
-
-                            }
-                            } else if (selectedType === "n-three"){ if( selectedRide ==="i-one"){
-                                $(".data2").hide();
-                                $("data1").show();
-                            }else if (selectedRide === "i-two") {
-                                $(".data2").show();
-                                $(".data1").hide();
-                               
-                            }
-                            }else{
-                                $(".data2").hide();
-                                $(".data1").hide();
-                            }
-                        });
-                    });
-            
-        </script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
-        <script>
-            $('.form-control').each(function () {
-                floatedLabel($(this));
-            });
-    
-            $('.form-control').on('input', function () {
-                floatedLabel($(this));
-            });
-    
-            function floatedLabel(input) {
-                var $field = input.closest('.form-group');
-                if (input.val()) {
-                    $field.addClass('input-not-empty');
-                } else {
-                    $field.removeClass('input-not-empty');
-                }
-            }
-        </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
+        
     <!----   Subscribe US button          ---->
         <div class="modal fade" id="book4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="modal-dialog">
@@ -1270,6 +1154,86 @@
                     </div>
                 </div>
             </div>
+
+
+                        <!--- ============================ Booking form control js =================================== -->
+                        <script>
+                            function showConfirmation() {
+                                alert("Confirm booking");
+                                return true; // Allow the form submission to proceed
+                            }
+                        </script>
+                        <style>
+                            .data1, .data2{
+                                display: none;
+                            }
+                        </style>
+                        <script src="assert/js/jquery.min.js"></script>
+                        <script>// Booking Button option 
+                            $(document).ready(function() {
+                                        // Initially hide all data sections
+                                        $(".data1").hide();
+                                        $(".data2").hide();
+                                        // Show the appropriate data section based on the selected value in the "Type" dropdown
+                                        $("#b-type3,#t-type3").change(function() {
+                                            var selectedType = $("#b-type3").val();
+                                            var selectedRide = $("#t-type3").val();
+                                            if (selectedType === "one_trip"){ 
+                                                if( selectedRide ==="schedule_trip"){
+                                                $(".data2").hide();
+                                                $(".data1").show();
+                                            }else if (selectedRide === "immediate_trip") {
+                                                $(".data2, .data1").show();
+                                                $('#date3, #time3, #book').hide();
+                                            }
+                                            }else if (selectedType === "round_trip"){ if (selectedRide ==="schedule_trip"){
+                                                $(".data2").hide();
+                                                $(".data1").show();
+                                            } else if (selectedRide === "immediate_trip") {
+                                                $(".data2, .data1").show();
+                                                $('#date3, #time3, #book').hide();
+
+                                            }
+                                            } else if (selectedType === "hospital_trip"){ if( selectedRide ==="schedule_trip"){
+                                                
+                                                $(".data1").show();
+                                                $(".data2").hide();
+                                            }else if (selectedRide === "immediate_trip") {
+                                                $(".data2, .data1").show();
+                                                $('#date3, #time3, #book').hide();
+                                            
+                                            }
+                                            }else{
+                                                $(".data2").hide();
+                                                $(".data1").hide();
+                                            }
+                                        });
+                                    });
+                            
+                        </script>
+                    
+                    <!-- ================ form control ================ -->
+                        <script>
+                            $('.form-control').each(function () {
+                                floatedLabel($(this));
+                                });
+                    
+                                $('.form-control').on('input', function () {
+                                    floatedLabel($(this));
+                                });
+                    
+                                function floatedLabel(input) {
+                                    var $field = input.closest('.form-group');
+                                    if (input.val()) {
+                                        $field.addClass('input-not-empty');
+                                    } else {
+                                        $field.removeClass('input-not-empty');
+                                    }
+                            }
+                        </script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+                        <!--- ============================ Booking form control js End =================================== -->
     <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
