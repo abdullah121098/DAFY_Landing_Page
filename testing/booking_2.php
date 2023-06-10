@@ -1,5 +1,5 @@
-    <form method="post" id="send" action="insert_data.php" onsubmit="return showConfirmation()">
-            <div class="row">
+<form method="POST" action="insert_data.php">
+<div class="row">
                 <div class="col-10">
                   <div class="form-group">
                     <label class="form-label">Name</label><br>
@@ -77,9 +77,7 @@
                         <option>SUV</option>
                         <option>Luxury</option>
                         </select>
-                        
                         <span class="select-arrow"></span>
-
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -95,110 +93,37 @@
 
                     </div>
                 </div>
-                <div class="col-10 ">
+                <div class="col-10 "id="date3">
                     <div class="form-group">
-                        <label class="form-label"> Date and Time</label><br>
-                        <input class="form-control" type="date" id="date3" name="date_in3"  min="<?=date('Y-m-d\TH:i');?>" required>
+                        <label class="form-label"> Date </label><br>
+                        <input class="form-control" type="date"  name="date_in3"  min="<?=date('Y-m-d\TH:i');?>" >
                     </div>
                 </div>
-                <div class="col-10 ">
+                <div class="col-10 " id="time3">
                     <div class="form-group">
                         <label class="form-label"> Time</label><br>
-                        <input class="form-control" type="time" id="time3" name="time_in3" required>
+                        <input class="form-control" type="time" name="time_in3" >
                     </div>
                 </div>
                 </div>
       
-                <div class="row">
+                <div class="row" id="book">
                     <div class="col-10">
                         <div class="form-btn">
-                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" id="book">Book Now</button>
+                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addData">Add Data</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-         <!-- <div class="data2">
-            <div class="row">	
-                <div class="col-md-6 ">
-                    <div class="form-group">
-                    <label class="form-label">Pick-up Location</label><br>
-                    <input class="form-control" type="text" name="pick_up3" id="pick3" required>
-
-                    </div>
-                </div>							
-                <div class="col-md-6" >
-                    <div class="form-group" >
-                        <label class="form-label">Drop location</label><br>
-                      <input class="form-control" type="text" name="drop_in3" id="drop3" required>
-                    </div>
-              </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label class="form-label">Vechile Name</label><br>
-                        <select class="form-control" id="v-name3" name="v_name3"required>
-                        <option active>Select</option>
-                        <option>HatchBack</option>
-                        <option>Sedan</option>
-                        <option>SUV</option>
-                        <option>Luxury</option>
-                        </select>
-                        
-                        <span class="select-arrow"></span>
-
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <label class="form-label">Vechile Type</label><br>
-                    <select class="form-control" id="v-type3" name="v_type3" required>
-                            <option active>Select</option>
-                            <option >Automatic</option>
-                            <option>Manaual</option>
-                            <option>Both</option>
-                        </select>
-                        <span class="select-arrow"></span>
-
-                    </div>
-                </div>
-                <div class="col-10 ">
-                    <div class="form-group">
-                        <label class="form-label"> Date and Time</label><br>
-                        <input class="form-control" type="date" id="date3" name="date_in3"  min="<?=date('Y-m-d\TH:i');?>" >
-                    </div>
-                </div>
-                <div class="col-10 ">
-                    <div class="form-group">
-                        <label class="form-label"> Time</label><br>
-                        <input class="form-control" type="time" id="time3" name="time_in3" >
-                    </div>
-                </div>
-                </div>
-      
-                <div class="row">
+        <div class="row data2">
                     <div class="col-10">
                         <div class="form-btn">
-                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" id="book">Book Now</button>
+                        <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addDataWithDateTime">Add Data with Current Date and Time</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        -->
-<!--        
-        <div class="row">
-            <div class="col-10">
-                <div class="form-btn">
-                    <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" id="book">Book Now</button>
-                </div>                  
-          </div>
-        </div> -->
-
-
-       
-
-    </form>
+</form>
 <script>
             function showConfirmation() {
                 alert("Confirm booking");
@@ -210,7 +135,7 @@
                 display: none;
             }
         </style>
-        <script src="assert/js/jquery.min.js"></script>
+        <script src="../assert/js/jquery.min.js"></script>
 
         <script>
             $(document).ready(function() {
@@ -226,8 +151,8 @@
                                 $(".data2").hide();
                                 $(".data1").show();
                             }else if (selectedRide === "immediate_trip") {
-                                $(".data1").hide();
-                                $(".data2").show();
+                                $(".data2, .data1").show();
+                                $('#date3, #time3, #book').hide();
                             }
                             }else if (selectedType === "round_trip"){ if (selectedRide ==="schedule_trip"){
                                 $(".data2").hide();
@@ -277,4 +202,3 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-
