@@ -194,10 +194,10 @@ style="cursor: pointer;">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Profile</h5></div>
-<form method="post" action="#" enctype="multipart/form-data">
+        <form method="post" action="#" enctype="multipart/form-data">
       <div class="modal-body">                                
         <div class="form-group col-md-6">
-       <input type="file" name="img_file" id="Upload">
+       <input type="image" name="img_file" id="Upload">
        <input type="submit" name="sub" value="Upload"><br>
 <?php     
 
@@ -250,33 +250,33 @@ style="cursor: pointer;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Profile</h5></div>
 
-<?php
+                    <?php
 
-$sql=mysqli_query($conn,"SELECT * FROM `review` WHERE `name`='$session'");                    
-while ($view = mysqli_fetch_array($sql)){ 
-?>                    
-        
-    <form method="post" action="#" enctype="multipart/form-data">
-      <div class="modal-body"><center>
-        <img src="<?php echo 'assets/images/profile/'.$view['log_img'];?>" class='img-radius' style='width:25%;'>
-</center><br>
-                <label for="inputEmail4">Username:</label><center>
-          <?php echo $view['name']; ?></center><br>
-                    <label for="inputAddress">Mobile No:</label><center>
-<?php echo $view['log_mobile']; ?></center><br>
-                    <label for="inputEmail4">Email:</label><center>
-<?php echo $view['log_mail']; ?></center><br>
-                <label for="inputAddress">Address:</label><center>
-<?php echo $view['log_address']; ?></center><br>
-                    <label for="inputCity">City:</label><center>
-<?php echo $view['log_country']; ?></center><br>
-                        <label for="inputState">Country:</label><center>
-<?php echo $view['log_location']; ?></center>
-            </div>   
-        
-    </form>
-<?php } ?>
-    </div></div></div></div>                            
+                    $sql=mysqli_query($conn,"SELECT * FROM `review` WHERE `name`='$session'");                    
+                    while ($view = mysqli_fetch_array($sql)){ 
+                    ?>                    
+                            
+                        <form method="post" action="#" enctype="multipart/form-data">
+                        <div class="modal-body"><center>
+                            <img src="<?php echo 'assets/images/profile/'.$view['log_img'];?>" class='img-radius' style='width:25%;'>
+                    </center><br>
+                                    <label for="inputEmail4">Username:</label><center>
+                            <?php echo $view['name']; ?></center><br>
+                                        <label for="inputAddress">Mobile No:</label><center>
+                    <?php echo $view['log_mobile']; ?></center><br>
+                                        <label for="inputEmail4">Email:</label><center>
+                    <?php echo $view['log_mail']; ?></center><br>
+                                    <label for="inputAddress">Address:</label><center>
+                    <?php echo $view['log_address']; ?></center><br>
+                                        <label for="inputCity">City:</label><center>
+                    <?php echo $view['log_country']; ?></center><br>
+                                            <label for="inputState">Country:</label><center>
+                    <?php echo $view['log_location']; ?></center>
+                                </div>   
+                            
+                        </form>
+                    <?php } ?>
+                        </div></div></div></div>                            
                             
                             
                         </div>
@@ -288,16 +288,16 @@ while ($view = mysqli_fetch_array($sql)){
             </div>
             </div>
                     <div class="col-xl-12 col-md-12">
-                <div class="card latest-update-card">
+                        <div class="card latest-update-card">
                     <div class="card-header">
                         <h5>Profile Detail</h5>
                     </div>
                     
-<?php
-     
-$sql=mysqli_query($conn,"SELECT * FROM `review` WHERE `name`='$session'");                    
-while ($view = mysqli_fetch_array($sql)){ 
-?>                    
+                        <?php
+                            
+                        $sql=mysqli_query($conn,"SELECT * FROM `review` WHERE `name`='$session'");                    
+                        while ($view = mysqli_fetch_array($sql)){ 
+                        ?>                    
                     
                     <div class="card-body">
                             <form method="post" action="#">

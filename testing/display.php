@@ -4,7 +4,7 @@
                                       die("Connection failed: " . $conn->connect_error);
                                   }
                                 // Fetch data from the 'review' table
-                                  $sql = "SELECT * FROM review ORDER BY id DESC";
+                                  $sql = "SELECT * FROM customer ORDER BY id DESC";
                                   $result = $conn->query($sql); ?>
         <form action="#" method="post">
                   <table class="table text-nowrap mb-0 align-middle">
@@ -63,7 +63,7 @@
                     <tbody>
                         <?php
                           if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
+                            while ($row = $result->fetch_array()) {
                                 // Display each row of data
                                ?><tr>
                                 <td class="border-bottom-0">
@@ -132,9 +132,9 @@
                                 </td> 
                                 <td class="border-bottom-0">
                                 <div class="d-flex align-items-center gap-2">
-                                    <!-- <a type="button" name="submit" class="badge bg-warning rounded-3 fw-semibold py-3 px-3" href="update.php?id=<php echo $row['id']; ?>">confirm</a> -->
-                                    <!-- <a type="button" class="fa-solid fa-trash fs-5" href="edit.php?id=<php echo $row['id']; ?>">delete</a> -->
-                                    <button type="submit" class="btn  btn-primary" name="update"> update</button>
+                                    <a type="button" name="submit" class="badge bg-warning rounded-3 fw-semibold py-3 px-3" href="update.php?id=<?php echo $row['id']; ?>">confirm</a>
+                                    <a type="button" class="fa-solid fa-trash fs-5" name="update" type="submit" href="display.php?id=<?php echo $row['id']; ?>">delete</a>
+                                    <!-- <button type="submit" class="btn  btn-primary" name="update"> update</button> -->
                                 </div>
                                 </td>
                             </tr> 
@@ -213,26 +213,28 @@
 </script>
 
 <?php
+$test_id=$_GET['id'];
+echo $test_id
 
-if(isset($_POST['update'])){
+//  if(isset($_POST['update'])){
     
-$a=$_POST['assign']; $b=$_POST['status']; 
-   $sql ="UPDATE `review` SET `driver_name`='$a',`status`='$b' WHERE 'id'= 1";
-    $res=mysqli_query($conn,$sql);
-if($res){ ?>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>swal("Profile Updated Succesfull");
+// $a=$_POST['assign']; $b=$_POST['status']; 
+//     $sql ="UPDATE `customer` SET `driver_name`='$a',`status`='$b' WHERE 'id'= $test_id";
+//      $res=mysqli_query($conn,$sql);
+//  if($res){ ?>
+<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script>swal("Profile Updated Succesfull");
 setTimeout(function(){
     window.location.href='display.php';},1500);
 
-</script>
-                <?php 
-                }else{?>
-<script>swal(" Update Failed ")</script>
-                <?php
-                    echo '<br> images Not upload into database';
-                }
-}
+</script> -->
+               <?php 
+                // }else{?>
+<!-- <script>swal(" Update Failed ")</script> -->
+                 <?php
+                    // echo '<br> images Not upload into database';
+                // }
+// }
   ?>
 
 
@@ -247,7 +249,7 @@ setTimeout(function(){
                                       die("Connection failed: " . $conn->connect_error);
                                   }
                                 // Fetch data from the 'review' table
-$sql = "SELECT * FROM review_1 ORDER BY id DESC";
+$sql = "SELECT * FROM complete_ride ORDER BY id DESC";
                                   $result = $conn->query($sql); ?>
 
                   <table class="table text-nowrap mb-0 align-middle">

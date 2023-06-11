@@ -1,3 +1,7 @@
+<?php
+require_once "database/connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,29 +95,25 @@
             <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 
                     <div class="carousel-inner">
-                        <!-- <form action="" method="post"> -->
+                        
                         <div class="carousel-item active">
                                 <img class="w-100" src="assert/img/banner/a.jpg" alt="breeze-street-image" style="height: 100%;">
                                 <div class="carousel-caption">
                                     <div class="container">
                                         <div class="row justify-content-end">
-                                            <div class="col-lg-7 text-end col-6">
+                                            <div class="col-lg-6 text-end col-6">
                                                 <h1 class="fs-4   animated slideInLeft" style="font-family: 'Lato', sans-serif;">
                                                 <span class="highlight">Welcome to<strong>Dafy Online Service</strong></span></h1>
                                                 <h1 class="display-3  mb-4 animated slideInLeft" style="font-family:'Lato', sans-serif;">
-                                                    <span class="highlight">Most reliable and </span></h1>
-                                                    <h1 class="display-3  mb-4 animated slideInLeft" style="font-family:'Lato', sans-serif;">
-                                                    <span class="highlight">economical professional </span></h1>
-                                                    <h1 class="display-4  mb-4 animated slideInLeft" style="font-family:'Lato', sans-serif;">
-                                                    <span class="highlight">driver on demand</span></h1>  
-                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
-                                                data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
-                                                <a href="#service-type" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                                    Read More</a>
+                                                    <span class="highlight">Most reliable and economical professional driver on demand</span></h1>  
+                                                <a href="" class="btn btn-none rounded-pill py-3 px-4 animated slideInLeft"
+                                                data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif; color:#ffd300"><b> Book Now</b></a>
+                                                <a href="#service-type" class="btn btn-none rounded-pill py-3 px-4 animated slideInLeft"
+                                                style="font-family: 'Lato', sans-serif;color:#ffd300"> Read More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                         <style> .highlight{
                                         background-color: #ffd300; 
@@ -122,133 +122,17 @@
                         }
                         </style>
 
-                                <!-- </form> -->
-                        <!-- <div class="carousel-item">
-                            <img class="w-100 animated slideInLeft" src="assert/img/banner/a.jpg" alt="Image" style="height: 100%;">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row  justify-content-end">
-                                        <div class="col-lg-7 text-end col-10">
-                                            p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
-                                                <strong>Dafy Online Service</strong></p>
-                                            <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                                Verified & Trained drivers for your car</h1>
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;"
-                                            data-bs-toggle="modal" data-bs-target="#book1">Book Now</a>
-                                            <a href="#feature" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                                Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Additional Slider items -->
-                        <!-- <div class="carousel-item">
-                            <img class="w-100 animated slideInRight" src="assert/img/slider/navigation.jpg" alt="Image" style="height: 100%;">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-end">
-                                        <div class="col-lg-7 text-end col-10">
-                                        
-                                            <h1 class="display-1 text-white mb-4 animated slideInRight" style="font-family: 'Lato', sans-serif;">
-                                                Hire a Driver Anytime to anywhere!</h1>
-                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight"
-                                                data-bs-toggle="modal" data-bs-target="#book1">Book Now</a>
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight"
-                                                href="tel:917592933933">Call Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="w-100 animated slideInLeft" src="assert/img/slider/luxury-car3.png" alt="Image" style="height: 100%;">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-end">
-                                        <div class="col-lg-7 text-end">
-                                            <p class="fs-4 text-whiteanimated slideInLeft" style="font-family: 'Lato', sans-serif;font-size: medium;"><strong>Do DAFY</strong>
-                                                </p>
-                                            <h1 class="display-1 text-white mb-5 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
-                                                Get your private driver now</h1>
-                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft" 
-                                                data-bs-toggle="modal" data-bs-target="#book1">Book now</a>
-                                            <a href="#service"
-                                                class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft">Read
-                                                More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="w-100" src="assert/img/slider/Dafy-Banner-03.png" alt="Image" style="height: 100%;">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-end">
-                                        <div class="col-lg-7 text-bottom-end">
-                                            
-                                            <h1 class="display-1 text-white mb-5" style="font-family: 'Lato', sans-serif;">
-                                                Affordable Rides Premimum Experience</h1>
-                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4" data-bs-toggle="modal" data-bs-target="#book1">
-                                            Book now</a>
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="w-100 animated slideInRight" src="assert/img/slider/stan.jpg" alt="Image" style="height: 100%;">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-end">
-                                        <div class="col-lg-7 text-end">
-                                        
-                                            <h1 class="display-1 text-white mb-5 animated slideInRight" style="font-family: 'Lato', sans-serif;">
-                                                Hassle Free Rides <br><span class="animated slideInRight text-primary">₹ 299*</span>
-                                            </h1>
-                                                <a href=""data-bs-toggle="modal" data-bs-target="#book1"
-                                                class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight">
-                                            Book now
-                                            </a>
-                                            <a href=""
-                                                class="btn btn-warning rounded-pill py-3 px-4 animated slideInRight">Read
-                                                More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="w-100 animated slideInLeft" src="assert/img/slider/8.png" alt="Image" style="height: 100%;">
-                            <div class="carousel-caption">
-                                <div class="container">
-                                    <div class="row justify-content-end">
-                                        <div class="col-lg-7 text-end">
-                                            
-                                            <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
-                                                Hospital Emergencies</h1>
-                                                <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft" 
-                                                data-bs-toggle="modal" data-bs-target="#book1">Book now</a>
-                                            <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
-                                                href="tel:917592933933">Call Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 
                 <!-- Additional Slider End -->
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                </button> -->
+                </button>
             </div>
         </div>
     <!--------------------------------------------------  Slider End       ----------------------------------->
@@ -536,7 +420,7 @@
                                     <div class="col-lg-6">
                                         <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 50%;">
                                             <button type="button" class="btn-play" data-bs-toggle="modal"
-                                                data-src="assert/video/ser.mp4" data-bs-target="#videoModal">
+                                                data-src="assert/video/02-2.mp4" data-bs-target="#videoModal">
                                                 <span></span>
                                             </button>
                                         </div>
@@ -729,8 +613,8 @@
                         <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
                     </div>
                     <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s" >
-                        <!-- <form action="" method="post"> -->
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                        
+                            <!-- <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">SUJITH E R</h5>
                                 <p class="mb-3 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
                                     and I am pleased to share my experience. One aspect that impressed me was their responsiveness.
@@ -742,7 +626,7 @@
                                 
 
                             </div>
-                        <!-- </form> -->
+                      
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">ANANDHU S </h5>
                                 <p class="mb-3 limitline">The efficiency and punctuality of the drivers provided by
@@ -798,7 +682,25 @@
                                 <input type="checkbox" class="expand-btn" id="expand-btn">
                                 
                                 
-                            </div>
+                            </div> -->
+                            <?php
+                                // Fetch data from the 'review' table
+                                $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
+                                $result = $conn->query($sql); 
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            // Display each row of data
+                                        ?>
+                                <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
+                                    <h5 class="text-center"><?php echo  $row['name'];  ?></h5>
+                                    <p class="mb-4 limitline"><?php echo  $row['review'];  ?></p>
+                                    <input type="checkbox" class="expand-btn" id="expand-btn">
+                                </div>
+                                <?php
+                                }
+                                } else {
+                                echo '<tr><td colspan="12">No data found.</td></tr>';
+                          }?>
                       
                     </div>
                 </div>

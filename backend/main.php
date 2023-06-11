@@ -2,9 +2,8 @@
           <!-- ============== ==================== Main -Body Start- ======================================================================= -->
       
               <?php
-            include_once "recent-booking.php";
-            include_once "pending-booking.php";
-            include_once "completed-booking.php";
+            include_once "new-ride.php";
+            
             ?>
           <!-- ================================================== Footer  =======================================-->
       <?php require_once "footer.php"; ?>
