@@ -1,6 +1,6 @@
 <?php 
 
-$conn = new mysqli('localhost', 'root', '', 'file');
+$conn = new mysqli('localhost', 'root', '', 'dafy');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

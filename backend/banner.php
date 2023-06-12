@@ -6,39 +6,39 @@
             <div class="col-lg-100 d-flex align-items-center">
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">Testimonial </h5>
+                        <h5 class="card-title fw-semibold mb-4">Banner </h5>
                         <div class="booking-form">
                         <form method="POST" action="database/banner_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
                                     <div class="row">
                                         <div class="col-10">
                                         <div class="form-group">
                                                     <label class="form-label">Name</label><br>
-                                                    <input class="form-control" type="text" name="b-name">
+                                                    <input class="form-control" type="text" name="b-name" required>
                                             </div>
                                         </div>
                                         <div class="col-10">
                                         <div class="form-group">
                                                     <label class="form-label">content</label><br>
-                                                    <input class="form-control" type="text" name="b-position">
+                                                    <input class="form-control" type="text" name="b-content" required>
                                             </div>
                                         </div>
                                         <div class="col-10">
                                             <div class="form-group">
                                                 <label class="form-label"> Date </label><br>
-                                                <input class="form-control" type="datetime-local"  name="b-date"  min="<?=date('Y-m-d\TH:i');?>" >
+                                                <input class="form-control" type="datetime-local"  name="b-date"  min="<?=date('Y-m-d\TH:i');?>" required>
                                             </div>
                                         </div>
                                         <div class="col-10">
                                             <div class="form-group">
                                                 <label class="form-label">Photo</label><br>
-                                                <input type="file" name="b-img" id="Upload">
+                                                <input type="file" name="b-img" id="Upload" required>
                                             </div>
                                         </div>
                                     </div>
                                         <div class="row">
                                             <div class="col-10">
                                                 <div class="form-btn">
-                                                <button type="submit" class="submib-btn rounded-pill texb-center bg-warning w-100" name="b-addData">Add New </button>
+                                                <button type="submit" class="submib-btn rounded-pill texb-center bg-warning w-100" name="b-banner">Add New </button>
                                                 </div>
                                             </div>
                                         </div>

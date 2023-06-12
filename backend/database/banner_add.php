@@ -2,19 +2,18 @@
 <?php
 include 'connection.php';
 
-if (isset($_POST['b-addData'])) {
+if (isset($_POST['b-banner'])) {
 
   $name = $_POST['b-name'];
   $date = $_POST['b-date'];
-
-//   $content= $_POST['b-content'];
+  $designation= $_POST['b-content'];
   $img= $_FILES ['b-img']['name'];
   $img_tmp = $_FILES ['b-img']['tmp_name'];
-  $img_loc = '../assets/images/banner/';
+  $img_loc = '../assets/images/team/';
   $move=move_uploaded_file($img_tmp,$img_loc.$img);
 
-  $stmt = $conn->prepare("INSERT INTO `banner`(`b_date`,`b_name`, `b_img`, ) VALUES (?, ?, ?)");
-  $stmt->bind_param("sss", $date, $name, $img);
+  $stmt = $conn->prepare("INSERT INTO `banner`(`b_date` `b_name`, `b_content`, `b_img`) VALUES (?, ?, ?,?)");
+  $stmt->bind_param("ssss", $date, $name, $content,$img);
   
   // Execute the prepared statement
   if ($stmt->execute()) {

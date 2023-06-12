@@ -23,7 +23,7 @@ require_once "header.php"; ?>
                             <th class="border-bottom-0">
                               <h6 class="fw-semibold mb-0">Phone</h6>
                             </th>
-                            <th class="border-bottom-0">
+                            <th class="border-bottom-0 data5">
                               <h6 class="fw-semibold mb-0">Email</h6>
                             </th>
                             <th class="border-bottom-0">
@@ -50,13 +50,13 @@ require_once "header.php"; ?>
                             <th class="border-bottom-0">
                               <h6 class="fw-semibold mb-0">Vechicle Type</h6>
                             </th>
-                            <th class="border-bottom-0 ">
+                            <th class="border-bottom-0 data5">
                               <h6 class="fw-semibold mb-0">Driver Name</h6>
                             </th>
-                            <th class="border-bottom-0">
+                            <th class="border-bottom-0  data5">
                               <h6 class="fw-semibold mb-0">payment Type</h6>
                             </th>
-                            <th class="border-bottom-0">
+                            <th class="border-bottom-0 data5">
                               <h6 class="fw-semibold mb-0">payment</h6>
                             </th>
                             <th class="border-bottom-0">
@@ -69,66 +69,7 @@ require_once "header.php"; ?>
                           </tr>
                         </thead>
                         <tbody>
-                          <!-- <tr>
-                            <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
-                            <td class="border-bottom-0">
-                                <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
-                                <span class="fw-normal">Web Designer</span>                          
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">09876543211</p>
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">Sunil@gmail.com</p>
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">current-loc</p>
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">drop-loc</p>
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">one-side Trip</p>
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">01-06-23 & 10:40am</p>
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">SUV</p>
-                            </td>
-                            <td class="border-bottom-0">
-                              <p class="mb-0 fw-normal">Automatic</p>
-                            </td>
-                              <!-- table row data ->
-                              <td class="border-bottom-0">
-                              <div class="d-flex align-items-center gap-2">
-                                <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
-                                  
-                                </label>
-                              </div>
-                            </td>
-                            <td class="border-bottom-0 data5" >
-                              <select name="" id=""class="badge bg-primary fw-semibold">
-                                <option value="" selected disabled>Select</option>
-                                <option value="a">Amal</option>
-                                <option value="b">jijo</option>
-                                <option value="c">Drive Started</option>
-                                <option value="d">siva</option>
-                                <option value="e">Cancel</option>
-                              </select>
-                            </td>
-                            <td class="border-bottom-0" >
-                              <select name="" id="sel"class="badge bg-primary fw-semibold">
-                                <option value="" selected disabled>Select</option>
-                                <option value="1">Confirm</option>
-                                <option value="2">Driver Assigned</option>
-                                <option value="3">Drive Started</option>
-                                <option value="4">Completed</option>
-                                <option value="5">Cancel</option>
-                              </select>
-                            </td>
                           
-                          </tr>  -->
                           <?php  
                                       if ($conn->connect_error) {
                                       die("Connection failed: " . $conn->connect_error);
@@ -140,16 +81,18 @@ require_once "header.php"; ?>
                                   if (mysqli_num_rows($result)> 0) {
                                 while ($row=mysqli_fetch_array($result)) {
                                     // Display each row of data?>
+                                   
                                   <tr>
                                     <td class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6></td>
+                                        <h6 class="fw-semibold mb-0">
+                                           <?php echo $row['id']; ?></h6></td>
                                     <td class="border-bottom-0">
                                         <h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6>
                                     </td>
                                     <td class="border-bottom-0">
                                     <p class="mb-0 fw-normal"><?php echo $row['phone'];?></p>
                                     </td>
-                                    <td class="border-bottom-0">
+                                    <td class="border-bottom-0 data5">
                                     <p class="mb-0 fw-normal"><?php echo $row['email']; ?></p>
                                     </td>
                                     <td class="border-bottom-0">
@@ -177,28 +120,14 @@ require_once "header.php"; ?>
                                     <td class="border-bottom-0">
                                     <p class="mb-0 fw-normal"><?php echo $row['v_type']; ?></p>
                                     </td>
-                                    <td class="border-bottom-0 " >
-                                    <select name="assign" id=""class="badge bg-primary fw-semibold">
-                                        <option selected disabled>Select</option>
-                                        <option>Amal</option>
-                                        <option>jijo</option>
-                                        <option>Drive Started</option>
-                                        <option>siva</option>
-                                        <option>Cancel</option>
-                                    </select>
+                                    <td class="border-bottom-0 data5">
+                                   <p class="mb-0 fw-normal"><?php echo $row['driver_name']; ?></p>
                                     </td>
-                                    <td class="border-bottom-0">
-                                    <select name="pay_type" id=""class="badge bg-primary fw-semibold">
-                                        <option selected disabled>Select</option>
-                                        <option >G-pay</option>
-                                        <option >paytm</option>
-                                        <option >phonepe</option>
-                                        <option >direct_Cash</option>
-                                        <option >Cancel</option>
-                                    </select>
+                                    <td class="border-bottom-0 data5">
+                                    <p class="mb-0 fw-normal"><?php echo $row['payment_type']; ?></p>
                                     </td>
-                                    <td class="border-bottom-0">
-                                    <input type="text" name="payment" id="" placeholder="Amount" value="<?php echo $row['payment']; ?>">
+                                    <td class="border-bottom-0 data5">
+                                    <p class="mb-0 fw-normal"><?php echo $row['payment']; ?></p>
                                     </td>
                                     <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
@@ -207,7 +136,13 @@ require_once "header.php"; ?>
                                         </label>
                                     </div>
                                     </td>
-                                    <td class="border-bottom-0" >
+                                    <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                    <a type="button" class="" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">update</a>
+                                        </label>
+                                    </div>
+                                    </td>
+                                    <!-- <td class="border-bottom-0" >
                                     <select name="status" id="sel"class="badge bg-primary fw-semibold">
                                         <option value="" selected disabled>Select</option>
                                         <option value="1">Confirm</option>
@@ -216,7 +151,7 @@ require_once "header.php"; ?>
                                         <option value="4">Completed</option>
                                         <option value="5">Cancel</option>
                                     </select>
-                                    </td> 
+                                    </td>  -->
                                    
                                   </tr> 
                                     <?php
@@ -244,23 +179,11 @@ require_once "header.php"; ?>
                     console.log(selection.selectedIndex);
                 });
             </script>
-            <!-- <script>
-                  $(document).ready(function() {
-                    // Initially hide all data sections
-                    $(".data5").hide();
-
-                    // Show the appropriate data section based on the selected value in the "Type" dropdown
-                    $("#sel").change(function() {
-                      var selectedType = $(this).val();
-                      $(".data5").hide();
-                      
-                      if (selectedType === "2") {
-                        $(".data5").show();
-                      }
-                    });
-                  });
-            </script> -->
-
+           <style>
+            .data5{
+              display: none;
+            }
+           </style>
 
         <!-- ================================================== Footer  =======================================-->
 <?php include_once 'footer.php'; ?>

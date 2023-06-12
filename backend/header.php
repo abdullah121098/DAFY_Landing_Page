@@ -7,6 +7,7 @@
   <title>Dafy Online Pvt ltd</title>
   <link rel="shortcut icon" type="image/png" href="assets/images/logos/loader.png" />
   <link rel="stylesheet" href="assets/css/styles.min.css" />
+
 </head>
 
 <body>
@@ -105,7 +106,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="team.php" aria-expanded="false">
                 <span>
-                  <i class="ti ti-mood-happy"></i>
+                  <i class="ti ti-aperture"></i>
                 </span>
                 <span class="hide-menu">Team Detail</span>
               </a>
@@ -138,15 +139,17 @@
                 <i class="ti ti-menu-2"></i>
               </a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link nav-icon-hover" href="javascript:void(0)">
                 <i class="ti ti-bell-ringing"></i>
                 <div class="notification bg-primary rounded-circle"></div>
               </a>
-            </li> -->
+            </li>
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+            <a href="new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
+             
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -175,4 +178,4 @@
         </nav>
       </header>
       <!--  Header End -->
-     
+    

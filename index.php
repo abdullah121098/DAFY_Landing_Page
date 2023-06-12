@@ -97,41 +97,35 @@ require_once "database/connection.php";
                     <div class="carousel-inner">
                         
                         <div class="carousel-item active">
-                                <img class="w-100" src="assert/img/banner/a.jpg" alt="breeze-street-image" style="height: 100%;">
+                                <img class="w-100" src="assert/img/banner/a.jpg" alt="breeze-street-image">
                                 <div class="carousel-caption">
                                     <div class="container">
                                         <div class="row justify-content-end">
-                                            <div class="col-lg-6 text-end col-6">
-                                                <h1 class="fs-4   animated slideInLeft" style="font-family: 'Lato', sans-serif;">
+                                            <div class="col-lg-7 text-end col-7">
+                                                <h1 class="fs-4 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
                                                 <span class="highlight">Welcome to<strong>Dafy Online Service</strong></span></h1>
-                                                <h1 class="display-3  mb-4 animated slideInLeft" style="font-family:'Lato', sans-serif;">
-                                                    <span class="highlight">Most reliable and economical professional driver on demand</span></h1>  
+                                                <h1 class="display-5 mb-3 animated slideInLeft" style="font-family:'Lato', sans-serif;">
+                                                    <span class="highlight">Most reliable and economical <br> professional driver on demand</span></h1>  
                                                 <a href="" class="btn btn-none rounded-pill py-3 px-4 animated slideInLeft"
                                                 data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif; color:#ffd300"><b> Book Now</b></a>
                                                 <a href="#service-type" class="btn btn-none rounded-pill py-3 px-4 animated slideInLeft"
-                                                style="font-family: 'Lato', sans-serif;color:#ffd300"> Read More</a>
+                                                style="font-family: 'Lato', sans-serif;color:#ffd300"><b> Read More</b></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                         </div>
-                        <style> .highlight{
-                                        background-color: #ffd300; 
-                                        border-radius:4px; 
-                                        padding: 2px 3px;
-                        }
-                        </style>
-
+                        
                     </div>
                 
                 <!-- Additional Slider End -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                    <!-- <span class="visually-hidden">Previous</span> -->
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                    <!-- <span class="visually-hidden">Next</span> -->
                 </button>
             </div>
         </div>
@@ -420,7 +414,7 @@ require_once "database/connection.php";
                                     <div class="col-lg-6">
                                         <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 50%;">
                                             <button type="button" class="btn-play" data-bs-toggle="modal"
-                                                data-src="assert/video/02-2.mp4" data-bs-target="#videoModal">
+                                                data-src="assert/video/02-2.mp4" data-src2="assert/video/01_1.mp4" data-bs-target="#videoModal">
                                                 <span></span>
                                             </button>
                                         </div>
@@ -481,6 +475,22 @@ require_once "database/connection.php";
                 </div>
                 
                 <!-- Video Modal End -->
+                <script>
+                    var videoModal = document.getElementById('videoModal');
+                    var videoElement = document.getElementById('video');
+                    var btnPlay = document.getElementsByClassName('btn-play')[0];
+                    var videoSource = btnPlay.getAttribute('data-src');
+                    var videoSource2 = btnPlay.getAttribute('data-src2');
+
+                    btnPlay.addEventListener('click', function() {
+                        videoElement.src = videoSource;
+                        videoModal.addEventListener('hidden.bs.modal', function() {
+                            videoElement.src = videoSource2;
+                            videoModal.removeEventListener('hidden.bs.modal');
+                        });
+                    });
+                </script>
+
             </section>
     <!--------------------------------------------------- Service Start ------------------------------------->
     <!--------------------------------------------------- enquiry End ------------------------------------->
@@ -545,8 +555,8 @@ require_once "database/connection.php";
                         <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                        <!-- <form action="" method="post"> -->
-                            <div class="project-item mb-5">
+
+                        <div class="project-item mb-5">
                                 <div class="position-relative">
                                     <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
                                 </div>
@@ -555,7 +565,7 @@ require_once "database/connection.php";
                                     <span class="text-warning">CEO</span></a>
                                 </div>
                             </div>
-                        <!-- </form> -->
+                      
                             <div class="project-item mb-5">
                                 <div class="position-relative">
                                     <img class="img-fluid" src="assert/img/team/team-2.jpg" alt="">
@@ -595,8 +605,10 @@ require_once "database/connection.php";
                                     <a class="d-block h5 text-center" href="">Josen Kuriakose <br>
                                         <span class="text-warning">Operational's Head</span></a>
                                 </div>
-                            </div>
+                            </div> 
                        
+                       
+                        
                     </div>
                 </div>
             </div>
@@ -614,7 +626,7 @@ require_once "database/connection.php";
                     </div>
                     <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s" >
                         
-                            <!-- <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                        <!-- <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">SUJITH E R</h5>
                                 <p class="mb-3 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
                                     and I am pleased to share my experience. One aspect that impressed me was their responsiveness.
@@ -680,9 +692,8 @@ require_once "database/connection.php";
                                     He is very attentive to my specific needs and preferences like adjusting the temperature, 
                                     ensuring privacy, or helping with luggage, thus made my journey comfortable and stress-free.</p>
                                 <input type="checkbox" class="expand-btn" id="expand-btn">
-                                
-                                
-                            </div> -->
+                               </div>
+                        -->
                             <?php
                                 // Fetch data from the 'review' table
                                 $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
@@ -984,7 +995,7 @@ require_once "database/connection.php";
                                 <h2 class="text-primary">Subscribe Us</h2>
                             </div>
                         <div class="modal-body ">
-                            <form action="" method="post">
+                            <form action="database/subcribe-add.php" method="POST">
                                 <div class="row">
                                     <div class="col-10">
                                         <div class="form-group">
@@ -1004,7 +1015,7 @@ require_once "database/connection.php";
                                 </div>
                                 <div class="col-10">
                                     <div class="form-btn validate">
-                                    <button class="submit-btn" id="subscribe-submit">Subscribe Us</button>
+                                    <button class="submit-btn" id="subscribe-submit" name="subscribe-submit">Subscribe Us</button>
                                     </div>
                                 </div>
                             </form>
@@ -1022,31 +1033,31 @@ require_once "database/connection.php";
                                 <h2 class="text-primary">Join Us</h2>
                             </div>
                         <div class="modal-body">
-                            <form action="" method="post">
+                            <form action="database/cv_add.php" method="post">
                                 <div class="row">
                                     <div class="col-10">
                                         <div class="form-group">
-                                            <input class="form-control validate" type="text" placeholder="Enter your name" id="name1" pattern=[A-Z\sa-z]{3,20} required>
+                                            <input class="form-control validate" type="text" placeholder="Enter your name" id="name2" name="name2" pattern=[A-Z\sa-z]{3,20} required>
                                         </div>
                                     </div>
                                     <div class="col-10">
                                         <div class="form-group">
-                                            <input class="form-control validate" type="email" placeholder="Enter your email" id="email1" required>
+                                            <input class="form-control validate" type="email" placeholder="Enter your email" id="email2" name="email2" required>
                                         </div>
                                     </div>
                                     <div class="col-10">
                                         <div class="form-group">
-                                            <input class="form-control validate" type="tel" placeholder="Enter your phone number" id="phone1" pattern=(\d{3})?\s?(\d{3})?\s?(\d{4}) required>
+                                            <input class="form-control validate" type="tel" placeholder="Enter your phone number" name="phone2" id="phone2" pattern=(\d{3})?\s?(\d{3})?\s?(\d{4}) required>
                                         </div>
                                     </div>
                                     <div class="col-10">
                                         <div class="form-group">
-                                            <input class="form-control validate" type="file"id="file-cv1" name="cv-file" required placeholder="upload your cv/resume">
+                                            <input class="form-control validate" type="file"id="file-cv1" name="cv-file1" required placeholder="upload your cv/resume">
                                         </div>
                                     </div>
                                     <div class="col-10">
                                         <div class="form-btn validate">
-                                            <button class="submit-btn" id="join-submit">Submit</button>
+                                            <button class="submit-btn" id="join-submit"name="join-submit">Submit</button>
                                         </div>
                                     </div>
                                 </div>
