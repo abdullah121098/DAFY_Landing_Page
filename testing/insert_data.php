@@ -17,12 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
   if (isset($_POST['addData'])) {
     // Button 1: Add all data to the database
-    $stmt = $conn->prepare("INSERT INTO review (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt = $conn->prepare("INSERT INTO customer(name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
     $stmt->bind_param("sssssssssss", $name, $email, $phone, $pick_up, $drop_in, $ride_type, $time_type, $date, $time, $v_name, $v_type);
   } elseif (isset($_POST['addDataWithDateTime'])) {
     // Button 2: Add data with current date and time
     $currentDateTime = date('Y-m-d H:i');
-    $stmt = $conn->prepare("INSERT INTO review (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt = $conn->prepare("INSERT INTO customer (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
     $stmt->bind_param("sssssssssss", $name, $email, $phone, $pick_up, $drop_in, $ride_type, $time_type, $currentDateTime, $currentDateTime, $v_name, $v_type);
   }
   

@@ -1165,7 +1165,7 @@
                         </div>
                         <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s" >
                            
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                            <!-- <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">SUJITH E R</h5>
                                 <p class="mb-3 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
                                     and I am pleased to share my experience. One aspect that impressed me was their responsiveness.
@@ -1230,7 +1230,30 @@
                                     He is very attentive to my specific needs and preferences like adjusting the temperature, 
                                     ensuring privacy, or helping with luggage, thus made my journey comfortable and stress-free.</p>
                                 <input type="checkbox" class="expand-btn" id="expand-btn">
+                            </div> -->
+                            <?php
+                                    $conn = new mysqli('localhost', 'root', '', 'file');
+            
+                                    if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+                                // Fetch data from the 'review' table
+                                $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
+                                $result = $conn->query($sql); 
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            // Display each row of data
+                                        ?>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
+                                <h5 class="text-center"><?php echo  $row['name'];  ?></h5>
+                                <p class="mb-4 limitline"><?php echo  $row['review'];  ?></p>
+                                <input type="checkbox" class="expand-btn" id="expand-btn">
                             </div>
+                            <?php
+                              }
+                            } else {
+                               echo '<tr><td colspan="12">No data found.</td></tr>';
+                          }?>
                         </div>
                     </div>
                 </div>
