@@ -1,5 +1,5 @@
 <?php
-require_once "database/connection.php";
+// require_once "database/connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -93,12 +93,10 @@ require_once "database/connection.php";
     <!----------------------------- slider Start ------------------------------------------------>
         <div class="container-fluid px-0 mb-5">
             <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                
-                    <div class="carousel-inner">
-                        
-                        <div class="carousel-item active">
-                                <img class="w-100" src="assert/img/banner/a.jpg" alt="breeze-street-image">
-                                <div class="carousel-caption">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                                <img class="w-100 h-100" src="assert/img/banner/a.jpg" alt="breeze-street-image">
+                                <!-- <div class="carousel-caption">
                                     <div class="container">
                                         <div class="row justify-content-end">
                                             <div class="col-lg-7 text-end col-7">
@@ -113,10 +111,32 @@ require_once "database/connection.php";
                                             </div>
                                         </div>
                                     </div>
+                                </div> -->
+                                <div class="carousel-caption">
+                                    <div class="container">
+                                        <div class="row justify-content-end">
+                                            <div class="col-lg-7 text-end col-10">
+                                                <p class="fs-4  animated slideInLeft" style="font-family: 'Lato', sans-serif; color:gold;">
+                                                <span > Welcome to</span>
+                                                <strong >Dafy Online Service</strong>
+                                                </p>
+                                                <h1 class="display-3  mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif; color:gold;">
+                                                    <span class=""> Most reliable</span>
+                                                    <span class="">and economical</span>
+                                                    <span class="">professional driver</span>
+                                                    <span class="">driver on demand</span>
+                                                </h1>  
+                                                <a href="" class="btn btn-light rounded-pill py-3 px-4 animated slideInLeft"
+                                                data-bs-toggle="modal" data-bs-target="#book1"
+                                                style="font-family: 'Lato', sans-serif;color:black;">Book Now</a>
+                                                <a href="" class="btn btn-light rounded-pill py-3 px-4 animated slideInLeft" 
+                                                style="font-family: 'Lato', sans-serif; color:black;">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                        
                     </div>
+                </div>
                 
                 <!-- Additional Slider End -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
@@ -414,7 +434,7 @@ require_once "database/connection.php";
                                     <div class="col-lg-6">
                                         <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 50%;">
                                             <button type="button" class="btn-play" data-bs-toggle="modal"
-                                                data-src="assert/video/02-2.mp4" data-src2="assert/video/01_1.mp4" data-bs-target="#videoModal">
+                                                data-src="assert/video/dafy.mp4" data-bs-target="#videoModal">
                                                 <span></span>
                                             </button>
                                         </div>
@@ -451,8 +471,7 @@ require_once "database/connection.php";
                                 </div>
                             </div>
                         </div>
-                <!-- About End -->
-
+                <!-- About End -->        
 
                 <!-- Video Modal Start -->
                 <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -475,21 +494,7 @@ require_once "database/connection.php";
                 </div>
                 
                 <!-- Video Modal End -->
-                <script>
-                    var videoModal = document.getElementById('videoModal');
-                    var videoElement = document.getElementById('video');
-                    var btnPlay = document.getElementsByClassName('btn-play')[0];
-                    var videoSource = btnPlay.getAttribute('data-src');
-                    var videoSource2 = btnPlay.getAttribute('data-src2');
-
-                    btnPlay.addEventListener('click', function() {
-                        videoElement.src = videoSource;
-                        videoModal.addEventListener('hidden.bs.modal', function() {
-                            videoElement.src = videoSource2;
-                            videoModal.removeEventListener('hidden.bs.modal');
-                        });
-                    });
-                </script>
+            
 
             </section>
     <!--------------------------------------------------- Service Start ------------------------------------->
@@ -626,7 +631,7 @@ require_once "database/connection.php";
                     </div>
                     <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s" >
                         
-                        <!-- <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                        <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">SUJITH E R</h5>
                                 <p class="mb-3 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
                                     and I am pleased to share my experience. One aspect that impressed me was their responsiveness.
@@ -693,25 +698,25 @@ require_once "database/connection.php";
                                     ensuring privacy, or helping with luggage, thus made my journey comfortable and stress-free.</p>
                                 <input type="checkbox" class="expand-btn" id="expand-btn">
                                </div>
-                        -->
-                            <?php
+                       
+                            <!-- <?php
                                 // Fetch data from the 'review' table
-                                $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
-                                $result = $conn->query($sql); 
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            // Display each row of data
-                                        ?>
-                                <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
-                                    <h5 class="text-center"><?php echo  $row['name'];  ?></h5>
-                                    <p class="mb-4 limitline"><?php echo  $row['review'];  ?></p>
-                                    <input type="checkbox" class="expand-btn" id="expand-btn">
-                                </div>
-                                <?php
-                                }
-                                } else {
-                                echo '<tr><td colspan="12">No data found.</td></tr>';
-                          }?>
+                                // $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
+                                // $result = $conn->query($sql); 
+                                //     if ($result->num_rows > 0) {
+                                //         while ($row = $result->fetch_assoc()) {
+                                //             // Display each row of data
+                                //         ?>
+                                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
+                                     <h5 class="text-center"><?php //echo  $row['name'];  ?></h5>
+                                     <p class="mb-4 limitline"><?php //echo  $row['review'];  ?></p>
+                                     <input type="checkbox" class="expand-btn" id="expand-btn">
+                                 </div> 
+                                 <?php
+                                // }
+                                // } else {
+                                // echo '<tr><td colspan="12">No data found.</td></tr>';}
+                            ?> -->
                       
                     </div>
                 </div>

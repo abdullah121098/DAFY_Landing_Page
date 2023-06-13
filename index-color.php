@@ -318,10 +318,10 @@
                                     data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
                                     <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
                                         Read More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="carousel-item">
                     <img class="w-100 animated slideInLeft" src="assert/img/slider/your-car-our-driver.jpg" alt="Image">

@@ -138,7 +138,8 @@ require_once "header.php"; ?>
                                     </td>
                                     <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
-                                    <a type="button" class="" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">update</a>
+                                    <a type="button" class="" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">
+                                  </a>
                                         </label>
                                     </div>
                                     </td>
