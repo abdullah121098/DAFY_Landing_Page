@@ -1,3 +1,4 @@
+<?php include 'database/connection.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,10 +39,10 @@
 
 <body style="background-color:gray;">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 
+    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 
         vh-100 top-50 start-50 d-flex align-items-center justify-content-center" data-delay="50000s">
                     <span><img src="assert/img/logo/dafy.jpeg" class="" width="100px" alt="" srcset=""> </span>
-    </div>
+    </div> -->
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
@@ -1098,7 +1099,7 @@
                         <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="project-item mb-5">
+                        <!-- <div class="project-item mb-5">
                             <div class="position-relative">
                                 <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
                             </div>
@@ -1146,7 +1147,29 @@
                                 <a class="d-block h5 text-center" href="">Josen Kuriakose <br>
                                     <span class="text-warning">Operational's Head</span></a>
                             </div>
-                        </div>
+                        </div> -->
+                        <?php // Fetch data from the 'review' table
+                                $sql1 = "SELECT * FROM `team` ORDER BY date DESC LIMIT 6";
+                                $result1 = $conn->query($sql); 
+                                    if ($result1->num_rows > 0) {
+                                        while ($img = $result1->fetch_assoc()) {
+                                            // Display each row of data
+                                        ?>
+                            <div class="project-item mb-5">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="backend/assets/images/team/<?php echo  $img['t_img']; ?>" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <a class="d-block h5 text-center" href=""><?php echo  $img['t_name']; ?><br>
+                                    <span class="text-warning"><?php echo  $img['t_position']; ?></span></a>
+                                </div>
+                            </div>
+                            <?php
+                                }
+                                } else {
+                                echo '<tr><td colspan="12">No data found.</td></tr>';
+                          }?>
+
                     </div>
                 </div>
             </div>
@@ -1232,11 +1255,6 @@
                                 <input type="checkbox" class="expand-btn" id="expand-btn">
                             </div> -->
                             <?php
-                                    $conn = new mysqli('localhost', 'root', '', 'file');
-            
-                                    if ($conn->connect_error) {
-                                    die("Connection failed: " . $conn->connect_error);
-                                }
                                 // Fetch data from the 'review' table
                                 $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
                                 $result = $conn->query($sql); 

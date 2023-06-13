@@ -76,7 +76,7 @@
                            die("Connection failed: " . $conn->connect_error);
                        }
                      // Fetch data from the 'review' table
-                       $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 2";
+                       $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 4";
                        $result = $conn->query($sql); 
                           if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
@@ -92,10 +92,10 @@
                                     <h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <textarea class="fw-semibold mb-1 w-100"><?php echo  $row['review'];  ?></textarea>
+                                    <textarea class="fw-semibold mb-1 w-100 h-50"><?php echo  $row['review'];  ?></textarea>
                                 </td>
                                 <td class="border-bottom-0">
-                                      <a href="edit.php/?id=<?php echo $row['id']; ?>" name='update' type="submit" title="edit">edit</a>
+                                      <a href="database/edit.php/?id=<?php echo $row['id']; ?>" name='edit' title="edit">edit</a>
                                       <a href="" title="delete">delete</i></a>
                                     </td>
                             </tr> 

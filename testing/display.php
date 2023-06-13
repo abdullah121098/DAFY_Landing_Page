@@ -65,7 +65,8 @@
                           if ($result->num_rows > 0) {
                             while ($row = $result->fetch_array()) {
                                 // Display each row of data
-                               ?><tr>
+                               ?>
+                               <tr>
                                 <td class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6></td>
                                 <td class="border-bottom-0">
@@ -100,7 +101,7 @@
                                 <p class="mb-0 fw-normal"><?php echo $row['v_name']; ?></p>
                                 </td>
                                 <td class="border-bottom-0">
-                                <input type="text" class="form-control mb-0 fw-normal" value="<?php echo $row['v_type']; ?>" name="v-type">
+                                <label class="form-control mb-0 fw-normal" ><?php echo $row['v_type']; ?></label>
                                 </td>
                                 <!-- table row data -->
                                 <td class="border-bottom-0">
@@ -111,30 +112,48 @@
                                 </div>
                                 </td>
                                 <td class="border-bottom-0 data5" >
-                                <select name="assign" id=""class="badge bg-primary fw-semibold">
+                                <!-- <select name="assign" id=""class="badge bg-primary fw-semibold">
                                     <option selected disabled>Select</option>
                                     <option>Amal</option>
                                     <option >jijo</option>
                                     <option >Drive Started</option>
                                     <option >siva</option>
                                     <option>Cancel</option>
-                                </select>
+                                </select> -->
+                                <div class="d-flex align-items-center gap-2">
+                                    <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
+                                    <?php echo $row['driver_name']; ?>
+                                    </label>
+                                </div>
                                 </td>
                                 <td class="border-bottom-0" >
-                                <select name="status" id="sel"class="badge bg-primary fw-semibold">
+                                <!-- <select name="status" id="sel"class="badge bg-primary fw-semibold">
                                     <option value="" selected disabled>Select</option>
                                     <option >Confirm</option>
                                     <option >Driver Assigned</option>
                                     <option >Drive Started</option>
                                     <option >Completed</option>
                                     <option >Cancel</option>
-                                </select>
+                                </select> -->
+                                <div class="d-flex align-items-center gap-2">
+                                    <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
+                                    <?php echo $row['payment']; ?>
+                                    </label>
+                                </div>
                                 </td> 
                                 <td class="border-bottom-0">
                                 <div class="d-flex align-items-center gap-2">
-                                    <a type="button" name="submit" class="badge bg-warning rounded-3 fw-semibold py-3 px-3" href="update.php?id=<?php echo $row['id']; ?>">confirm</a>
-                                    <a type="button" class="fa-solid fa-trash fs-5" name="update" type="submit" href="display.php?id=<?php echo $row['id']; ?>">delete</a>
+                                    <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
+                                    <?php echo $row['payment_type']; ?>
+                                    </label>
+                                </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                <div class="d-flex align-items-center gap-2">
+                                    <!-- <a type="button" name="submit" class="badge bg-warning rounded-3 fw-semibold py-3 px-3" href="">confirm</a> -->
+                                    <a type="button" class="fa-solid fa-trash fs-5" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">delete</a>
                                     <!-- <button type="submit" class="btn  btn-primary" name="update"> update</button> -->
+                                    
                                 </div>
                                 </td>
                             </tr> 
@@ -160,22 +179,7 @@
                     console.log(selection.selectedIndex);
                 });
             </script>
-            <!-- <script>
-                  $(document).ready(function() {
-                    // Initially hide all data sections
-                    $(".data5").hide();
-
-                    // Show the appropriate data section based on the selected value in the "Type" dropdown
-                    $("#sel").change(function() {
-                      var selectedType = $(this).val();
-                      $(".data5").hide();
-                      
-                      if (selectedType === "2") {
-                        $(".data5").show();
-                      }
-                    });
-                  });
-            </script> -->
+          
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -212,42 +216,18 @@
   });
 </script>
 
+
 <?php
-$test_id=$_GET['id'];
-echo $test_id
-
-//  if(isset($_POST['update'])){
-    
-// $a=$_POST['assign']; $b=$_POST['status']; 
-//     $sql ="UPDATE `customer` SET `driver_name`='$a',`status`='$b' WHERE 'id'= $test_id";
-//      $res=mysqli_query($conn,$sql);
-//  if($res){ ?>
-<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
- <script>swal("Profile Updated Succesfull");
-setTimeout(function(){
-    window.location.href='display.php';},1500);
-
-</script> -->
-               <?php 
-                // }else{?>
-<!-- <script>swal(" Update Failed ")</script> -->
-                 <?php
-                    // echo '<br> images Not upload into database';
-                // }
-// }
-  ?>
 
 
-
-
-
+?>
 
 
 <br><br><br><br>
-<?php  $conn = new mysqli('localhost', 'root', '', 'file');
-                                  if ($conn->connect_error) {
-                                      die("Connection failed: " . $conn->connect_error);
-                                  }
+                                            <!--- table no 2   --->
+
+
+<?php 
                                 // Fetch data from the 'review' table
 $sql = "SELECT * FROM complete_ride ORDER BY id DESC";
                                   $result = $conn->query($sql); ?>
