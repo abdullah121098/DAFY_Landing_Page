@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dafy Online pvt.lmt.</title>
+    <link rel="icon" type="image/x-icon" href="assert/img/logo/loader.png" >
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+   
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="assert/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assert/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assert/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="assert/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="assert/css/style.css" rel="stylesheet">
+    <link href="assert/css/booking.css" rel="stylesheet">
+</head>
+<body>
+<div class="col-lg-6">
+    <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 50%;">
+        <button type="button" class="btn-play" data-bs-toggle="modal" data-video="assert/video/01_1.mp4,02-2.mp4"
+            data-bs-target="#videoModal">
+            <span></span>
+        </button>
+    </div>
+</div>
+
+<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">DAFY Video</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 16:9 aspect ratio -->
+                <div class="ratio ratio-16x9">
+                    <video class="embed-responsive-item" id="video" controls></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var videoSources = [];
+    var currentVideoIndex = 0;
+    var videoElement = document.getElementById('video');
+    
+    document.getElementById('videoModal').addEventListener('show.bs.modal', function(event) {
+        var button = event.relatedTarget;
+        var videoSrc = button.getAttribute('data-video');
+        
+        videoSources = videoSrc.split(',');
+        playNextVideo();
+    });
+    
+    document.getElementById('videoModal').addEventListener('hide.bs.modal', function() {
+        videoElement.pause();
+        videoElement.removeAttribute('src');
+        currentVideoIndex = 0;
+    });
+    
+    videoElement.addEventListener('ended', playNextVideo);
+    
+    function playNextVideo() {
+        if (currentVideoIndex < videoSources.length) {
+            videoElement.setAttribute('src', videoSources[currentVideoIndex]);
+            videoElement.load();
+            videoElement.play();
+            currentVideoIndex++;
+        } else {
+            document.getElementById('videoModal').modal('hide');
+        }
+    }
+});
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<!--- ============================ Booking form control js End =================================== -->
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assert/lib/wow/wow.min.js"></script>
+<script src="assert/lib/easing/easing.min.js"></script>
+<script src="assert/lib/waypoints/waypoints.min.js"></script>
+<script src="assert/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="assert/lib/lightbox/js/lightbox.min.js"></script>
+<!-- Template Javascript -->
+<script src="assert/js/main.js"></script>
+</body>
+</html>

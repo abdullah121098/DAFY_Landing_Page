@@ -112,14 +112,7 @@
                                 </div>
                                 </td>
                                 <td class="border-bottom-0 data5" >
-                                <!-- <select name="assign" id=""class="badge bg-primary fw-semibold">
-                                    <option selected disabled>Select</option>
-                                    <option>Amal</option>
-                                    <option >jijo</option>
-                                    <option >Drive Started</option>
-                                    <option >siva</option>
-                                    <option>Cancel</option>
-                                </select> -->
+                              
                                 <div class="d-flex align-items-center gap-2">
                                     <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
                                     <?php echo $row['driver_name']; ?>
@@ -127,14 +120,7 @@
                                 </div>
                                 </td>
                                 <td class="border-bottom-0" >
-                                <!-- <select name="status" id="sel"class="badge bg-primary fw-semibold">
-                                    <option value="" selected disabled>Select</option>
-                                    <option >Confirm</option>
-                                    <option >Driver Assigned</option>
-                                    <option >Drive Started</option>
-                                    <option >Completed</option>
-                                    <option >Cancel</option>
-                                </select> -->
+                               
                                 <div class="d-flex align-items-center gap-2">
                                     <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
                                     <?php echo $row['payment']; ?>
@@ -151,9 +137,7 @@
                                 <td class="border-bottom-0">
                                 <div class="d-flex align-items-center gap-2">
                                     <!-- <a type="button" name="submit" class="badge bg-warning rounded-3 fw-semibold py-3 px-3" href="">confirm</a> -->
-                                    <a type="button" class="fa-solid fa-trash fs-5" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">delete</a>
-                                    <!-- <button type="submit" class="btn  btn-primary" name="update"> update</button> -->
-                                    
+                                    <a  class="fa-solid fa-trash fs-5" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">update</a>
                                 </div>
                                 </td>
                             </tr> 
@@ -170,6 +154,10 @@
                     </tbody>
                   </table>
         </form>
+
+
+
+
                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
           <script>
                 let selection =document.querySelector('#sel');
@@ -215,13 +203,6 @@
     });
   });
 </script>
-
-
-<?php
-
-
-?>
-
 
 <br><br><br><br>
                                             <!--- table no 2   --->

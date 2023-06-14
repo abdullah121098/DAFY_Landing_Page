@@ -126,12 +126,13 @@ if(isset($_POST['delete'])){
 
   $sql = mysqli_query($conn, $up);
   if($sql) {
-    echo 'delete successful';
+    header("Location:display.php");
+    echo '<script>alert("delete successful")</script>';
   } else {
     echo 'delete failed';
   }
 }
-// header("Location:display.php");
+
 // exit();
       // Display each row of data
 

@@ -1,6 +1,6 @@
 
 <?php
-$conn = new mysqli('localhost', 'root', '', 'file');
+include "connection.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = $_POST['name3'];

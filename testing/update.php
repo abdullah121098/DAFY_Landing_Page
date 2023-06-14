@@ -145,6 +145,7 @@ if(isset($_POST['update'])){
 
   $sql = mysqli_query($conn, $up);
   if($sql) {
+    header("Location:display.php");
     echo 'Update successful';
   } else {
     echo 'Update failed';
@@ -157,12 +158,14 @@ if(isset($_POST['delete'])){
 
   $sql = mysqli_query($conn, $up);
   if($sql) {
+    header("Location:display.php");
     echo 'delete successful';
   } else {
     echo 'delete failed';
   }
 }
-// header("Location:display.php");
-// exit();
+
+
       // Display each row of data
+      
 ?>
