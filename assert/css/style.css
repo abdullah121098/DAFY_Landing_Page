@@ -312,7 +312,6 @@
     opacity: 1;
 }
 
-
 /*** Service ***/
 .service-item .service-text {
     position: relative;
@@ -366,7 +365,7 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
 }
 
-/* .project-item .project-overlay {
+.project-item .project-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -384,7 +383,7 @@
 .project-item:hover .project-overlay {
     opacity: 1;
     padding-top: 0;
-} */
+}
 
 .project-item {
     display: flex;
@@ -436,7 +435,7 @@
 .project-carousel .owl-nav .owl-prev:hover,
 .project-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
-    color: red;
+    color: white;
 }
 
 @media (max-width: 768px) {

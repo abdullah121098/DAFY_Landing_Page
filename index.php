@@ -65,13 +65,13 @@
                             <a href="#service" class="dropdown-item">Hospital Assistance</a>
                         </div-->
                     </li>
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Join Us</a>
                                 <div class="dropdown-menu fade-up m-0 p-0">
                                     <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#book5">Join as Driver Partner</a>
-                                    <!-- <a href="#" class="dropdown-item">Join as Business Partner</a> -->
+                                    <a href="#" class="dropdown-item">Join as Business Partner</a>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
                         <div class="dropdown-menu fade-up m-0">
@@ -116,9 +116,9 @@
                                     <div class="container">
                                         <div class="row justify-content-end">
                                             <div class="col-lg-7 text-end col-10">
-                                                <p class="fs-4  animated slideInLeft" style="font-family: 'Lato', sans-serif; color:gold;">
-                                                <span > Welcome to</span>
-                                                <strong >Dafy Online Service</strong>
+                                                <p class="fs-4  animated slideInLeft" style="font-family: 'Lato', sans-serif; color:black;">
+                                                <span class="highlight"> Welcome to</span>
+                                                <strong class="highlight">Dafy Online Service</strong>
                                                 </p>
                                                 <h1 class="display-3  mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif; color:gold;">
                                                     <span class=""> Most reliable</span>
@@ -126,11 +126,13 @@
                                                     <span class="">professional driver</span>
                                                     <span class="">driver on demand</span>
                                                 </h1>  
-                                                <a href="" class="btn btn-light rounded-pill py-3 px-4 animated slideInLeft"
+                                                <a class="d-inline-flex align-items-centerbtn btn-light rounded-pill py-3 px-4 animated slideInLeft"
+                                                    href="tel:917592933933"><strong>call now</strong></a>
+                                                <!-- <a href="" class="btn btn-light rounded-pill py-3 px-4 animated slideInLeft"
                                                 data-bs-toggle="modal" data-bs-target="#book1"
-                                                style="font-family: 'Lato', sans-serif;color:black;">Book Now</a>
-                                                <a href="" class="btn btn-light rounded-pill py-3 px-4 animated slideInLeft" 
-                                                style="font-family: 'Lato', sans-serif; color:black;">Read More</a>
+                                                style="font-family: 'Lato', sans-serif;color:black;">Book Now</a> -->
+                                                <a href="#service-type" class="btn btn-light rounded-pill py-3 px-4 animated slideInLeft" 
+                                                style="font-family: 'Lato', sans-serif; color:black;"><strong>Read More</strong></a>
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +176,8 @@
                                 </p>
                             </div>
                             <div class="service-btn rounded-0 rounded-bottom bg-dark">
-                                <a class="text-warning fw-medium" href="" data-bs-toggle="modal" data-bs-target="#book1">Book Now
+                            <a class="text-warning fw-medium" href="tel:917592933933"><strong>call now</strong>
+                                <!-- <a class="text-warning fw-medium" href="" data-bs-toggle="modal" data-bs-target="#book1">Book Now -->
                                     <i class="bi bi-chevron-double-right ms-2"></i></a>
                             </div>
                         </div>
@@ -196,7 +199,8 @@
                                 </p>
                             </div>
                             <div class="service-btn rounded-0 rounded-bottom bg-dark">
-                                <a class="text-warning fw-medium" href="" data-bs-toggle="modal" data-bs-target="#book1">Book Now
+                                <!-- <a class="text-warning fw-medium" href="" data-bs-toggle="modal" data-bs-target="#book1">Book Now -->
+                            <a class="text-warning fw-medium" href="tel:917592933933"><strong>call now</strong>
                                     <i class="bi bi-chevron-double-right ms-2"></i></a>
                             </div>
                         </div>
@@ -245,17 +249,18 @@
                                             </div>
                                         </div>
                             
-                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s" >
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s" >
                                             <div class="collapsed-content d-none d-lg-block">
                                                 <h3 class="mb-3 text-primary">One-Side Service</h3>
                                                 <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the hustle of driving</p>
                                                 <p><i class="fa fa-check text-success me-3"></i> No more driving in heavy traffic and locating a parking spot</p>
                                                 <p><i class="fa fa-check text-success me-3"></i> Hire drivers for airport pickup or drop-off services</p>
-                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
+                                                <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                            <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
-                                            <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100  py-3 px-10" id="read-more">  
+                                              
                                         </div>
+                                        <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100  py-3 px-10" id="read-more">
                                     </div>
                                 </div>
         
@@ -268,16 +273,16 @@
                                                     style="object-fit: cover;border-radius: 0 50% 0 50%  ;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
                                             <div class="collapsed-content d-none d-lg-block">
                                                 <h3 class="mb-3 text-primary">Round-Trip Service</h3>
                                                 <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to commute your vehicle.</p>
                                                 <p><i class="fa fa-check text-success me-3"></i> Simply get around in town for midnight cravings, shopping, and night parties.</p>
                                                 <p><i class="fa fa-check text-success me-3"></i> Make a quick stop at any stores/pharmacies on your rides</p>
                                                 <p><i class="fa fa-check text-success me-3"></i> No more delays on your meeting schedules</p>
-                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
+                                                <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                             <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
                                              <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">  
                                         
                                         </div>
@@ -293,13 +298,14 @@
                                                     style="object-fit: cover; border-radius:30% 30% 30% 30%;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
                                             <div class="collapsed-content d-none d-lg-block">
                                                 <h3 class="mb-3 text-primary">Hospital Assistance</h3>
                                                 <p><i class="fa fa-check text-success me-3"></i> You can trust that your loved ones are in capable and caring hands.</p>
                                                 <p><i class="fa fa-check text-success me-3"></i> We prioritize the physical and emotional well-being of seniors.</p>
                                                 <p><i class="fa fa-check text-success me-3"></i> Our experienced drivers are here to provide a comfortable and supportive environment during their hospitalization.</p>
-                                                <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a>
+                                                <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
+                                                <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
                                              <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
                                              <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">
@@ -432,7 +438,7 @@
                             <div class="container">
                                 <div class="row g-0">
                                     <div class="col-lg-6">
-                                        <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 50%;">
+                                        <div class="h-100 w-100 d-flex align-items-center justify-content-center" style="height: 50%;">
                                             <button type="button" class="btn-play" data-bs-toggle="modal"
                                                 data-src="assert/video/dafy.mp4" data-bs-target="#videoModal">
                                                 <span></span>
@@ -465,7 +471,7 @@
                                                         your loved ones are in capable and caring hands. </span>
                                                 </div>
                                             </div>
-                                            <!--a class="btn btn-warning rounded-pill py-3 px-5" href="">Explore More</a-->
+                                            <a class="btn btn-white rounded-pill py-3 px-5" href=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -573,7 +579,7 @@
                       
                             <div class="project-item mb-5">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="assert/img/team/team-2.jpg" alt="">
+                                    <img class="img-fluid h-100" src="assert/img/team/team-5.jpg" alt="" >
                                     
                                 </div>
                                 <div class="p-4">
@@ -583,12 +589,12 @@
                             </div>
                             <div class="project-item mb-5">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="assert/img/team/team-1.jpg" alt="">
+                                    <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
                                     
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Jijo Louis <br>
-                                    <span class="text-warning">Human Resource's Head</span></a>
+                                    <span class="text-warning">HR's Head</span></a>
                                 </div>
                             </div>
                             <div class="project-item mb-5">
@@ -603,12 +609,12 @@
                             </div>
                             <div class="project-item mb-5">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="assert/img/team/team-3.jpg" alt="">
+                                    <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
                                     
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Josen Kuriakose <br>
-                                        <span class="text-warning">Operational's Head</span></a>
+                                        <span class="text-warning">Operation's Head</span></a>
                                 </div>
                             </div> 
                        
@@ -848,7 +854,7 @@
     <i class="fa fa-angle-up"></i></a>
     <!-- ===========================Modal Pop-Up ==============================================================-->
              <!---------------------------- One-Ride Modal ----------------------------------->
-    <div class="modal fade" id="book1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade right" id="book1" tabindex="-1" aria-labelledby="exampleModalLabel"   aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div id="booking" class="section-center bg-dark">
@@ -969,7 +975,7 @@
                                         <div class="row" id="book">
                                             <div class="col-10">
                                                 <div class="form-btn">
-                                                <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addData">Book </button>
+                                                <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3 w-100" name="addData">Book </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -978,7 +984,7 @@
                                     <div class="row data2">
                                                 <div class="col-10">
                                                     <div class="form-btn">
-                                                    <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3" name="addDataWithDateTime">book</button>
+                                                    <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3 w-100" name="addDataWithDateTime">book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -988,11 +994,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
         
     <!----   Subscribe US button          ---->
-        <div class="modal fade" id="book4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <!-- <div class="modal fade" id="book4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="booking-form">
@@ -1018,9 +1024,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-10">
+                                <div class="col-10 justify-content-center">
                                     <div class="form-btn validate">
-                                    <button class="submit-btn" id="subscribe-submit" name="subscribe-submit">Subscribe Us</button>
+                                    <button class="submit-btn w-100 py-3 px-3 rounded-pill" id="subscribe-submit" name="subscribe-submit">Subscribe Us</button>
                                     </div>
                                 </div>
                             </form>
@@ -1028,9 +1034,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     <!--- join US driver --->
-            <div class="modal fade" id="book5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <!-- <div class="modal fade" id="book5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="booking-form">
@@ -1062,7 +1068,7 @@
                                     </div>
                                     <div class="col-10">
                                         <div class="form-btn validate">
-                                            <button class="submit-btn" id="join-submit"name="join-submit">Submit</button>
+                                            <button class="submit-btn py-3 px-3 w-100 rounded-pill" id="join-submit"name="join-submit">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1071,65 +1077,65 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
-                        <!--- ============================ Booking form control js =================================== -->
-                        <script>
-                            function showConfirmation() {
-                                alert("Confirm booking");
-                                return true; // Allow the form submission to proceed
-                            }
+        <!--- ============================ Booking form control js =================================== -->
+                        <!-- <script>
+                            // function showConfirmation() {
+                            //     alert("Confirm booking");
+                            //     return true; // Allow the form submission to proceed
+                            // }
                         </script>
                         <style>
-                            .data1, .data2{
+                            /* .data1, .data2{
                                 display: none;
-                            }
-                        </style>
-                        <script src="assert/js/jquery.min.js"></script>
+                            } */
+                        </style> -->
+                        <!-- <script src="assert/js/jquery.min.js"></script>
                         <script>// Booking Button option 
-                            $(document).ready(function() {
-                                        // Initially hide all data sections
-                                        $(".data1").hide();
-                                        $(".data2").hide();
-                                        // Show the appropriate data section based on the selected value in the "Type" dropdown
-                                        $("#b-type3,#t-type3").change(function() {
-                                            var selectedType = $("#b-type3").val();
-                                            var selectedRide = $("#t-type3").val();
-                                            if (selectedType === "one_trip"){ 
-                                                if( selectedRide ==="schedule_trip"){
-                                                $(".data2").hide();
-                                                $(".data1").show();
-                                            }else if (selectedRide === "immediate_trip") {
-                                                $(".data2, .data1").show();
-                                                $('#date3, #time3, #book').hide();
-                                            }
-                                            }else if (selectedType === "round_trip"){ if (selectedRide ==="schedule_trip"){
-                                                $(".data2").hide();
-                                                $(".data1").show();
-                                            } else if (selectedRide === "immediate_trip") {
-                                                $(".data2, .data1").show();
-                                                $('#date3, #time3, #book').hide();
+                            // $(document).ready(function() {
+                            //             // Initially hide all data sections
+                            //             $(".data1").hide();
+                            //             $(".data2").hide();
+                            //             // Show the appropriate data section based on the selected value in the "Type" dropdown
+                            //             $("#b-type3,#t-type3").change(function() {
+                            //                 var selectedType = $("#b-type3").val();
+                            //                 var selectedRide = $("#t-type3").val();
+                            //                 if (selectedType === "one_trip"){ 
+                            //                     if( selectedRide ==="schedule_trip"){
+                            //                     $(".data2").hide();
+                            //                     $(".data1").show();
+                            //                 }else if (selectedRide === "immediate_trip") {
+                            //                     $(".data2, .data1").show();
+                            //                     $('#date3, #time3, #book').hide();
+                            //                 }
+                            //                 }else if (selectedType === "round_trip"){ if (selectedRide ==="schedule_trip"){
+                            //                     $(".data2").hide();
+                            //                     $(".data1").show();
+                            //                 } else if (selectedRide === "immediate_trip") {
+                            //                     $(".data2, .data1").show();
+                            //                     $('#date3, #time3, #book').hide();
 
-                                            }
-                                            } else if (selectedType === "hospital_trip"){ if( selectedRide ==="schedule_trip"){
+                            //                 }
+                            //                 } else if (selectedType === "hospital_trip"){ if( selectedRide ==="schedule_trip"){
                                                 
-                                                $(".data1").show();
-                                                $(".data2").hide();
-                                            }else if (selectedRide === "immediate_trip") {
-                                                $(".data2, .data1").show();
-                                                $('#date3, #time3, #book').hide();
+                            //                     $(".data1").show();
+                            //                     $(".data2").hide();
+                            //                 }else if (selectedRide === "immediate_trip") {
+                            //                     $(".data2, .data1").show();
+                            //                     $('#date3, #time3, #book').hide();
                                             
-                                            }
-                                            }else{
-                                                $(".data2").hide();
-                                                $(".data1").hide();
-                                            }
-                                        });
+                            //                 }
+                            //                 }else{
+                            //                     $(".data2").hide();
+                            //                     $(".data1").hide();
+                            //                 }
+                            //             });
                                     });
                             
                         </script>
-                    
+                     -->
                     <!-- ================ form control ================ -->
                         <script>
                             $('.form-control').each(function () {
@@ -1162,5 +1168,6 @@
         <script src="assert/lib/lightbox/js/lightbox.min.js"></script>
         <!-- Template Javascript -->
         <script src="assert/js/main.js"></script>
+    <!-- JavaScript Libraries End -->    
 </body>
 </html>
