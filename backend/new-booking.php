@@ -2,19 +2,19 @@
             <div class="container-fluid">
                 <div id="booking" class="section-center">
                     <div class="booking-form">
-                            <div class="form-header text-center text-primary">
-                                <h2 class="text-primary">Booking Service</h2>
+                            <div class="form-header text-center">
+                                <h2 class="text-warning">Booking Service</h2>
                             </div>
                         <div class="modal-body">
                             <form method="POST" action="database/insert_data.php" onsubmit="showConfirmation()">
                                 <div class="row">
-                                    <div class="col-10">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label class="form-label">Name</label><br>
                                             <input class="form-control" type="text" name="name3" pattern="[A-Z\sa-z]{3,20}" required>
                                         </div>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-6">
                                         <div class="form-group">
 
                                             <label class="form-label">E-mail</label><br>
@@ -22,7 +22,7 @@
                                             
                                         </div>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             
                                             <label class="form-label">Phone</label><br>
@@ -30,7 +30,9 @@
                                             
                                         </div>
                                     </div>
-                                    <div class="col-10">
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
                                         <div class="form-group">
                                                 <label class="form-label">Type</label><br>
                                             <select class="form-control"  name="ride-type3" id="b-type3" required >
@@ -43,9 +45,7 @@
                                             
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                <div class="col-10" id="round">
+                                    <div class="col-6" id="round">
                                     <div class="form-group">
                                         <label class="form-label" for="select">Choose Ride</label><br>
                                         <select class="form-control" name="t-type3" id="t-type3"  required >
@@ -101,21 +101,19 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-10 "id="date3">
+                                        <div class="col-6 "id="date3">
                                             <div class="form-group">
                                                 <label class="form-label"> Date </label><br>
                                                 <input class="form-control" type="date"  name="date_in3"  min="<?=date('Y-m-d\TH:i');?>" >
                                             </div>
                                         </div>
-                                        <div class="col-10 " id="time3">
+                                        <div class="col-6 " id="time3">
                                             <div class="form-group">
                                                 <label class="form-label"> Time</label><br>
                                                 <input class="form-control" type="time" name="time_in3" >
                                             </div>
                                         </div>
-                                        </div>
-                            
-                                        <div class="row" id="book">
+                                        </div><div class="row" id="book">
                                             <div class="col-10">
                                                 <div class="form-btn">
                                                 <button type="submit" class="submit-btn rounded-pill text-center py-2 px-3 w-100" name="addData">Book </button>
