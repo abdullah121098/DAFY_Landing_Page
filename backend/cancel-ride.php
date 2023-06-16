@@ -49,17 +49,17 @@ require_once "header.php";
                             <th class="border-bottom-0">
                                 <h6 class="fw-semibold mb-0">Vehicle Type</h6>
                             </th>
-                            <th class="border-bottom-0">
-                                <h6 class="fw-semibold mb-0">Status</h6>
-                            </th>
                             <th class="border-bottom-0 data5">
                                 <h6 class="fw-semibold mb-0">Driver Name</h6>
                             </th>
                             <th class="border-bottom-0">
-                                <h6 class="fw-semibold mb-0">Action</h6>
+                                <h6 class="fw-semibold mb-0">Payment Type</h6>
                             </th>
                             <th class="border-bottom-0">
-                                <h6 class="fw-semibold mb-0">confirm</h6>
+                                <h6 class="fw-semibold mb-0">Payment</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Status</h6>
                             </th>
                         </tr>
                     </thead>
@@ -69,7 +69,7 @@ require_once "header.php";
                                       die("Connection failed: " . $conn->connect_error);
                                   }
                                 // Fetch data from the 'review' table
-                                $sql = "SELECT * FROM cancel ORDER BY id DESC";
+                                $sql = "SELECT * FROM cancel ORDER BY date And time DESC";
                                   $result = $conn->query($sql); 
                               
                           if ($result->num_rows > 0) {
@@ -112,10 +112,18 @@ require_once "header.php";
                                 <td class="border-bottom-0">
                                 <p class="mb-0 fw-normal"><?php echo $row['v_type']; ?></p>
                                 </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['driver_name']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['payment_type']; ?></p>
+                                </td>
+                                <td class="border-bottom-0">
+                                <p class="mb-0 fw-normal"><?php echo $row['payment']; ?></p>
                                 <!-- table row data -->
                                 <td class="border-bottom-0">
                                 <div class="d-flex align-items-center gap-2">
-                                    <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
+                                    <label class="badge rounded-3 fw-semibold py-3 px-3" style="background-color:red;">
                                     <?php echo $row['status']; ?>
                                     </label>
                                 </div>

@@ -9,11 +9,22 @@ require_once "header.php"; ?>
               <div class="col-lg-100 d-flex align-items-center">
                 <div class="card w-100">
                   <div class="card-body p-4">
-                    <h5 class="card-title fw-semibold mb-4">New Ride List </h5>
+                    <h5 class="card-title fw-semibold mb-4 text-center">New Ride List </h5>
+                    <form method="post">
+                    <select name="view" >
+                          <option>5</option>
+                          <option>15</option>
+                          <option>20</option>
+                          <option>30</option>
+                    </select>
+                    </form>
+                    <button onclick="exportToExcel()">Export to Excel</button>
                     <div class="table-responsive">
-                      <table class="table text-nowrap mb-0 align-middle">
+                      <table class="table text-nowrap mb-0 align-middle" id="data-table">
                         <thead class="text-dark fs-4">
-                          <tr>
+                       
+                            </tr>
+                            <tr>
                             <th class="border-bottom-0">
                               <h6 class="fw-semibold mb-0">Id</h6>
                             </th>
@@ -71,12 +82,11 @@ require_once "header.php"; ?>
                         <tbody>
                           
                           <?php  
-                                      if ($conn->connect_error) {
-                                      die("Connection failed: " . $conn->connect_error);
-                                  }
+                       
                                 // Fetch data from the 'customer' table
-                                    $sql = "SELECT * FROM customer ORDER BY id DESC";
-                                  $result = $conn->query($sql); 
+                                $sql = "SELECT * FROM customer ORDER BY date DESC, time DESC ";
+
+                                  $result = mysqli_query($conn,$sql); 
 
                                   if (mysqli_num_rows($result)> 0) {
                                 while ($row=mysqli_fetch_array($result)) {
@@ -133,7 +143,7 @@ require_once "header.php"; ?>
                                 ?>             
                         </tbody>
                       </table>
-                          
+                      
                     </div>
                 </div>
               </div>
@@ -152,8 +162,41 @@ require_once "header.php"; ?>
            <style>
             .data5{
               display: none;
-            }
+            } 
+           
            </style>
+    <script>
+        function exportToExcel() {
+          var table = document.getElementById('data-table');
+          var rows = table.getElementsByTagName('tr');
+          var csvContent = '';
 
+          for (var i = 0; i < rows.length; i++) {
+            var cells = rows[i].getElementsByTagName('td');
+            var row = [];
+
+            for (var j = 0; j < cells.length; j++) {
+              var cellData = cells[j].textContent.trim();
+              if (/^[0-9.]+$/.test(cellData)) { // Check if data is numeric
+                row.push('\t' + cellData); // Align numeric data to the right
+              } else {
+                row.push(cellData);
+              }
+            }
+
+            var thCells = rows[i].getElementsByTagName('th');
+            for (var j = 0; j < thCells.length; j++) {
+              row.push(thCells[j].textContent.trim());
+            }
+
+            csvContent += row.join(',') + '\r\n';
+          }
+
+          var link = document.createElement('a');
+          link.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvContent);
+          link.download = 'data.csv';
+          link.click();
+        }
+  </script>
         <!-- ================================================== Footer  =======================================-->
 <?php include_once 'footer.php'; ?>

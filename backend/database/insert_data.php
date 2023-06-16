@@ -21,9 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sssssssssss", $name, $email, $phone, $pick_up, $drop_in, $ride_type, $time_type, $date, $time, $v_name, $v_type);
   } elseif (isset($_POST['addDataWithDateTime'])) {
     // Button 2: Add data with current date and time
-    $currentDateTime = date('Y-m-d H:i');
+    $currentDate = date('Y-m-d');
+    $currentTime = date("h:i:sa");
     $stmt = $conn->prepare("INSERT INTO customer (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("sssssssssss", $name, $email, $phone, $pick_up, $drop_in, $ride_type, $time_type, $currentDateTime, $currentDateTime, $v_name, $v_type);
+    $stmt->bind_param("sssssssssss", $name, $email, $phone, $pick_up, $drop_in, $ride_type, $time_type, $currentDate, $currentTime, $v_name, $v_type);
   }
   
   // Execute the prepared statement
@@ -31,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $stmt->close();
 }
 
-$conn->close();
+
 // Redirect back to the booking page
 header("Location:../index.php");
 exit();
