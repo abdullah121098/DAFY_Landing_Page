@@ -49,7 +49,7 @@
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Testimonial Detail</h5>
-                        <form method="post">
+                        <!-- <form method="post">
                             <select name='list'>
                                 <option>5</option>
                                 <option>15</option>
@@ -58,7 +58,7 @@
                                 <option>----</option>
 
                             </select>
-                        </form>
+                        </form> -->
                         <div class="table-responsive">        
 
                             <table class="table text-nowrap mb-0 align-middle">

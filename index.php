@@ -211,7 +211,7 @@
     </section>
     <!-- ================================================ Service End ========================================== -->
     <!-- =====================================Explore Service Start =================================================== -->
-    <section id="service-type"><br><br>
+        <section id="service-type"><br><br>
             <div class="container-xxl service py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.2s">
@@ -249,7 +249,7 @@
                                             </div>
                                         </div>
                             
-                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s" >
+                                        <div class="col-md-6">
                                             <div class="collapsed-content d-none d-lg-block">
                                                 <h3 class="mb-3 text-primary">One-Side Service</h3>
                                                 <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to pick up from bars & eliminate the hustle of driving</p>
@@ -258,9 +258,9 @@
                                                 <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
                                                 <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                              
+                                            <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more  py-3 px-10" id="read-more"> 
                                         </div>
-                                        <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100  py-3 px-10" id="read-more">
+                                        
                                     </div>
                                 </div>
         
@@ -273,7 +273,8 @@
                                                     style="object-fit: cover;border-radius: 0 50% 0 50%  ;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
+                                        
+                                        <div class="col-md-6">
                                             <div class="collapsed-content d-none d-lg-block">
                                                 <h3 class="mb-3 text-primary">Round-Trip Service</h3>
                                                 <p><i class="fa fa-check text-success me-3"></i> Hire professional drivers to commute your vehicle.</p>
@@ -283,8 +284,7 @@
                                                 <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
                                                 <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">  
-                                        
+                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more  py-3 px-10" id="read-more">  
                                         </div>
                                     </div>
                                 </div>
@@ -298,7 +298,7 @@
                                                     style="object-fit: cover; border-radius:30% 30% 30% 30%;" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
+                                        <div class="col-md-6 ">
                                             <div class="collapsed-content d-none d-lg-block">
                                                 <h3 class="mb-3 text-primary">Hospital Assistance</h3>
                                                 <p><i class="fa fa-check text-success me-3"></i> You can trust that your loved ones are in capable and caring hands.</p>
@@ -307,8 +307,7 @@
                                                 <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
                                                 <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                             <!-- <button class="btn btn-link read-more" id="read-more">Read More</button> -->
-                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">
+                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more  py-3 px-10" id="read-more">
                                         </div>
                                     </div>
                                 </div>
@@ -317,7 +316,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script>
                     $(document).ready(function () {
@@ -341,7 +340,7 @@
                     }
                     .read-more:hover{
                         background-color:none;
-                        grid-auto-rows: auto;
+                        grid-auto-rows:inherit;
                         
                     }
                     .read-more::before{
@@ -351,6 +350,7 @@
                         content: "↑ less";
                     }
                 </style>
+        </section>
     <!--------------------------------------------------- Service End ------------------------------------->
     <!--------------------------------------------- Features Start ------------------------------------------------->
  
@@ -411,22 +411,7 @@
             </div>
         </div>
     </section>
-    <style>
-            @keyframes fade-in-out {
-                0% {
-                    opacity: 0;
-                }
-                25%{
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 1;
-                }
-                100% {
-                    opacity: 0;
-                }
-            }
-        </style>
+   
      <!--------------------------------------------------- Feactures End ------------------------------------->
     <!--------------------------------------------------- About Start ----------------------->
             <section id="about"> <br><br>
@@ -438,9 +423,8 @@
                             <div class="container">
                                 <div class="row g-0">
                                     <div class="col-lg-6">
-                                        <div class="h-100 w-100 d-flex align-items-center justify-content-center" style="height: 50%;">
-                                            <button type="button" class="btn-play" data-bs-toggle="modal"
-                                                data-src="assert/video/dafy.mp4" data-bs-target="#videoModal">
+                                        <div class="h-100 d-flex align-items-center justify-content-center" style="height: 100%;">
+                                            <button type="button" class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal">
                                                 <span></span>
                                             </button>
                                         </div>
@@ -490,17 +474,21 @@
                             </div>
                             <div class="modal-body">
                                 <!-- 16:9 aspect ratio -->
-                                <div class="ratio ratio-16x9">
-                                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                                        allowscriptaccess="always" allow="autoplay"></iframe>
-                                </div>
+                                <div class="ratio ratio-16x9 clip">
+                                    <!-- <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                                        allowscriptaccess="always" allow="autoplay"></iframe> -->
+                                        <video id="videoPlayer"  autoplay>
+                                        <source src="assert/video/01_1.mp4" type="video/mp4">
+                                        <source src="assert/video/02-2.mp4" type="video/mp4">
+                                        </video>  
+                                     
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Video Modal End -->
-            
+           
 
             </section>
     <!--------------------------------------------------- Service Start ------------------------------------->
@@ -627,17 +615,15 @@
         </section>
     <!--------------------------------------------------- Team  end ------------------------------------->
     <!--------------------------------------------------- Testimonial  Start ------------------------------------->
-        <section id="testimonial"> <br><br>
-            <div class="container-xxl pt-5" >
-                <div class="container">
-                    <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                        style="max-width: 500px;">
-                        <!--p class="fs-5 fw-medium text-warning">Testimonial</p-->
-                        <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
-                    </div>
-                    <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s" >
-                        
-                        <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+    <section id="testimonial">
+        <div class="container-xxl pt-5">
+            <div class="container">
+                <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
+                    <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
                                 <h5 class="text-center">SUJITH E R</h5>
                                 <p class="mb-3 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
                                     and I am pleased to share my experience. One aspect that impressed me was their responsiveness.
@@ -645,7 +631,7 @@
                                     and provided prompt and helpful responses. Their efficiency in handling these matters was truly commendable. 
                                     I highly recommend DAFY's service based on my positive experience. I am grateful for their assistance 
                                     and would not hesitate to utilize their services again if needed in the future.</p>
-                                    <input type="checkbox" class="expand-btn" id="expand-btn">
+                                    <input type="checkbox" class="expand-btn" id="expand-btn-1">
                                 
 
                             </div>
@@ -727,8 +713,7 @@
                     </div>
                 </div>
             </div>
-        
-
+            
             <style>
                 .limitline {
                         --max-lines: 5;
@@ -1137,36 +1122,41 @@
                         </script>
                      -->
                     <!-- ================ form control ================ -->
-                        <script>
-                            $('.form-control').each(function () {
-                                floatedLabel($(this));
-                                });
+                        <!-- <script>
+                            // $('.form-control').each(function () {
+                            //     floatedLabel($(this));
+                            //     });
                     
-                                $('.form-control').on('input', function () {
-                                    floatedLabel($(this));
-                                });
+                            //     $('.form-control').on('input', function () {
+                            //         floatedLabel($(this));
+                            //     });
                     
-                                function floatedLabel(input) {
-                                    var $field = input.closest('.form-group');
-                                    if (input.val()) {
-                                        $field.addClass('input-not-empty');
-                                    } else {
-                                        $field.removeClass('input-not-empty');
-                                    }
-                            }
-                        </script>
+                            //     function floatedLabel(input) {
+                            //         var $field = input.closest('.form-group');
+                            //         if (input.val()) {
+                            //             $field.addClass('input-not-empty');
+                            //         } else {
+                            //             $field.removeClass('input-not-empty');
+                            //         }
+                            // }
+                        </script> -->
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
                         <!--- ============================ Booking form control js End =================================== -->
     <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
         <script src="assert/lib/wow/wow.min.js"></script>
         <script src="assert/lib/easing/easing.min.js"></script>
         <script src="assert/lib/waypoints/waypoints.min.js"></script>
         <script src="assert/lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="assert/lib/lightbox/js/lightbox.min.js"></script>
         <!-- Template Javascript -->
+        <script src="assert/js/video.js"></script>
         <script src="assert/js/main.js"></script>
     <!-- JavaScript Libraries End -->    
 </body>

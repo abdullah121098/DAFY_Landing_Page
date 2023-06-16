@@ -23,7 +23,7 @@ require_once "header.php"; ?>
                             <th class="border-bottom-0">
                               <h6 class="fw-semibold mb-0">Phone</h6>
                             </th>
-                            <th class="border-bottom-0 data5">
+                            <th class="border-bottom-0 ">
                               <h6 class="fw-semibold mb-0">Email</h6>
                             </th>
                             <th class="border-bottom-0">
@@ -50,13 +50,13 @@ require_once "header.php"; ?>
                             <th class="border-bottom-0">
                               <h6 class="fw-semibold mb-0">Vechicle Type</h6>
                             </th>
-                            <th class="border-bottom-0 data5">
+                            <th class="border-bottom-0 ">
                               <h6 class="fw-semibold mb-0">Driver Name</h6>
                             </th>
-                            <th class="border-bottom-0  data5">
+                            <th class="border-bottom-0  ">
                               <h6 class="fw-semibold mb-0">payment Type</h6>
                             </th>
-                            <th class="border-bottom-0 data5">
+                            <th class="border-bottom-0">
                               <h6 class="fw-semibold mb-0">payment</h6>
                             </th>
                             <th class="border-bottom-0">
@@ -83,54 +83,22 @@ require_once "header.php"; ?>
                                     // Display each row of data?>
                                    
                                   <tr>
-                                    <td class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">
-                                           <?php echo $row['id']; ?></h6></td>
-                                    <td class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['phone'];?></p>
-                                    </td>
-                                    <td class="border-bottom-0 data5">
-                                    <p class="mb-0 fw-normal"><?php echo $row['email']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['pick_up']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['drop_in']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['ride_type']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['time_ride']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['date']; ?></p>
-                                    </td>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['time']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['v_name']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal"><?php echo $row['v_type']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0 data5">
-                                   <p class="mb-0 fw-normal"><?php echo $row['driver_name']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0 data5">
-                                    <p class="mb-0 fw-normal"><?php echo $row['payment_type']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0 data5">
-                                    <p class="mb-0 fw-normal"><?php echo $row['payment']; ?></p>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
+                                    <td class="border-bottom-0"><h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6></td>
+                                    <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['phone'];?></p></td>
+                                    <td class="border-bottom-0 "><p class="mb-0 fw-normal"><?php echo $row['email']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['pick_up']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['drop_in']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['ride_type']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['time_ride']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['date']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['time']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['v_name']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['v_type']; ?></p> </td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['driver_name']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['payment_type']; ?></p></td>
+                                    <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['payment']; ?></p></td>
+                                    <td class="border-bottom-0"><div class="d-flex align-items-center gap-2">
                                         <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
                                         <?php echo $row['status']; ?>
                                         </label>
@@ -139,6 +107,7 @@ require_once "header.php"; ?>
                                     <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
                                     <a type="button" class="" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">
+                                    view
                                   </a>
                                         </label>
                                     </div>
