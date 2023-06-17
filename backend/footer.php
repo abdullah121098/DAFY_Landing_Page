@@ -18,6 +18,9 @@ require_once "header.php";
   <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
   <script src="assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="assets/js/dashboard.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="export.js"></script>
 </body>
 
 </html>
