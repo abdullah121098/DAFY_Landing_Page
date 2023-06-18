@@ -1,11 +1,11 @@
-<?php include 'database/connection.php'; ?>
+<?php include '../database/connection.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Dafy Online pvt.lmt.</title>
-    <link rel="icon" type="image/x-icon" href="assert/img/logo/loader.png" >
+    <link rel="icon" type="image/x-icon" href="../assert/img/logo/loader.png" >
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -26,29 +26,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="assert/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="assert/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assert/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../assert/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../assert/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../assert/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="assert/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assert/css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href="assert/css/style.css" rel="stylesheet">
-    <link href="assert/css/booking.css" rel="stylesheet">
+    <link href="../assert/css/style.css" rel="stylesheet">
+    <link href="../assert/css/booking.css" rel="stylesheet">
 </head>
 
 <body style="background-color:gray;">
     <!-- Spinner Start -->
     <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 
         vh-100 top-50 start-50 d-flex align-items-center justify-content-center" data-delay="50000s">
-                    <span><img src="assert/img/logo/dafy.jpeg" class="" width="100px" alt="" srcset=""> </span>
+                    <span><img src="../assert/img/logo/dafy.jpeg" class="" width="100px" alt="" srcset=""> </span>
     </div> -->
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top p-0 m-0 w-100" id="navbar"  style="background-color:silver;">
             <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-3 m-0">
-                <img src="assert/img/logo/dafy-logo-1.png" style="width:25%;" alt="icon" srcset="">
+                <img src="../assert/img/logo/dafy-logo-1.png" style="width:25%;" alt="icon" srcset="">
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -94,7 +94,7 @@
         
         <!-- <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0 w-100" id="navbar">
             <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-3 m-0">
-                <img src="assert/img/logo/dafy.jpeg" style="height: 5%; width: 5%;" alt="icon" srcset="">
+                <img src="../assert/img/logo/dafy.jpeg" style="height: 5%; width: 5%;" alt="icon" srcset="">
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -304,7 +304,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner" style="height:100%;">
                 <div class="carousel-item active">
-                    <img class="w-100" src="assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image">
+                    <img class="w-100" src="../assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -324,7 +324,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInLeft" src="assert/img/slider/your-car-our-driver.jpg" alt="Image">
+                    <img class="w-100 animated slideInLeft" src="../assert/img/slider/your-car-our-driver.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row  justify-content-end">
@@ -344,7 +344,7 @@
                 </div>
                 <!-- Additional Slider items -->
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInRight" src="assert/img/slider/navigation.jpg" alt="Image">
+                    <img class="w-100 animated slideInRight" src="../assert/img/slider/navigation.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -361,7 +361,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInLeft" src="assert/img/slider/luxury-car3.png" alt="Image">
+                    <img class="w-100 animated slideInLeft" src="../assert/img/slider/luxury-car3.png" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -381,7 +381,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="assert/img/slider/Dafy-Banner-03-1.jpg" alt="Image">
+                    <img class="w-100" src="../assert/img/slider/Dafy-Banner-03-1.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -398,7 +398,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInRight" src="assert/img/slider/stan.jpg" alt="Image" >
+                    <img class="w-100 animated slideInRight" src="../assert/img/slider/stan.jpg" alt="Image" >
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -420,7 +420,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 animated slideInLeft" src="assert/img/slider/8.png" alt="Image">
+                    <img class="w-100 animated slideInLeft" src="../assert/img/slider/8.png" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -525,7 +525,7 @@
                         <div class="service-item position-relative h-100">
                             <div class="service-text rounded p-5"style="font-family: 'Lato', sans-serif;">
                                 <div class="btn-square rounded-circle mx-auto mb-4" style="width: 124px; height: 124px;">
-                                    <img class="img-fluid w-100 h-100" src="assert/img/icon/wheels3.png" alt="Icon" >
+                                    <img class="img-fluid w-100 h-100" src="../assert/img/icon/wheels3.png" alt="Icon" >
                                 </div>
                                 <h5 class="mb-3">Professional Drivers</h5>
                                 <p class="mb-0"> Hire the professionals,Experience a smooth and stress-free journey. <br>
@@ -547,7 +547,7 @@
                             <div class="service-text rounded p-5" style="font-family: 'Lato', sans-serif;" >
                                 <div class="btn-square rounded-circle mx-auto mb-4"
                                     style="width: 124px; height: 124px;">
-                                    <img class="img-fluid w-100 h-100" src="assert/img/icon/assistance.png" alt="Icon" >
+                                    <img class="img-fluid w-100 h-100" src="../assert/img/icon/assistance.png" alt="Icon" >
                                 </div>
                                 <h5 class="mb-3">Hospital Assistance</h5>
                                 <p class="mb-0">Our driver assistants also act as an assistant who provides support for personal care. <br>
@@ -682,17 +682,17 @@
                             <div class="nav w-100 nav-pills me-4 p-0">
                                 <button class="nav-link w-100 d-flex align-items-center p-3 mb-3 active" data-bs-toggle="pill"
                                     data-bs-target="#tab-pane-1" type="button" style=" border-radius: 50% 50% 0 0;">
-                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <img class="img-fluid" src="../assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
                                     <h4 class="m-0">One-Side Service</h4>
                                 </button>
                                 <button class="nav-link w-100 d-flex align-items-center p-3 mb-3" data-bs-toggle="pill"
                                     data-bs-target="#tab-pane-2" type="button" style=" border-radius: 0 0 0 0;">
-                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <img class="img-fluid" src="../assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
                                     <h4 class="m-0">Round-Trip Service</h4>
                                 </button>
                                 <button class="nav-link w-100 d-flex align-items-center p-4 mb-4" data-bs-toggle="pill"
                                     data-bs-target="#tab-pane-3" type="button" style=" border-radius: 0 0 50% 50% ;">
-                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <img class="img-fluid" src="../assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
                                     <h4 class="m-0">Hospital Assistance</h4>
                                 </button>
                             </div>
@@ -704,7 +704,7 @@
                                     <div class="row g-4" >
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute img-fluid" src="assert/img/slider/Dafy-Single-Trip.gif"
+                                                <img class="position-absolute img-fluid" src="../assert/img/slider/Dafy-Single-Trip.gif"
                                                     style="object-fit: cover; border-radius: 50% 0 50% 0 ;" alt="">
                                             </div>
                                         </div>
@@ -728,7 +728,7 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute img-fluid" src="assert/img/slider/Dafy-Round-Trip.gif"
+                                                <img class="position-absolute img-fluid" src="../assert/img/slider/Dafy-Round-Trip.gif"
                                                     style="object-fit: cover;border-radius: 0 50% 0 50%  ;" alt="">
                                             </div>
                                         </div>
@@ -753,7 +753,7 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute img-fluid" src="assert/img/icon/assistance.webp"
+                                                <img class="position-absolute img-fluid" src="../assert/img/icon/assistance.webp"
                                                     style="object-fit: cover; border-radius:50% 30% 70% 40%;" alt="">
                                             </div>
                                         </div>
@@ -787,17 +787,17 @@
                             <div class="nav w-100 nav-pills me-4 p-0">
                                 <button class="nav-link w-100 d-flex align-items-center p-3 mb-3 active" data-bs-toggle="pill"
                                     data-bs-target="#tab-pane-1" type="button" style=" border-radius: 50% 50% 0 0;">
-                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <img class="img-fluid" src="../assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
                                     <h4 class="m-0">One-Side Service</h4>
                                 </button>
                                 <button class="nav-link w-100 d-flex align-items-center p-3 mb-3" data-bs-toggle="pill"
                                     data-bs-target="#tab-pane-2" type="button" style=" border-radius: 0 0 0 0;">
-                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <img class="img-fluid" src="../assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
                                     <h4 class="m-0">Round-Trip Service</h4>
                                 </button>
                                 <button class="nav-link w-100 d-flex align-items-center p-4 mb-4" data-bs-toggle="pill"
                                     data-bs-target="#tab-pane-3" type="button" style=" border-radius: 0 0 50% 50% ;">
-                                    <img class="img-fluid" src="assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
+                                    <img class="img-fluid" src="../assert/img/icon/wheels.png" style="width: 70px; height: 70px;" alt="Icon">
                                     <h4 class="m-0">Hospital Assistance</h4>
                                 </button>
                             </div>
@@ -809,7 +809,7 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute img-fluid" src="assert/img/slider/Dafy-Single-Trip.gif"
+                                                <img class="position-absolute img-fluid" src="../assert/img/slider/Dafy-Single-Trip.gif"
                                                     style="object-fit: cover; border-radius: 50% 0 50% 0 ;" alt="">
                                             </div>
                                         </div>
@@ -892,11 +892,11 @@
                     <!--p class="fs-5 fw-medium" style="color: #ffae00;">Features Service</p-->
                     <h1 class="display-5 mb-5">   Explore Our Features </h1>
                 </div>
-                <div class="row g-0 feature-row"  style="background-image: url('assert/img/slider/banner4.png'); animation: fade-in-out 5s infinite; color:#ffff">
+                <div class="row g-0 feature-row"  style="background-image: url('../assert/img/slider/banner4.png'); animation: fade-in-out 5s infinite; color:#ffff">
                     <div class="col-md-6 col-lg-3 wow fadeIn animated " data-wow-delay="0.1s" >
                         <div class="feature-item border h-100 p-5 " style="animation: fadeIn  15s infinite;">
                             <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                                <img class="img-fluid" src="assert/img/icon/personal.png" alt="Icon">
+                                <img class="img-fluid" src="../assert/img/icon/personal.png" alt="Icon">
                             </div>
                             <h5 class="mb-3 text-warning">Personalized Service</h5>
                             <p class="mb-0"><i>Our commitment lies in understanding our client’s unique requirements and interests, ensuring and
@@ -906,7 +906,7 @@
                     <div class="col-md-6 col-lg-3 wow fadeIn animated " data-wow-delay="0.3s">
                         <div class="feature-item border h-100 p-5 " style="animation: fadeOut  15s infinite;">
                             <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                                <img class="img-fluid" src="assert/img/icon/city.png" alt="Icon">
+                                <img class="img-fluid" src="../assert/img/icon/city.png" alt="Icon">
                             </div>
                             <h5 class="mb-3 text-warning">In-City Rides</h5>
                             <p class="mb-0"> <i>Ensure that your drivers are familiar with the citys roads and traffic patterns. Optimize routing to
@@ -916,7 +916,7 @@
                     <div class="col-md-6 col-lg-3 wow fadeIn animated " data-wow-delay="0.5s">
                         <div class="feature-item border h-100 p-5 " style="animation: fadeIn 15s infinite;">
                             <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                                <img class="img-fluid" src="assert/img/icon/outstation.png" alt="Icon">
+                                <img class="img-fluid" src="../assert/img/icon/outstation.png" alt="Icon">
                             </div>
                             <h5 class="mb-3 text-warning">Outstation Rides</h5>
                             <p class="mb-0"><i>
@@ -929,7 +929,7 @@
                     <div class="col-md-6 col-lg-3 wow fadeIn animated " data-wow-delay="0.7s">
                         <div class="feature-item border h-100 p-5 " style="animation: fadeOut 15s infinite;">
                             <div class="btn-square bg-white rounded-circle mb-4" style="width: 70px; height: 70px;">
-                                <img class="img-fluid" src="assert/img/icon/bar.png" alt="Icon">
+                                <img class="img-fluid" src="../assert/img/icon/bar.png" alt="Icon">
                             </div>
                             <h5 class="mb-3 text-warning">Bar Pickup</h5>
                             <p class="mb-0"><i > Bar pick-up driver service offers convenience to customers by providing a designated driver.
@@ -972,7 +972,7 @@
                                     <div class="col-lg-6">
                                         <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 50%;">
                                             <button type="button" class="btn-play" data-bs-toggle="modal"
-                                                data-src="assert/video/ser.mp4" data-bs-target="#videoModal">
+                                                data-src="../assert/video/ser.mp4" data-bs-target="#videoModal">
                                                 <span></span>
                                             </button>
                                         </div>
@@ -992,12 +992,12 @@
                                                 to help you manage your busy lifestyle with ease</p>
                                             <div class="row g-5 pt-2 mb-5">
                                                 <div class="col-sm-6 animated slideInRight">
-                                                    <img class="img-fluid mb-4" src="assert/img/icon/icon-5.png" alt="">
+                                                    <img class="img-fluid mb-4" src="../assert/img/icon/icon-5.png" alt="">
                                                     <h5 class="mb-3">Managed Services</h5>
                                                     <span>our experienced drivers are trained to provide reliable and discreet transportation services.</span>
                                                 </div>
                                                 <div class="col-sm-6 animated slideInLeft">
-                                                    <img class="img-fluid mb-4" src="assert/img/icon/icon-2.png" alt="">
+                                                    <img class="img-fluid mb-4" src="../assert/img/icon/icon-2.png" alt="">
                                                     <h5 class="mb-3">Dedicated Experts</h5>
                                                     <span>With our experienced caregivers, you can trust that
                                                         your loved ones are in capable and caring hands. </span>
@@ -1101,7 +1101,7 @@
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
                         <!-- <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/ceo1.jpg" alt="">
                             </div>
                             <div class="p-4">
                                 <a class="d-block h5 text-center" href="">Manikandan Ak <br>
@@ -1110,7 +1110,7 @@
                         </div>
                         <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/team-2.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/team-2.jpg" alt="">
                                 
                             </div>
                             <div class="p-4">
@@ -1120,7 +1120,7 @@
                         </div>
                         <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/team-1.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/team-1.jpg" alt="">
                                 
                             </div>
                             <div class="p-4">
@@ -1130,7 +1130,7 @@
                         </div>
                         <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/account.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/account.jpg" alt="">
                                 
                             </div>
                             <div class="p-4">
@@ -1140,7 +1140,7 @@
                         </div>
                         <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="assert/img/team/team-3.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/team-3.jpg" alt="">
                                 
                             </div>
                             <div class="p-4">
@@ -1148,28 +1148,29 @@
                                     <span class="text-warning">Operational's Head</span></a>
                             </div>
                         </div> -->
-                        <?php // Fetch data from the 'review' table
-                                $sql1 = "SELECT * FROM `team` ORDER BY date DESC LIMIT 6";
-                                $result1 = $conn->query($sql); 
-                                    if ($result1->num_rows > 0) {
-                                        while ($img = $result1->fetch_assoc()) {
-                                            // Display each row of data
-                                        ?>
-                            <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="backend/assets/images/team/<?php echo  $img['t_img']; ?>" alt="">
-                                </div>
-                                <div class="p-4">
-                                    <a class="d-block h5 text-center" href=""><?php echo  $img['t_name']; ?><br>
-                                    <span class="text-warning"><?php echo  $img['t_position']; ?></span></a>
-                                </div>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6  project-item">
+                                <?php // Fetch data from the 'review' table
+                                        $sql1 = "SELECT * FROM `team` ORDER BY date DESC LIMIT 6";
+                                        $result1 = $conn->query($sql); 
+                                            if ($result1->num_rows > 0) {
+                                                while ($img = $result1->fetch_assoc()) {
+                                                    // Display each row of data
+                                                ?>        
+                                        <div class="position-relative">
+                                            <img class="img-fluid" src="backend/assets/images/team/<?php echo  $img['t_img']; ?>" alt="">
+                                        </div>
+                                        <div class="p-4">
+                                            <a class="d-block h5 text-center" href=""><?php echo  $img['t_name']; ?><br>
+                                            <span class="text-warning"><?php echo  $img['t_position']; ?></span></a>
+                                        </div>
+                                        <?php
+                                        }
+                                        } else {
+                                        echo 'No data found';
+                                }?>
                             </div>
-                            <?php
-                                }
-                                } else {
-                                echo '<tr><td colspan="12">No data found.</td></tr>';
-                          }?>
-
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1843,14 +1844,14 @@
 <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assert/lib/wow/wow.min.js"></script>
-    <script src="assert/lib/easing/easing.min.js"></script>
-    <script src="assert/lib/waypoints/waypoints.min.js"></script>
-    <script src="assert/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="assert/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../assert/lib/wow/wow.min.js"></script>
+    <script src="../assert/lib/easing/easing.min.js"></script>
+    <script src="../assert/lib/waypoints/waypoints.min.js"></script>
+    <script src="../assert/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../assert/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="assert/js/main.js"></script>
+    <script src="../assert/js/main.js"></script>
 </body>
 
 </html>

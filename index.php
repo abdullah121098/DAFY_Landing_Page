@@ -44,14 +44,14 @@
     </div>
     <!-- Spinner End -->
     <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0 w-100" id="navbar">
-            <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-1 m-0">
-                <img src="assert/img/logo/dafy.jpeg" style="width: 5%;" alt="icon" srcset="">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0 w-80" id="navbar">
+            <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-1 m-0 w-50">
+                <img src="assert/img/logo/dafy.jpeg" style="width: 10%;" alt="icon" srcset="">
             </a>
-            <button type="button" class="navbar-toggler me-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-2 justify-content-end" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <div class="collapse navbar-collapse justify-content-end  text-end" id="navbarCollapse">
                 <ul class="navbar-nav p-3 p-lg-0">
                     <li class="nav-item">
                         <a href="#" class="nav-link active">Home</a>
@@ -124,7 +124,7 @@
                                                     <span class=""> Most reliable</span>
                                                     <span class="">and economical</span>
                                                     <span class="">professional driver</span>
-                                                    <span class="">driver on demand</span>
+                                                    <span class="">on demand</span>
                                                 </h1>  
                                                 <a class="d-inline-flex align-items-centerbtn btn-light rounded-pill py-3 px-4 animated slideInLeft"
                                                     href="tel:917592933933"><strong>call now</strong></a>
@@ -258,7 +258,7 @@
                                                 <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
                                                 <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                            <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more  py-3 px-10" id="read-more"> 
+                                            <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more"> 
                                         </div>
                                         
                                     </div>
@@ -284,7 +284,7 @@
                                                 <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
                                                 <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more  py-3 px-10" id="read-more">  
+                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">  
                                         </div>
                                     </div>
                                 </div>
@@ -307,7 +307,7 @@
                                                 <a class="btn btn-warning rounded-pill py-3 px-5" href="tel:917592933933"><strong>call now</strong></a>
                                                 <!-- <a class="btn btn-warning rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#book1" href="">Book Now</a> -->
                                             </div>
-                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more  py-3 px-10" id="read-more">
+                                             <input type="checkbox" class="d-lg-none .d-xl-block btn btn-link btn-light read-more w-100 py-3 px-10" id="read-more">
                                         </div>
                                     </div>
                                 </div>
@@ -421,7 +421,7 @@
                     </div>
                         <div class="container-xxl about my-5" >
                             <div class="container">
-                                <div class="row g-0">
+                                <div class="row g-5">
                                     <div class="col-lg-6">
                                         <div class="h-100 d-flex align-items-center justify-content-center" style="height: 100%;">
                                             <button type="button" class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal">
@@ -477,7 +477,7 @@
                                 <div class="ratio ratio-16x9 clip">
                                     <!-- <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
                                         allowscriptaccess="always" allow="autoplay"></iframe> -->
-                                        <video id="videoPlayer"  autoplay>
+                                        <video id="videoPlayer" controls autoplay>
                                         <source src="assert/video/01_1.mp4" type="video/mp4">
                                         <source src="assert/video/02-2.mp4" type="video/mp4">
                                         </video>  
@@ -554,20 +554,21 @@
                         <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-
-                        <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6 project-item mb-8">
+                                <div class="position-relative w-100">
+                                    <img class="img-fluid mb-5" src="assert/img/team/ceo1.jpg" alt="">
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Manikandan Ak <br>
                                     <span class="text-warning">CEO</span></a>
                                 </div>
                             </div>
-                      
-                            <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid h-100" src="assert/img/team/team-5.jpg" alt="" >
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6 project-item mb-8">
+                                <div class="position-relative w-100">
+                                    <img class="img-fluid mb-5" src="assert/img/team/team-5.jpg" alt="" >
                                     
                                 </div>
                                 <div class="p-4">
@@ -575,39 +576,42 @@
                                     <span class="text-warning">COO</span></a>
                                 </div>
                             </div>
-                            <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
-                                    
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6 project-item mb-8">
+                                <div class="position-relative w-100">
+                                    <img class="img-fluid mb-5" src="assert/img/team/team-5.jpg" alt="">
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Jijo Louis <br>
-                                    <span class="text-warning">HR's Head</span></a>
+                                    <span class="text-warning">HR Head</span></a>
                                 </div>
                             </div>
-                            <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="assert/img/team/account.jpg" alt="">
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6 project-item mb-8">
+                                <div class="position-relative w-100">
+                                    <img class="img-fluid mb-5" src="assert/img/team/account.jpg" alt="">
                                     
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Stephin Jose <br>
-                                    <span class="text-warning">Account's Head</span></a>
+                                    <span class="text-warning">Accounts Head</span></a>
                                 </div>
                             </div>
-                            <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6 project-item mb-8">
+                                <div class="position-relative w-100">
+                                    <img class="img-fluid mb-5" src="assert/img/team/team-5.jpg" alt="">
                                     
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Josen Kuriakose <br>
-                                        <span class="text-warning">Operation's Head</span></a>
+                                        <span class="text-warning">Operations Head</span></a>
                                 </div>
                             </div> 
-                       
-                       
-                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -622,41 +626,47 @@
                     style="max-width: 500px;">
                     <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
                 </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                <div class="owl-carousel testimonial-carousel wow fadeInUp limitext" data-wow-delay="0.1s">
+                           
+                        <div class="row g-1 limitext">
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 col-10 w-100" >
                                 <h5 class="text-center">SUJITH E R</h5>
-                                <p class="mb-3 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
+                                <p class="mb-4 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
                                     and I am pleased to share my experience. One aspect that impressed me was their responsiveness.
                                     Whenever I needed assistance or had a question, their customer service team was readily available 
                                     and provided prompt and helpful responses. Their efficiency in handling these matters was truly commendable. 
                                     I highly recommend DAFY's service based on my positive experience. I am grateful for their assistance 
                                     and would not hesitate to utilize their services again if needed in the future.</p>
-                                    <input type="checkbox" class="expand-btn" id="expand-btn-1">
-                                
-
+                                    <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
-                      
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                        </div>
+
+                        <div class="row g-1 limitext">                                
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 col-10 w-100">
                                 <h5 class="text-center">ANANDHU S </h5>
-                                <p class="mb-3 limitline">The efficiency and punctuality of the drivers provided by
+                                <p class="mb-4 limitline">The efficiency and punctuality of the drivers provided by
                                     DAFY had impressed me a lot. Whenever I needed a driver to take me and my friends to 
                                     various lounge and venues, they were always prompt and ready to assist. Their knowledge of 
                                     the local area and the best routes ensured that we reached our destinations without any hassle. 
                                     The drivers were polite, courteous, and made us feel safe throughout the journey.</p>
                                     <input type="checkbox" class="expand-btn" id="expand-btn">
-                                
                             </div>
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                        </div>
+                        
+                        <div class="row g-1 limitext">
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 col-10 w-100">
                                 <h5 class="text-center">JAYESH K</h5>
-                                <p class="mb-3 limitline">I recently had the pleasure of using the professional driver assistant service provided by DAFY for my family.
+                                <p class="mb-4 limitline">I recently had the pleasure of using the professional driver assistant service provided by DAFY for my family.
                                     One aspect that stood out to me was the professionalism and expertise of the driver provided by DAFY.
                                     He was not only skilled behind the wheel but also displayed a warm and friendly approach towards us. 
                                     We felt safe on the road, and the driver consistently exhibited the highest standards of professionalism and respect.
                                     I would not hesitate to engage their services again in the future.</p>
                                     <input type="checkbox" class="expand-btn" id="expand-btn">
-                                
                             </div>
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                        </div>
+
+                        <div class="row g-1 limitext">    
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 col-10 w-100">
                                 <h5 class="text-center">SAJESH V</h5>
                                 <p class="mb-4 limitline">Using the driver service was a truly amazing experience for me. 
                                     It blew me away with its excellent service, The driver was attentive and professional, 
@@ -664,9 +674,11 @@
                                     I was truly impressed with the level of service and would
                                     definitely use it again.</p>
                                     <input type="checkbox" class="expand-btn" id="expand-btn">
-                                
                             </div>
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                        </div>
+                            
+                        <div class="row g-1 limitext">    
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 col-10 w-100">
                                 <h5 class="text-center">ARCHIT M D</h5>
                                 <p class="mb-4 limitline">I've been using DAFY's driver/caretaker service for several months now, 
                                     and I must say they have exceeded my expectations in every way!Considering the exceptional service 
@@ -678,9 +690,11 @@
                                     DAFY has set a new standard in the industry. 
                                     I am grateful for their outstanding service and will continue relying on them for all my transportation needs.</p>
                                     <input type="checkbox" class="expand-btn" id="expand-btn">
-                                
                             </div>
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
+                        </div>
+
+                        <div class="row g-1 limitext">
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 col-10 w-100">
                                 <h5 class="text-center">NANCY JACOB</h5>
                                 <p class="mb-4 limitline">I recently experienced the professional driver assistance service provided by DAFY,
                                     and I am delighted to share my positive experience. 
@@ -689,9 +703,10 @@
                                     He is very attentive to my specific needs and preferences like adjusting the temperature, 
                                     ensuring privacy, or helping with luggage, thus made my journey comfortable and stress-free.</p>
                                 <input type="checkbox" class="expand-btn" id="expand-btn">
-                               </div>
+                            </div>
+                        </div>
                        
-                            <!-- <?php
+                            <!-- <php
                                 // Fetch data from the 'review' table
                                 // $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
                                 // $result = $conn->query($sql); 
@@ -700,18 +715,17 @@
                                 //             // Display each row of data
                                 //         ?>
                                  <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
-                                     <h5 class="text-center"><?php //echo  $row['name'];  ?></h5>
-                                     <p class="mb-4 limitline"><?php //echo  $row['review'];  ?></p>
+                                     <h5 class="text-center"><php //echo  $row['name'];  ?></h5>
+                                     <p class="mb-4 limitline"><php //echo  $row['review'];  ?></p>
                                      <input type="checkbox" class="expand-btn" id="expand-btn">
                                  </div> 
-                                 <?php
+                                 <php
                                 // }
                                 // } else {
                                 // echo '<tr><td colspan="12">No data found.</td></tr>';}
                             ?> -->
                       
                     </div>
-                </div>
             </div>
             
             <style>

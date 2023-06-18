@@ -9,8 +9,9 @@ require_once "header.php";
                 <div class="card w-100">
                     <div class="card-body p-4">
                             <h5 class="card-title fw-semibold mb-4">Complete Booking List</h5>
+                            <button onclick="exportToExcel()">Export to Excel</button>
                             <div class="table-responsive">
-                            <table class="table text-nowrap mb-0 align-middle">
+                            <table class="table text-nowrap mb-0 align-middle" id="data-table">
                                 <thead class="text-dark fs-4">
                                     <tr>
                                         <th class="border-bottom-0">
@@ -141,6 +142,7 @@ require_once "header.php";
                                     
                                 </tbody>
                             </table>
+                            
                             </div>
                     </div>
                 </div>

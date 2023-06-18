@@ -10,14 +10,6 @@ require_once "header.php"; ?>
                 <div class="card w-100">
                   <div class="card-body p-4">
                     <h5 class="card-title fw-semibold mb-4 text-center">New Ride List </h5>
-                    <form method="post">
-                    <select name="view" >
-                          <option>5</option>
-                          <option>15</option>
-                          <option>20</option>
-                          <option>30</option>
-                    </select>
-                    </form>
                     <button onclick="exportToExcel()">Export to Excel</button>
                     <div class="table-responsive">
                       <table class="table text-nowrap mb-0 align-middle" id="data-table">
@@ -80,11 +72,8 @@ require_once "header.php"; ?>
                           </tr>
                         </thead>
                         <tbody>
-                          
-                          <?php  
-                       
-                                // Fetch data from the 'customer' table
-                                $sql = "SELECT * FROM customer ORDER BY date DESC, time DESC ";
+                           <?php  
+                                 $sql = "SELECT * FROM customer ORDER BY date DESC, time DESC ";
 
                                   $result = mysqli_query($conn,$sql); 
 
@@ -122,25 +111,12 @@ require_once "header.php"; ?>
                                         </label>
                                     </div>
                                     </td>
-                                    <!-- <td class="border-bottom-0" >
-                                    <select name="status" id="sel"class="badge bg-primary fw-semibold">
-                                        <option value="" selected disabled>Select</option>
-                                        <option value="1">Confirm</option>
-                                        <option value="2">Driver Assigned</option>
-                                        <option value="3">Drive Started</option>
-                                        <option value="4">Completed</option>
-                                        <option value="5">Cancel</option>
-                                    </select>
-                                    </td>  -->
-                                   
                                   </tr> 
                                     <?php
                                   }
                                 } else {
                                   echo '<tr><td colspan="12">No data found.</td></tr>';
-                              }
-                              $conn->close();
-                                ?>             
+                              }?>             
                         </tbody>
                       </table>
                       
@@ -150,7 +126,7 @@ require_once "header.php"; ?>
             </div>
           </div>
         
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+          
           <script>
                 let selection =document.querySelector('#sel');
                 let result=document.querySelector('#res');
@@ -165,38 +141,6 @@ require_once "header.php"; ?>
             } 
            
            </style>
-    <script>
-        function exportToExcel() {
-          var table = document.getElementById('data-table');
-          var rows = table.getElementsByTagName('tr');
-          var csvContent = '';
 
-          for (var i = 0; i < rows.length; i++) {
-            var cells = rows[i].getElementsByTagName('td');
-            var row = [];
-
-            for (var j = 0; j < cells.length; j++) {
-              var cellData = cells[j].textContent.trim();
-              if (/^[0-9.]+$/.test(cellData)) { // Check if data is numeric
-                row.push('\t' + cellData); // Align numeric data to the right
-              } else {
-                row.push(cellData);
-              }
-            }
-
-            var thCells = rows[i].getElementsByTagName('th');
-            for (var j = 0; j < thCells.length; j++) {
-              row.push(thCells[j].textContent.trim());
-            }
-
-            csvContent += row.join(',') + '\r\n';
-          }
-
-          var link = document.createElement('a');
-          link.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvContent);
-          link.download = 'data.csv';
-          link.click();
-        }
-  </script>
         <!-- ================================================== Footer  =======================================-->
 <?php include_once 'footer.php'; ?>

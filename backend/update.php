@@ -245,13 +245,13 @@ if(isset($_POST['update'])){
       
       $up = mysqli_query($conn,"UPDATE `customer` SET  `driver_name` = '$a', `status` = '$b' WHERE id = $g_id");
      
-  if($up) {
-   echo '<script>alert("Confirm booking");</script>';
-   header("Location:index.php");
-   exit();
-  } else {
-    echo 'Update failed';
-  }
+      if($up) {
+      echo '<script>alert("Confirm booking");</script>';
+      header("Location:index.php");
+      exit();
+      } else {
+        echo 'Update failed';
+      }
       break;
 
     case 'Drive Started':
@@ -293,8 +293,7 @@ if(isset($_POST['update'])){
      
       $moveQuery = "INSERT INTO cancel (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status)
                     SELECT name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status
-                    FROM customer
-                    WHERE id = $g_id";
+                    FROM customer WHERE id = $g_id";
 
       $moveResult = mysqli_query($conn, $moveQuery);
 
