@@ -35,7 +35,6 @@
     opacity: 1;
 }
 
-
 /*** Button ***/
 .btn {
     transition: .5s;
@@ -76,8 +75,6 @@
     justify-content: center;
     font-weight: normal;
 }
-
-
 
 /*** Navbar ***/
 .sticky-top {
@@ -187,7 +184,7 @@
     padding: 6px 6px;
 }
 
- /* .page-header */
+ /* .page-header
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/slider/assistancetrip.jpeg) center center no-repeat;
     background-size: cover;
@@ -201,8 +198,7 @@
 .page-header .breadcrumb-item a {
     font-size: 18px;
     color: var(--light);
-}
-
+} */
 
 /*** Features ***/
 .feature-row {
@@ -212,7 +208,6 @@
 .feature-item {
     border-color: rgba(0, 0, 0, .03) !important;
 }
-
 
 /*** About ***/
 .about {
@@ -231,8 +226,12 @@
     outline: none !important;
     padding: 18px 20px 20px 28px;
     background: var(--primary);
-}
-
+    margin: auto;
+  }
+  
+.about {
+    margin-top: 2rem;
+  }
 .btn-play:before {
     content: "";
     position: absolute;
@@ -356,7 +355,6 @@
     bottom: -1.5rem;
 }
 
-
 /*** Project ***/
 .project-item {
     position: relative;
@@ -393,12 +391,17 @@
     height: 100%; /* Set a percentage height for the image container */
     width: 100%; /* Set a percentage width for the image container */
 }
-
+.project-item .p-4 {
+    text-align: center;
+  }
+  
+  .project-item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 .project-item img {
     max-width: 100%; /* Ensure the image doesn't exceed the container */
     max-height: 90%; /* Ensure the image doesn't exceed the container */
 }
-
 
 .project-item .position-relative {
     height: 50%; /* Set a percentage height for the image container */
@@ -455,15 +458,12 @@
     }
 }
 
-
 /*** Team ***/
 .team-item {
     position: relative;
     text-align: center;
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
 }
-
-
 
 .team-item .team-social {
     position: absolute;
@@ -593,8 +593,6 @@
         font-size: 20px;
     }
 }
-
-
 
 /*** Footer ***/
 .footer {

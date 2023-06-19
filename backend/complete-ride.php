@@ -9,7 +9,7 @@ require_once "header.php";
                 <div class="card w-100">
                     <div class="card-body p-4">
                             <h5 class="card-title fw-semibold mb-4">Complete Booking List</h5>
-                            <button onclick="exportToExcel()">Export to Excel</button>
+                            <button onclick="exportToExcel3()">Export to Excel</button>
                             <div class="table-responsive">
                             <table class="table text-nowrap mb-0 align-middle" id="data-table">
                                 <thead class="text-dark fs-4">
@@ -65,9 +65,7 @@ require_once "header.php";
                                     </tr>
                                 </thead>
                                 <tbody> <?php  include 'database/connection.php';
-                                            if ($conn->connect_error) {
-                                                die("Connection failed: " . $conn->connect_error);
-                                            }
+                                            $a=date('Y-m-d H:i');
                                             // Fetch data from the 'review' table
                                             $sql = "SELECT * FROM complete_ride ORDER BY date AND time DESC";
                                             $result = $conn->query($sql); 

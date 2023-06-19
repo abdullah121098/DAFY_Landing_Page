@@ -558,15 +558,15 @@
             <div class="container-xxl pt-5">
                 <div class="container">
                     <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                        style="max-width: 500px;">
+                    style="max-width: 100%;">
                         <!-- <p class="fs-5 fw-medium text-primary">Our Team</p> -->
                         <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
 
-                        <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="../assert/img/team/ceo1.jpg" alt="">
+                            <div class="project-item mb-5">
+                                <div>
+                                    <img class="img" src="../assert/img/team/ceo1.jpg" alt="">
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Manikandan Ak <br>
@@ -575,8 +575,8 @@
                             </div>
                       
                             <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid h-100" src="../assert/img/team/team-5.jpg" alt="" >
+                                <div>
+                                    <img class="img h-100" src="../assert/img/team/team-5.jpg" alt="" >
                                     
                                 </div>
                                 <div class="p-4">
@@ -585,33 +585,32 @@
                                 </div>
                             </div>
                             <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="../assert/img/team/team-5.jpg" alt="">
-                                    
-                                </div>
+                                <div>
+                                    <img class="img" src="../assert/img/team/team-5.jpg" alt="">
+                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Jijo Louis <br>
-                                    <span class="text-warning">HR's Head</span></a>
+                                    <span class="text-warning">HR Head</span></a>
                                 </div>
                             </div>
                             <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="../assert/img/team/account.jpg" alt="">
+                                <div >
+                                    <img class="img" src="../assert/img/team/account.jpg" alt="">
                                     
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Stephin Jose <br>
-                                    <span class="text-warning">Account's Head</span></a>
+                                    <span class="text-warning">Accounts Head</span></a>
                                 </div>
                             </div>
                             <div class="project-item mb-5">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="../assert/img/team/team-5.jpg" alt="">
+                                <div>
+                                    <img class="img" src="../assert/img/team/team-5.jpg" alt="">
                                     
                                 </div>
                                 <div class="p-4">
                                     <a class="d-block h5 text-center" href="">Josen Kuriakose <br>
-                                        <span class="text-warning">Operation's Head</span></a>
+                                        <span class="text-warning">Operations Head</span></a>
                                 </div>
                             </div> 
                        
@@ -628,7 +627,7 @@
             <div class="container-xxl pt-5" >
                 <div class="container">
                     <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
-                        style="max-width: 500px;">
+                    style="max-width: 100%;">
                         <!--p class="fs-5 fw-medium text-warning">Testimonial</p-->
                         <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
                     </div>

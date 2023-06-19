@@ -10,7 +10,7 @@ require_once "header.php"; ?>
                 <div class="card w-100">
                   <div class="card-body p-4">
                     <h5 class="card-title fw-semibold mb-4 text-center">New Ride List </h5>
-                    <button onclick="exportToExcel()">Export to Excel</button>
+                    <!-- <button onclick="exportToExcel()">Export to Excel</button> -->
                     <div class="table-responsive">
                       <table class="table text-nowrap mb-0 align-middle" id="data-table">
                         <thead class="text-dark fs-4">

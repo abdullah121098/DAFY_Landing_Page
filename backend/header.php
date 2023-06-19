@@ -80,8 +80,15 @@
                 <span class="hide-menu">Completed-Booking</span>
               </a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="summary.php" aria-expanded="false">
+                <span>
+                  <i class="ti ti-cards"></i>
+                </span>
+                <span class="hide-menu">Summary</span>
+              </a>
+            </li>
             <li class="nav-small-cap">
-           
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">AUTHOR</span>
             </a>
