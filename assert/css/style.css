@@ -361,58 +361,11 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    max-width: 100%;
+    max-height: max-content;
 }
 
-.project-item .project-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, .5);
-    opacity: 0;
-    padding-top: 60px;
-    transition: .5s;
-}
 
-.project-item:hover .project-overlay {
-    opacity: 1;
-    padding-top: 0;
-}
-
-.project-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%; /* Set a percentage height for the image container */
-    width: 100%; /* Set a percentage width for the image container */
-}
-.project-item .p-4 {
-    text-align: center;
-  }
-  
-  .project-item:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-.project-item img {
-    max-width: 100%; /* Ensure the image doesn't exceed the container */
-    max-height: 90%; /* Ensure the image doesn't exceed the container */
-}
-
-.project-item .position-relative {
-    height: 50%; /* Set a percentage height for the image container */
-    width: 50%; /* Set a percentage width for the image container */
-}
-
-.project-item img {
-    object-fit: cover; /* Ensure the image fills the container */
-    height: 100%; /* Make the image height 100% of the container */
-    width: 100%; /* Make the image width 100% of the container */
-}
 .project-carousel .owl-nav {
     position: absolute;
     top: -100px;
@@ -438,7 +391,7 @@
 .project-carousel .owl-nav .owl-prev:hover,
 .project-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
-    color: white;
+    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
@@ -457,67 +410,13 @@
         font-size: 20px;
     }
 }
-
-/*** Team ***/
-.team-item {
-    position: relative;
-    text-align: center;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
-}
-
-.team-item .team-social {
-    position: absolute;
-    padding: 0;
-    top: 15px;
-    left: 0;
-    overflow: hidden;
-}
-
-.team-item .team-social li {
-    list-style-type: none;
-    margin-bottom: 10px;
-    margin-left: -50px;
-    opacity: 0;
-    transition: .5s;
-}
-
-.team-item:hover .team-social li {
-    margin-left: 15px;
-    opacity: 1;
-}
-
-.team-item .team-social li .btn {
-    background: #FFFFFF;
-    color: var(--primary);
-    border-radius: 40px;
-    transition: .5s;
-}
-
-.team-item .team-social li .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-.team-item .team-social li:nth-child(1) {
-    transition-delay: .1s;
-}
-
-.team-item .team-social li:nth-child(2) {
-    transition-delay: .2s;
-}
-
-.team-item .team-social li:nth-child(3) {
-    transition-delay: .3s;
-}
-
-.team-item .team-social li:nth-child(4) {
-    transition-delay: .4s;
-}
-
-.team-item .team-social li:nth-child(5) {
-    transition-delay: .5s;
-}
-
+ .project-item img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px;
+    right: 100%;
+    left: 100%;
+} 
 
 /*** Testimonial ***/
 .testimonial-item {
@@ -527,26 +426,24 @@
 
 .owl-item .testimonial-item,
 .testimonial-item * {
-    transition: 1.60s;
+    transition: .5s;
 }
 
 .owl-item.center .testimonial-item,
 .testimonial-item:hover {
     background: var(--primary);
-   
 }
 
 .owl-item.center .testimonial-item *,
 .testimonial-item:hover * {
     color: black !important;
-    
 }
 
-.testimonial-item img {
+/* .testimonial-item img {
     width: 100px !important;
     height: 100px !important;
     border-radius: 100px;
-}
+} */
 
 .testimonial-carousel .owl-nav {
     position: absolute;
@@ -567,14 +464,13 @@
     border-radius: 55px;
     box-shadow: 0 0 45px rgba(0, 0, 0, .15);
     font-size: 25px;
-    transition: 1.15s;
-    
+    transition: .5s;
 }
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
-    color: black;
+    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
