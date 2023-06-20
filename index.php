@@ -599,7 +599,7 @@
                                        
                                         <div class="p-4">
                                             <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
-                                                <span class="text-warning">Operationals Head</span></a>
+                                                <span class="text-warning">Operations Head</span></a>
                                         </div>
                                     </div>
                                 </div>
