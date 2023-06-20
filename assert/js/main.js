@@ -40,25 +40,12 @@
     });
 
 
-    // Modal Video
-    var $videoSrc;
-    $('.btn-play').click(function () {
-        $videoSrc = $(this).data("src");
-    });
-    console.log($videoSrc);
-    $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    })
-    $('#videoModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc);
-    })
-
-
     // Project and Testimonial carousel
     $(".project-carousel, .testimonial-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
-        margin: 25,
+        smartSpeed: 5000,
+        margin: 20,
+        innerWidth: 50,
         loop: true,
         center: true,
         dots: false,
@@ -75,13 +62,29 @@
                 items:1
             },
             768:{
-                items:2
+                items:1
             },
             992:{
                 items:3
             }
+          
         }
     });
     
-})(jQuery);
+    
+     // Modal Video
+     var $videoSrc;
+    var $src=document.getElementById('#videoPlayer');
+     $('.btn-play').click(function () {
+         $videoSrc = $(this).data("src");
+     });
+     console.log($videoSrc);
+     $('#videoModal').on('shown.bs.modal', function (e) {
+         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+     })
+     $('#videoModal').on('hide.bs.modal', function (e) {
+         $("#video").attr('src', $videoSrc);
+     })
+ 
 
+})(jQuery);
