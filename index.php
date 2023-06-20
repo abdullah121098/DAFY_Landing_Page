@@ -551,7 +551,7 @@
             <!-- ============================================== enquiry End ================================================== -->
             
            <!-- ============================================== Team Start ================================================== -->
-                <section id="team"> <br><br>
+           <section id="team"> <br><br>
                     <div class="container-xxl pt-5" >
                         <div class="container-fluid">
                             <div class="text-center text-md-start pb-5 pb-md-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
@@ -561,72 +561,68 @@
                             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                                 
                                 <div class="col-lg-10 col-md-6 ">
-                                    <div class="project-item rounded overflow-hidden pb-4">
-                                        <img class="img-fluid mb-4" src="assert/img/team/ceo1.jpg" alt="">
-                                        <!-- <div class="project-overlay">
-                                            <div class="p-10">
-                                                <h5 class="d-block  text-light">Manikandan Ak</h5>
-                                                <span class="text-warning">CEO</span>
-                                            </div>
-                                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/project-1.jpg"
-                                                data-lightbox="project"><i class="fa fa-eye"></i></a>
-                                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
-                                                    class="fa fa-link"></i></a>
-                                        -->
-                                    </div>
-                                    <div class="p-4">
-                                        <a class="d-block h5 text-center" href="">Manikandan Ak<br>
-                                            <span class="text-warning">CEO</span></a>
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
+                                   
+                                        <div class="p-4">
+                                            <a class="d-block h5 text-center" href="">Manikandan Ak<br>
+                                                <span class="text-warning">CEO</span></a>
+                                        </div>
                                     </div>
                                 </div>
                                 
                                 <div class="col-lg-10 col-md-6 ">
-                                    <div class="project-item rounded overflow-hidden pb-4">
-                                        <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                    </div>    
-                                    <div class="p-4">
-                                        <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
-                                            <span class="text-warning">COO</span></a>
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
+                                       
+                                        <div class="p-4">
+                                            <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
+                                                <span class="text-warning">COO</span></a>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="project-item p-10 p-lg-10 mb-8">
-                                        <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                    </div>    
-                                    <div class="p-4">
-                                        <a class="d-block h5 text-center" href="">Jijo Louis<br>
-                                            <span class="text-warning">HR Head</span></a>
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
+                                       
+                                        <div class="p-4">
+                                            <a class="d-block h5 text-center" href="">Jijo Louis<br>
+                                                <span class="text-warning">HR Head</span></a>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="project-item p-10 p-lg-10 mb-8">
-                                        <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                    </div>    
-                                    <div class="p-4">
-                                        <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
-                                            <span class="text-warning">Operationals Head</span></a>
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
+                                       
+                                        <div class="p-4">
+                                            <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
+                                                <span class="text-warning">Operationals Head</span></a>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="project-item mb-4 overflow-hidden" style="width: 100%;">
-                                        <img class="img-fluid mb-4" src="assert/img/team/account.jpg" alt="">
-                                    </div>    
-                                    <div class="p-4">
-                                        <a class="d-block h5 text-center" href="">Stephin Jose<br>
-                                        <span class="text-warning">Accounts Head</span></a>
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid" src="assert/img/team/account.jpg" alt="">
+                                        
+                                        <div class="p-4">
+                                            <a class="d-block h5 text-center" href="">Stephin Jose<br>
+                                            <span class="text-warning">Accounts Head</span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                    </div>
                         </div>
                     </div>
                 </section>
             <!-- ============================================== Team  end ================================================== -->
             
             <!-- ============================================== Testimonial  Start ================================================== -->
-        <section id="testimonial"> <br><br>
+            <section id="testimonial"> <br><br>
             <div class="container-xxl pt-10">
                 <div class="container">
                     <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
@@ -635,8 +631,8 @@
                     </div>
                     <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
 
-                        <div class="col-lg-10 col-md-10 ">
-                            <div class="testimonial-item rounded p-10 mb-4"><br>
+                        <div class="col-lg-10 col-md-6">
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">SUJITH E R</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
@@ -649,8 +645,9 @@
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
                         </div>
-                        <div class="col-lg-10 col-md-10">
-                            <div class="testimonial-item rounded p-10 p-lg-10 mb-4"> <br>
+
+                        <div class="col-lg-10 col-md-6">
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"> <br>
                                 <h6 class="mb-4 text-center">ANANDHU S</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">The efficiency and punctuality of the drivers provided by
@@ -661,8 +658,9 @@
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
                         </div>
-                        <div class="col-lg-10 col-md-10 ">
-                            <div class="testimonial-item rounded p-10 p-lg-10 mb-4"><br>
+
+                        <div class="col-lg-10 col-md-6">
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">JAYESH K</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I recently had the pleasure of using the professional driver assistant service provided by DAFY for my family.
@@ -673,8 +671,9 @@
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
                         </div>
+
                         <div class="col-lg-10 col-md-6 ">
-                            <div class="testimonial-item rounded p-10 p-lg-10 mb-4"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="text-center">SAJESH V</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">Using the driver service was a truly amazing experience for me. 
@@ -685,8 +684,9 @@
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
                         </div>
+
                         <div class="col-lg-10 col-md-6 ">
-                            <div class="testimonial-item rounded p-10 p-lg-10 mb-10"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">ARCHIT M D</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I've been using DAFY's driver / caretaker service for several months now, 
@@ -701,8 +701,9 @@
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
                         </div>
+
                         <div class="col-lg-10 col-md-6 ">
-                            <div class="testimonial-item rounded p-10 p-lg-10 mb-4"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">NANCY JACOB</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I recently experienced the professional driver assistance service provided by DAFY,

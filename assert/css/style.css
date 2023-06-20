@@ -418,6 +418,15 @@
     left: 100%;
 } 
 
+.owl-item.center .project-item,
+.project-item:hover {
+    background: var(--primary);
+}
+.owl-item.center .project-item *,
+.project-item:hover * {
+    color: #FFFFFF !important;
+}
+
 /*** Testimonial ***/
 .testimonial-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
