@@ -421,12 +421,12 @@
 /*** Testimonial ***/
 .testimonial-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
-    transition: .5s;
+    transition: .25s;
 }
 
 .owl-item .testimonial-item,
 .testimonial-item * {
-    transition: .5s;
+    transition: .25s;
 }
 
 .owl-item.center .testimonial-item,
@@ -462,7 +462,7 @@
     justify-content: center;
     color: var(--secondary);
     border-radius: 55px;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 45px rgba(0, 0, 0, .35);
     font-size: 25px;
     transition: .5s;
 }

@@ -423,7 +423,7 @@
             <!-- ============================================== Feactures End ================================================== -->
             
             <!-- ============================================== About Start ================================================== -->
-                    <section id="about"> <br><br>
+                <section id="about"> <br><br>
                             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" id="about">
                                 <!--p class="fs-5 fw-medium" style="color: #ffae00;">Our Services</p-->
                                 <h1 class="display-5 mb-5">About Us</h1>
@@ -433,7 +433,7 @@
                                         <div class="row g-5">
                                             <div class="col-lg-6">
                                                 <div class="h-100 d-flex align-items-center justify-content-center" style="height: 100%;">
-                                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                                    <button type="button" class="btn-play" data-bs-toggle="modal"  data-bs-target="#videoModal">
                                                         <span></span>
                                                     </button>
                                                 </div>
@@ -473,8 +473,7 @@
                         <!-- About End -->        
 
                         <!-- Video Modal Start -->
-                        <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
+                        <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content rounded-0">
                                     <div class="modal-header">
@@ -486,17 +485,18 @@
                                         <div class="ratio ratio-16x9 clip">
                                             <!-- <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
                                                 allowscriptaccess="always" allow="autoplay"></iframe> -->
-                                                <video id="videoPlayer" controls autoplay>
+                                                <video id="videoPlayer" controls>
                                                 <source src="assert/video/01_1.mp4" type="video/mp4">
                                                 <source src="assert/video/02-2.mp4" type="video/mp4">
                                                 </video>  
                                             
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Video Modal End -->
-                    </section>
+                </section>
             <!-- ============================================== Service Start ================================================== -->
 
             <!-- ============================================== enquiry End ================================================== -->
@@ -551,7 +551,7 @@
             <!-- ============================================== enquiry End ================================================== -->
             
            <!-- ============================================== Team Start ================================================== -->
-           <section id="team"> <br><br>
+                <section id="team"> <br><br>
                     <div class="container-xxl pt-5" >
                         <div class="container-fluid">
                             <div class="text-center text-md-start pb-5 pb-md-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
@@ -572,45 +572,54 @@
                                                 data-lightbox="project"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
                                                     class="fa fa-link"></i></a>
-                                        </div> -->                                       
-                                        <h6>Manikandan Ak</h6>
-                                        <span class="text-warning">CEO</span>
+                                        -->
+                                    </div>
+                                    <div class="p-4">
+                                        <a class="d-block h5 text-center" href="">Manikandan Ak<br>
+                                            <span class="text-warning">CEO</span></a>
                                     </div>
                                 </div>
                                 
                                 <div class="col-lg-10 col-md-6 ">
                                     <div class="project-item rounded overflow-hidden pb-4">
                                         <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                        <h6>Arun Chandrasekaran</h6>
-                                        <span class="text-warning">COO</span>
+                                    </div>    
+                                    <div class="p-4">
+                                        <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
+                                            <span class="text-warning">COO</span></a>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="project-item p-10 p-lg-10 mb-8">
                                         <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                        <h6>Jijo Louis</h6>
-                                            <span class="text-warning">HR Head</span>
+                                    </div>    
+                                    <div class="p-4">
+                                        <a class="d-block h5 text-center" href="">Jijo Louis<br>
+                                            <span class="text-warning">HR Head</span></a>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="project-item p-10 p-lg-10 mb-8">
                                         <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                            <h6>Josen Kuriakose</h6>
-                                            <span class="text-warning">Operationals Head</span>
+                                    </div>    
+                                    <div class="p-4">
+                                        <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
+                                            <span class="text-warning">Operationals Head</span></a>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="project-item mb-4 overflow-hidden" style="width: 100%;">
                                         <img class="img-fluid mb-4" src="assert/img/team/account.jpg" alt="">
-                                            <h6>Stephin Jose</h6>
-                                            <span class="text-warning text-center">Accounts Head</span>
+                                    </div>    
+                                    <div class="p-4">
+                                        <a class="d-block h5 text-center" href="">Stephin Jose<br>
+                                        <span class="text-warning">Accounts Head</span></a>
                                     </div>
                                 </div>
                             </div>
-                    </div>
                         </div>
                     </div>
                 </section>
