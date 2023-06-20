@@ -21,74 +21,74 @@ require_once "header.php";
                                 <option value="Cancel">Cancel</option>
 
                             </select>
-                            <input type="submit" name="show" value="show">
+                            <input type="submit" name="show" value="search">
                         </form>
                         <?php
                                         if(isset($_POST['show'])){
                                                 $get=$_POST['choose'];
                                                 $a=$_POST['date2'];
                                                 $b=$_POST['date3'];
+                        ?>                        
+                                         <h5 class="card-title fw-semibold mb-4 text-center"> <?php echo $get;  ?></h5>
+                                        <div class="table-responsive">
+                                        <table class="table text-nowrap mb-0 align-middle" id="data-table">
+                                            <thead class="text-dark fs-4">
+                                                <tr>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Id</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Name</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Phone</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Email</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Pick-up</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Drop-in</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Ride-type</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">service-type</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Date</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Time</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Vehicle name</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Vehicle Type</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0 data5">
+                                                        <h6 class="fw-semibold mb-0">Driver Name</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Payment Type</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Payment</h6>
+                                                    </th>
+                                                    <th class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0">Status</h6>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody> 
+                        <?php                        
                                                 switch($get){
-            
                                                     case "Completed":
-                        ?>
-                        <h5 class="card-title fw-semibold mb-4 text-center"> <?php echo $get;  ?></h5>
-                            <div class="table-responsive">
-                            <table class="table text-nowrap mb-0 align-middle" id="data-table">
-                                <thead class="text-dark fs-4">
-                                    <tr>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Id</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Name</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Phone</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Email</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Pick-up</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Drop-in</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Ride-type</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">service-type</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Date</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Time</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Vehicle name</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Vehicle Type</h6>
-                                        </th>
-                                        <th class="border-bottom-0 data5">
-                                            <h6 class="fw-semibold mb-0">Driver Name</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Payment Type</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Payment</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Status</h6>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody> 
-                                    <?php  
+                      
                                            
                                             // Fetch data from the 'review' table
                                             $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE date BETWEEN '$a' AND '$b'");
@@ -226,15 +226,81 @@ require_once "header.php";
                                                         echo '<tr><td colspan="12">No data found.</td></tr>';
                                                     }
                                                 break;
+                                                break;   
+                                                case "Cancel": 
+                                                      // Fetch data from the 'review' table
+                                                    $sql2 =mysqli_query ($conn, "SELECT * FROM `cancel` WHERE date BETWEEN '$a' AND '$b' ORDER BY date AND time DESC");
+                                                  if (mysqli_num_rows($sql2) >0) {
+                                                        while ($row2= mysqli_fetch_array($sql2)) {
+                                                            // Display each row of data?>
+                                                        <tr>
+                                                            <td class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-0"><?php echo $row2['id']; ?></h6></td>
+                                                            <td class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-1"><?php echo  $row2['name'];  ?></h6>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['phone'];?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['email']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['pick_up']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['drop_in']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['ride_type']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['time_ride']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['date']; ?></p>
+                                                            </td>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['time']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['v_name']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['v_type']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['driver_name']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['payment_type']; ?></p>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                            <p class="mb-0 fw-normal"><?php echo $row2['payment']; ?></p>
+                                                            </td>
+                                                            
+                                                            <!-- table row data -->
+                                                            <td class="border-bottom-0">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <label class="badge rounded-3 fw-semibold py-3 px-3"style="background-color:red;">
+                                                                <?php echo $row2['status']; ?>
+                                                                </label>
+                                                            </div>
+                                                            </td>
+                                                        </tr> 
+                                                            <?php
+                                                        }
+                                                        } else {
+                                                        echo '<tr><td colspan="12">No data found.</td></tr>';
+                                                    }
+                                                break;
                                             }
                                         } 
                                     ?>
-
-                                    
                                 </tbody>
                             </table>
-                            
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
