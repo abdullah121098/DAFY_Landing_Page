@@ -1,57 +1,82 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+  <body>
+<?php
 // Connect to the database
 $servername = "localhost"; // Replace with your database server name
 $username = "root"; // Replace with your database username
 $password = ""; // Replace with your database password
-$dbname = "dafy"; // Replace with your database name
+$dbname = "sample_test"; // Replace with your database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+$sq = mysqli_query($conn,"SELECT * FROM count");
+$res= mysqli_num_rows($sq);
+
+$rowsPerPage = 4; // Number of rows to display per page
+$totalRows = $res; // Total number of rows in the table
+
+$page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+
+$start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+$end = $start + $rowsPerPage; // Calculate the ending row index
+
+$sql = "SELECT * FROM count Limit $start,$rowsPerPage";
+
+$result = mysqli_query($conn, $sql);
 ?>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-                      <table class="table text-nowrap mb-0 align-middle" id="data-table">
-                        <thead class="text-dark fs-4">
-                       
-                            </tr>
-                            <tr>
-                            <th class="border-bottom-0">
-                              <h6 class="fw-semibold mb-0">Id</h6>
-                            </th>
-                            <th class="border-bottom-0">
-                              <h6 class="fw-semibold mb-0">Name</h6>
-                            </th>
-                         
-                          </tr>
-                        </thead>
-                        <tbody>
-                           <?php  
-                                 $sql = "SELECT * FROM customer";
+<form action="" method="post">
+  <table id="data-count">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <?php
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_array($result)) {
+        // Display each row of data
+        echo '<tr>
+                <td class="border-bottom-0"><h6 class="fw-semibold mb-0">' . $row['id'] . '</h6></td>
+                <td class="border-bottom-0"><h6 class="fw-semibold mb-1">' . $row['count'] . '</h6></td>
+              </tr>';
+      }
+    }
+    ?>
+  </table>
+  <ul class="pager">
+    <?php if ($page > 1): ?>
+      <li><a href="?page=<?php echo ($page - 1); ?>" class="per">Previous</a></li>
+    <?php endif; ?>
+    <?php if ($end < $totalRows): ?>
+      <li><a href="?page=<?php echo ($page + 1); ?>" class="pro">Next</a></li>
+    <?php endif; ?>
+  </ul>
+</form>
 
-                                  $result = mysqli_query($conn,$sql); 
+<form method="post">
+    <div class="autocomplete-container" style="width:300px;">
+        <input type="text" id="tutorial_name" name="tutorial_name" placeholder="tutorial name">
+    </div>
+    <input type="submit" name="submit">
+</form>
+<script>
+    $(function() {
+        $("#tutorial_name").autocomplete({
+            source: 'backend-script.php',
+            minLength: 1 // Minimum number of characters to trigger autocomplete
+        });
+    });
+</script>
 
-                                  if (mysqli_num_rows($result)> 0) {
-                                while ($row=mysqli_fetch_array($result)) {
-                                    // Display each row of data?>
-                                   
-                                  <tr>
-                                    <td class="border-bottom-0"><h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6></td>
-                                    <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6></td>
-                                    
-                                  </tr> 
-                                    <?php
-                                  }
-                                } else {
-                                  echo '<tr><td colspan="12">No data found.</td></tr>';
-                              }?>             
-                        </tbody>
-                      </table>
-                      
-                    </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
-   integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
-  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>
