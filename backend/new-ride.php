@@ -35,9 +35,9 @@ require_once "header.php"; ?>
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Phone</h6>
                                   </th>
-                                  <th class="border-bottom-0 ">
+                                  <!-- <th class="border-bottom-0 ">
                                     <h6 class="fw-semibold mb-0">Email</h6>
-                                  </th>
+                                  </th> -->
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Pick-up</h6>
                                   </th>
@@ -62,7 +62,7 @@ require_once "header.php"; ?>
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Vechicle Type</h6>
                                   </th>
-                                  <th class="border-bottom-0 ">
+                                  <!-- <th class="border-bottom-0 ">
                                     <h6 class="fw-semibold mb-0">Driver Name</h6>
                                   </th>
                                   <th class="border-bottom-0  ">
@@ -70,7 +70,7 @@ require_once "header.php"; ?>
                                   </th>
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">payment</h6>
-                                  </th>
+                                  </th> -->
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Status</h6>
                                   </th>
@@ -82,18 +82,18 @@ require_once "header.php"; ?>
                               </thead>
                               <tbody>
                                 <?php  
-                                        $sq = mysqli_query($conn,"SELECT * FROM customer");
-                                        // $sq = mysqli_query($conn,"SELECT * FROM count");
-                                        $res= mysqli_num_rows($sq);
-                                        $rowsPerPage = 4; // Number of rows to display per page
-                                        $totalRows = $res; // Total number of rows in the table
+                                        // $sq = mysqli_query($conn,"SELECT * FROM customer");
+                                        // // $sq = mysqli_query($conn,"SELECT * FROM count");
+                                        // $res= mysqli_num_rows($sq);
+                                        // $rowsPerPage = 3; // Number of rows to display per page
+                                        // $totalRows = $res; // Total number of rows in the table
 
-                                        $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                        // $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
 
-                                        $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
-                                        $end = $start + $rowsPerPage; // Calculate the ending row index
+                                        // $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+                                        // $end = $start + $rowsPerPage; // Calculate the ending row index
 
-                                        $sql = "SELECT * FROM  customer ORDER BY date DESC, time DESC  Limit $start,$rowsPerPage";
+                                        $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
                                         // $sql = "SELECT * FROM count Limit $start,$rowsPerPage";
                                         $result = mysqli_query($conn,$sql); 
 
@@ -104,27 +104,27 @@ require_once "header.php"; ?>
                                         <tr>
                                           <td class="border-bottom-0"><h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6></td>
                                           <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['phone'];?></p></td>
-                                          <td class="border-bottom-0 "><p class="mb-0 fw-normal"><?php echo $row['email']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['pick_up']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['drop_in']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['ride_type']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['time_ride']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['date']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['time']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['v_name']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['v_type']; ?></p> </td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['driver_name']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['payment_type']; ?></p></td>
-                                          <td class="border-bottom-0"><p class="mb-0 fw-normal"><?php echo $row['payment']; ?></p></td>
-                                          <td class="border-bottom-0"><div class="d-flex align-items-center gap-2">
-                                              <label class="badge bg-warning rounded-3 fw-semibold py-3 px-3" id="res">
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['phone'];?></h6></td>
+                                          <!-- <td class="border-bottom-0 "><h6 class="mb-0 fw-normal"><?php //echo $row['email']; ?></h6></td> -->
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['pick_up']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['drop_in']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['ride_type']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['time_ride']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['date']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['time']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['v_name']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['v_type']; ?></h6> </td>
+                                          <!-- <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php // echo $row['driver_name']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php// echo $row['payment_type']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php //echo $row['payment']; ?></h6></td> -->
+                                          <td class="border-bottom-0"><div class="d-flex align-items-center" style="background-color:skyblue;">
+                                              <label class="rounded-3 fw-semibold py-3 px-3" id="res">
                                               <?php echo $row['status']; ?>
                                               </label>
                                           </div>
                                           </td>
                                           <td class="border-bottom-0">
-                                          <div class="d-flex align-items-center gap-2">
+                                          <div class="d-flex align-items-center">
                                           <a type="button" class="" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">
                                           view
                                           </a>
@@ -143,18 +143,18 @@ require_once "header.php"; ?>
                                     }?>             
                               </tbody>
                             </table>
-                                <nav aria-label="Page navigation example">
-                                  <ul class="pagination justify-content-end">
-                                    <?php if ($page > 1): ?>
-                                      <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
+                                <!-- <nav aria-label="Page navigation example" >
+                                  <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                                    <?php //if ($page > 1): ?>
+                                      <li class="page-item"><a href="?page=<?php //echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
                                       <span aria-hidden="true">&laquo;</span></a></li>
-                                    <?php endif; ?>
-                                    <?php if ($end < $totalRows): ?>
-                                      <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
+                                    <?php //endif; ?>
+                                    <?php //if ($end < $totalRows): ?>
+                                      <li class="page-item"><a href="?page=<?php //echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
                                       <span aria-hidden="true">&raquo;</span></a></li>
-                                    <?php endif; ?>
+                                    <?php //endif; ?>
                                   </ul>
-                                </nav>
+                                </nav> -->
                         </form>
                     </div>
                 </div>
@@ -163,6 +163,7 @@ require_once "header.php"; ?>
           </div>
         
           <style>
+          
             .page-link{
               background: black;
               font-style: bold;
