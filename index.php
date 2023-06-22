@@ -25,6 +25,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Bootsrtap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <!-- Libraries Stylesheet -->
     <link href="assert/lib/animate/animate.min.css" rel="stylesheet">
     <link href="assert/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -327,39 +331,39 @@
                         </div>
                     </div>
                 
-                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                        <script>
-                            $(document).ready(function () {
-                                $('.read-more').on('click', function () {
-                                    var content = $(this).siblings('.collapsed-content');
-                                    content.toggleClass('d-none d-lg-block');
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script>
+                        $(document).ready(function () {
+                            $('.read-more').on('click', function () {
+                                var content = $(this).siblings('.collapsed-content');
+                                content.toggleClass('d-none d-lg-block');
 
-                                    var icon = $(this).find('.fa');
-                                    icon.toggleClass('fa-angle-down fa-angle-up');
-                                }); });
-                        </script>
-                        <style>
-                            .read-more{
-                                appearance: none;
-                                border: transparent;
-                                padding: .5em;
-                                border-radius: .25em;
-                                cursor: pointer;
-                                margin-top: 1rem;
-                                
-                            }
-                            .read-more:hover{
-                                background-color:none;
-                                grid-auto-rows:inherit;
-                                
-                            }
-                            .read-more::before{
-                                content: "↓ more";
-                            }
-                            .read-more:checked::before{
-                                content: "↑ less";
-                            }
-                        </style>
+                                var icon = $(this).find('.fa');
+                                icon.toggleClass('fa-angle-down fa-angle-up');
+                            }); });
+                    </script>
+                    <style>
+                        .read-more{
+                            appearance: none;
+                            border: transparent;
+                            padding: .5em;
+                            border-radius: .25em;
+                            cursor: pointer;
+                            margin-top: 1rem;
+                            
+                        }
+                        .read-more:hover{
+                            background-color:none;
+                            grid-auto-rows:inherit;
+                            
+                        }
+                        .read-more::before{
+                            content: "↓ more";
+                        }
+                        .read-more:checked::before{
+                            content: "↑ less";
+                        }
+                    </style>
                 </section>
             <!-- ============================================== Service End ================================================== -->
 
@@ -551,79 +555,79 @@
             <!-- ============================================== enquiry End ================================================== -->
             
            <!-- ============================================== Team Start ================================================== -->
-           <section id="team"> <br><br>
+                <section id="team"> <br><br>
                     <div class="container-xxl pt-5" >
-                        <div class="container-fluid">
+                        <div class="container">
                             <div class="text-center text-md-start pb-5 pb-md-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
                                 <!--p class="fs-5 fw-medium text-warning">Team</p-->
                                 <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
                             </div>
                             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                               
+                                    <div class="col-lg-10 col-md-6">
+                                        <div class="project-item mb-4 overflow-hidden">
+                                            <img class="img-fluid mb-4" src="assert/img/team/ceo1.jpg" alt="">
+                                    
+                                            <div class="p-4">
+                                                <a class="d-block h5 text-center" href="">Manikandan Ak<br>
+                                                    <span class="text-warning">CEO</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 
-                                <div class="col-lg-10 col-md-6 ">
-                                    <div class="project-item mb-4 overflow-hidden">
-                                        <img class="img-fluid" src="assert/img/team/ceo1.jpg" alt="">
-                                   
-                                        <div class="p-4">
-                                            <a class="d-block h5 text-center" href="">Manikandan Ak<br>
-                                                <span class="text-warning">CEO</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-10 col-md-6 ">
-                                    <div class="project-item mb-4 overflow-hidden">
-                                        <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
-                                       
-                                        <div class="p-4">
-                                            <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
-                                                <span class="text-warning">COO</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-10 col-md-6">
-                                    <div class="project-item mb-4 overflow-hidden">
-                                        <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
-                                       
-                                        <div class="p-4">
-                                            <a class="d-block h5 text-center" href="">Jijo Louis<br>
-                                                <span class="text-warning">HR Head</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-10 col-md-6">
-                                    <div class="project-item mb-4 overflow-hidden">
-                                        <img class="img-fluid" src="assert/img/team/team-5.jpg" alt="">
-                                       
-                                        <div class="p-4">
-                                            <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
-                                                <span class="text-warning">Operations Head</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-10 col-md-6">
-                                    <div class="project-item mb-4 overflow-hidden">
-                                        <img class="img-fluid" src="assert/img/team/account.jpg" alt="">
+                                    <div class="col-lg-10 col-md-6">
+                                        <div class="project-item mb-4 overflow-hidden">
+                                            <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
                                         
-                                        <div class="p-4">
-                                            <a class="d-block h5 text-center" href="">Stephin Jose<br>
-                                            <span class="text-warning">Accounts Head</span></a>
+                                            <div class="p-4">
+                                                <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
+                                                    <span class="text-warning">COO</span></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+
+                                    <div class="col-lg-10 col-md-6">
+                                        <div class="project-item mb-4 overflow-hidden">
+                                            <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
+                                        
+                                            <div class="p-4">
+                                                <a class="d-block h5 text-center" href="">Jijo Louis<br>
+                                                    <span class="text-warning">HR Head</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-10 col-md-6">
+                                        <div class="project-item mb-4 overflow-hidden">
+                                            <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
+                                        
+                                            <div class="p-4">
+                                                <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
+                                                    <span class="text-warning">Operations Head</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-10 col-md-6">
+                                        <div class="project-item mb-4 overflow-hidden">
+                                            <img class="img-fluid mb-4" src="assert/img/team/account.jpg" alt="">
+                                            
+                                            <div class="p-4">
+                                                <a class="d-block h5 text-center" href="">Stephin Jose<br>
+                                                <span class="text-warning">Accounts Head</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
                             </div>
-                    </div>
                         </div>
                     </div>
                 </section>
             <!-- ============================================== Team  end ================================================== -->
             
             <!-- ============================================== Testimonial  Start ================================================== -->
-            <section id="testimonial"> <br><br>
-            <div class="container-xxl pt-10">
+        <section id="testimonial"> <br><br>
+            <div class="container-xxl pt-5">
                 <div class="container">
                     <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
                         <!-- <p class="fs-5 fw-medium text-primary">Testimonial</p> -->
@@ -631,7 +635,7 @@
                     </div>
                     <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
 
-                        <div class="col-lg-10 col-md-6">
+                        <!-- <div class="col-lg-5 col-md-6"> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">SUJITH E R</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
@@ -644,9 +648,9 @@
                                 </p>
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
-                        </div>
+                        <!-- </div> -->
 
-                        <div class="col-lg-10 col-md-6">
+                        <!-- <div class="col-lg-5 col-md-6"> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5"> <br>
                                 <h6 class="mb-4 text-center">ANANDHU S</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
@@ -657,9 +661,9 @@
                                     The drivers were polite, courteous, and made us feel safe throughout the journey.</p>
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
-                        </div>
+                        <!-- </div> -->
 
-                        <div class="col-lg-10 col-md-6">
+                        <!-- <div class="col-lg-5 col-md-6"> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">JAYESH K</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
@@ -670,11 +674,11 @@
                                     I would not hesitate to engage their services again in the future.</p>
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
-                        </div>
+                        <!-- </div> -->
 
-                        <div class="col-lg-10 col-md-6 ">
+                        <!-- <div class="col-lg-5 col-md-6 "> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
-                                <h6 class="text-center">SAJESH V</h6>
+                                <h6 class="mb-4 text-center">SAJESH V</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">Using the driver service was a truly amazing experience for me. 
                                     It blew me away with its excellent service, The driver was attentive and professional, 
@@ -683,9 +687,9 @@
                                     definitely use it again.</p>
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
-                        </div>
+                        <!-- </div> -->
 
-                        <div class="col-lg-10 col-md-6 ">
+                        <!-- <div class="col-lg-5 col-md-6 "> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">ARCHIT M D</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
@@ -700,9 +704,9 @@
                                     will continue relying on them for all my transportation needs.</p>
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
-                        </div>
+                        <!-- </div> -->
 
-                        <div class="col-lg-10 col-md-6 ">
+                        <!-- <div class="col-lg-5 col-md-6 "> -->
                             <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
                                 <h6 class="mb-4 text-center">NANCY JACOB</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
@@ -714,14 +718,15 @@
                                     ensuring privacy, or helping with luggage, thus made my journey comfortable and stress-free.</p>
                                 <input type="checkbox" class="expand-btn text-center" id="expand-btn">
                             </div>
-                        </div>
+                        <!-- </div> -->
+                        
                     </div>
                 </div>
             </div>
         </section>
             <style>
                 .limitline {
-                        --max-lines: 5;
+                        --max-lines: 8;
                         --line-height: 1.4;
                         max-height: calc(var(--max-lines)*1em*var(--line-height));
                         line-height: var(--line-height);
@@ -736,7 +741,7 @@
                             position: absolute;
                             height: calc(1em * var(--line-height));
                             width: 100%;
-                            bottom: 0;
+                            bottom: 10%;
                             pointer-events: none;
                             background: linear-gradient(to bottom,transparent,white);
                         }
@@ -744,7 +749,7 @@
                     .expand-btn{
                         appearance: none;
                         border: transparent;
-                        padding: .5em;
+                        padding: .2em;
                         border-radius: .25em;
                         cursor: pointer;
                         margin-top: 1rem;
@@ -766,7 +771,7 @@
                     }
             </style>
         
-            <<!-- ============================================== Testimonial  end ================================================== -->
+            <!-- ============================================== Testimonial  end ================================================== -->
             
             <!-- ====================================== Footer Start ================================================ -->  
             <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" id="contact">
@@ -1154,8 +1159,16 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
+            
+            <!-- Bootstrap Libraries -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+                integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+                integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+            
+            <!-- Local Libraries -->
             <script src="assert/lib/wow/wow.min.js"></script>
             <script src="assert/lib/easing/easing.min.js"></script>
             <script src="assert/lib/waypoints/waypoints.min.js"></script>
