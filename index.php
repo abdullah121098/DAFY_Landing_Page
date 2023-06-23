@@ -258,7 +258,7 @@
                                             <div class="row g-4" >
                                                 <div class="col-md-6" style="min-height: 350px;">
                                                     <div class="position-relative h-100">
-                                                        <img class="position-absolute img-fluid" src="assert/img/slider/Dafy-Single-Trip.gif"
+                                                        <img class="position-relative img-fluid" src="assert/img/slider/Dafy-Single-Trip.gif"
                                                             style="object-fit: cover; border-radius: 50% 0 50% 0 ;" alt="">
                                                     </div>
                                                 </div>
@@ -283,7 +283,7 @@
                                             <div class="row g-4">
                                                 <div class="col-md-6" style="min-height: 350px;">
                                                     <div class="position-relative h-100">
-                                                        <img class="position-absolute img-fluid" src="assert/img/slider/Dafy-Round-Trip.gif"
+                                                        <img class="position-relative img-fluid" src="assert/img/slider/Dafy-Round-Trip.gif"
                                                             style="object-fit: cover;border-radius: 0 50% 0 50%  ;" alt="">
                                                     </div>
                                                 </div>
@@ -308,7 +308,7 @@
                                             <div class="row g-4">
                                                 <div class="col-md-6" style="min-height: 350px;">
                                                     <div class="position-relative h-100">
-                                                        <img class="position-absolute img-fluid" src="assert/img/banner/b.jpeg"
+                                                        <img class="position-relative img-fluid" src="assert/img/banner/b.jpeg"
                                                             style="object-fit: cover; border-radius:30% 30% 30% 30%;" alt="">
                                                     </div>
                                                 </div>

@@ -21,6 +21,7 @@ require_once "header.php";
                                 <option value="Cancel">Cancel</option>
 
                             </select>
+                            <input type="text" name="name" id="">
                             <input type="submit" name="show" value="search">
                         </form>
                         <?php
@@ -28,7 +29,8 @@ require_once "header.php";
                                                 $get=$_POST['choose'];
                                                 $a=$_POST['date2'];
                                                 $b=$_POST['date3'];
-                        ?>                        
+                                                $c=$_POST['name']
+                        ?>                       
                                          <h5 class="card-title fw-semibold mb-4 text-center"> <?php echo $get;  ?></h5>
                                         <div class="table-responsive">
                                         <table class="table text-nowrap mb-0 align-middle" id="data-table">
@@ -91,7 +93,8 @@ require_once "header.php";
                       
                                            
                                             // Fetch data from the 'review' table
-                                            $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE date BETWEEN '$a' AND '$b'");
+                                            $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE date BETWEEN '$a' AND '$b' ");
+                                            // $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE );
                                             if (mysqli_num_rows($sql) > 0) {
                                                 while ($row= mysqli_fetch_array($sql)) {
                                                     // Display each row of data
