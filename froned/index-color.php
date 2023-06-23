@@ -299,12 +299,17 @@
                     </div>
                 </div>
             -->
+<?php 
+    $banner=mysqli_query($conn,"SELECT * FROM `banner`");
+    if (mysqli_num_rows($banner)>0){
+        while($ban=mysqli_fetch_array($banner)){
 
+?>
     <div class="container-fluid px-0 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner" style="height:100%;">
                 <div class="carousel-item active">
-                    <img class="w-100" src="../assert/img/slider/welcome-to-dafy1.png" alt="breeze-street-image">
+                    <img class="w-100" src="../backend/assets/images/banner/<?php echo $ban['b_img']; ?>" alt="breeze-street-image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-end">
@@ -313,7 +318,7 @@
                                     <strong>Dafy Online Service</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInLeft" style="font-family: 'Lato', sans-serif;">
-                                        Most reliable and economical driver on demand</h1>  
+                                    <?php echo $ban['b_content']; ?> <!--Most reliable and economical driver on demand--></h1>  
                                     <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
                                     data-bs-toggle="modal" data-bs-target="#book1"style="font-family: 'Lato', sans-serif;">Book Now</a>
                                     <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
@@ -323,14 +328,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <img class="w-100 animated slideInLeft" src="../assert/img/slider/your-car-our-driver.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row  justify-content-end">
                                 <div class="col-lg-7 text-end col-10">
                                     <!--p class="fs-4 text-white animated slideInLeft" style="font-family: 'Lato', sans-serif;">Welcome to
-                                        <strong>Dafy Online Service</strong></p-->
+                                        <strong>Dafy Online Service</strong></p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft"style="font-family: 'Lato', sans-serif;">
                                         Verified & Trained drivers for your car</h1>
                                     <a href="" class="btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"style="font-family: 'Lato', sans-serif;"
@@ -341,9 +346,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Additional Slider items -->
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <img class="w-100 animated slideInRight" src="../assert/img/slider/navigation.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
@@ -436,7 +441,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- Additional Slider End -->
             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
@@ -449,7 +454,12 @@
             </button>
         </div>
     </div>
-
+<?php
+        }
+    }else{
+        echo 'No Data Found';
+    }
+?>
     <!-- Carousel End -->
     <!--------------------------------------------------  Slider End       ----------------------------------->
     <!--
@@ -1099,6 +1109,29 @@
                         <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+                        <?php
+                            $sq=mysqli_query($conn,"SELECT * FROM team");
+                            if (mysqli_num_rows($sq)>0){
+                                while($img=mysqli_fetch_array($sq)){
+                                    echo '
+                                            <div class="project-item mb-5">
+                                                <div class="position-relative">
+                                                    <img class="img-fluid" src="../backend/assets/images/team/'.$img['t_img'].'" alt="">
+                                                </div>
+                                                <div class="p-4">
+                                                    <a class="d-block h5 text-center" href="">'.$img['t_name'].'<br>
+                                                    <span class="text-warning">'.$img['t_position'].'</span></a>
+                                                </div>
+                                            </div>';
+                                        }
+                                }else {
+                                    echo '<tr><td colspan="12">No data found.</td></tr>';
+                                }
+                        ?>
+
+                        
+                        
+                                                    
                         <!-- <div class="project-item mb-5">
                             <div class="position-relative">
                                 <img class="img-fluid" src="../assert/img/team/ceo1.jpg" alt="">
@@ -1108,9 +1141,10 @@
                                 <span class="text-warning">CEO</span></a>
                             </div>
                         </div>
+                        
                         <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="../assert/img/team/team-2.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/team-5.jpg" alt="">
                                 
                             </div>
                             <div class="p-4">
@@ -1118,9 +1152,10 @@
                                 <span class="text-warning">COO</span></a>
                             </div>
                         </div>
+                       
                         <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="../assert/img/team/team-1.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/team-5.jpg" alt="">
                                 
                             </div>
                             <div class="p-4">
@@ -1128,6 +1163,7 @@
                                 <span class="text-warning">Human Resource's Head</span></a>
                             </div>
                         </div>
+                        
                         <div class="project-item mb-5">
                             <div class="position-relative">
                                 <img class="img-fluid" src="../assert/img/team/account.jpg" alt="">
@@ -1138,9 +1174,10 @@
                                 <span class="text-warning">Account's Head</span></a>
                             </div>
                         </div>
+                        
                         <div class="project-item mb-5">
                             <div class="position-relative">
-                                <img class="img-fluid" src="../assert/img/team/team-3.jpg" alt="">
+                                <img class="img-fluid" src="../assert/img/team/team-5.jpg" alt="">
                                 
                             </div>
                             <div class="p-4">
@@ -1148,29 +1185,7 @@
                                     <span class="text-warning">Operational's Head</span></a>
                             </div>
                         </div> -->
-                        <div class="row g-4">
-                            <div class="col-lg-3 col-md-6  project-item">
-                                <?php // Fetch data from the 'review' table
-                                        $sql1 = "SELECT * FROM `team` ORDER BY date DESC LIMIT 6";
-                                        $result1 = $conn->query($sql); 
-                                            if ($result1->num_rows > 0) {
-                                                while ($img = $result1->fetch_assoc()) {
-                                                    // Display each row of data
-                                                ?>        
-                                        <div class="position-relative">
-                                            <img class="img-fluid" src="backend/assets/images/team/<?php echo  $img['t_img']; ?>" alt="">
-                                        </div>
-                                        <div class="p-4">
-                                            <a class="d-block h5 text-center" href=""><?php echo  $img['t_name']; ?><br>
-                                            <span class="text-warning"><?php echo  $img['t_position']; ?></span></a>
-                                        </div>
-                                        <?php
-                                        }
-                                        } else {
-                                        echo 'No data found';
-                                }?>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1257,29 +1272,32 @@
                             </div> -->
                             <?php
                                 // Fetch data from the 'review' table
-                                $sql = "SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6";
-                                $result = $conn->query($sql); 
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
+                                $sql = mysqli_query($conn,"SELECT * FROM `testimonial` ORDER BY date DESC LIMIT 6");
+                                // $result = $conn->query($sql); 
+                                    if (mysqli_num_rows($sql)>0){ 
+                                        //$result->num_rows > 0) {
+                                        while ($row=mysqli_fetch_assoc($sql)){
+                                            //$row = $result->fetch_assoc()) {
                                             // Display each row of data
                                         ?>
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
-                                <h5 class="text-center"><?php echo  $row['name'];  ?></h5>
-                                <p class="mb-4 limitline"><?php echo  $row['review'];  ?></p>
-                                <input type="checkbox" class="expand-btn" id="expand-btn">
-                            </div>
-                            <?php
-                              }
-                            } else {
-                               echo '<tr><td colspan="12">No data found.</td></tr>';
-                          }?>
+                                <div class="testimonial-item rounded p-4 p-lg-5 mb-5 limitext">
+                                    <h5 class="text-center"><?php echo  $row['name'];  ?></h5>
+                                    <p class="mb-4 limitline"><?php echo  $row['review'];  ?></p>
+                                    <input type="checkbox" class="expand-btn" id="expand-btn">
+                                </div>
+                                    <?php
+                                    }
+                                    } else {
+                                    echo '<tr><td colspan="12">No data found.</td></tr>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
         
 
                 <style>
-                .limitline {
+                    .limitline {
                         --max-lines: 5;
                     --line-height: 1.4;
                     max-height: calc(var(--max-lines)*1em*var(--line-height));
@@ -1679,10 +1697,11 @@
             }
             });
     });
-    </script> -->
+    </script> 
+-->
 
 
-<script>
+        <script>
             $(document).ready(function() {
                         // Initially hide all data sections
                         $(".data1").hide();
@@ -1851,6 +1870,7 @@
     <script src="../assert/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="../assert/js/modal_video.js"></script>
     <script src="../assert/js/main.js"></script>
 </body>
 

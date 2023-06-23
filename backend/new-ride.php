@@ -82,27 +82,30 @@ require_once "header.php"; ?>
                               </thead>
                               <tbody>
                                 <?php  
-                                        // $sq = mysqli_query($conn,"SELECT * FROM customer");
-                                        // // $sq = mysqli_query($conn,"SELECT * FROM count");
-                                        // $res= mysqli_num_rows($sq);
-                                        // $rowsPerPage = 3; // Number of rows to display per page
-                                        // $totalRows = $res; // Total number of rows in the table
+                                        $sq = mysqli_query($conn,"SELECT * FROM customer");
+                                        // $sq = mysqli_query($conn,"SELECT * FROM count");
+                                        $res= mysqli_num_rows($sq);
+                                       
+                                        $rowsPerPage = 5; // Number of rows to display per page
+                                        $totalRows = $res; // Total number of rows in the table
 
-                                        // $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                        $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                        
+                                        $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+                                        $end = $start + $rowsPerPage; // Calculate the ending row index
 
-                                        // $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
-                                        // $end = $start + $rowsPerPage; // Calculate the ending row index
-
-                                        $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
-                                        // $sql = "SELECT * FROM count Limit $start,$rowsPerPage";
+                                        // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
+                                        $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
                                         $result = mysqli_query($conn,$sql); 
-
+                                        
+                                        $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
+                                        
                                         if (mysqli_num_rows($result)> 0) {
                                       while ($row=mysqli_fetch_array($result)) {
                                           // Display each row of data?>
                                         
                                         <tr>
-                                          <td class="border-bottom-0"><h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
                                           <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6></td>
                                           <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['phone'];?></h6></td>
                                           <!-- <td class="border-bottom-0 "><h6 class="mb-0 fw-normal"><?php //echo $row['email']; ?></h6></td> -->
@@ -125,7 +128,7 @@ require_once "header.php"; ?>
                                           </td>
                                           <td class="border-bottom-0">
                                           <div class="d-flex align-items-center">
-                                          <a type="button" class="" name="update" type="submit" href="update.php?id=<?php echo $row['id']; ?>">
+                                          <a type="button" class="" name="update" type="submit" href="new-ride-update.php?id=<?php echo $row['id']; ?>">
                                           view
                                           </a>
                                               </label>
@@ -140,22 +143,24 @@ require_once "header.php"; ?>
                                         }
                                       } else {
                                         echo '<tr><td colspan="12">No data found.</td></tr>';
-                                    }?>             
+                                    }
+                                    ?>             
                               </tbody>
                             </table>
-                                <!-- <nav aria-label="Page navigation example" >
+                          </form>
+                                <nav aria-label="Page navigation example" >
                                   <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
-                                    <?php //if ($page > 1): ?>
-                                      <li class="page-item"><a href="?page=<?php //echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
+                                    <?php if ($page > 1): ?>
+                                      <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
                                       <span aria-hidden="true">&laquo;</span></a></li>
-                                    <?php //endif; ?>
-                                    <?php //if ($end < $totalRows): ?>
-                                      <li class="page-item"><a href="?page=<?php //echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
+                                    <?php endif; ?>
+                                    <?php if ($end < $totalRows): ?>
+                                      <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
                                       <span aria-hidden="true">&raquo;</span></a></li>
-                                    <?php //endif; ?>
+                                    <?php endif; ?>
                                   </ul>
-                                </nav> -->
-                        </form>
+                                </nav>
+                        
                     </div>
                 </div>
               </div>
