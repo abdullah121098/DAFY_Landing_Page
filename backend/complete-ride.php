@@ -69,10 +69,8 @@ require_once "header.php";
                                         <?php  
                                                 $a=date('Y-m-d H:i');
                                                 // Fetch data from the 'review' table
-                                                // $sql = "SELECT * FROM complete_ride ORDER BY date AND time DESC";
-                                                // $result = $conn->query($sql); 
                                                 $sq = mysqli_query($conn,"SELECT * FROM complete_ride");
-                                                // $sq = mysqli_query($conn,"SELECT * FROM count");
+                                               
                                                 $res= mysqli_num_rows($sq);
                                                 $rowsPerPage = 3; // Number of rows to display per page
                                                 $totalRows = $res; // Total number of rows in the table
@@ -82,7 +80,6 @@ require_once "header.php";
                                                 $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
                                                 $end = $start + $rowsPerPage; // Calculate the ending row index
 
-                                                // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
                                                 $sql = "SELECT * FROM  complete_ride ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
                                                 $result = mysqli_query($conn,$sql);
 
@@ -147,27 +144,22 @@ require_once "header.php";
                                                     </div>
                                                 </td>
                                             </tr> 
-                                                <?php
-                                            }
-                                            } else {
-                                            echo '<tr><td colspan="12">No data found.</td></tr>';
-                                        }
-                                        $conn->close();
-                                            ?>
+                                                <?php } } else { echo '<tr><td colspan="12">No data found.</td></tr>';  } ?>
                                     </tbody>
                                 </table>
                             </form>
-                                <nav aria-label="Page navigation example" >
-                                  <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
-                                    <?php if ($page > 1): ?>
-                                      <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
-                                      <span aria-hidden="true">&laquo;</span></a></li>
-                                    <?php endif; ?>
-                                    <?php if ($end < $totalRows): ?>
-                                      <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
-                                      <span aria-hidden="true">&raquo;</span></a></li>
-                                    <?php endif; ?>
-                                  </ul>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-contena-end left" style="position: relative;border-box: 500px;">
+                                        <?php if ($page > 1): ?>
+                                            <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-left"></i></a></li>
+                                        <?php endif; ?>
+                                        <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
+                                            <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
+                                        <?php endfor; ?>
+                                        <?php if ($page < ceil($totalRows / $rowsPerPage)): ?>
+                                            <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-right"></i></a></li>
+                                        <?php endif; ?>
+                                    </ul>
                                 </nav>
                         </div>
                     </div>

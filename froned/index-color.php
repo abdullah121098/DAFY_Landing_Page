@@ -881,15 +881,6 @@
                         content: "↑";
                     }
                 </style>
-
-
-
-
-
-
-
-
-
     <!--  About Service End-->
     <!--------------------------------------------------- Service End ------------------------------------->
     <!--------------------------------------------- Features Start ------------------------------------------------->
@@ -1095,8 +1086,6 @@
                     </div>
                 </section>
     <!--------------------------------------------------- enquiry End ------------------------------------->
-
-  
 
     <!--------------------------------------------------- Team Start ------------------------------------->
         <section id="team">
@@ -1345,8 +1334,7 @@
                 </style>
             </section>
     <!--------------------------------------------------- Testimonial  end ------------------------------------->
-
-        
+    
     <!-- Footer Start -->  
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" id="contact">
         <div class="container py-5">
@@ -1403,7 +1391,6 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">
         <div class="container">
@@ -1420,7 +1407,6 @@
         </div>
     </div>
     <!-- Copyright End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-warning btn-square rounded-circle back-to-top"  style="display: inline;">
@@ -1699,8 +1685,6 @@
     });
     </script> 
 -->
-
-
         <script>
             $(document).ready(function() {
                         // Initially hide all data sections
@@ -1804,8 +1788,6 @@
         </div>
     </div>
 
-
-
 <!--- join US driver --->
     <div class="modal fade" id="book5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
         <div class="modal-dialog">
@@ -1856,9 +1838,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
