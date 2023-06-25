@@ -48,8 +48,7 @@ include 'database/connection.php';
         </div>
         <!--  Row 2 -->
             <?php
-                if (isset($_GET['id'])) {
-                $g_id = $_GET['id'];
+                if (isset($_GET['id'])) {  $g_id = $_GET['id'];
 
                 if (isset($_POST['update'])) {
                     $a = $_POST['t-name'];
@@ -61,18 +60,14 @@ include 'database/connection.php';
                         echo '<script>alert("Confirm booking");</script>';
                         header("Location:testimonial.php");
                         exit();
-                    } else {
-                        echo 'Update failed';
-                    }
-                } elseif (isset($_POST['delete'])) {
-                    $delete = mysqli_query($conn, "DELETE FROM `testimonial` WHERE id = $g_id");
+                    } else { echo 'Update failed'; }
+                } elseif (isset($_POST['delete'])) { $delete = mysqli_query($conn, "DELETE FROM `testimonial` WHERE id = $g_id");
                     if ($delete) {
                         echo '<script>alert("Confirm booking");</script>';
                         header("Location:testimonial.php");
                         exit();
                     } else {
-                        echo 'Delete failed';
-                    }
+                        echo 'Delete failed'; } 
                 }
 
                 $sql = mysqli_query($conn, "SELECT * FROM `testimonial` WHERE id=$g_id");

@@ -1,15 +1,15 @@
 
 <?php
-include "database/connection.php";
+  include "database/connection.php";
 
-$g_id = $_GET['id'];
-// echo $g_id;
-include_once 'header.php';
+  $g_id = $_GET['id'];
+  // echo $g_id;
+  include_once 'header.php';
 
-$sql = mysqli_query($conn, "SELECT * FROM `customer` WHERE id= $g_id");
+  $sql = mysqli_query($conn, "SELECT * FROM `customer` WHERE id= $g_id");
 
-if (mysqli_num_rows($sql) > 0) {
-   while ($edit = mysqli_fetch_array($sql)) {
+  if (mysqli_num_rows($sql) > 0) {
+    while ($edit = mysqli_fetch_array($sql)) {
 ?>
 
 <div class="container-responsive">
@@ -193,10 +193,8 @@ if (mysqli_num_rows($sql) > 0) {
             </div>
 </div>
       <style>.form-control{ color:black;  font-family: Arial, Helvetica, sans-serif;}</style>
-      <?php
-      }
-     }
-    if(isset($_POST['update'])){
+  <?php } }
+  if(isset($_POST['update'])){
         $name=$_POST['e-name'];
         $email=$_POST['e-email'];
         $phone=$_POST['e-phone'];
@@ -307,33 +305,33 @@ if (mysqli_num_rows($sql) > 0) {
             } else {
               echo 'Update failed';
             }
-          break;
-      }
-    } else if(isset($_POST['updateall'])){
-      $name=$_POST['e-name'];
-      $email=$_POST['e-email'];
-      $phone=$_POST['e-phone'];
-      $drop=$_POST['e-drop'];
-      $pick=$_POST['e-pick'];
-      $ride=$_POST['e-ride'];
-      $ridetype=$_POST['e-service'];
-      $date=$_POST['e-date'];
-      $time=$_POST['e-time'];
-      $vname=$_POST['e-vname'];
-      $vtype=$_POST['e-vtype'];
-      $a = $_POST['driver'];
-      $b = $_POST['status'];
-      $c=$_POST['paytype'];
-      $d=$_POST['payment'];
-      $all = "UPDATE `customer` SET `name`='$name',`email`='$email',`phone`='$phone',`pick_up`='$pick',`drop_in`='$drop',`ride_type`='$ride',`time_ride`='$ridetype',
-      `date`='$date',`time`='$time',`v_name`='$vname',`v_type`='$vtype',`driver_name`='$a',
-      `payment_type`='$c',`payment`='$d',`status`='$b' WHERE id = $g_id";
-      if($all) {
-        echo '<script>alert("Confirm booking");</script>';
-      } else {
-        echo 'Update failed';
-      }
-    }
+          break; 
+        }
+      } else if(isset($_POST['updateall'])){
+          $name=$_POST['e-name'];
+          $email=$_POST['e-email'];
+          $phone=$_POST['e-phone'];
+          $drop=$_POST['e-drop'];
+          $pick=$_POST['e-pick'];
+          $ride=$_POST['e-ride'];
+          $ridetype=$_POST['e-service'];
+          $date=$_POST['e-date'];
+          $time=$_POST['e-time'];
+          $vname=$_POST['e-vname'];
+          $vtype=$_POST['e-vtype'];
+          $a = $_POST['driver'];
+          $b = $_POST['status'];
+          $c=$_POST['paytype'];
+          $d=$_POST['payment'];
+          $all = "UPDATE `customer` SET `name`='$name',`email`='$email',`phone`='$phone',`pick_up`='$pick',`drop_in`='$drop',`ride_type`='$ride',`time_ride`='$ridetype',
+          `date`='$date',`time`='$time',`v_name`='$vname',`v_type`='$vtype',`driver_name`='$a',
+          `payment_type`='$c',`payment`='$d',`status`='$b' WHERE id = $g_id";
+          if($all) {
+            echo '<script>alert("Confirm booking");</script>';
+          } else {
+            echo 'Update failed';
+          }
+        }
 
     // if(isset($_POST['delete'])){
       
