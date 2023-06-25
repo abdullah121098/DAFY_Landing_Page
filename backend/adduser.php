@@ -58,31 +58,25 @@ include 'database/connection.php';
 </div>
 <!-- Row 2 -->
 
-
+<div class="container-fluid"> 
 <?php
 if (isset($_GET['id'])) {
     $editId = $_GET['id'];
 
     if (isset($_POST['update'])) {
-        $date = $_POST['a-date'];
-        $address = $_POST['a-address'];
-        $mobile = $_POST['a-mobile'];
-        $name = $_POST['a-name'];
-        $mail=$_POST['a-email'];
-        $pass = $_POST['a-pass'];
-        $conpass = $_POST['a-conpass'];
-        $photo = $_FILES['a-photo']['name'];
+        $date = $_POST['t-date'];
+        $position = $_POST['t-position'];
+        $name = $_POST['t-name'];
+        $photo = $_FILES['t-photo']['name'];
 
         // Upload the photo file to the desired location
-        move_uploaded_file($_FILES['a-photo']['tmp_name'], 'assets/images/profile/' . $photo);
+        move_uploaded_file($_FILES['t-photo']['tmp_name'], 'assets/images/profile/' . $photo);
 
-        $up = mysqli_query($conn, "UPDATE `admin` SET `a_name`='$name', `a_mobile`='$mobile', `a_mail`='$mail', `a_position`='$address', `a_img`='$photo',
-        `a_date`='$date', `password`='$pass', `password_confirm`='$conpass' WHERE `sno`='$editId'");
+        $up = mysqli_query($conn, "UPDATE `admin`SET `a_date`='$date', `a_name`='$name', `a_position`='$position', `a_img`='$photo' WHERE sno=$editId");
 
         if ($up) {
             echo '<script>alert("Update Successful");</script>';
-            // Redirect back to the booking page
-            header("Location:adduser.php");
+            
             exit();
         } else {
             echo 'Failed';
@@ -91,23 +85,22 @@ if (isset($_GET['id'])) {
         $editId = $_GET['id'];
 
         // Retrieve the file name from the database before deleting the row
-        $fileResult = mysqli_query($conn, "SELECT `a_img` FROM `team` WHERE id=$editId");
+        $fileResult = mysqli_query($conn, "SELECT `a_img` FROM `admin` WHERE sno=$editId");
         if (mysqli_num_rows($fileResult) > 0) {
             $fileRow = mysqli_fetch_assoc($fileResult);
             $fileName = $fileRow['a_img'];
 
             // Delete the file from the directory
-            $filePath = 'assets/images/team/' . $fileName;
+            $filePath = 'assets/images/profile/' . $fileName;
             if (file_exists($filePath)) {
                 unlink($filePath);
             }
         }
 
-        $del = mysqli_query($conn, "DELETE FROM `team` WHERE id=$editId");
+        $del = mysqli_query($conn, "DELETE FROM `admin` WHERE `sno`=$editId");
         if ($del) {
             echo '<script>alert("Delete Successful");</script>';
-           // Redirect back to the booking page
-            header("Location:adduser.php");
+           
             exit();
         } else {
             echo 'Failed';
@@ -118,87 +111,84 @@ if (isset($_GET['id'])) {
 
     if (mysqli_num_rows($sql) > 0) {
         while ($row = mysqli_fetch_assoc($sql)) {
-?>
-     <div class="row justify-content-center">
-        <div class="col-lg-10 d-flex align-items-center">
-            <div class="card w-100">
-                <div class="card-body p-4">
-                    <h5 class="card-title fw-semibold mb-4 text-center">Team Profile</h5>
-                    <div class="table-responsive">
-                        <form method="post" enctype="multipart/form-data">
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">Name</label><br>
-                                    <input class="form-control bg-warning text-black" type="text" name="a-name" value="<?php echo $row['a_name']; ?>">
-                                </div>
+            ?>
+            <div class="row">
+                <div class="col-lg-100 d-flex align-items-center">
+                    <div class="card w-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-semibold mb-4">Testimonial Detail</h5>
+                            <div class="table-responsive">
+                                <form method="post" enctype="multipart/form-data">
+                                    <table class="table text-nowrap mb-0 align-middle">
+                                        <thead class="text-dark fs-4">
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Id</h6>
+                                                </th><td class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0 col-6" name="t-id"><?php echo $row['sno']; ?></h6>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Date</h6>
+                                                </th>
+                                                <td class="border-bottom-0">
+                                                    <input class="fw-semibold col-6" type="datetime-local" name="t-date" value="<?php echo $row['a_date']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Name</h6>
+                                                </th>
+                                                <td class="border-bottom-0">
+                                                    <input type="text" class="fw-semibold col-6" name="t-name" value="<?php echo $row['a_name']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Designation</h6>
+                                                </th>
+                                                <td class="border-bottom-0">
+                                                    <input type="text" class="fw-semibold col-6" name="t-position" value="<?php echo $row['a_position']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Photo</h6>
+                                                </th>
+                                                <td class="border-bottom-0">
+                                                    <img class="fw-semibold" src="assets/images/profile/<?php echo $row['a_img']; ?>" width="70" height="90">
+                                                    <input type="file" name="t-photo" id="upload" class="col-6">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Action</h6>
+                                                </th>
+                                                <td class="border-bottom-0">
+                                                    <input type="submit" name="update" value="Save">
+                                                    <input type="submit" name="delete" value="Delete">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
                             </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">E-mail</label><br>
-                                    <input class="form-control bg-warning text-black" type="text" name="a-email" value="<?php echo $row['a_mail']; ?>">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">Phone</label><br>
-                                    <input class="form-control bg-warning text-black" type="text" name="a-mobile" value="<?php echo $row['a_mobile']; ?>" maxlength="10">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">Address</label><br>
-                                    <input class="form-control bg-warning text-black" type="text" name="a-address" value="<?php echo $row['a_position']; ?>">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">Date</label><br>
-                                    <input class="form-control bg-warning text-black" type="datetime-local" name="a-date" value="<?php echo $row['a_date']; ?>">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">Photo</label><br>
-                                    <img class="fw-semibold" src="assets/images/team/<?php echo $row['a_img']; ?>" width="100" height="100">
-                                    <input type="file" name="a-photo" id="upload" class="form-control bg-warning text-black" value="<?php echo $row['a_img']; ?>">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">Password</label><br>
-                                    <input class="form-control bg-warning text-black" type="text" name="a-pass" value="<?php echo $row['password']; ?>">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">Confirm Password</label><br>
-                                    <input class="form-control bg-warning text-black" type="text" name="a-conpass" value="<?php echo $row['password_confirm']; ?>">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group ">
-                                    <input type="submit" class="btn btn-primary update" name="update" value="Save">
-                                    <input type="submit" class="btn btn-primary delete" name="delete" value="Delete">
-                                </div>
-                            </div>
-                            <style> .update, .delete{ color:black; width:15%; height:5%; position: center;} </style>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 <?php
         }
     } else {
-        echo '<div class="row"><div class="col-lg-10 d-flex align-items-center"><div class="card w-100"><div class="card-body p-4"><p>No data found.</p></div></div></div></div>';
+        echo '<div class="row"><div class="col-lg-100 d-flex align-items-center"><div class="card w-100"><div class="card-body p-4"><p>No data found.</p></div></div></div></div>';
     }
-    } else {
-    $sql = mysqli_query($conn, "SELECT * FROM `admin`");
-    $result = mysqli_num_rows($sql);
+} else {
+    $sq = mysqli_query($conn, "SELECT * FROM `admin`");
+    $res = mysqli_num_rows($sq);
 
-    $rowsPerPage = 3; // Number of rows to display per page
-    $totalRows = $result; // Total number of rows in the table
+    $rowsPerPage = 5; // Number of rows to display per page
+    $totalRows = $res; // Total number of rows in the table
 
     $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
 
@@ -207,21 +197,21 @@ if (isset($_GET['id'])) {
     $end = $start + $rowsPerPage; // Calculate the ending row index
 
     // Fetch data from the 'review' table
-    $sql = "SELECT * FROM `admin` ORDER BY `sno` DESC LIMIT $start, $rowsPerPage";
+    $sql = "SELECT * FROM `admin` ORDER BY sno DESC LIMIT $start, $rowsPerPage";
     $result = $conn->query($sql);
 
     $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
 ?>
     <!-- Row 3 -->
-    <div class="row justify-content-center">
-        <div class="col-lg-10 d-flex align-items-center">
+    <div class="row">
+        <div class="col-lg-100 d-flex align-items-center">
             <div class="card w-100">
                 <div class="card-body p-4">
-                    <h5 class="card-title fw-semibold mb-4">Team Profile</h5>
+                    <h5 class="card-title fw-semibold mb-4">Testimonial Detail</h5>
                     <div class="table-responsive">
                         <form method="post">
-                            <table class="table texa-nowrap mb-0 align-middle">
-                                <thead class="texa-dark fs-4">
+                            <table class="table text-nowrap mb-0 align-middle">
+                                <thead class="text-dark fs-4">
                                     <tr>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Id</h6>
@@ -233,13 +223,7 @@ if (isset($_GET['id'])) {
                                             <h6 class="fw-semibold mb-0">Name</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Mobile</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Email</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Address</h6>
+                                            <h6 class="fw-semibold mb-0">Designation</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Photo</h6>
@@ -250,51 +234,57 @@ if (isset($_GET['id'])) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            // Display each row of data
-                                            ?>
-                                            <tr>
-                                                <td class="border-bottom-0"><h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
-                                                <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo $row['a_date']; ?></h6></td>
-                                                <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo $row['a_name']; ?></h6></td>
-                                                <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo $row['a_mobile']; ?></h6></td>
-                                                <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo $row['a_mail']; ?></h6></td>
-                                                <td class="border-bottom-0"><h6 class="fw-semibold mb-1"><?php echo $row['a_position']; ?></h6></td>
-                                                <td class="border-bottom-0"><img class="fw-semibold mb-1" src="assets/images/team/<?php echo $row['a_img']; ?>" width="70" height="90"></td>
-                                                <td class="border-bottom-0"><a href="?id=<?php echo $row['sno']; ?>" name='edit' title="Edit">Edit</a></td>
-                                            </tr>
-                                            <?php
-                                        }
-                                    } else {
-                                        echo '<tr><td colspan="12">No data found.</td></tr>';
-                                    }
-                                    ?>
+<?php
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            // Display each row of data
+?>
+        <tr>
+            <td class="border-bottom-0">
+                <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
+                <td class="border-bottom-0">
+                <h6 class="fw-semibold mb-1"><?php echo $row['a_date']; ?></h6>
+            </td>
+            <td class="border-bottom-0">
+                <h6 class="fw-semibold mb-1"><?php echo $row['a_name']; ?></h6>
+            </td>
+            <td class="border-bottom-0">
+                <h6 class="fw-semibold mb-1"><?php echo $row['a_position']; ?></h6>
+            </td>
+            <td class="border-bottom-0">
+                <img class="fw-semibold mb-1" src="assets/images/profile/<?php echo $row['a_img']; ?>"
+                width="70" height="90">
+            </td>
+            <td class="border-bottom-0">
+                <a href="?id=<?php echo $row['sno']; ?>" name='edit' title="Edit">Edit</a>
+            </td>
+        </tr>                                       
+<?php
+        }
+    } else {
+        echo '<tr><td colspan="12">No data found.</td></tr>';
+    }
+?>
                                 </tbody>
                             </table>
-                            <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-contena-end left" style="position: relative;border-box: 500px;">
-                                        <?php if ($page > 1): ?>
-                                            <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-left"></i></a></li>
-                                        <?php endif; ?>
-                                        <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
-                                            <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
-                                        <?php endfor; ?>
-                                        <?php if ($page < ceil($totalRows / $rowsPerPage)): ?>
-                                            <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-right"></i></a></li>
-                                        <?php endif; ?>
-                                    </ul>
-                                </nav>
+                            <nav aria-label="Page navigation example" >
+                                <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                                    <?php if ($page > 1): ?>
+                                    <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span></a></li>
+                                    <?php endif; if ($end < $totalRows): ?>
+                                    <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span></a></li>
+                                    <?php endif; ?>
+                                </ul>
+                            </nav>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php
-}
-?>
+<?php } ?>
 </div>
 
 <script>function showConfirmation() { alert("Confirm booking");return true; } </script>
