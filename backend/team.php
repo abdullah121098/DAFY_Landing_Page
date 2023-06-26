@@ -65,7 +65,7 @@ if (isset($_GET['id'])) {
 
         if ($up) {
             echo '<script>alert("Update Successful");</script>';
-            header("Location: team.php");
+            
             exit();
         } else {
             echo 'Failed';
@@ -89,7 +89,7 @@ if (isset($_GET['id'])) {
         $del = mysqli_query($conn, "DELETE FROM `team` WHERE id=$editId");
         if ($del) {
             echo '<script>alert("Delete Successful");</script>';
-            header("Location: team.php");
+           
             exit();
         } else {
             echo 'Failed';
@@ -113,42 +113,47 @@ if (isset($_GET['id'])) {
                                             <tr>
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Id</h6>
-                                                </th>
+                                                </th><td class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0 col-6" name="t-id"><?php echo $row['id']; ?></h6>
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Date</h6>
                                                 </th>
+                                                <td class="border-bottom-0">
+                                                    <input class="fw-semibold col-6" type="datetime-local" name="t-date" value="<?php echo $row['t_date']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Name</h6>
                                                 </th>
+                                                <td class="border-bottom-0">
+                                                    <input type="text" class="fw-semibold col-6" name="t-name" value="<?php echo $row['t_name']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Designation</h6>
                                                 </th>
+                                                <td class="border-bottom-0">
+                                                    <input type="text" class="fw-semibold col-6" name="t-position" value="<?php echo $row['t_position']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Photo</h6>
                                                 </th>
+                                                <td class="border-bottom-0">
+                                                    <img class="fw-semibold" src="assets/images/team/<?php echo $row['t_img']; ?>" width="70" height="90">
+                                                    <input type="file" name="t-photo" id="upload" class="col-6">
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Action</h6>
                                                 </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0" name="t-id"><?php echo $row['id']; ?></h6>
-                                                </td>
-                                                <td class="border-bottom-0">
-                                                    <input class="fw-semibold w-50" type="datetime-local" name="t-date" value="<?php echo $row['t_date']; ?>">
-                                                </td>
-                                                <td class="border-bottom-0">
-                                                    <input type="text" class="fw-semibold" name="t-name" value="<?php echo $row['t_name']; ?>">
-                                                </td>
-                                                <td class="border-bottom-0">
-                                                    <input type="text" class="fw-semibold" name="t-position" value="<?php echo $row['t_position']; ?>">
-                                                </td>
-                                                <td class="border-bottom-0">
-                                                    <img class="fw-semibold" src="assets/images/team/<?php echo $row['t_img']; ?>" width="70" height="90">
-                                                    <input type="file" name="t-photo" id="upload">
-                                                </td>
                                                 <td class="border-bottom-0">
                                                     <input type="submit" name="update" value="Save">
                                                     <input type="submit" name="delete" value="Delete">
