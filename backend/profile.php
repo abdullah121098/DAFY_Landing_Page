@@ -1,4 +1,27 @@
 <?php  include 'database/connection.php'; require_once "header.php"; ?>
+<?php
+session_start();
+// echo $_SESSION['user'];
+// echo $_SESSION['id'];
+$session=$_SESSION['id'];
+
+if(isset($_POST['update'])){
+   $a= $_POST['user']; $b=$_POST['phone']; $c= $_POST['mail']; $d=$_POST['position']; $e= $_POST['date'];
+   $f= $_POST['pass']; $g= $_POST['conpass']; 
+   $photo = $_FILES['photo']['name'];
+   // Upload the photo file to the desired location
+   move_uploaded_file($_FILES['photo']['tmp_name'], 'assets/images/profile/' . $photo); 
+    
+        $up = mysqli_query($conn, "UPDATE `admin`SET  `a_name`='$a',`a_mobile`='$b', `a_mail`='$c',
+                `a_position`='$d',`a_img`='$photo',`a_date`='$e',`password`='$f',`password_confirm`='$g' WHERE  `sno`='$session'");
+        if ($up) {
+            echo '<script>alert("Update Successful");</script>';
+            header('Location:display.php');
+        } else {
+            echo 'Failed';
+        }
+}
+?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
     <div class="container-fluid">
         <!--  Row 1 -->
@@ -8,11 +31,11 @@
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Profile Detail</h5>
                         <div class="col-xl-12 col-md-12">
-                            <?php
-                                $sql=mysqli_query($conn,"SELECT * FROM `admin` LIMIT 1");   
-                                if ($sql->num_rows > 0) {                 
-                                while ($view = mysqli_fetch_array($sql)){ 
-                                ?>                    
+                        <?php
+                            $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");   
+                            if ($sql->num_rows > 0) {                 
+                            while ($view = mysqli_fetch_array($sql)){ 
+                            ?>                 
                     
                                 <form method="post" action="#">
                                     <div class="form-row">

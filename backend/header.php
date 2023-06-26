@@ -1,3 +1,12 @@
+<?php include '../database/connection.php';
+session_start();
+// echo $_SESSION['user'];
+// echo $_SESSION['id'];
+$session=$_SESSION['id'];
+$sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");   
+if ($sql->num_rows > 0) {                 
+while ($view = mysqli_fetch_array($sql)){ 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -172,7 +181,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <img src="assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                  <!-- <img src="assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle"> -->
+                  <img src="../assets/images/profile/<?php echo $view['a_img']; ?>" alt="" width="35" height="35" class="rounded-circle">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
@@ -197,4 +207,4 @@
         </nav>
       </header>
       <!--  Header End -->
-    
+      <?php } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>

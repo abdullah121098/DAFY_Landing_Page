@@ -29,20 +29,24 @@
                 <p class="text-center"></p>
                 <form action="" method="post">
                   <div class="mb-3">
-                    <label for="exampleInputtext1" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="exampleInputtext1" name="user" aria-describedby="textHelp">
+                    <!-- <label for="exampleInputtext1" class="form-label">Name</label> -->
+                    <input type="text" class="form-control" id="exampleInputtext1" name="user" aria-describedby="textHelp" placeholder="User Name">
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+                    <!-- <label for="exampleInputEmail1" class="form-label">Email Address</label> -->
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="User Email">
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputmobile" class="form-label">Mobile </label>
-                    <input type="tel" class="form-control" id="exampleInputmobile" name="mobile" aria-describedby="mobileHelp" maxlength="10">
+                    <!-- <label for="exampleInputmobile" class="form-label">Mobile </label> -->
+                    <input type="tel" class="form-control" id="exampleInputmobile" name="mobile" aria-describedby="mobileHelp" maxlength="10" placeholder="Mobile">
                   </div>
                   <div class="mb-4">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                  </div>
+                  <div class="mb-4">
+                    <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="conpassword" placeholder="Confirm Password">
                   </div>
                   <!-- <a href="login.php" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="register">Sign Up</a> -->
                   <input type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="register"value="Sign Up">
@@ -64,13 +68,17 @@
 
 </html>
 <?php 
-if(isset($_POST['register'])!= ''){
-  $a=$_POST['user']; $b=$_POST['email']; $c=$_POST['password'];$d=$_POST['mobile'];
-  $sql = mysqli_query($conn, "INSERT INTO `admin`(`a_name`, `a_mobile`, `a_mail`, `password`, `password_confirm`) VALUES ('$a', '$d', '$b', '$c', '$c')");
-  if($sql){
-    echo '<script>alert("Successed");</script>';
-    // header("location:login.php");
-    exit;
-  }else{ echo '<script>alert("Failed");</script>';}
+if(isset($_POST['register'])& !empty($_POST['user'])& !empty($_POST['email'])){
+  $a=$_POST['user']; $b=$_POST['email']; $c=$_POST['password'];$d=$_POST['mobile'];$e=$_POST['conpassword'];
+  // if($d==$e){
+    $sql = mysqli_query($conn, "INSERT INTO `admin`(`a_name`, `a_mobile`, `a_mail`, `password`, `password_confirm`) VALUES ('$a', '$d', '$b', '$c', '$e')");
+    if($sql){
+      echo '<script>alert("Successed");</script>';
+      header("location:login.php");
+      exit;
+    }else{ echo '<script>alert("Failed");</script>';}
+  }else{
+    echo '<script>alert("Password Error");</script>';
+  // }
 }
 ?>
