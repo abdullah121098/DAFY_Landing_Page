@@ -1,14 +1,26 @@
-<?php  
+<?php include '../database/connection.php';
 session_start();
-include '../database/connection.php'; 
+// echo $_SESSION['user'];
+// echo $_SESSION['id'];
+$session=$_SESSION['id'];
 
-$session=6;
-
-
-// if($_SESSION['mail']==''){?>
-<!-- <script> window.location="login.php"</script> -->
-<?php //} ?>
-
+if(isset($_POST['update'])){
+   $a= $_POST['user']; $b=$_POST['phone']; $c= $_POST['mail']; $d=$_POST['position']; $e= $_POST['date'];
+   $f= $_POST['pass']; $g= $_POST['conpass']; 
+   $photo = $_FILES['photo']['name'];
+   // Upload the photo file to the desired location
+   move_uploaded_file($_FILES['photo']['tmp_name'], 'assets/images/profile/' . $photo); 
+    
+        $up = mysqli_query($conn, "UPDATE `admin`SET  `a_name`='$a',`a_mobile`='$b', `a_mail`='$c',
+                `a_position`='$d',`a_img`='$photo',`a_date`='$e',`password`='$f',`password_confirm`='$g' WHERE  `sno`='$session'");
+        if ($up) {
+            echo '<script>alert("Update Successful");</script>';
+            header('Location:display.php');
+        } else {
+            echo 'Failed';
+        }
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -33,6 +45,11 @@ $session=6;
 </head>
 
 <body>
+    <?php
+    $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");   
+    if ($sql->num_rows > 0) {                 
+    while ($view = mysqli_fetch_array($sql)){ 
+    ?>
   <!--  Body Wrapper -->
 <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
 data-sidebar-position="fixed" data-header-position="fixed">
@@ -179,84 +196,72 @@ data-sidebar-position="fixed" data-header-position="fixed">
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
             <a href="../new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
-           
-                <li class="nav-item dropdown">
-                    <?php $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");  while ($pro= mysqli_fetch_array($sql)){ ?>
-                    <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <!-- <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle"> -->
-                    <img src="../assets/images/profile/<?php echo $pro['a_img'];?>" alt="" width="35" height="35" class="rounded-circle">
-                    </a> <?php }?>
-                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
-                    <div class="message-body">
-                        <a href="../profile.php" class="d-flex align-items-center gap-2 dropdown-item">
-                        <i class="ti ti-user fs-6"></i>
-                        <p class="mb-0 fs-3">My Profile</p>
-                        </a>
-                        <a href="../adduser.php" class="d-flex align-items-center gap-2 dropdown-item">
-                        <i class="ti ti-mail fs-6"></i>
-                        <p class="mb-0 fs-3">Team Profile</p>
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                        <i class="ti ti-list-check fs-6"></i>
-                        <p class="mb-0 fs-3">My Task</p>
-                        </a> -->
-                        <a href="logout.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
-                    </div>
-                    </div>
-                   
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/images/profile/<?php echo $view['a_img']; ?>" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="../profile.php" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="../adduser.php" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <!-- <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a> -->
+                    <a href="login.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
         </nav>
       </header>
       <!--  Header End -->
-<!-- ============== ==================== Main -Body Start- ======================================================================= -->
-    <div class="container-fluid">
-        <!--  Row 1 -->
+
+    <div class="container-fluid"> 
+        <!-- Row 1 -->
         <div class="row">
             <div class="col-lg-100 d-flex">
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Profile Detail</h5>
                         <div class="col-xl-12 col-md-12">
-                            <?php
-                                $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");   
-                                if ($sql->num_rows > 0) {                 
-                                while ($view = mysqli_fetch_array($sql)){ 
-                            ?>  
+                            
                                 <form method="post" action="#">
                                     <div class="form-row">
                                         <div class="form-group col-md-6 text-center">
                                             <!-- <label for="inputimg4">Photo</label> -->
                                             <img class="fw-semibold g-2 rounded-circle" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="100" height="100">
                                         </div>
-                                    </div>
-                                    <div class="form-row">
+                                    
                                         <div class="form-group col-md-6">
                                             <label for="inputuser4">Username</label>
                                             <input type="text" class="form-control" id="inputuser4" value="<?php echo $view['a_name']; ?>" name="user">
                                         </div>
-                                    </div>
-                                    <div class="form-row">
+                                    
                                         <div class="form-group col-md-6">
                                         <label for="inputmobile4">Mobile No</label>
                                         <input type="text" class="form-control" id="inputmobile4" value="<?php echo $view['a_mobile']; ?>" name="phone">                                </div>
-                                    </div>
+                                        </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputemail4">Email</label>
                                             <input type="email" class="form-control" id="inputemail4" value="<?php echo $view['a_mail']; ?>" name="mail">
                                         </div>
-                                        
-                                    </div>
-                                    <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                        <div class="form-group col-md-6">
                                         <label for="inputaddress4">Designation</label>
                                         <input type="text" class="form-control" id="inputaddress4" value="<?php echo $view['a_position']; ?>" name="position">
-                                    </div>
-                                    <div class="form-row">
+                                        </div>
+                                   
                                         <div class="form-group col-md-6">
                                             <label for="inputdate4">Date-Time</label>
                                             <input type="datetime" class="form-control" id="inputdate4" value="<?php echo $view['a_date']; ?>" name="date">
@@ -268,14 +273,12 @@ data-sidebar-position="fixed" data-header-position="fixed">
                                             <img class="fw-semibold g-2" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="70" height="90">
                                             <input type="file" name="photo" id="inputimg4" class="fw-semibold g-2" value="<?php echo $view['a_img']; ?>">
                                         </div>
-                                    </div>
-                                    <div class="form-row">
+                                    
                                         <div class="form-group col-md-6">
                                             <label for="inputpassword4">Password</label>
                                             <input type="text" class="form-control" id="inputpassword4" value="<?php echo $view['password']; ?>" name="pass" maxlength="15">
                                         </div>
-                                    </div>
-                                    <div class="form-row">
+                                   
                                         <div class="form-group col-md-6">
                                             <label for="inputconpassword4">Confirm Password</label>
                                             <input type="text" class="form-control" id="inputconpassword4" value="<?php echo $view['password_confirm']; ?>" name="conpass" maxlength="15">
@@ -292,40 +295,9 @@ data-sidebar-position="fixed" data-header-position="fixed">
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-<?php 
-        if(isset($_POST['update'])){
-            $user=$_POST['user']; $mail=$_POST['mail']; $mobile=$_POST['phone'];$design=$_POST['position'];$date=$_POST['date'];
-            $pass=$_POST['pass'];$conpass=$_POST['conpass'];
-            $img= $_FILES['photo']['name'];
-
-            // Upload the photo file to the desired location
-            move_uploaded_file($_FILES['photo']['tmp_name'], '../assets/images/profile/' . $photo);
-
-            if($pass ==$conpass){
-                $up=mysqli_query($conn,"UPDATE `admin` SET `a_name`='$user',
-                `a_mobile`='$mobile',`a_mail`='$mail',`a_position`='$design',`a_img`='$img',`a_date`='$date',
-                `password`='$pass',`password_confirm`='$conpass' WHERE `sno`='$session'");
-                
-                if ($up) {
-                    echo '<script>alert("Update Successful");</script>';
-                    header("Location: profile.php"); // Redirect to profile.php
-                    exit;
-                } else {
-                    echo '<script>alert("Update Failed");</script>';
-                }
-            } else {
-                echo '<script>alert("Password Error!");</script>';
-            }
-        }
-?>
-
-
-
-
-    <!-- ================================================== Footer  =======================================-->
-    <div class="py-6 px-6 text-center">
+        </div>   
+         <!-- ================================================== Footer  =======================================-->
+         <div class="py-6 px-6 text-center">
             <p class="mb-0 fs-4"> &copy; <a class="fw-medium" href="#">2023</a>, All Right Reserved.</p>
         </div>
       </div>

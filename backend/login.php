@@ -1,4 +1,21 @@
+<?php  include '../database/connection.php';   ?>
 
+<?php 
+session_start();
+if(isset($_POST['access'])){
+  $user=$_POST['user'];  $password=$_POST['pass'];
+  $sql= "SELECT * FROM admin WHERE a_name='$user' AND password='$password'";
+  $check=mysqli_query($conn,$sql);
+  $no=mysqli_num_rows($check);
+  // echo $no;
+  if($no ==1){ while ($v=mysqli_fetch_array($check)) {
+    $_SESSION['user']=$v['a_name']; $_SESSION['id']=$v['sno']; 
+    // header('Location:sample.php');
+    header('Location:index.php');
+  } }
+  else{echo " failed";}
+}
+?>
 <!doctype html>
 <html lang="en">
 

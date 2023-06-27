@@ -1,29 +1,22 @@
+<?php  include '../database/connection.php';   ?>
+
 <?php 
-// session_start();
-// require_once '../database/connection.php';
+session_start();
+if(isset($_POST['access'])){
+  $user=$_POST['user'];  $password=$_POST['pass'];
+  $sql= "SELECT * FROM admin WHERE a_name='$user' AND password='$password'";
+  $check=mysqli_query($conn,$sql);
+  $no=mysqli_num_rows($check);
+  // echo $no;
+  if($no ==1){ while ($v=mysqli_fetch_array($check)) {
+    $_SESSION['user']=$v['a_name']; $_SESSION['id']=$v['sno']; 
+    // header('Location:sample.php');
+    header('Location:display.php');
+  } }
+  else{echo " failed";}
+}
 
-// if(isset($_POST['access'])){
-//   $a=$_POST['email'];
-//   $b=$_POST['password'];
-//   //$c=md5($b);
-  
-//       if(empty($_POST['email'])||empty($_POST['password'])){
-//           header("location:login.php? Empty= Please Fill the  Blank");
-//       }else{
-//           $username=mysqli_escape_string($conn,$a);
-//           $password=mysqli_escape_string($conn,$b);
-//           $ql="SELECT * FROM `admin` WHERE `a_name`='$a' OR `a_mail`='$a' AND `password`='$b'";
-//           $run=mysqli_query($conn,$ql);
-//           if($r=mysqli_fetch_assoc($run)){
-           
-//               $_SESSION['id']=$r[`sno`];
-//             header("location:profile.php");
-//           }else{
-//       header("location:login.php? Invalid= Please enter correct user name/password");}
-//       }
-//   }
-  ?>
-
+?>
 <!doctype html>
 <html lang="en">
 
@@ -53,11 +46,11 @@
                 <form action="" method="post">
                   <div class="mb-3">
                     <label for="InputEmail1" class="form-label">Username</label>
-                    <input type="text" class="form-control" name="text" id="InputEmail1" >
+                    <input type="text" class="form-control" name="user" id="InputEmail1" >
                   </div>
                   <div class="mb-4">
                     <label for="InputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password"  id="InputPassword1">
+                    <input type="password" class="form-control" name="pass"  id="InputPassword1">
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-4">
                     <div class="form-check">
@@ -68,8 +61,9 @@
                     </div>
                     <a class="text-primary fw-bold" href="index.php">Forgot Password ?</a>
                   </div>
-                    <a href="profile.php" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="access">Sign In</a>
-                  <div class="d-flex align-items-center justify-content-center">
+                    <!-- <a href="profile.php" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="access">Sign In</a> -->
+                    <input type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="access" value="Sign In">
+                    <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Add new user?</p>
                     <a class="text-primary fw-bold ms-2" href="register.php">Create an account</a>
                   </div>
