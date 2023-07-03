@@ -14,10 +14,8 @@
 
 <body>
   <!--  Body Wrapper -->
-  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    <div
-      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
       <div class="d-flex align-items-center justify-content-center w-100">
         <div class="row justify-content-center w-100">
           <div class="col-md-8 col-lg-6 col-xxl-3">
@@ -76,7 +74,7 @@ if(isset($_POST['register'])& !empty($_POST['user'])& !empty($_POST['email'])){
       echo '<script>alert("Successed");</script>';
       header("location:login.php");
       exit;
-    }else{ echo '<script>alert("Failed");</script>';}
+    }
   }else{
     echo '<script>alert("Password Error");</script>';
   // }

@@ -17,9 +17,7 @@ if(isset($_POST['update'])){
         if ($up) {
             echo '<script>alert("Update Successful");</script>';
             header('Location:display.php');
-        } else {
-            echo 'Failed';
-        }
+        }  else{ echo '<script>alert("Login failed!");</script>'; }
 }
 ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->

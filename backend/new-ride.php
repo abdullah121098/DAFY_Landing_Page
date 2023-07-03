@@ -7,7 +7,7 @@ include 'database/connection.php';
 
 // $conn = new mysqli($servername, $username, $password, $dbname);
 
-require_once "header.php"; ?>
+include_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
                                 
           <div class="container-fluid">

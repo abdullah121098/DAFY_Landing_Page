@@ -3,23 +3,6 @@ session_start();
 // echo $_SESSION['user'];
 // echo $_SESSION['id'];
 $session=$_SESSION['id'];
-
-if(isset($_POST['update'])){
-   $a= $_POST['user']; $b=$_POST['phone']; $c= $_POST['mail']; $d=$_POST['position']; $e= $_POST['date'];
-   $f= $_POST['pass']; $g= $_POST['conpass']; 
-   $photo = $_FILES['photo']['name'];
-   // Upload the photo file to the desired location
-   move_uploaded_file($_FILES['photo']['tmp_name'], 'assets/images/profile/' . $photo); 
-    
-        $up = mysqli_query($conn, "UPDATE `admin`SET  `a_name`='$a',`a_mobile`='$b', `a_mail`='$c',
-                `a_position`='$d',`a_img`='$photo',`a_date`='$e',`password`='$f',`password_confirm`='$g' WHERE  `sno`='$session'");
-        if ($up) {
-            echo '<script>alert("Update Successful");</script>';
-            header('Location:display.php');
-        } else {
-            echo 'Failed';
-        }
-}
 ?>
 <!doctype html>
 <html lang="en">
@@ -51,8 +34,7 @@ if(isset($_POST['update'])){
     while ($view = mysqli_fetch_array($sql)){ 
     ?>
   <!--  Body Wrapper -->
-<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-data-sidebar-position="fixed" data-header-position="fixed">
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
 <!-- Sidebar Start -->
 <aside class="left-sidebar">
     <!-- Sidebar scroll-->
@@ -303,14 +285,78 @@ data-sidebar-position="fixed" data-header-position="fixed">
       </div>
     </div>
 </div>
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/sidebarmenu.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-  <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
-  <script src="../assets/js/dashboard.js"></script>
-  <script src="export.js"></script>
+  
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="export.js"></script>
 </body>
 
 </html>
+<?php
+    // if(isset($_POST['update'])){
+    //     $a= $_POST['user']; $b=$_POST['phone']; $c= $_POST['mail']; $d=$_POST['position']; $e= $_POST['date'];
+    //     $f= $_POST['pass']; $g= $_POST['conpass']; 
+    //     $photo = $_FILES['photo']['name'];
+    //     // Upload the photo file to the desired location
+    //     move_uploaded_file($_FILES['photo']['tmp_name'], 'assets/images/profile/' . $photo); 
+        
+    //          $up = mysqli_query($conn, "UPDATE `admin`SET  `a_name`='$a',`a_mobile`='$b', `a_mail`='$c',
+    //                  `a_position`='$d',`a_img`='$photo',`a_date`='$e',`password`='$f',`password_confirm`='$g' WHERE  `sno`='$session'");
+    //          if ($up) {
+    //              echo '<script>alert("Update Successful");</script>';
+    //              header('Location:display.php');
+    //          } else {
+    //              echo 'Failed';
+    //          }
+    //  }
+?>
+<?php    
+if (isset($_POST['update'])) {
+    $a = $_POST['user'];
+    $b = $_POST['phone'];
+    $c = $_POST['mail'];
+    $d = $_POST['position'];
+    $e = $_POST['date'];
+    $f = $_POST['pass'];
+    $g = $_POST['conpass'];
+
+    // Check if a new photo was uploaded
+    if ($_FILES['photo']['error'] === UPLOAD_ERR_OK) {
+        $photo = $_FILES['photo']['name'];
+        $tempFile = $_FILES['photo']['tmp_name'];
+        $targetPath = 'assets/images/profile/';
+        $targetFile = $targetPath . $photo;
+
+        // Upload the photo file to the desired location
+        if (move_uploaded_file($tempFile, $targetFile)) {
+            $up = mysqli_query($conn, "UPDATE `admin` SET `a_name`='$a', `a_mobile`='$b', `a_mail`='$c',
+                `a_position`='$d', `a_img`='$photo', `a_date`='$e', `password`='$f', `password_confirm`='$g' WHERE `sno`='$session'");
+            if ($up) {
+                echo '<script>alert("Update Successful");</script>';
+                header('Location: display.php');
+                exit;
+            } else {
+                echo 'Update failed';
+            }
+        } else {
+            echo 'File upload failed';
+        }
+    } else {
+        $up = mysqli_query($conn, "UPDATE `admin` SET `a_name`='$a', `a_mobile`='$b', `a_mail`='$c',
+            `a_position`='$d', `a_date`='$e', `password`='$f', `password_confirm`='$g' WHERE `sno`='$session'");
+        if ($up) {
+            echo '<script>alert("Update Successful");</script>';
+            header('Location: display.php');
+            exit;
+        } else {
+            echo 'Update failed';
+        }
+    }
+}
+
+ ?>

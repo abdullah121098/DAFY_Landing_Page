@@ -1,9 +1,13 @@
-<?php  
+<?php
 session_start();
-include '../database/connection.php'; 
+include '../database/connection.php';
 
-$session=6;
+$session = $_SESSION['id'];
 
+$sql = mysqli_query($conn, "SELECT * FROM `admin` WHERE `sno`='$session'");
+if ($sql->num_rows > 0) {
+    while ($view = mysqli_fetch_array($sql)) {
+       
 
 // if($_SESSION['mail']==''){?>
 <!-- <script> window.location="login.php"</script> -->
@@ -220,109 +224,164 @@ data-sidebar-position="fixed" data-header-position="fixed">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Profile Detail</h5>
                         <div class="col-xl-12 col-md-12">
-                            <?php
-                                $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");   
-                                if ($sql->num_rows > 0) {                 
-                                while ($view = mysqli_fetch_array($sql)){ 
-                            ?>  
-                                <form method="post" action="#">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6 text-center">
-                                            <!-- <label for="inputimg4">Photo</label> -->
-                                            <img class="fw-semibold g-2 rounded-circle" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="100" height="100">
-                                        </div>
+                            <form method="post" action="#" enctype="multipart/form-data">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6 text-center">
+                                        <img class="fw-semibold g-2 rounded-circle" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="100" height="100">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputuser4">Username</label>
-                                            <input type="text" class="form-control" id="inputuser4" value="<?php echo $view['a_name']; ?>" name="user">
-                                        </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputuser4">Username</label>
+                                        <input type="text" class="form-control" id="inputuser4" value="<?php echo $view['a_name']; ?>" name="user">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
                                         <label for="inputmobile4">Mobile No</label>
-                                        <input type="text" class="form-control" id="inputmobile4" value="<?php echo $view['a_mobile']; ?>" name="phone">                                </div>
+                                        <input type="text" class="form-control" id="inputmobile4" value="<?php echo $view['a_mobile']; ?>" name="phone">
                                     </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputemail4">Email</label>
+                                        <input type="email" class="form-control" id="inputemail4" value="<?php echo $view['a_mail']; ?>" name="mail">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputemail4">Email</label>
-                                            <input type="email" class="form-control" id="inputemail4" value="<?php echo $view['a_mail']; ?>" name="mail">
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="form-row">
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputaddress4">Designation</label>
                                         <input type="text" class="form-control" id="inputaddress4" value="<?php echo $view['a_position']; ?>" name="position">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputdate4">Date-Time</label>
-                                            <input type="datetime" class="form-control" id="inputdate4" value="<?php echo $view['a_date']; ?>" name="date">
-                                        </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputdate4">Date-Time</label>
+                                        <input type="datetime" class="form-control" id="inputdate4" value="<?php echo $view['a_date']; ?>" name="date">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputimg4">Photo</label>
-                                            <img class="fw-semibold g-2" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="70" height="90">
-                                            <input type="file" name="photo" id="inputimg4" class="fw-semibold g-2" value="<?php echo $view['a_img']; ?>">
-                                        </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputimg4">Photo</label>
+                                        <img class="fw-semibold g-2" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="70" height="90">
+                                        <input type="file" name="photo[]" id="inputimg4" class="fw-semibold g-2" multiple>
                                     </div>
-                                    <div class="form-row">
+                                </div>
+                                <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputpassword4">Password</label>
-                                            <input type="text" class="form-control" id="inputpassword4" value="<?php echo $view['password']; ?>" name="pass" maxlength="15">
+                                            <input type="password" class="form-control" id="inputpassword4" value="<?php echo $view['password']; ?>" name="pass" maxlength="15">
+                                            <span onclick="myFunction()"> <i name="hide1" id="hide">hide</i> <i name="hide2" id="show">Show</i></span>
                                         </div>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputconpassword4">Confirm Password</label>
-                                            <input type="text" class="form-control" id="inputconpassword4" value="<?php echo $view['password_confirm']; ?>" name="conpass" maxlength="15">
-                                        </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputconpassword4">Confirm Password</label>
+                                        <input type="password" class="form-control" id="inputconpassword4" value="<?php echo $view['password_confirm']; ?>" name="conpass" maxlength="15">
+                                        <span onclick="myFunction()"> <i name="hide1" id="hide">hide</i> <i name="hide2" id="show">Show</i></span>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <button type="submit" class="btn  btn-primary" name="update"> update</button>
-                                        </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <button type="submit" class="btn btn-primary" name="update">Update</button>
                                     </div>
-                                </form>
-                            <?php } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>
+                                </div>
+                            </form>
+                            <?php    } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<?php 
-        if(isset($_POST['update'])){
-            $user=$_POST['user']; $mail=$_POST['mail']; $mobile=$_POST['phone'];$design=$_POST['position'];$date=$_POST['date'];
-            $pass=$_POST['pass'];$conpass=$_POST['conpass'];
-            $img= $_FILES['photo']['name'];
+    <style>#hide1{ display: none;}</style>
+<script>
+    // function myFunction() {
+    //     var x = document.getElementById("inputpassword4");
+    //     var v=document.getElementById("inputconpassword4");
+    //     var y = document.getElementById("show");
+    //     var z = document.getElementById("hide");
 
-            // Upload the photo file to the desired location
-            move_uploaded_file($_FILES['photo']['tmp_name'], '../assets/images/profile/' . $photo);
+    //     if (x.type === 'password') {
+    //         x.type = "text";
+    //         y.style.display = "none";
+    //         z.style.display = "block";
+    //     }else if (v.type === 'password'){
+    //         v.type = "text";
+    //         y.style.display = "none";
+    //         z.style.display = "block";
+    //     } 
+    //     else {
+    //         x.type = "password";
+    //         v.type = "password";
+    //         y.style.display = "block";
+    //         z.style.display = "none";
+    //     }
+    // }
+</script>
+<script>
+    function myFunction() {
+        var passwordFields = document.querySelectorAll('input[type="password"]');
+        var showButton = document.getElementById("hide");
+        var hideButton = document.getElementById("show");
 
-            if($pass ==$conpass){
-                $up=mysqli_query($conn,"UPDATE `admin` SET `a_name`='$user',
-                `a_mobile`='$mobile',`a_mail`='$mail',`a_position`='$design',`a_img`='$img',`a_date`='$date',
-                `password`='$pass',`password_confirm`='$conpass' WHERE `sno`='$session'");
-                
-                if ($up) {
-                    echo '<script>alert("Update Successful");</script>';
-                    header("Location: profile.php"); // Redirect to profile.php
-                    exit;
-                } else {
-                    echo '<script>alert("Update Failed");</script>';
-                }
+        for (var i = 0; i < passwordFields.length; i++) {
+            if (passwordFields[i].type === 'password') {
+                passwordFields[i].type = "text";
+                hideButton.style.display = "block";
+                showButton.style.display = "none";
             } else {
-                echo '<script>alert("Password Error!");</script>';
+                passwordFields[i].type = "password";
+                hideButton.style.display = "none";
+                showButton.style.display = "block";
             }
         }
+    }
+</script>
+<?php 
+  if (isset($_POST['update'])) {
+    $user = $_POST['user'];
+    $mail = $_POST['mail'];
+    $mobile = $_POST['phone'];
+    $design = $_POST['position'];
+    $date = $_POST['date'];
+    $pass = $_POST['pass'];
+    $conpass = $_POST['conpass'];
+    $totalFiles = count($_FILES['photo']['name']);
+
+    if ($pass == $conpass) {
+        $up = mysqli_query($conn, "UPDATE `admin` SET `a_name`='$user', `a_mobile`='$mobile', `a_mail`='$mail',
+             `a_position`='$design', `a_date`='$date', `password`='$pass', `password_confirm`='$conpass' WHERE `sno`='$session'");
+
+        for ($i = 0; $i < $totalFiles; $i++) {
+            $img = $_FILES['photo']['name'][$i];
+            $tempFile = $_FILES['photo']['tmp_name'][$i];
+            $targetPath = '../assets/images/profile/';
+            $targetFile = $targetPath . $img;
+
+            // Check if a new photo was uploaded
+            if (!empty($img)) {
+                // Upload the photo file to the desired location
+                if (move_uploaded_file($tempFile, $targetFile)) {
+                    $up = mysqli_query($conn, "UPDATE `admin` SET `a_img`='$img' WHERE `sno`='$session'");
+                } else {
+                    echo '<script>alert("File Upload Failed");</script>';
+                }
+            }
+        }
+
+        if ($up) {
+            echo '<script>alert("Update Successful");</script>';
+            header("Location: testing.php");
+            exit;
+        } else {
+            echo '<script>alert("Update Failed");</script>';
+        }
+    } else {
+        echo '<script>alert("Password Error!");</script>';
+    }
+}
 ?>
-
-
-
 
     <!-- ================================================== Footer  =======================================-->
     <div class="py-6 px-6 text-center">
