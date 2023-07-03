@@ -1,7 +1,7 @@
 <?php 
 include 'header.php';
 
-include 'database/connection.php';
+include '../database/connection.php';
 ?>
 <div class="container-fluid">
         <!--  Row 1 -->
@@ -11,7 +11,7 @@ include 'database/connection.php';
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Testimonial </h5>
                         <div class="booking-form">
-                            <form method="POST" action="database/testimonial_add.php"  onsubmit="showConfirmation()">
+                            <form method="POST" action="../database/testimonial_add.php"  onsubmit="showConfirmation()">
                                         <div class="row">
                                             <div class="col-10">
                                             <div class="form-group">

@@ -1,53 +1,64 @@
-<?php include 'database/connection.php'; require_once "header.php"; ?>
-<!-- ============== ==================== Main -Body Start- ======================================================================= -->
-<div class="container-fluid">
-        <!--  Row 1 -->
-        <div class="row">
-            <div class="col-lg-100 d-flex align-items-center">
-                <div class="card w-100">
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">Team </h5>
-                        <form method="POST" action="database/team_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
-                                    <div class="row">
-                                        <div class="col-10">
-                                        <div class="form-group">
-                                                    <label class="form-label">Name</label><br>
-                                                    <input class="form-control" type="text" name="t-name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-10">
-                                        <div class="form-group">
-                                                    <label class="form-label">Designation</label><br>
-                                                    <input class="form-control" type="text" name="t-position" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-10">
-                                            <div class="form-group">
-                                                <label class="form-label"> Date </label><br>
-                                                <input class="form-control" type="datetime-local"  name="t-date" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-10">
-                                            <div class="form-group">
-                                                <label class="form-label">Photo</label><br>
-                                                <input type="file" name="t-img" id="Upload" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <div class="form-btn">
-                                                <button type="submit" class="submit-btn rounded-pill text-center bg-warning w-100" name="t_addData">Add New </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                        </form>
+<?php
+require_once 'header.php';
+include '../database/connection.php';
 
+?>
+<div class="container-fluid">
+<!--  Row 1 -->
+<div class="row">
+    <div class="col-lg-100 d-flex align-items-center">
+        <div class="card w-100">
+            <div class="card-body p-4">
+                <h5 class="card-title fw-semibold mb-4 text-center">Profile</h5>
+                <form method="POST" action="../database/profile_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
+                    <div class="row">
+                        <div class="col-10">
+                        <div class="form-group">
+                                    <label class="form-label">Name</label><br>
+                                    <input class="form-control" type="text" name="t-name" required>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="form-group">
+                                    <label class="form-label">Date</label><br>
+                                    <input class="form-control" type="text" name="t-date" required>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="form-group">
+                                    <label class="form-label">Address</label><br>
+                                    <input class="form-control" type="text" name="t-address" required>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="form-group">
+                                <label class="form-label"> Date </label><br>
+                                <input class="form-control" type="datetime-local"  name="t-date" required>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="form-group">
+                                <label class="form-label">Photo</label><br>
+                                <input type="file" name="t-img" id="Upload" required>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="form-btn">
+                            <button type="submit" class="submit-btn rounded-pill text-center bg-warning w-100" name="t_addData">Add New </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
+    </div>
+</div>
 <!-- Row 2 -->
+
+<div class="container-fluid"> 
 <?php
 if (isset($_GET['id'])) {
     $editId = $_GET['id'];
@@ -59,9 +70,9 @@ if (isset($_GET['id'])) {
         $photo = $_FILES['t-photo']['name'];
 
         // Upload the photo file to the desired location
-        move_uploaded_file($_FILES['t-photo']['tmp_name'], 'assets/images/team/' . $photo);
+        move_uploaded_file($_FILES['t-photo']['tmp_name'], '../assets/images/profile/' . $photo);
 
-        $up = mysqli_query($conn, "UPDATE `team` SET `t_date`='$date', `t_name`='$name', `t_position`='$position', `t_img`='$photo' WHERE id=$editId");
+        $up = mysqli_query($conn, "UPDATE `admin`SET `a_date`='$date', `a_name`='$name', `a_position`='$position', `a_img`='$photo' WHERE sno=$editId");
 
         if ($up) {
             echo '<script>alert("Update Successful");</script>';
@@ -74,19 +85,19 @@ if (isset($_GET['id'])) {
         $editId = $_GET['id'];
 
         // Retrieve the file name from the database before deleting the row
-        $fileResult = mysqli_query($conn, "SELECT `t_img` FROM `team` WHERE id=$editId");
+        $fileResult = mysqli_query($conn, "SELECT `a_img` FROM `admin` WHERE sno=$editId");
         if (mysqli_num_rows($fileResult) > 0) {
             $fileRow = mysqli_fetch_assoc($fileResult);
-            $fileName = $fileRow['t_img'];
+            $fileName = $fileRow['a_img'];
 
             // Delete the file from the directory
-            $filePath = 'assets/images/team/' . $fileName;
+            $filePath = 'assets/images/profile/' . $fileName;
             if (file_exists($filePath)) {
                 unlink($filePath);
             }
         }
 
-        $del = mysqli_query($conn, "DELETE FROM `team` WHERE id=$editId");
+        $del = mysqli_query($conn, "DELETE FROM `admin` WHERE `sno`=$editId");
         if ($del) {
             echo '<script>alert("Delete Successful");</script>';
            
@@ -96,7 +107,7 @@ if (isset($_GET['id'])) {
         }
     }
 
-    $sql = mysqli_query($conn, "SELECT * FROM `team` WHERE id=$editId");
+    $sql = mysqli_query($conn, "SELECT * FROM `admin` WHERE `sno`=$editId");
 
     if (mysqli_num_rows($sql) > 0) {
         while ($row = mysqli_fetch_assoc($sql)) {
@@ -114,7 +125,7 @@ if (isset($_GET['id'])) {
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Id</h6>
                                                 </th><td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0 col-6" name="t-id"><?php echo $row['id']; ?></h6>
+                                                    <h6 class="fw-semibold mb-0 col-6" name="t-id"><?php echo $row['sno']; ?></h6>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -122,7 +133,7 @@ if (isset($_GET['id'])) {
                                                     <h6 class="fw-semibold mb-0">Date</h6>
                                                 </th>
                                                 <td class="border-bottom-0">
-                                                    <input class="fw-semibold col-6" type="datetime-local" name="t-date" value="<?php echo $row['t_date']; ?>">
+                                                    <input class="fw-semibold col-6" type="datetime-local" name="t-date" value="<?php echo $row['a_date']; ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -130,7 +141,7 @@ if (isset($_GET['id'])) {
                                                     <h6 class="fw-semibold mb-0">Name</h6>
                                                 </th>
                                                 <td class="border-bottom-0">
-                                                    <input type="text" class="fw-semibold col-6" name="t-name" value="<?php echo $row['t_name']; ?>">
+                                                    <input type="text" class="fw-semibold col-6" name="t-name" value="<?php echo $row['a_name']; ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -138,7 +149,7 @@ if (isset($_GET['id'])) {
                                                     <h6 class="fw-semibold mb-0">Designation</h6>
                                                 </th>
                                                 <td class="border-bottom-0">
-                                                    <input type="text" class="fw-semibold col-6" name="t-position" value="<?php echo $row['t_position']; ?>">
+                                                    <input type="text" class="fw-semibold col-6" name="t-position" value="<?php echo $row['a_position']; ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -146,7 +157,7 @@ if (isset($_GET['id'])) {
                                                     <h6 class="fw-semibold mb-0">Photo</h6>
                                                 </th>
                                                 <td class="border-bottom-0">
-                                                    <img class="fw-semibold" src="assets/images/team/<?php echo $row['t_img']; ?>" width="70" height="90">
+                                                    <img class="fw-semibold" src="../assets/images/profile/<?php echo $row['a_img']; ?>" width="70" height="90">
                                                     <input type="file" name="t-photo" id="upload" class="col-6">
                                                 </td>
                                             </tr>
@@ -173,7 +184,7 @@ if (isset($_GET['id'])) {
         echo '<div class="row"><div class="col-lg-100 d-flex align-items-center"><div class="card w-100"><div class="card-body p-4"><p>No data found.</p></div></div></div></div>';
     }
 } else {
-    $sq = mysqli_query($conn, "SELECT * FROM team");
+    $sq = mysqli_query($conn, "SELECT * FROM `admin`");
     $res = mysqli_num_rows($sq);
 
     $rowsPerPage = 5; // Number of rows to display per page
@@ -186,7 +197,7 @@ if (isset($_GET['id'])) {
     $end = $start + $rowsPerPage; // Calculate the ending row index
 
     // Fetch data from the 'review' table
-    $sql = "SELECT * FROM `team` ORDER BY id DESC LIMIT $start, $rowsPerPage";
+    $sql = "SELECT * FROM `admin` ORDER BY sno DESC LIMIT $start, $rowsPerPage";
     $result = $conn->query($sql);
 
     $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
@@ -232,20 +243,20 @@ if (isset($_GET['id'])) {
             <td class="border-bottom-0">
                 <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
                 <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['t_date']; ?></h6>
+                <h6 class="fw-semibold mb-1"><?php echo $row['a_date']; ?></h6>
             </td>
             <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['t_name']; ?></h6>
+                <h6 class="fw-semibold mb-1"><?php echo $row['a_name']; ?></h6>
             </td>
             <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['t_position']; ?></h6>
+                <h6 class="fw-semibold mb-1"><?php echo $row['a_position']; ?></h6>
             </td>
             <td class="border-bottom-0">
-                <img class="fw-semibold mb-1" src="assets/images/team/<?php echo $row['t_img']; ?>"
+                <img class="fw-semibold mb-1" src="../assets/images/profile/<?php echo $row['a_img']; ?>"
                 width="70" height="90">
             </td>
             <td class="border-bottom-0">
-                <a href="?id=<?php echo $row['id']; ?>" name='edit' title="Edit">Edit</a>
+                <a href="?id=<?php echo $row['sno']; ?>" name='edit' title="Edit">Edit</a>
             </td>
         </tr>                                       
 <?php
@@ -274,8 +285,10 @@ if (isset($_GET['id'])) {
         </div>
     </div>
 <?php } ?>
-
-<style>.page-link{ background: black; font-style: bold; color: white; }</style>
 </div>
+
 <script>function showConfirmation() { alert("Confirm booking");return true; } </script>
-<?php require_once 'footer.php'; ?>
+<style>.page-link{ background: black; font-style: bold; color: white; }</style>
+<?php
+require_once 'footer.php';
+?>

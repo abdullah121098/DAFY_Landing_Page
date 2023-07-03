@@ -1,6 +1,3 @@
-<?php
-// require_once "database/connection.php";
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,10 +22,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Bootsrtap Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
     <!-- Libraries Stylesheet -->
     <link href="assert/lib/animate/animate.min.css" rel="stylesheet">
     <link href="assert/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -80,7 +73,7 @@
                                 </li> -->
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
-                                    <div class="dropdown-menu fade-up m-0">
+                                    <div class="dropdown-menu fade-up m-0 text-end">
                                         <a href="#team" class="dropdown-item">Our Team</a>
                                         <a href="#contact" class="dropdown-item">Contact Us</a>
                                         <a href="#expert" class="dropdown-item">Our Expert Help</a>
@@ -331,39 +324,39 @@
                         </div>
                     </div>
                 
-                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                    <script>
-                        $(document).ready(function () {
-                            $('.read-more').on('click', function () {
-                                var content = $(this).siblings('.collapsed-content');
-                                content.toggleClass('d-none d-lg-block');
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                        <script>
+                            $(document).ready(function () {
+                                $('.read-more').on('click', function () {
+                                    var content = $(this).siblings('.collapsed-content');
+                                    content.toggleClass('d-none d-lg-block');
 
-                                var icon = $(this).find('.fa');
-                                icon.toggleClass('fa-angle-down fa-angle-up');
-                            }); });
-                    </script>
-                    <style>
-                        .read-more{
-                            appearance: none;
-                            border: transparent;
-                            padding: .5em;
-                            border-radius: .25em;
-                            cursor: pointer;
-                            margin-top: 1rem;
-                            
-                        }
-                        .read-more:hover{
-                            background-color:none;
-                            grid-auto-rows:inherit;
-                            
-                        }
-                        .read-more::before{
-                            content: "↓ more";
-                        }
-                        .read-more:checked::before{
-                            content: "↑ less";
-                        }
-                    </style>
+                                    var icon = $(this).find('.fa');
+                                    icon.toggleClass('fa-angle-down fa-angle-up');
+                                }); });
+                        </script>
+                        <style>
+                            .read-more{
+                                appearance: none;
+                                border: transparent;
+                                padding: .5em;
+                                border-radius: .25em;
+                                cursor: pointer;
+                                margin-top: 1rem;
+                                
+                            }
+                            .read-more:hover{
+                                background-color:none;
+                                grid-auto-rows:inherit;
+                                
+                            }
+                            .read-more::before{
+                                content: "↓ more";
+                            }
+                            .read-more:checked::before{
+                                content: "↑ less";
+                            }
+                        </style>
                 </section>
             <!-- ============================================== Service End ================================================== -->
 
@@ -427,80 +420,80 @@
             <!-- ============================================== Feactures End ================================================== -->
             
             <!-- ============================================== About Start ================================================== -->
-                <section id="about"> <br><br>
-                            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" id="about">
-                                <!--p class="fs-5 fw-medium" style="color: #ffae00;">Our Services</p-->
-                                <h1 class="display-5 mb-5">About Us</h1>
-                            </div>
-                                <div class="container-xxl about my-5" >
-                                    <div class="container">
-                                        <div class="row g-5">
-                                            <div class="col-lg-6">
-                                                <div class="h-100 d-flex align-items-center justify-content-center" style="height: 100%;">
-                                                    <button type="button" class="btn-play" data-bs-toggle="modal"  data-bs-target="#videoModal">
-                                                        <span></span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
-                                                <div class="bg-white rounded-top p-5 mt-lg-5 animated slideInRight">
-                                                    <p class="fs-5 fw-medium text-warning">About Us</p>
-                                                    <h1 class="display-6 mb-4">DAFY Online Pvt. Ltd.</h1>
-                                                    <p class="mb-4"><i class="fa fa-check text-success me-2"></i>At DAFY Online, we understand that your time is valuable, and 
-                                                        our services are designed to cater to your unique needs. </p>
-                                                        <p><i class="fa fa-check text-success me-2"></i>
-                                                        Whether you need a reliable driver for your daily commute, a professional chauffeur 
-                                                        for a special occasion, or assistance with transportation logistics, we have you covered.</p>
-                                                        <p><i class="fa fa-check text-success me-2"></i>Our user-friendly platform makes booking 
-                                                        our services quick and easy. 
-                                                        We are dedicated to provide convenient and reliable assistants 
-                                                        to help you manage your busy lifestyle with ease</p>
-                                                    <div class="row g-5 pt-2 mb-5">
-                                                        <div class="col-sm-6 animated slideInRight">
-                                                            <img class="img-fluid mb-4" src="assert/img/icon/icon-5.png" alt="">
-                                                            <h5 class="mb-3">Managed Services</h5>
-                                                            <span>our experienced drivers are trained to provide reliable and discreet transportation services.</span>
-                                                        </div>
-                                                        <div class="col-sm-6 animated slideInLeft">
-                                                            <img class="img-fluid mb-4" src="assert/img/icon/icon-2.png" alt="">
-                                                            <h5 class="mb-3">Dedicated Experts</h5>
-                                                            <span>With our experienced caregivers, you can trust that
-                                                                your loved ones are in capable and caring hands. </span>
-                                                        </div>
-                                                    </div>
-                                                    <a class="btn btn-white rounded-pill py-3 px-5" href=""></a>
-                                                </div>
-                                            </div>
+            <section id="about"> <br><br>
+                    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" id="about">
+                        <!--p class="fs-5 fw-medium" style="color: #ffae00;">Our Services</p-->
+                        <h1 class="display-5 mb-5">About Us</h1>
+                    </div>
+                        <div class="container-xxl about my-5" >
+                            <div class="container">
+                                <div class="row g-5">
+                                    <div class="col-lg-6">
+                                        <div class="h-100 d-flex align-items-center justify-content-center" style="height: 100%;">
+                                            <button type="button" class="btn-play" data-bs-toggle="modal"  data-bs-target="#videoModal">
+                                                <span></span>
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                        <!-- About End -->        
-
-                        <!-- Video Modal Start -->
-                        <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content rounded-0">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">DAFY Video</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- 16:9 aspect ratio -->
-                                        <div class="ratio ratio-16x9 clip">
-                                            <!-- <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                                                allowscriptaccess="always" allow="autoplay"></iframe> -->
-                                                <video id="videoPlayer" controls>
-                                                <source src="assert/video/01_1.mp4" type="video/mp4">
-                                                <source src="assert/video/02-2.mp4" type="video/mp4">
-                                                </video>  
-                                            
+                                    <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
+                                        <div class="bg-white rounded-top p-5 mt-lg-5 animated slideInRight">
+                                            <p class="fs-5 fw-medium text-warning">About Us</p>
+                                            <h1 class="display-6 mb-4">DAFY Online Pvt. Ltd.</h1>
+                                            <p class="mb-4"><i class="fa fa-check text-success me-2"></i>At DAFY Online, we understand that your time is valuable, and 
+                                                our services are designed to cater to your unique needs. </p>
+                                                <p><i class="fa fa-check text-success me-2"></i>
+                                                Whether you need a reliable driver for your daily commute, a professional chauffeur 
+                                                for a special occasion, or assistance with transportation logistics, we have you covered.</p>
+                                                <p><i class="fa fa-check text-success me-2"></i>Our user-friendly platform makes booking 
+                                                our services quick and easy. 
+                                                We are dedicated to provide convenient and reliable assistants 
+                                                to help you manage your busy lifestyle with ease</p>
+                                            <div class="row g-5 pt-2 mb-5">
+                                                <div class="col-sm-6 animated slideInRight">
+                                                    <img class="img-fluid mb-4" src="assert/img/icon/icon-5.png" alt="">
+                                                    <h5 class="mb-3">Managed Services</h5>
+                                                    <span>our experienced drivers are trained to provide reliable and discreet transportation services.</span>
+                                                </div>
+                                                <div class="col-sm-6 animated slideInLeft">
+                                                    <img class="img-fluid mb-4" src="assert/img/icon/icon-2.png" alt="">
+                                                    <h5 class="mb-3">Dedicated Experts</h5>
+                                                    <span>With our experienced caregivers, you can trust that
+                                                        your loved ones are in capable and caring hands. </span>
+                                                </div>
+                                            </div>
+                                            <a class="btn btn-white rounded-pill py-3 px-5" href=""></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Video Modal End -->
-                </section>
+                <!-- About End -->        
+
+                <!-- Video Modal Start -->
+                <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content rounded-0">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalLabel">DAFY Video</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- 16:9 aspect ratio -->
+                                <div class="ratio ratio-16x9 clip">
+                                    <!-- <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                                        allowscriptaccess="always" allow="autoplay"></iframe> -->
+                                        <video id="videoPlayer" controls>
+                                        <source src="assert/video/01_1.mp4" type="video/mp4">
+                                        <source src="assert/video/02-2.mp4" type="video/mp4">
+                                        </video>  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video Modal End -->
+            </section>
             <!-- ============================================== Service Start ================================================== -->
 
             <!-- ============================================== enquiry End ================================================== -->
@@ -555,88 +548,88 @@
             <!-- ============================================== enquiry End ================================================== -->
             
            <!-- ============================================== Team Start ================================================== -->
-                <section id="team"> <br><br>
-                    <div class="container-xxl pt-5" >
-                        <div class="container">
-                            <div class="text-center text-md-start pb-5 pb-md-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
-                                <!--p class="fs-5 fw-medium text-warning">Team</p-->
-                                <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
-                            </div>
-                            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                               
-                                    <div class="col-lg-10 col-md-6">
-                                        <div class="project-item mb-4 overflow-hidden">
-                                            <img class="img-fluid mb-4" src="assert/img/team/ceo1.jpg" alt="">
+           <section id="team"> <br><br>
+                <div class="container-xxl pt-5" >
+                    <div class="container">
+                        <div class="text-center text-md-start pb-5 pb-md-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width:80%;border-radius: 30%;">
+                            <!--p class="fs-5 fw-medium text-warning">Team</p-->
+                            <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
+                        </div>
+                        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                           
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid mb-4" src="assert/img/team/ceo1.jpg" alt="">
+                                
+                                        <div class="p-4">
+                                            <a class="d-block h5 text-center" href="">Manikandan Ak<br>
+                                                <span class="text-warning">CEO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid mb-4" src="assert/img/team/IMG_20230703_163134.jpg" alt="">
+                                        <div class="p-2">
+                                            <a class="d-block h5 text-center img-size" href="">Arun Chandrasekaran <br>
+                                                <span class="text-warning">COO</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
                                     
-                                            <div class="p-4">
-                                                <a class="d-block h5 text-center" href="">Manikandan Ak<br>
-                                                    <span class="text-warning">CEO</span></a>
-                                            </div>
+                                        <div class="p-2">
+                                            <a class="d-block h5 text-center" href="">Jijo Louis<br>
+                                                <span class="text-warning">HR Head</span></a>
                                         </div>
                                     </div>
-                                
-                                    <div class="col-lg-10 col-md-6">
-                                        <div class="project-item mb-4 overflow-hidden">
-                                            <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                        
-                                            <div class="p-4">
-                                                <a class="d-block h5 text-center" href="">Arun Chandrasekaran <br>
-                                                    <span class="text-warning">COO</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
 
-                                    <div class="col-lg-10 col-md-6">
-                                        <div class="project-item mb-4 overflow-hidden">
-                                            <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
-                                        
-                                            <div class="p-4">
-                                                <a class="d-block h5 text-center" href="">Jijo Louis<br>
-                                                    <span class="text-warning">HR Head</span></a>
-                                            </div>
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
+                                    
+                                        <div class="p-2">
+                                            <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
+                                                <span class="text-warning">Operations Head</span></a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-10 col-md-6">
-                                        <div class="project-item mb-4 overflow-hidden">
-                                            <img class="img-fluid mb-4" src="assert/img/team/team-5.jpg" alt="">
+                                <div class="col-lg-10 col-md-6">
+                                    <div class="project-item mb-4 overflow-hidden">
+                                        <img class="img-fluid mb-4" src="assert/img/team/account.jpg" alt="">
                                         
-                                            <div class="p-4">
-                                                <a class="d-block h5 text-center" href="">Josen Kuriakose<br>
-                                                    <span class="text-warning">Operations Head</span></a>
-                                            </div>
+                                        <div class="p-2">
+                                            <a class="d-block h5 text-center" href="">Stephin Jose<br>
+                                            <span class="text-warning">Accounts Head</span></a>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-10 col-md-6">
-                                        <div class="project-item mb-4 overflow-hidden">
-                                            <img class="img-fluid mb-4" src="assert/img/team/account.jpg" alt="">
-                                            
-                                            <div class="p-4">
-                                                <a class="d-block h5 text-center" href="">Stephin Jose<br>
-                                                <span class="text-warning">Accounts Head</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                            </div>
+                                </div>
+                            
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
             <!-- ============================================== Team  end ================================================== -->
-            
-            <!-- ============================================== Testimonial  Start ================================================== -->
+    
+    <!-- ============================================== Testimonial  Start ================================================== -->
+        
         <section id="testimonial"> <br><br>
             <div class="container-xxl pt-5">
                 <div class="container">
-                    <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
+                    <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                         <!-- <p class="fs-5 fw-medium text-primary">Testimonial</p> -->
                         <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
                     </div>
                     <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
 
                         <!-- <div class="col-lg-5 col-md-6"> -->
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-4"><br>
                                 <h6 class="mb-4 text-center">SUJITH E R</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I recently had the opportunity to avail myself the service provided by DAFY,
@@ -651,7 +644,7 @@
                         <!-- </div> -->
 
                         <!-- <div class="col-lg-5 col-md-6"> -->
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"> <br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-4"> <br>
                                 <h6 class="mb-4 text-center">ANANDHU S</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">The efficiency and punctuality of the drivers provided by
@@ -664,7 +657,7 @@
                         <!-- </div> -->
 
                         <!-- <div class="col-lg-5 col-md-6"> -->
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-4"><br>
                                 <h6 class="mb-4 text-center">JAYESH K</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I recently had the pleasure of using the professional driver assistant service provided by DAFY for my family.
@@ -677,7 +670,7 @@
                         <!-- </div> -->
 
                         <!-- <div class="col-lg-5 col-md-6 "> -->
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-4"><br>
                                 <h6 class="mb-4 text-center">SAJESH V</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">Using the driver service was a truly amazing experience for me. 
@@ -690,7 +683,7 @@
                         <!-- </div> -->
 
                         <!-- <div class="col-lg-5 col-md-6 "> -->
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-4"><br>
                                 <h6 class="mb-4 text-center">ARCHIT M D</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I've been using DAFY's driver / caretaker service for several months now, 
@@ -707,7 +700,7 @@
                         <!-- </div> -->
 
                         <!-- <div class="col-lg-5 col-md-6 "> -->
-                            <div class="testimonial-item rounded p-4 p-lg-5 mb-5"><br>
+                            <div class="testimonial-item rounded p-4 p-lg-5 mb-4"><br>
                                 <h6 class="mb-4 text-center">NANCY JACOB</h6>
                                 <!-- <img class="mb-4" src="img/testimonial-1.jpg" alt=""> -->
                                 <p class="mb-4 limitline">I recently experienced the professional driver assistance service provided by DAFY,
@@ -724,54 +717,53 @@
                 </div>
             </div>
         </section>
-            <style>
-                .limitline {
-                        --max-lines: 8;
-                        --line-height: 1.4;
-                        max-height: calc(var(--max-lines)*1em*var(--line-height));
-                        line-height: var(--line-height);
-                        display: flex;
-                        overflow: hidden;
-                        position: relative;
-                        justify-content: center;
-                        align-content: stretch;
-                            }
-                        .limitext::before{
-                            content: "";
-                            position: absolute;
-                            height: calc(1em * var(--line-height));
-                            width: 100%;
-                            bottom: 10%;
-                            pointer-events: none;
-                            background: linear-gradient(to bottom,transparent,white);
-                        }
-                
-                    .expand-btn{
-                        appearance: none;
-                        border: transparent;
-                        padding: .2em;
-                        border-radius: .25em;
-                        cursor: pointer;
-                        margin-top: 1rem;
-                        
-                    }
-                    .expand-btn:hover{
-                        background-color:none;
-                        grid-auto-rows: auto;
-                        
-                    }
-                    .expand-btn::before{
-                        content: "Read more";
-                    }
-                    .expand-btn:checked::before{
-                        content: "Read less";
-                    }
-                    .limitline:has(+ .expand-btn:checked){
-                        max-height: none;
-                    }
-            </style>
-        
-            <!-- ============================================== Testimonial  end ================================================== -->
+                        <style>
+                            .limitline {
+                                    --max-lines: 8;
+                                    --line-height: 1.4;
+                                    max-height: calc(var(--max-lines)*1em*var(--line-height));
+                                    line-height: var(--line-height);
+                                    display: flex;
+                                    overflow: hidden;
+                                    position: relative;
+                                    justify-content: center;
+                                    align-content: stretch;
+                                        }
+                                    .limitext::before{
+                                        content: "";
+                                        position: absolute;
+                                        height: calc(1em * var(--line-height));
+                                        width: 100%;
+                                        bottom: 10%;
+                                        pointer-events: none;
+                                        background: linear-gradient(to bottom,transparent,white);
+                                    }
+                            
+                                .expand-btn{
+                                    appearance: none;
+                                    border: transparent;
+                                    padding: .2em;
+                                    border-radius: .25em;
+                                    cursor: pointer;
+                                    margin-top: 1rem;
+                                    
+                                }
+                                .expand-btn:hover{
+                                    background-color:none;
+                                    grid-auto-rows: auto;
+                                    
+                                }
+                                .expand-btn::before{
+                                    content: "Read more";
+                                }
+                                .expand-btn:checked::before{
+                                    content: "Read less";
+                                }
+                                .limitline:has(+ .expand-btn:checked){
+                                    max-height: none;
+                                }
+                        </style>
+    <!-- ============================================== Testimonial  end ================================================== -->
             
             <!-- ====================================== Footer Start ================================================ -->  
             <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" id="contact">
@@ -1159,23 +1151,15 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-            
-            <!-- Bootstrap Libraries -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
-                integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
-                integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-            
-            <!-- Local Libraries -->
+
+
             <script src="assert/lib/wow/wow.min.js"></script>
             <script src="assert/lib/easing/easing.min.js"></script>
             <script src="assert/lib/waypoints/waypoints.min.js"></script>
             <script src="assert/lib/owlcarousel/owl.carousel.min.js"></script>
             <script src="assert/lib/lightbox/js/lightbox.min.js"></script>
             <!-- Template Javascript -->
-            <script src="assert/js/video.js"></script>
+            <script src="assert/js/modal_video.js"></script>
             <script src="assert/js/main.js"></script>
         <!-- JavaScript Libraries End -->    
 </body>

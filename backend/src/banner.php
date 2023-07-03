@@ -1,4 +1,4 @@
-<?php require_once "header.php"; ?>
+<?php include '../database/connection.php'; require_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Starb- ======================================================================= -->
     <div class="container-fluid">
         <!--  Row 1 -->
@@ -8,7 +8,7 @@
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Banner </h5>
                         <div class="booking-form">
-                        <form method="POST" action="database/banner_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
+                        <form method="POST" action="../database/banner_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
                                     <div class="row">
                                         <div class="col-10">
                                         <div class="form-group">
@@ -75,7 +75,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php include 'database/connection.php';
+                                            <?php 
                                                     if ($conn->connect_error) {
                                                         die("Connection failed: " . $conn->connect_error);
                                                     }

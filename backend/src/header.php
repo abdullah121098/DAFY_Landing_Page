@@ -4,8 +4,7 @@ session_start();
 // echo $_SESSION['id'];
 $session=$_SESSION['id'];
 $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");   
-if ($sql->num_rows > 0) {                 
-while ($view = mysqli_fetch_array($sql)){ 
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,8 +24,10 @@ while ($view = mysqli_fetch_array($sql)){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 
-  <link rel="shortcut icon" type="image/png" href="assets/images/logos/loader.png" />
-  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/loader.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="../assets/css/booking.css" />
 
 </head>
 
@@ -40,7 +41,7 @@ while ($view = mysqli_fetch_array($sql)){
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="./index.php" class="text-nowrap logo-img">
-            <img src="assets/images/logos/loader.png" width="180" alt="" />
+            <img src="../assets/images/logos/loader.png" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>
@@ -54,7 +55,7 @@ while ($view = mysqli_fetch_array($sql)){
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.php" aria-expanded="false">
+              <a class="sidebar-link" href="index.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -181,9 +182,14 @@ while ($view = mysqli_fetch_array($sql)){
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <!-- <img src="assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle"> -->
+                  <?php if ($sql->num_rows > 0) {  while ($view = mysqli_fetch_array($sql)){  ?>
+                  <!-- <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle"> -->
                   <img src="../assets/images/profile/<?php echo $view['a_img']; ?>" alt="" width="35" height="35" class="rounded-circle">
                 </a>
+                <?php 
+                    } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } 
+                    // require_once "footer.php";
+                 ?>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
                     <a href="profile.php" class="d-flex align-items-center gap-2 dropdown-item">
@@ -198,7 +204,7 @@ while ($view = mysqli_fetch_array($sql)){
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a> -->
-                    <a href="./login.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="logout.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
@@ -207,4 +213,4 @@ while ($view = mysqli_fetch_array($sql)){
         </nav>
       </header>
       <!--  Header End -->
-      <?php } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>
+     
