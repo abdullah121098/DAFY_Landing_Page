@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-unset($_SESSION['mail']);
-unset($_SESSION['name']);
+unset($_SESSION['a_mail']);
+unset($_SESSION['a_name']);
 
 header("Location:login.php");
 ?>

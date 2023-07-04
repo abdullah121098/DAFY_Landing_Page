@@ -1,3 +1,4 @@
+
 <?php include '../database/connection.php'; require_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Starb- ======================================================================= -->
     <div class="container-fluid">
@@ -38,7 +39,7 @@
                                         <div class="row">
                                             <div class="col-10">
                                                 <div class="form-btn">
-                                                <button type="submit" class="submib-btn rounded-pill texb-center bg-warning w-100" name="b-banner">Add New </button>
+                                                <button type="submit" class="submib-btn rounded-pill btn btn-primary px-3 py-2 m-3 text-black" name="b-banner">Add New </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -72,13 +73,14 @@
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Photo</h6>
                                                 </th>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Status</h6>
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php 
-                                                    if ($conn->connect_error) {
-                                                        die("Connection failed: " . $conn->connect_error);
-                                                    }
+                                                   
                                                     // Fetch data from the 'review' table
                                                     $sql = "SELECT * FROM `banner` ORDER BY b_date DESC LIMIT 5";
                                                     $result = $conn->query($sql); 
@@ -99,10 +101,16 @@
                                                         <h6 class="fw-semibold mb-1"><?php echo  $row['b_content'];  ?></h6>
                                                     </td>
                                                     <td class="border-bottom-0">
-                                                        <img class="fw-semibold mb-1" src=" assets/images/banner/<?php echo  $row['b_img'];  ?>"
+                                                        <img class="fw-semibold mb-1" src=" ../assets/images/banner/<?php echo  $row['b_img'];  ?>"
                                                         width="80" height="80">
                                                     </td> 
-                                                                                
+                                                    <td class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-1"><?php if( $row['status']==1){
+                                                            echo "<p><a href='status.php?id=".$row['b_id']."&status=0' class='btn btn-success'>
+                                                            Active</a></p>"; 
+                                                            }else{ echo "<p><a href='status.php?id=".$row['b_id']."&status=1' class='btn btn-danger'>
+                                                                Disable</a></p>"; }  ?></h6>
+                                                    </td>                         
                                                 </tr> 
                                                     <?php
                                                 }

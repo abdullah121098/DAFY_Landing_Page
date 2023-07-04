@@ -91,7 +91,7 @@ if(isset($_POST['access'])){
       </div>
     </div>
   </div>
-  <style>#hide {  display: none;} .eye{ position: absolute;}</style>
+  <style>#hide {  display: none;} .eye{ position: relative;}</style>
   <script>
     function myFunction() {
         var x = document.getElementById("InputPassword1");

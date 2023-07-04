@@ -1,11 +1,5 @@
-<?php session_start();
+<?php
 include '../database/connection.php';
-// $servername = "localhost"; // Replace with your database server name
-// $username = "root"; // Replace with your database username
-// $password = ""; // Replace with your database password
-// $dbname = "sample_test"; // Replace with your database name
-
-// $conn = new mysqli($servername, $username, $password, $dbname);
 
 include_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
@@ -128,8 +122,8 @@ include_once "header.php"; ?>
                                           </td>
                                           <td class="border-bottom-0">
                                           <div class="d-flex align-items-center">
-                                          <a type="button" class="" name="update" type="submit" href="new-ride-update.php?id=<?php echo $row['id']; ?>">
-                                          view
+                                          <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride-update.php?id=<?php echo $row['id']; ?>">
+                                          <i class="fa-sharp fa-solid fa-eye eye" ></i>
                                           </a>
                                               </label>
                                           </div>
@@ -147,19 +141,21 @@ include_once "header.php"; ?>
                                     ?>                                                                            
                                 </tbody>
                             </table>
-                              <nav aria-label="Page navigation example">
-                                  <ul class="pagination justify-contena-end left" style="position: relative;border-box: 500px;">
-                                      <?php if ($page > 1): ?>
-                                          <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-left"></i></a></li>
-                                      <?php endif; ?>
-                                      <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
+                            <nav aria-label="Page navigation example" >
+                                    <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                                        <?php if ($page > 1): ?>
+                                        <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span></a></li>
+                                        <?php endif; ?>
+                                        <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
                                           <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
                                       <?php endfor; ?>
-                                      <?php if ($page < ceil($totalRows / $rowsPerPage)): ?>
-                                          <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-right"></i></a></li>
-                                      <?php endif; ?>
-                                  </ul>
-                              </nav>
+                                        <?php if ($end < $totalRows): ?>
+                                        <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span></a></li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </nav>
                           </form>
                   </div>
                 </div>
@@ -191,4 +187,4 @@ include_once "header.php"; ?>
            </style>
 
         <!-- ================================================== Footer  =======================================-->
-<?php include_once 'footer.php'; ?>
+<?php //include_once 'footer.php'; ?>

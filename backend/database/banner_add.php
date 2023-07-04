@@ -29,6 +29,6 @@ if (isset($_POST['b-banner'])) {
 
 $conn->close();
 // Redirect back to the booking page
-header("Location:../team.php");
+header("Location:../src/team.php");
 exit();
 ?>

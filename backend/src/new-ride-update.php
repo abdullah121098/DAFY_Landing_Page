@@ -1,7 +1,8 @@
 
-<?php session_start();
+<?php 
   include "../database/connection.php";
 
+  
   $g_id = $_GET['id'];
   // echo $g_id;
   include_once 'header.php';
@@ -14,7 +15,7 @@
 
 <div class="container-responsive">
             <!--  Row 1 -->
-            <div class="row">
+            <div class="row g-3">
               <div class="col-lg-100 d-flex align-items-center">
                 <div class="card w-100">
                   <div class="card-body p-4">
@@ -218,7 +219,7 @@
             if($conf) {
               
               echo '<script>alert("Confirm booking");</script>';
-              header("Location:index.php");
+              header("Location:main.php");
               exit();
             } else {
               echo 'Update failed';
@@ -231,7 +232,7 @@
           
             if($up) {
             echo '<script>alert("Confirm booking");</script>';
-            header("Location:index.php");
+            header("Location:main.php");
             exit();
             } else {
               echo 'Update failed';
@@ -271,7 +272,9 @@
               //   }
               // } else {
               //   echo 'Failed to move data to the completed table.';
-              // }
+              // }  
+              header("Location:main.php");
+              exit();
             } else {
                 echo 'Update failed';
               }
@@ -302,6 +305,8 @@
               // } else {
               //   echo 'Failed to move data to the completed table.';
               // }
+              header("Location:main.php");
+              exit();
             } else {
               echo 'Update failed';
             }
@@ -328,6 +333,8 @@
           `payment_type`='$c',`payment`='$d',`status`='$b' WHERE id = $g_id";
           if($all) {
             echo '<script>alert("Confirm booking");</script>';
+            header("Location:main.php");
+            exit();
           } else {
             echo 'Update failed';
           }
