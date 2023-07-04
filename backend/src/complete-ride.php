@@ -9,7 +9,7 @@ require_once "header.php";
                 <div class="card w-100">
                     <div class="card-body p-4">
                             <h5 class="card-title fw-semibold mb-4">Complete Booking List</h5>
-                            <button onclick="exportToExcel3()">Export to Excel</button>
+                            <!-- <button onclick="exportToExcel3()">Export to Excel</button> -->
                             <div class="table-responsive">
                             <form action="" method="post">    
                                 <table class="table text-nowrap mb-0 align-middle" id="data-table">
@@ -65,7 +65,7 @@ require_once "header.php";
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody> 
+                                    <tbody class="h5"> 
                                         <?php  
                                                 $a=date('Y-m-d H:i');
                                                 // Fetch data from the 'review' table
@@ -148,16 +148,18 @@ require_once "header.php";
                                     </tbody>
                                 </table>
                             </form>
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-contena-end left" style="position: relative;border-box: 500px;">
+                                <nav aria-label="Page navigation example" >
+                                    <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
                                         <?php if ($page > 1): ?>
-                                            <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-left"></i></a></li>
+                                        <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span></a></li>
                                         <?php endif; ?>
                                         <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
-                                            <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
-                                        <?php endfor; ?>
-                                        <?php if ($page < ceil($totalRows / $rowsPerPage)): ?>
-                                            <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-right"></i></a></li>
+                                          <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
+                                      <?php endfor; ?>
+                                        <?php if ($end < $totalRows): ?>
+                                        <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span></a></li>
                                         <?php endif; ?>
                                     </ul>
                                 </nav>
@@ -176,5 +178,5 @@ require_once "header.php";
         </style>
         <!-- ================================================== Footer  =======================================-->
             <?php
-            require_once "footer.php";
+           // require_once "footer.php";
             ?>

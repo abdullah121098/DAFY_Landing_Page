@@ -4,18 +4,26 @@
 session_start();
 if(isset($_POST['access'])){
   $user=$_POST['user'];  $password=$_POST['pass'];
-  $sql= "SELECT * FROM admin WHERE a_name='$user' AND password='$password'";
-  $check=mysqli_query($conn,$sql);
-  $no=mysqli_num_rows($check);
+  
+  if(empty($user)||empty($password)){
+    echo '<script>alert("Please Fill the  Blank !");</script>';
+    // header("location:login.php");
+  }else{
+    $username=mysqli_escape_string($conn,$user);
+    $password=mysqli_escape_string($conn,$password);
+    $sql= "SELECT * FROM admin WHERE a_name='$user' OR a_mail= '$user' AND password='$password'";
+    $check=mysqli_query($conn,$sql);
+    $no=mysqli_num_rows($check);
   // echo $no;
+  
   if($no ==1){ while ($v=mysqli_fetch_array($check)) {
     $_SESSION['user']=$v['a_name']; $_SESSION['id']=$v['sno']; 
     // header('Location:sample.php');
     header('Location:main.php');
   } }
-  else{echo '<script>alert("Login failed!");</script>';}
+  else{ echo '<script>alert("Login failed!");</script>'; }
 }
-
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,6 +34,7 @@ if(isset($_POST['access'])){
   <title>Dafy Online Pvt ltd</title>
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/loader.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
@@ -49,11 +58,16 @@ if(isset($_POST['access'])){
                   </div>
                   <div class="mb-4">
                     <label for="InputPassword1" class="form-label">Password</label>
-                    <span class="eye" onclick="myFunction()"><i name="hide1" id="hide">hide</i> <i name="hide2" id="show">Show</i></span>
-                    <input type="password" class="form-control" name="pass"  id="InputPassword1">
-                   
-
+                    <div class="input-group">
+                      <input type="password" class="form-control" name="pass" id="InputPassword1">
+                      <span class="input-group-text center">
+                            <i class="fa-sharp fa-solid fa-eye eye" onclick="myFunction()" name="hide2"  id="hide"></i>
+                            <i class="fa-sharp fa-solid fa-eye-slash eye" onclick="myFunction()" name="hide1"  id="show"></i>
+                      </span>
+                    </div>
                   </div>
+
+                   
                   <div class="d-flex align-items-center justify-content-between mb-4">
                     <div class="form-check">
                       <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
@@ -77,7 +91,7 @@ if(isset($_POST['access'])){
       </div>
     </div>
   </div>
-  <style>#hide {  display: none;} .eye{ position: absolute;}</style>
+  <style>#hide {  display: none;} .eye{ position: relative;}</style>
   <script>
     function myFunction() {
         var x = document.getElementById("InputPassword1");

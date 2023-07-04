@@ -1,4 +1,7 @@
-<?php session_start(); require_once 'header.php'; ?>
+<?php
+require_once 'header.php'; 
+?>
+<link rel="stylesheet" href="../assets/css/booking.css" />
             <div class="container-fluid">
                 <div id="booking" class="section-center">
                     <div class="booking-form">
@@ -6,7 +9,7 @@
                                 <h2 class="text-warning">Booking Service</h2>
                             </div>
                         <div class="modal-body">
-                            <form method="POST" action="database/insert_data.php" onsubmit="showConfirmation()">
+                            <form method="POST" action="../database/insert_data.php" onsubmit="showConfirmation()">
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">

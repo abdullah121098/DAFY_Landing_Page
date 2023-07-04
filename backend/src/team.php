@@ -1,12 +1,13 @@
 <?php include '../database/connection.php'; require_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
+
 <div class="container-fluid">
         <!--  Row 1 -->
         <div class="row">
             <div class="col-lg-100 d-flex align-items-center">
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">Team </h5>
+                        <h5 class="card-title fw-semibold mb-4 text-center h4">Team Photo Add </h5>
                         <form method="POST" action="../database/team_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
                                     <div class="row">
                                         <div class="col-10">
@@ -37,7 +38,8 @@
                                         <div class="row">
                                             <div class="col-10">
                                                 <div class="form-btn">
-                                                <button type="submit" class="submit-btn rounded-pill text-center bg-warning w-100" name="t_addData">Add New </button>
+                                                <button type="submit" class="submit-btn  rounded-pill btn btn-center bg-warning px-3 py-2 m-3" name="t_addData">
+                                                <i class="fa-solid fa-file-arrow-up m-1"></i>Add New Profile</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,8 +157,8 @@ if (isset($_GET['id'])) {
                                                     <h6 class="fw-semibold mb-0">Action</h6>
                                                 </th>
                                                 <td class="border-bottom-0">
-                                                    <input type="submit" name="update" value="Save">
-                                                    <input type="submit" name="delete" value="Delete">
+                                                    <button type="submit" name="update"class="btn btn-primary text-black m-1"><i class="fa-solid fa-floppy-disk"></i><button>
+                                                    <button type="submit" name="delete"class="btn btn-primary  text-black  m-1"><i class="fa-solid fa-trash"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -245,7 +247,8 @@ if (isset($_GET['id'])) {
                 width="70" height="90">
             </td>
             <td class="border-bottom-0">
-                <a href="?id=<?php echo $row['id']; ?>" name='edit' title="Edit">Edit</a>
+                <a href="?id=<?php echo $row['id']; ?>" name='edit'class="btn btn-primary fw-semibold text-black"  title="Edit">
+                <i class="fa-solid fa-pen-to-square m-2"></i></a>
             </td>
         </tr>                                       
 <?php

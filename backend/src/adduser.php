@@ -234,37 +234,37 @@ if (isset($_GET['id'])) {
                                     </tr>
                                 </thead>
                                 <tbody>
-<?php
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            // Display each row of data
-?>
-        <tr>
-            <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
-                <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['a_date']; ?></h6>
-            </td>
-            <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['a_name']; ?></h6>
-            </td>
-            <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['a_position']; ?></h6>
-            </td>
-            <td class="border-bottom-0">
-                <img class="fw-semibold mb-1" src="../assets/images/profile/<?php echo $row['a_img']; ?>"
-                width="70" height="90">
-            </td>
-            <td class="border-bottom-0">
-                <a href="?id=<?php echo $row['sno']; ?>" name='edit' title="Edit">Edit</a>
-            </td>
-        </tr>                                       
-<?php
-        }
-    } else {
-        echo '<tr><td colspan="12">No data found.</td></tr>';
-    }
-?>
+                                                <?php
+                                                    if ($result->num_rows > 0) {
+                                                        while ($row = $result->fetch_assoc()) {
+                                                            // Display each row of data
+                                                ?>
+                                                        <tr>
+                                                            <td class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
+                                                                <td class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-1"><?php echo $row['a_date']; ?></h6>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-1"><?php echo $row['a_name']; ?></h6>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-1"><?php echo $row['a_position']; ?></h6>
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                                <img class="fw-semibold mb-1" src="../assets/images/profile/<?php echo $row['a_img']; ?>"
+                                                                width="70" height="90">
+                                                            </td>
+                                                            <td class="border-bottom-0">
+                                                                <a href="?id=<?php echo $row['sno']; ?>" name='edit' title="Edit">Edit</a>
+                                                            </td>
+                                                        </tr>                                       
+                                                <?php
+                                                        }
+                                                    } else {
+                                                        echo '<tr><td colspan="12">No data found.</td></tr>';
+                                                    }
+                                                ?>
                                 </tbody>
                             </table>
                             <nav aria-label="Page navigation example" >
@@ -287,8 +287,6 @@ if (isset($_GET['id'])) {
 <?php } ?>
 </div>
 
-<script>function showConfirmation() { alert("Confirm booking");return true; } </script>
+<script>function showConfirmation() { alert("Confirm booking"); return true; } </script>
 <style>.page-link{ background: black; font-style: bold; color: white; }</style>
-<?php
-require_once 'footer.php';
-?>
+<?php require_once 'footer.php'; ?>

@@ -34,6 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 // Redirect back to the booking page
-header("Location:../index.php");
+header("Location:../src/main.php");
 exit();
 ?>

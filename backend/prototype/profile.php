@@ -33,6 +33,7 @@ if ($sql->num_rows > 0) {
 
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/loader.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 </head>
 
@@ -45,7 +46,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
     <!-- Sidebar scroll-->
     <div>
     <div class="brand-logo d-flex align-items-center justify-content-between">
-        <a href="../index.php" class="text-nowrap logo-img">
+        <a href="../src/main.php" class="text-nowrap logo-img">
         <img src="../assets/images/logos/loader.png" width="180" alt="" />
         </a>
         <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -60,7 +61,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu">Home</span>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../index.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/main.php" aria-expanded="false">
             <span>
                 <i class="ti ti-layout-dashboard"></i>
             </span>
@@ -72,7 +73,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu"></span>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../new-ride.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/new-ride.php" aria-expanded="false">
             <span>
                 <i class="ti ti-article"></i>
             </span>
@@ -80,7 +81,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../cancel-ride.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/cancel-ride.php" aria-expanded="false">
             <span>
                 <i class="ti ti-alert-circle"></i>
             </span>
@@ -88,7 +89,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../complete-ride.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/complete-ride.php" aria-expanded="false">
             <span>
                 <i class="ti ti-cards"></i>
             </span>
@@ -96,7 +97,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../summary.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/summary.php" aria-expanded="false">
             <span>
                 <i class="ti ti-cards"></i>
             </span>
@@ -130,7 +131,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu">EXTRA</span>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../testimonial.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/testimonial.php" aria-expanded="false">
             <span>
                 <i class="ti ti-mood-happy"></i>
             </span>
@@ -138,7 +139,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../team.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/team.php" aria-expanded="false">
             <span>
                 <i class="ti ti-aperture"></i>
             </span>
@@ -146,7 +147,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../banner.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/banner.php" aria-expanded="false">
             <span>
                 <i class="ti ti-mood-happy"></i>
             </span>
@@ -193,11 +194,11 @@ data-sidebar-position="fixed" data-header-position="fixed">
                     </a> <?php }?>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                     <div class="message-body">
-                        <a href="../profile.php" class="d-flex align-items-center gap-2 dropdown-item">
+                        <a href="../src/profile.php" class="d-flex align-items-center gap-2 dropdown-item">
                         <i class="ti ti-user fs-6"></i>
                         <p class="mb-0 fs-3">My Profile</p>
                         </a>
-                        <a href="../adduser.php" class="d-flex align-items-center gap-2 dropdown-item">
+                        <a href="../src/adduser.php" class="d-flex align-items-center gap-2 dropdown-item">
                         <i class="ti ti-mail fs-6"></i>
                         <p class="mb-0 fs-3">Team Profile</p>
                         </a>
@@ -226,64 +227,74 @@ data-sidebar-position="fixed" data-header-position="fixed">
                         <div class="col-xl-12 col-md-12">
                             <form method="post" action="#" enctype="multipart/form-data">
                                 <div class="form-row">
-                                    <div class="form-group col-md-6 text-center">
+                                    <div class="form-group col-md-6 text-center bg-dark">
                                         <img class="fw-semibold g-2 rounded-circle" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="100" height="100">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputuser4">Username</label>
-                                        <input type="text" class="form-control" id="inputuser4" value="<?php echo $view['a_name']; ?>" name="user">
+                                        <label for="inputuser4" class="h5">Username</label>
+                                        <input type="text" class="form-control h6" id="inputuser4" value="<?php echo $view['a_name']; ?>" name="user">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputmobile4">Mobile No</label>
-                                        <input type="text" class="form-control" id="inputmobile4" value="<?php echo $view['a_mobile']; ?>" name="phone">
+                                        <label for="inputmobile4"  class="h5">Mobile No</label>
+                                        <input type="text" class="form-control h6" id="inputmobile4" value="<?php echo $view['a_mobile']; ?>" name="phone">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputemail4">Email</label>
-                                        <input type="email" class="form-control" id="inputemail4" value="<?php echo $view['a_mail']; ?>" name="mail">
+                                        <label for="inputemail4"  class="h5">Email</label>
+                                        <input type="email" class="form-control h6" id="inputemail4" value="<?php echo $view['a_mail']; ?>" name="mail">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputaddress4">Designation</label>
-                                        <input type="text" class="form-control" id="inputaddress4" value="<?php echo $view['a_position']; ?>" name="position">
+                                        <label for="inputaddress4"  class="h5">Designation</label>
+                                        <input type="text" class="form-control h6" id="inputaddress4" value="<?php echo $view['a_position']; ?>" name="position">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputdate4">Date-Time</label>
-                                        <input type="datetime" class="form-control" id="inputdate4" value="<?php echo $view['a_date']; ?>" name="date">
+                                        <label for="inputdate4"  class="h5">Date-Time</label>
+                                        <input type="datetime" class="form-control h6" id="inputdate4" value="<?php echo $view['a_date']; ?>" name="date">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputimg4">Photo</label>
+                                        <label for="inputimg4"  class="h5">Photo</label>
                                         <img class="fw-semibold g-2" src="../assets/images/profile/<?php echo $view['a_img']; ?>" width="70" height="90">
-                                        <input type="file" name="photo[]" id="inputimg4" class="fw-semibold g-2" multiple>
+                                        <input type="file" name="photo[]" id="inputimg4" class="fw-semibold h6 g-2" multiple>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputpassword4">Password</label>
-                                            <input type="password" class="form-control" id="inputpassword4" value="<?php echo $view['password']; ?>" name="pass" maxlength="15">
-                                            <span onclick="myFunction()"> <i name="hide1" id="hide">hide</i> <i name="hide2" id="show">Show</i></span>
+                                            <label for="inputpassword3"  class="h5">Password</label>
+                                            <div class="input-group">
+                                                <input type="password" class="form-control h6" id="inputpassword3" value="<?php echo $view['password']; ?>" name="pass" maxlength="15">
+                                                <span class="input-group-text center">
+                                                    <i class="fa-sharp fa-solid fa-eye eye" onclick="myFunction()" name="hide4"  id="hide"></i>
+                                                    <i class="fa-sharp fa-solid fa-eye-slash eye" onclick="myFunction()" name="hide3"  id="show"></i>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputconpassword4">Confirm Password</label>
-                                        <input type="password" class="form-control" id="inputconpassword4" value="<?php echo $view['password_confirm']; ?>" name="conpass" maxlength="15">
-                                        <span onclick="myFunction()"> <i name="hide1" id="hide">hide</i> <i name="hide2" id="show">Show</i></span>
+                                        <label for="inputconpassword4"  class="h5">Confirm Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control h6" id="inputconpassword4" value="<?php echo $view['password_confirm']; ?>" name="conpass" maxlength="15">
+                                            <span class="input-group-text center">
+                                                    <i class="fa-sharp fa-solid fa-eye eye" onclick="myFunction()" name="hide2"  id="hide"></i>
+                                                    <i class="fa-sharp fa-solid fa-eye-slash eye" onclick="myFunction()" name="hide1"  id="show"></i>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
+                                </div> <br><br>
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <button type="submit" class="btn btn-primary" name="update">Update</button>
+                                    <div class="form-group col-md-6 text-center">
+                                        <button type="submit" class="btn btn-primary" name="update" style="color:black;">Update</button>
                                     </div>
                                 </div>
                             </form>
@@ -294,50 +305,38 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </div>
         </div>
     </div>
-    <style>#hide1{ display: none;}</style>
-<script>
-    // function myFunction() {
-    //     var x = document.getElementById("inputpassword4");
-    //     var v=document.getElementById("inputconpassword4");
-    //     var y = document.getElementById("show");
-    //     var z = document.getElementById("hide");
-
-    //     if (x.type === 'password') {
-    //         x.type = "text";
-    //         y.style.display = "none";
-    //         z.style.display = "block";
-    //     }else if (v.type === 'password'){
-    //         v.type = "text";
-    //         y.style.display = "none";
-    //         z.style.display = "block";
-    //     } 
-    //     else {
-    //         x.type = "password";
-    //         v.type = "password";
-    //         y.style.display = "block";
-    //         z.style.display = "none";
-    //     }
-    // }
-</script>
-<script>
+    <style>#hide {  display: none;} .eye{ position: relative;}</style>
+    <script>
     function myFunction() {
-        var passwordFields = document.querySelectorAll('input[type="password"]');
-        var showButton = document.getElementById("hide");
-        var hideButton = document.getElementById("show");
+        var p = document.getElementById("inputconpassword3");
+        var q = document.getElementById("show1");
+        var r = document.getElementById("hide1");
+        if (p.type === 'password') {
+            p.type = "text";
+            q.style.display = "none";
+           r.style.display = "block";
+        }else {
+            p.type = "password";
+            q.style.display = "block";
+            r.style.display = "none";
+        } 
 
-        for (var i = 0; i < passwordFields.length; i++) {
-            if (passwordFields[i].type === 'password') {
-                passwordFields[i].type = "text";
-                hideButton.style.display = "block";
-                showButton.style.display = "none";
-            } else {
-                passwordFields[i].type = "password";
-                hideButton.style.display = "none";
-                showButton.style.display = "block";
-            }
+        var x = document.getElementById("inputconpassword4");
+        var y = document.getElementById("show");
+        var z = document.getElementById("hide");
+
+        if (x.type === 'password') {
+            x.type = "text";
+            y.style.display = "none";
+            z.style.display = "block";
+        }else {
+            x.type = "password";
+            y.style.display = "block";
+            z.style.display = "none";
         }
     }
 </script>
+
 <?php 
   if (isset($_POST['update'])) {
     $user = $_POST['user'];
@@ -372,7 +371,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
 
         if ($up) {
             echo '<script>alert("Update Successful");</script>';
-            header("Location: testing.php");
+            // header("Location: profile.php");
             exit;
         } else {
             echo '<script>alert("Update Failed");</script>';

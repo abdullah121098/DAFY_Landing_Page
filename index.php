@@ -73,7 +73,7 @@
                                 </li> -->
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
-                                    <div class="dropdown-menu fade-up m-0 text-end">
+                                    <div class="dropdown-menu fade-up m-0 justify-content-end">
                                         <a href="#team" class="dropdown-item">Our Team</a>
                                         <a href="#contact" class="dropdown-item">Contact Us</a>
                                         <a href="#expert" class="dropdown-item">Our Expert Help</a>
@@ -89,6 +89,7 @@
                         </div>
                     
                 </nav>
+
             <!-- ============================================== Navbar End ================================================= -->
 
             <!-- ============================================== slider Start ================================================= -->

@@ -26,8 +26,9 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");
 
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/loader.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
-  <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css" /> -->
-  <link rel="stylesheet" href="../assets/css/booking.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
 
 </head>
 
@@ -40,7 +41,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.php" class="text-nowrap logo-img">
+          <a href="./main.php" class="text-nowrap logo-img">
             <img src="../assets/images/logos/loader.png" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -55,7 +56,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="index.php" aria-expanded="false">
+              <a class="sidebar-link" href="main.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>

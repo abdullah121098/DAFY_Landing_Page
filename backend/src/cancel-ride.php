@@ -8,13 +8,13 @@ require_once "header.php";
           <div class="col-lg-100 d-flex align-items-center">
             <div class="card w-100">
               <div class="card-body p-4">
-                <h5 class="card-title fw-semibold mb-4">Cancel Ride List </h5>
+                <h5 class="card-title fw-semibold mb-4 text-center">Cancel Ride List </h5>
                 <!-- <button onclick="exportToExcel2()">Export to Excel</button> -->
                 <div class="table-responsive">
                     <form action="" method="post">
                         <table class="table text-nowrap mb-0 align-middle" id="data-table">
                             <thead class="text-dark fs-4">
-                                <tr>
+                                <tr class="h6">
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Id</h6>
                                     </th>
@@ -65,26 +65,26 @@ require_once "header.php";
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="h6">
                                     <?php  
                                     $a=date('Y-m-d H:i');
                                     // Fetch data from the 'review' table
-                                    $sq = mysqli_query($conn,"SELECT * FROM cancel");
+                                    $sq1 = mysqli_query($conn,"SELECT * FROM cancel");
                                     
-                                    $res= mysqli_num_rows($sq);
-                                    $rowsPerPage = 3; // Number of rows to display per page
-                                    $totalRows = $res; // Total number of rows in the table
+                                    $res1= mysqli_num_rows($sq1);
+                                    $rowsPerPage1 = 3; // Number of rows to display per page
+                                    $totalRows1 = $res1; // Total number of rows in the table
                                     
-                                    $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                    $page1 = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
                                     
-                                    $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
-                                    $end = $start + $rowsPerPage; // Calculate the ending row index
+                                    $start1 = ($page1 - 1) * $rowsPerPage1; // Calculate the starting row index
+                                    $end1 = $start1 + $rowsPerPage1; // Calculate the ending row index
 
                                     // Fetch data from the 'review' table
-                                    $sql = "SELECT * FROM cancel ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+                                    $sql = "SELECT * FROM cancel ORDER BY id DESC, Date DESC Limit $start1,$rowsPerPage1";
                                     $result = mysqli_query($conn,$sql);
 
-                                    $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
+                                    $index1 = ($page1 - 1) * $rowsPerPage1 + 1; // Calculate the starting index for the current page
                             
                                         if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
@@ -92,7 +92,7 @@ require_once "header.php";
                                     ?>
                                     <tr>
                                         <td class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
+                                            <h6 class="fw-semibold mb-0"><?php echo $index1++; ?></h6></td>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-1"><?php echo  $row['name'];  ?></h6>
                                         </td>
@@ -148,19 +148,21 @@ require_once "header.php";
                             </tbody>
                         </table>
                         
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-contena-end left" style="position: relative;border-box: 500px;">
-                                <?php if ($page > 1): ?>
-                                    <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-left"></i></a></li>
-                                <?php endif; ?>
-                                <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
-                                    <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
-                                <?php endfor; ?>
-                                <?php if ($page < ceil($totalRows / $rowsPerPage)): ?>
-                                    <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3"><i class="fas fa-angle-double-right"></i></a></li>
-                                <?php endif; ?>
-                            </ul>
-                        </nav>
+                                <nav aria-label="Page navigation example" >
+                                    <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                                        <?php if ($page1 > 1): ?>
+                                        <li class="page-item"><a href="?page=<?php echo ($page1 - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span></a></li>
+                                        <?php endif; ?>
+                                        <?php for ($i = 1; $i <= ceil($totalRows1 / $rowsPerPage1); $i++): ?>
+                                          <li class="page-item <?php echo ($page1 == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
+                                      <?php endfor; ?>
+                                        <?php if ($end1 < $totalRows1): ?>
+                                        <li class="page-item"><a href="?page=<?php echo ($page1 + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span></a></li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </nav>
                     </form>
                 </div>
               </div>
@@ -170,4 +172,4 @@ require_once "header.php";
 
     </div>
               <!-- ================================================== Footer  =======================================-->
-      <?php require_once 'footer.php'; ?>
+      <?php //require_once 'footer.php'; ?>

@@ -36,7 +36,8 @@ include '../database/connection.php';
                                             <div class="row">
                                                 <div class="col-10">
                                                     <div class="form-btn">
-                                                    <button type="submit" class="submit-btn rounded-pill text-center bg-warning w-100" name="addData">Add New </button>
+                                                    <button type="submit" class="submit-btn  rounded-pill btn btn-center bg-warning px-3 py-2 m-2" name="addData">
+                                                    <i class="fa-solid fa-file-arrow-up m-1"></i>Add New Review </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -97,12 +98,15 @@ include '../database/connection.php';
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Review</h6>
                                         </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Action</h6>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0"></h6>
+                                            <h6 class="fw-semibold mb-0"><?php echo $row['id']; ?></h6>
                                         </td>
                                         <td class="border-bottom-0">
                                             <input type="datetime" class="fw-semibold mb-1" value="<?php echo $row['date']; ?>" name="t-date">
@@ -114,8 +118,8 @@ include '../database/connection.php';
                                             <textarea class="fw-semibold mb-1 w-100 h-100"  rows="6" cols="50" name="t-review"><?php echo $row['review']; ?></textarea>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <button type="submit" class="btn btn-primary" name="update">Update</button>
-                                            <button type="submit" class="btn btn-primary" name="delete">Delete</button>
+                                            <button type="submit" class="btn btn-primary  text-black m-1" name="update"><i class="fa-solid fa-floppy-disk"></i></button>
+                                            <button type="submit" class="btn btn-primary text-black m-1" name="delete"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -191,7 +195,8 @@ include '../database/connection.php';
                                         </td>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <a href="?id=<?php echo $row['id']; ?>" name='edit' title="edit">edit</a>
+                                            <a href="?id=<?php echo $row['id']; ?>" name='edit' class="fw-semibold mb-1 rounded-pill px-3 py-2 btn-primary text-black" title="edit">
+                                                <i class="fa-solid fa-pen-to-square m-2"></i></a>
                                             </td>
                                     </tr> 
                                                 <?php
@@ -208,6 +213,9 @@ include '../database/connection.php';
                                         <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span></a></li>
                                         <?php endif; ?>
+                                        <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
+                                          <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
+                                      <?php endfor; ?>
                                         <?php if ($end < $totalRows): ?>
                                         <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span></a></li>

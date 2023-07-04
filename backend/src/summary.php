@@ -10,11 +10,10 @@ require_once "header.php";
                 <div class="card w-100">
                     <div class="card-body p-4">
                             <h5 class="card-title fw-semibold mb-4 text-center">Search</h5>
-                            <button onclick="exportToExcel()">Export to Excel</button>
                         <form method="POST">
                             <input type="date" name="date2" id="">
                             <input type="date" name="date3" id="">
-                            <select name="choose" id="">
+                            <select name="choose" id="choose">
                                 <option  selected>select</option>
                                 <option value="New Ride">New Ride</option>
                                 <option value="Completed">Completed</option>
@@ -23,6 +22,7 @@ require_once "header.php";
                             </select>
                             <input type="text" name="name" id="">
                             <input type="submit" name="show" value="search">
+                            <button onclick="exportToExcel()"><i class="fa-solid fa-file-export btn btn-primary text-black"></i></button>
                         </form>
                         <?php
                                         if(isset($_POST['show'])){
@@ -87,17 +87,15 @@ require_once "header.php";
                                                 </tr>
                                             </thead>
                                             <tbody> 
-                        <?php                        
+                                            <?php                        
                                                 switch($get){
                                                     case "Completed":
-                      
-                                           
-                                            // Fetch data from the 'review' table
-                                            $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE date BETWEEN '$a' AND '$b' ");
-                                            // $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE );
-                                            if (mysqli_num_rows($sql) > 0) {
-                                                while ($row= mysqli_fetch_array($sql)) {
-                                                    // Display each row of data
+                                                // Fetch data from the 'review' table
+                                                $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE date BETWEEN '$a' AND '$b' ");
+                                                // $sql = mysqli_query ($conn,"SELECT * FROM complete_ride  WHERE );
+                                                if (mysqli_num_rows($sql) > 0) {
+                                                    while ($row= mysqli_fetch_array($sql)) {
+                                                        // Display each row of data
                                             ?>
                                                 <tr>
                                                     <td class="border-bottom-0">
