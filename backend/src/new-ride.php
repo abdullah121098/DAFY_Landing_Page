@@ -1,5 +1,5 @@
-<?php
-include 'database/connection.php';
+<?php session_start();
+include '../database/connection.php';
 // $servername = "localhost"; // Replace with your database server name
 // $username = "root"; // Replace with your database username
 // $password = ""; // Replace with your database password

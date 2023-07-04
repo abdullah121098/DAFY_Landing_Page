@@ -1,6 +1,6 @@
 
 <?php
-include "database/connection.php";
+include "../database/connection.php";
 
 $g_id = $_GET['id'];
 // echo $g_id;

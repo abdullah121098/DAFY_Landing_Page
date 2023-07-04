@@ -1,4 +1,4 @@
-<?php require_once 'header.php'; ?>
+<?php session_start(); require_once 'header.php'; ?>
             <div class="container-fluid">
                 <div id="booking" class="section-center">
                     <div class="booking-form">
@@ -146,7 +146,7 @@
                                 display: none;
                             }
                         </style>
-                        <script src="assets/js/jquery.min.js"></script>
+                        <script src="../assets/js/jquery.min.js"></script>
                         <script>// Booking Button option 
                             $(document).ready(function() {
                                         // Initially hide all data sections

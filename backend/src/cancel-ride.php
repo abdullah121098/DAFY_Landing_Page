@@ -1,4 +1,4 @@
-<?php  include 'database/connection.php';
+<?php  include '../database/connection.php';
 require_once "header.php";
 ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->

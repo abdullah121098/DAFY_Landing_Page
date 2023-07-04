@@ -55,7 +55,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu">Home</span>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../index.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/index.php" aria-expanded="false">
             <span>
                 <i class="ti ti-layout-dashboard"></i>
             </span>
@@ -67,7 +67,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu"></span>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../new-ride.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/new-ride.php" aria-expanded="false">
             <span>
                 <i class="ti ti-article"></i>
             </span>
@@ -75,7 +75,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../cancel-ride.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/cancel-ride.php" aria-expanded="false">
             <span>
                 <i class="ti ti-alert-circle"></i>
             </span>
@@ -83,7 +83,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../complete-ride.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/complete-ride.php" aria-expanded="false">
             <span>
                 <i class="ti ti-cards"></i>
             </span>
@@ -91,7 +91,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../summary.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/summary.php" aria-expanded="false">
             <span>
                 <i class="ti ti-cards"></i>
             </span>
@@ -125,7 +125,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu">EXTRA</span>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../testimonial.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/testimonial.php" aria-expanded="false">
             <span>
                 <i class="ti ti-mood-happy"></i>
             </span>
@@ -133,7 +133,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../team.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/team.php" aria-expanded="false">
             <span>
                 <i class="ti ti-aperture"></i>
             </span>
@@ -141,7 +141,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="../banner.php" aria-expanded="false">
+            <a class="sidebar-link" href="../src/banner.php" aria-expanded="false">
             <span>
                 <i class="ti ti-mood-happy"></i>
             </span>
@@ -177,7 +177,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-            <a href="../new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
+            <a href="../src/new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2">Add New booking</a>
              
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
@@ -186,11 +186,11 @@ data-sidebar-position="fixed" data-header-position="fixed">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="../profile.php" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="profile.php" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
-                    <a href="../adduser.php" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="../src/adduser.php" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-mail fs-6"></i>
                       <p class="mb-0 fs-3">My Account</p>
                     </a>
@@ -198,7 +198,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a> -->
-                    <a href="login.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="logout.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
