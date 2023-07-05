@@ -1,13 +1,12 @@
 <?php include '../database/connection.php'; require_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
-
 <div class="container-fluid">
         <!--  Row 1 -->
         <div class="row">
             <div class="col-lg-100 d-flex align-items-center">
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4 text-center h4">Team Photo Add </h5>
+                        <h5 class="card-title fw-semibold mb-4 text-center">Team </h5>
                         <form method="POST" action="../database/team_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
                                     <div class="row">
                                         <div class="col-10">
@@ -35,11 +34,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                        <div class="row">
+                                        <div class="row m-3">
                                             <div class="col-10">
                                                 <div class="form-btn">
-                                                <button type="submit" class="submit-btn  rounded-pill btn btn-center bg-warning px-3 py-2 m-3" name="t_addData">
-                                                <i class="fa-solid fa-file-arrow-up m-1"></i>Add New Profile</button>
+                                                <button type="submit" class="submit-btn rounded-pill text btn btn-warning px-3 py-2" name="t_addData">Add New </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -107,7 +105,7 @@ if (isset($_GET['id'])) {
                 <div class="col-lg-100 d-flex align-items-center">
                     <div class="card w-100">
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-semibold mb-4">Testimonial Detail</h5>
+                            <h5 class="card-title fw-semibold mb-4">Team Detail</h5>
                             <div class="table-responsive">
                                 <form method="post" enctype="multipart/form-data">
                                     <table class="table text-nowrap mb-0 align-middle">
@@ -157,8 +155,8 @@ if (isset($_GET['id'])) {
                                                     <h6 class="fw-semibold mb-0">Action</h6>
                                                 </th>
                                                 <td class="border-bottom-0">
-                                                    <button type="submit" name="update"class="btn btn-primary text-black m-1"><i class="fa-solid fa-floppy-disk"></i><button>
-                                                    <button type="submit" name="delete"class="btn btn-primary  text-black  m-1"><i class="fa-solid fa-trash"></i></button>
+                                                    <button type="submit" name="update" class="fw-semibold mb-1 px-3 py-2 btn btn-primary rounded-pill text-black"><i class="fa-solid fa-pen-to-square m-2"></i></button>
+                                                    <button type="submit" name="delete" class="fw-semibold mb-1 px-3 py-2 btn btn-primary rounded-pill text-black"><i class="fa-solid fa-trash m-2"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -172,7 +170,8 @@ if (isset($_GET['id'])) {
 <?php
         }
     } else {
-        echo '<div class="row"><div class="col-lg-100 d-flex align-items-center"><div class="card w-100"><div class="card-body p-4"><p>No data found.</p></div></div></div></div>';
+        echo '<div class="row"><div class="col-lg-100 d-flex align-items-center"><div class="card w-100">
+        <div class="card-body p-4"><p>No data found.</p></div></div></div></div>';
     }
 } else {
     $sq = mysqli_query($conn, "SELECT * FROM team");
@@ -198,7 +197,7 @@ if (isset($_GET['id'])) {
         <div class="col-lg-100 d-flex align-items-center">
             <div class="card w-100">
                 <div class="card-body p-4">
-                    <h5 class="card-title fw-semibold mb-4">Testimonial Detail</h5>
+                    <h5 class="card-title fw-semibold mb-4 text-center">Team Detail</h5>
                     <div class="table-responsive">
                         <form method="post">
                             <table class="table text-nowrap mb-0 align-middle">
@@ -225,38 +224,39 @@ if (isset($_GET['id'])) {
                                     </tr>
                                 </thead>
                                 <tbody>
-<?php
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            // Display each row of data
-?>
-        <tr>
-            <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
-                <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['t_date']; ?></h6>
-            </td>
-            <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['t_name']; ?></h6>
-            </td>
-            <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-1"><?php echo $row['t_position']; ?></h6>
-            </td>
-            <td class="border-bottom-0">
-                <img class="fw-semibold mb-1" src="../assets/images/team/<?php echo $row['t_img']; ?>"
-                width="70" height="90">
-            </td>
-            <td class="border-bottom-0">
-                <a href="?id=<?php echo $row['id']; ?>" name='edit'class="btn btn-primary fw-semibold text-black"  title="Edit">
-                <i class="fa-solid fa-pen-to-square m-2"></i></a>
-            </td>
-        </tr>                                       
-<?php
-        }
-    } else {
-        echo '<tr><td colspan="12">No data found.</td></tr>';
-    }
-?>
+                                        <?php
+                                            if ($result->num_rows > 0) {
+                                                while ($row = $result->fetch_assoc()) {
+                                                    // Display each row of data
+                                        ?>
+                                    <tr>
+                                        <td class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
+                                            <td class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-1"><?php echo $row['t_date']; ?></h6>
+                                        </td>
+                                        <td class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-1"><?php echo $row['t_name']; ?></h6>
+                                        </td>
+                                        <td class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-1"><?php echo $row['t_position']; ?></h6>
+                                        </td>
+                                        <td class="border-bottom-0">
+                                            <img class="fw-semibold mb-1" src="../assets/images/team/<?php echo $row['t_img']; ?>"
+                                            width="70" height="90">
+                                        </td>
+                                        <td class="border-bottom-0">
+                                            <a href="?id=<?php echo $row['id']; ?>" name='edit' class="fw-semibold mb-1 rounded-pill px-3 py-2 btn-primary text-black">
+                                            <i class="fa-solid fa-pen-to-square m-2"></i>
+                                            </a>
+                                        </td>
+                                    </tr>                                       
+                                        <?php
+                                                }
+                                            } else {
+                                                echo '<tr><td colspan="12">No data found.</td></tr>';
+                                            }
+                                        ?>
                                 </tbody>
                             </table>
                             <nav aria-label="Page navigation example" >

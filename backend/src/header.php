@@ -23,11 +23,10 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/loader.png" />
-  <link rel="stylesheet" href="../assets/css/styles.min.css" />
-  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/loader.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   
 
 </head>
