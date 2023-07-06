@@ -3,19 +3,39 @@ include '../database/connection.php';
 
 include_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
-                                
+<?php 
+ $sq = mysqli_query($conn,"SELECT * FROM customer");
+ // $sq = mysqli_query($conn,"SELECT * FROM count");
+ $res= mysqli_num_rows($sq);
+
+ $rowsPerPage = 5; // Number of rows to display per page
+ $totalRows = $res; // Total number of rows in the table
+
+ $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+ 
+ $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+ $end = $start + $rowsPerPage; // Calculate the ending row index
+
+ // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
+ $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+ $result = mysqli_query($conn,$sql); 
+ 
+ $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
+
+?>
+
           <div class="container-fluid">
             <!--  Row 1 -->
             <div class="row">
-              <div class="col-lg-100 d-flex align-items-center">
-                <div class="card w-100">
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
                   <div class="card-body p-4">
                     <h5 class="card-title fw-semibold mb-4 text-center">New Ride List </h5>
                     <!-- <button onclick="exportToExcel()">Export to Excel</button> -->
                           
                     <div class="table-responsive">
                         <form action="" method="post">
-                            <table class="table text-nowrap mb-0 align-middle" id="data-table">
+                            <table class="table text-nowrap table-bordered mb-0 align-middle" id="data-table">
                               <thead class="text-dark fs-4">
                             
                                   </tr>
@@ -76,24 +96,6 @@ include_once "header.php"; ?>
                               </thead>
                               <tbody>
                                 <?php  
-                                        $sq = mysqli_query($conn,"SELECT * FROM customer");
-                                        // $sq = mysqli_query($conn,"SELECT * FROM count");
-                                        $res= mysqli_num_rows($sq);
-                                       
-                                        $rowsPerPage = 5; // Number of rows to display per page
-                                        $totalRows = $res; // Total number of rows in the table
-
-                                        $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
-                                        
-                                        $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
-                                        $end = $start + $rowsPerPage; // Calculate the ending row index
-
-                                        // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
-                                        $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
-                                        $result = mysqli_query($conn,$sql); 
-                                        
-                                        $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
-                                        
                                         if (mysqli_num_rows($result)> 0) {
                                       while ($row=mysqli_fetch_array($result)) {
                                           // Display each row of data?>
@@ -125,15 +127,11 @@ include_once "header.php"; ?>
                                           <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride-update.php?id=<?php echo $row['id']; ?>">
                                           <i class="fa-sharp fa-solid fa-eye eye" ></i>
                                           </a>
-                                              </label>
+                                            
                                           </div>
                                           </td>
                                         </tr> 
-                                          <?php
-                                        //    echo '<tr>
-                                        //    <td class="border-bottom-0"><h6 class="fw-semibold mb-0">' . $row['id'] . '</h6></td>
-                                        //    <td class="border-bottom-0"><h6 class="fw-semibold mb-1">' . $row['count'] . '</h6></td>
-                                        //  </tr>';
+                                       <?php
                                         }
                                       } else {
                                         echo '<tr><td colspan="12">No data found.</td></tr>';
@@ -141,7 +139,7 @@ include_once "header.php"; ?>
                                     ?>                                                                            
                                 </tbody>
                             </table>
-                            <nav aria-label="Page navigation example" >
+                                  <nav aria-label="Page navigation example" >
                                     <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
                                         <?php if ($page > 1): ?>
                                         <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
@@ -155,7 +153,7 @@ include_once "header.php"; ?>
                                         <span aria-hidden="true">&raquo;</span></a></li>
                                         <?php endif; ?>
                                     </ul>
-                                </nav>
+                                  </nav>
                           </form>
                   </div>
                 </div>
@@ -187,4 +185,4 @@ include_once "header.php"; ?>
            </style>
 
         <!-- ================================================== Footer  =======================================-->
-<?php //include_once 'footer.php'; ?>
+<?php include_once 'footer.php'; ?>

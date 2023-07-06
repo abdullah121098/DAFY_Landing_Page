@@ -172,4 +172,4 @@ require_once "header.php";
 
     </div>
               <!-- ================================================== Footer  =======================================-->
-      <?php //require_once 'footer.php'; ?>
+      <?php require_once 'footer.php'; ?>

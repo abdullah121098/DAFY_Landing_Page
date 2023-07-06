@@ -183,7 +183,7 @@ if ($sql->num_rows > 0) {
             </ul>
             <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                 <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                <a href="../new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
+                <a href="new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
             
                     <li class="nav-item dropdown">
                         <?php $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");  while ($pro= mysqli_fetch_array($sql)){ ?>

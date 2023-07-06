@@ -46,7 +46,7 @@ include '../database/connection.php';
                     <div class="row">
                         <div class="col-10">
                             <div class="form-btn">
-                            <button type="submit" class="submit-btn rounded-pill text-center bg-warning w-100" name="t_addData">Add New </button>
+                            <button type="submit" class="submit-btn rounded-pill btn btn-warning text-black m-3" name="t_addData">Add New </button>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ include '../database/connection.php';
 
 <div class="container-fluid"> 
 <?php
-if (isset($_GET['id'])) {
+    if (isset($_GET['id'])) {
     $editId = $_GET['id'];
 
     if (isset($_POST['update'])) {
@@ -68,11 +68,13 @@ if (isset($_GET['id'])) {
         $position = $_POST['t-position'];
         $name = $_POST['t-name'];
         $photo = $_FILES['t-photo']['name'];
-
+        $pass = $_POST['t-pass'];
+        $passcon = $_POST['t-passcon'];
         // Upload the photo file to the desired location
         move_uploaded_file($_FILES['t-photo']['tmp_name'], '../assets/images/profile/' . $photo);
 
-        $up = mysqli_query($conn, "UPDATE `admin`SET `a_date`='$date', `a_name`='$name', `a_position`='$position', `a_img`='$photo' WHERE sno=$editId");
+        $up = mysqli_query($conn, "UPDATE `admin`SET `a_date`='$date', `a_name`='$name', `a_position`='$position', 
+        `a_img`='$photo',`password`=' $pass',`password`='$passcon' WHERE sno=$editId");
 
         if ($up) {
             echo '<script>alert("Update Successful");</script>';
@@ -111,12 +113,12 @@ if (isset($_GET['id'])) {
 
     if (mysqli_num_rows($sql) > 0) {
         while ($row = mysqli_fetch_assoc($sql)) {
-            ?>
+?>
             <div class="row">
                 <div class="col-lg-100 d-flex align-items-center">
                     <div class="card w-100">
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-semibold mb-4">Testimonial Detail</h5>
+                            <h5 class="card-title fw-semibold mb-4">Team Detail</h5>
                             <div class="table-responsive">
                                 <form method="post" enctype="multipart/form-data">
                                     <table class="table text-nowrap mb-0 align-middle">
@@ -163,11 +165,29 @@ if (isset($_GET['id'])) {
                                             </tr>
                                             <tr>
                                                 <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Password</h6>
+                                                </th>
+                                                <td class="border-bottom-0">
+                                                    <input type="password" class="fw-semibold col-6" name="t-pass" value="<?php echo $row['password']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Password Confirm</h6>
+                                                </th>
+                                                <td class="border-bottom-0">
+                                                    <input type="password" class="fw-semibold col-6" name="t-passcon" value="<?php echo $row['password_confirm']; ?>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Action</h6>
                                                 </th>
                                                 <td class="border-bottom-0">
-                                                    <input type="submit" name="update" value="Save">
-                                                    <input type="submit" name="delete" value="Delete">
+                                                <button type="submit" name="update" class="fw-semibold mb-1 px-3 py-2 btn btn-primary rounded-pill text-black">
+                                                    <i class="fa-solid fa-pen-to-square m-2"></i></button>
+                                                    <button type="submit" name="delete" class="fw-semibold mb-1 px-3 py-2 btn btn-primary rounded-pill text-black">
+                                                        <i class="fa-solid fa-trash m-2"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -207,7 +227,7 @@ if (isset($_GET['id'])) {
         <div class="col-lg-100 d-flex align-items-center">
             <div class="card w-100">
                 <div class="card-body p-4">
-                    <h5 class="card-title fw-semibold mb-4">Testimonial Detail</h5>
+                    <h5 class="card-title fw-semibold mb-4 text-center">Team  Member List</h5>
                     <div class="table-responsive">
                         <form method="post">
                             <table class="table text-nowrap mb-0 align-middle">
@@ -228,6 +248,12 @@ if (isset($_GET['id'])) {
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Photo</h6>
                                         </th>
+                                        <!-- <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Password</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Confirm Password</h6>
+                                        </th> -->
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Action</h6>
                                         </th>
@@ -255,8 +281,15 @@ if (isset($_GET['id'])) {
                                                                 <img class="fw-semibold mb-1" src="../assets/images/profile/<?php echo $row['a_img']; ?>"
                                                                 width="70" height="90">
                                                             </td>
+                                                            <!-- <td class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-1"><?php echo $row['password']; ?></h6>
+                                                            </td>
                                                             <td class="border-bottom-0">
-                                                                <a href="?id=<?php echo $row['sno']; ?>" name='edit' title="Edit">Edit</a>
+                                                                <h6 class="fw-semibold mb-1"><?php echo $row['password_confirm']; ?></h6>
+                                                            </td> -->
+                                                            <td class="border-bottom-0">
+                                                                <a href="?id=<?php echo $row['sno']; ?>" name='edit' class="btn btn-primary text-black">
+                                                                <i class="fa-sharp fa-solid fa-eye eye" ></i></a>
                                                             </td>
                                                         </tr>                                       
                                                 <?php
