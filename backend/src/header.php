@@ -3,7 +3,7 @@ session_start();
 // echo $_SESSION['user'];
 // echo $_SESSION['id'];
 $session=$_SESSION['id'];
-$sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");   
+$sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");   
 
 ?>
 <!doctype html>

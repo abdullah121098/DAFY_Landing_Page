@@ -1,4 +1,219 @@
 <?php include '../database/connection.php';  require_once "header.php";?> 
+<div class="container-fluid">
+        <!--- New Form History --->              
+            <div class="row">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h4 class="text-c-red">Immediate Trip</h4>
+                    </div>
+                </div>
+                    <?php 
+                        $sql1 = "SELECT * FROM `customer` WHERE `ride_type`='one_trip' AND `time_ride`='immediate_trip'";
+                        $result1 = mysqli_query($conn, $sql1); 
+                        $index1 = 1;
+                        if ($a1 = mysqli_num_rows($result1)) { 
+                            $row1 = mysqli_fetch_array($result1);
+                    ?>
+                    <div class="col-sm-4 ">
+                        <div class="card  bg-info">
+                            <div class="card-body">
+                                <div class="row align-items-center ">
+                                    <div class="col-8">
+                                        <h4 class="text-c-red"><?php echo $a1; ?></h4>
+                                        <h6 class=" m-b-0 h5">One Ride Trip</h6>
+                                    </div>
+                                    <!-- <div class="col-4 text-right">
+                                        <i style="font-size:24px" class="fa">&#xf201;</i>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div id="support-chart2"></div>
+                            <div class="card-footer bg-c-red">
+                                <!-- <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="m-b-0 h5"></p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-down  f-16"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                        <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
+                    <?php 
+                        $sql2 = "SELECT * FROM `complete_ride` WHERE `ride_type`='round_trip' AND `time_ride`='immediate_trip'";
+                        $result2 = mysqli_query($conn, $sql2); 
+                        if ($a2 = mysqli_num_rows($result2)) { 
+                    ?>
+                    <div class="col-sm-4">
+                        <div class="card  bg-primary">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-green"><?php echo $a2; ?></h4>
+                                        <h6 class=" m-b-0 h5">Round Trip</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i style="font-size:24px" class="fa">&#xf201;</i>
+                                    </div>
+                                </div>
+                            </div>
+                        <div id="support-chart1"></div>
+                            <div class="card-footer bg-c-green">
+                                <!-- <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class=" m-b-0 h5">Round Trip</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up  f-16"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                <?php } else { echo '<tr><tdcolspan="4">No data found.</td></tr>'; } ?>
+                <?php 
+                    $sql3 = "SELECT * FROM `customer` WHERE `ride_type`='hospital_trip' AND `time_ride`='immediate_trip'";
+                    $result3 = mysqli_query($conn, $sql3); 
+                    if ($a3 = mysqli_num_rows($result3)) { 
+                        $row3 = mysqli_fetch_array($result3);
+                ?>
+                <div class="col-sm-4">
+                    <div class="card  bg-secondary">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h4 class="text-c-blue"><?php echo $a3; ?></h4>
+                                    <h4 class=" m-b-0">Hospital Assistance</h4>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <i style="font-size:24px" class="fa">&#xf201;</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="support-chart"></div>
+                        <div class="card-footer bg-c-blue">
+                            <!-- <div class="row align-items-center">
+                                <div class="col-9">
+                                    <p class=" m-b-0 h5 text-black">Hospital Assistance</p>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <i class="feather icon-trending-up  f-16"></i>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
+                        <!--- Schedule Trip --->
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h4 class="text-c-red">Schedule Trip</h4>
+                    </div>
+                </div>
+                    <?php 
+                        $sql4 = "SELECT * FROM `customer` WHERE `ride_type`='one_trip' AND `time_ride`='schedule_trip'";
+                        $result4 = mysqli_query($conn, $sql4); 
+                        $index4 = 1;
+                        if ($a4 = mysqli_num_rows($result4)) { 
+                           
+                    ?>
+                    <div class="col-sm-4">
+                        <div class="card  bg-warning">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-red"><?php echo $a4; ?></h4>
+                                        <h6 class=" m-b-0 h5">One Ride Trip</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i style="font-size:24px" class="fa">&#xf201;</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="support-chart2"></div>
+                            <div class="card-footer bg-c-red">
+                                <!-- <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="m-b-0 h5"></p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-down  f-16"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                        <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
+                    <?php 
+                        $sql5 = "SELECT * FROM `customer` WHERE `ride_type`='round_trip' AND `time_ride`='schedule_trip'";
+                        $result5 = mysqli_query($conn, $sql5); 
+                        if ($a5 = mysqli_num_rows($result5)) { 
+                    ?>
+                    <div class="col-sm-4">
+                        <div class="card  bg-danger">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-green"><?php echo $a5; ?></h4>
+                                        <h6 class=" m-b-0 h5">Round Trip</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i style="font-size:24px" class="fa">&#xf201;</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="support-chart1"></div>
+                            <div class="card-footer bg-c-green">
+                                <!-- <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class=" m-b-0 h5">Round Trip</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up  f-16"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                <?php } else { echo '<tr><tdcolspan="4">No data found.</td></tr>'; } ?>
+                <?php 
+                    $sql6 = "SELECT * FROM `customer` WHERE `ride_type`='hospital_trip' AND `time_ride`='schedule_trip'";
+                    $result6 = mysqli_query($conn, $sql6); 
+                    if ($a3 = mysqli_num_rows($result6)) { 
+                ?>
+                <div class="col-sm-4">
+                    <div class="card  bg-success">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h4 class="text-c-blue"><?php echo $a3; ?></h4>
+                                    <h4 class=" m-b-0">Hospital Assistance</h4>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <i style="font-size:24px" class="fa">&#xf201;</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="support-chart"></div>
+                        <div class="card-footer bg-c-blue">
+                            <!-- <div class="row align-items-center">
+                                <div class="col-9">
+                                    <p class=" m-b-0 h5 text-black">Hospital Assistance</p>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <i class="feather icon-trending-up  f-16"></i>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
+            </div>
+        <!-- New form History End -->
+
+
 <?php 
  $sq = mysqli_query($conn,"SELECT * FROM customer");
  // $sq = mysqli_query($conn,"SELECT * FROM count");
@@ -21,7 +236,7 @@
 ?>
 
                                    
-    <div class="container-fluid">
+    
       <div class="row">
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
@@ -62,7 +277,6 @@
                                 }else{ 
                                     echo "<p><a href='status.php?id=".$row['id']."&status=?' class='btn btn-info text-black'>".$row['status']."</a></p>"; 
                                 }
-
                             ?>
 
                         
@@ -96,382 +310,8 @@
                 </div>
             </div>
       </div> 
-                            <!-- New Ride -->
-            <div class="row">
-              <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title text-center">Ride Completed History</h4>
-                      <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead class="fw-bold text-black">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Ride Type</th>
-                                    <th>Time</th>
-                                    <th>Completed</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
-                                $sql1 = "SELECT * FROM `customer` WHERE `ride_type`='one_trip' AND `time_ride`='immediate_trip' AND `status`='Completed'";
-                                $result1 = mysqli_query($conn, $sql1); 
-                                $index1 = 1;
-                                if ($a1 = mysqli_num_rows($result1)) { 
-                                    $row1 = mysqli_fetch_array($result1);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row1['ride_type']; ?></td>
-                                        <td><?php echo $row1['time_ride']; ?></td>
-                                        <td><?php echo $a1; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql2 = "SELECT * FROM `customer` WHERE `ride_type`='round_trip' AND `time_ride`='immediate_trip'AND `status`='Completed'";
-                                $result2 = mysqli_query($conn, $sql2); 
-                                if ($a2 = mysqli_num_rows($result2)) { 
-                                    $row2 = mysqli_fetch_array($result2);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row2['ride_type']; ?></td>
-                                        <td><?php echo $row2['time_ride']; ?></td>
-                                        <td><?php echo $a2; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql3 = "SELECT * FROM `customer` WHERE `ride_type`='hospital_trip' AND `time_ride`='immediate_trip' AND `status`='Completed'";
-                                $result3 = mysqli_query($conn, $sql3); 
-                                if ($a3 = mysqli_num_rows($result3)) { 
-                                    $row3 = mysqli_fetch_array($result3);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row3['ride_type']; ?></td>
-                                        <td><?php echo $row3['time_ride']; ?></td>
-                                        <td><?php echo $a3; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                ?>
-                                <!-- schedule_trip -->
-                                  <?php 
-                                $sql1 = "SELECT * FROM `customer` WHERE `ride_type`='one_trip' AND `time_ride`='schedule_trip' AND `status`='Completed'";
-                                $result1 = mysqli_query($conn, $sql1); 
-                              
-                                if ($a1 = mysqli_num_rows($result1)) { 
-                                    $row1 = mysqli_fetch_array($result1);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row1['ride_type']; ?></td>
-                                        <td><?php echo $row1['time_ride']; ?></td>
-                                        <td><?php echo $a1; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql2 = "SELECT * FROM `customer` WHERE `ride_type`='round_trip' AND `time_ride`='schedule_trip' AND `status`='Completed'";
-                                $result2 = mysqli_query($conn, $sql2); 
-                                if ($a2 = mysqli_num_rows($result2)) { 
-                                    $row2 = mysqli_fetch_array($result2);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row2['ride_type']; ?></td>
-                                        <td><?php echo $row2['time_ride']; ?></td>
-                                        <td><?php echo $a2; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql3 = "SELECT * FROM `customer` WHERE `ride_type`='hospital_trip' AND `time_ride`='schedule_trip' AND `status`='Completed'";
-                                $result3 = mysqli_query($conn, $sql3); 
-                                if ($a3 = mysqli_num_rows($result3)) { 
-                                    $row3 = mysqli_fetch_array($result3);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row3['ride_type']; ?></td>
-                                        <td><?php echo $row3['time_ride']; ?></td>
-                                        <td><?php echo $a3; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                           <!-- Completed Ride -->
-            <div class="row">
-              <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title text-center">Ride Completed History</h4>
-                      <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead class="fw-bold text-black">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Ride Type</th>
-                                    <th>Time</th>
-                                    <th>Completed</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
-                                $sql1 = "SELECT * FROM `complete_ride` WHERE `ride_type`='one_trip' AND `time_ride`='immediate_trip'";
-                                $result1 = mysqli_query($conn, $sql1); 
-                                $index1 = 1;
-                                if ($a1 = mysqli_num_rows($result1)) { 
-                                    $row1 = mysqli_fetch_array($result1);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row1['ride_type']; ?></td>
-                                        <td><?php echo $row1['time_ride']; ?></td>
-                                        <td><?php echo $a1; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql2 = "SELECT * FROM `complete_ride` WHERE `ride_type`='round_trip' AND `time_ride`='immediate_trip'";
-                                $result2 = mysqli_query($conn, $sql2); 
-                                if ($a2 = mysqli_num_rows($result2)) { 
-                                    $row2 = mysqli_fetch_array($result2);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row2['ride_type']; ?></td>
-                                        <td><?php echo $row2['time_ride']; ?></td>
-                                        <td><?php echo $a2; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql3 = "SELECT * FROM `complete_ride` WHERE `ride_type`='hospital_trip' AND `time_ride`='immediate_trip'";
-                                $result3 = mysqli_query($conn, $sql3); 
-                                if ($a3 = mysqli_num_rows($result3)) { 
-                                    $row3 = mysqli_fetch_array($result3);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row3['ride_type']; ?></td>
-                                        <td><?php echo $row3['time_ride']; ?></td>
-                                        <td><?php echo $a3; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                ?>
-                                <!-- schedule_trip -->
-                                  <?php 
-                                $sql1 = "SELECT * FROM `complete_ride` WHERE `ride_type`='one_trip' AND `time_ride`='schedule_trip'";
-                                $result1 = mysqli_query($conn, $sql1); 
-                              
-                                if ($a1 = mysqli_num_rows($result1)) { 
-                                    $row1 = mysqli_fetch_array($result1);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row1['ride_type']; ?></td>
-                                        <td><?php echo $row1['time_ride']; ?></td>
-                                        <td><?php echo $a1; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql2 = "SELECT * FROM `complete_ride` WHERE `ride_type`='round_trip' AND `time_ride`='schedule_trip'";
-                                $result2 = mysqli_query($conn, $sql2); 
-                                if ($a2 = mysqli_num_rows($result2)) { 
-                                    $row2 = mysqli_fetch_array($result2);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row2['ride_type']; ?></td>
-                                        <td><?php echo $row2['time_ride']; ?></td>
-                                        <td><?php echo $a2; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql3 = "SELECT * FROM `complete_ride` WHERE `ride_type`='hospital_trip' AND `time_ride`='schedule_trip'";
-                                $result3 = mysqli_query($conn, $sql3); 
-                                if ($a3 = mysqli_num_rows($result3)) { 
-                                    $row3 = mysqli_fetch_array($result3);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row3['ride_type']; ?></td>
-                                        <td><?php echo $row3['time_ride']; ?></td>
-                                        <td><?php echo $a3; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                           <!-- Cancel Ride -->
-            <div class="row">
-              <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title text-center">Ride Cancel History</h4>
-                      <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead class="fw-bold text-black">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Ride Type</th>
-                                    <th>Time</th>
-                                    <th>Completed</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
-                                $sql1 = "SELECT * FROM `cancel` WHERE `ride_type`='one_trip' AND `time_ride`='immediate_trip'";
-                                $result1 = mysqli_query($conn, $sql1); 
-                                $index1 = 1;
-                                if ($a1 = mysqli_num_rows($result1)) { 
-                                    $row1 = mysqli_fetch_array($result1);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row1['ride_type']; ?></td>
-                                        <td><?php echo $row1['time_ride']; ?></td>
-                                        <td><?php echo $a1; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql2 = "SELECT * FROM `cancel` WHERE `ride_type`='round_trip' AND `time_ride`='immediate_trip'";
-                                $result2 = mysqli_query($conn, $sql2); 
-                                if ($a2 = mysqli_num_rows($result2)) { 
-                                    $row2 = mysqli_fetch_array($result2);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row2['ride_type']; ?></td>
-                                        <td><?php echo $row2['time_ride']; ?></td>
-                                        <td><?php echo $a2; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql3 = "SELECT * FROM `cancel` WHERE `ride_type`='hospital_trip' AND `time_ride`='immediate_trip'";
-                                $result3 = mysqli_query($conn, $sql3); 
-                                if ($a3 = mysqli_num_rows($result3)) { 
-                                    $row3 = mysqli_fetch_array($result3);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row3['ride_type']; ?></td>
-                                        <td><?php echo $row3['time_ride']; ?></td>
-                                        <td><?php echo $a3; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                ?>
-                                <!-- schedule_trip -->
-                                  <?php 
-                                $sql1 = "SELECT * FROM `cancel` WHERE `ride_type`='one_trip' AND `time_ride`='schedule_trip'";
-                                $result1 = mysqli_query($conn, $sql1); 
-                              
-                                if ($a1 = mysqli_num_rows($result1)) { 
-                                    $row1 = mysqli_fetch_array($result1);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row1['ride_type']; ?></td>
-                                        <td><?php echo $row1['time_ride']; ?></td>
-                                        <td><?php echo $a1; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql2 = "SELECT * FROM `cancel` WHERE `ride_type`='round_trip' AND `time_ride`='schedule_trip'";
-                                $result2 = mysqli_query($conn, $sql2); 
-                                if ($a2 = mysqli_num_rows($result2)) { 
-                                    $row2 = mysqli_fetch_array($result2);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row2['ride_type']; ?></td>
-                                        <td><?php echo $row2['time_ride']; ?></td>
-                                        <td><?php echo $a2; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                
-                                $sql3 = "SELECT * FROM `cancel` WHERE `ride_type`='hospital_trip' AND `time_ride`='schedule_trip'";
-                                $result3 = mysqli_query($conn, $sql3); 
-                                if ($a3 = mysqli_num_rows($result3)) { 
-                                    $row3 = mysqli_fetch_array($result3);
-                                ?>
-                                    <tr class="fw-semibold text-black">
-                                        <td><?php echo $index1++; ?></td>
-                                        <td><?php echo $row3['ride_type']; ?></td>
-                                        <td><?php echo $row3['time_ride']; ?></td>
-                                        <td><?php echo $a3; ?></td>
-                                    </tr>
-                                <?php  
-                                } else {
-                                    echo '<tr><td colspan="4">No data found.</td></tr>';
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                          
+         
+     
     </div>
     <style> .page-link{
               background:darkgrey;

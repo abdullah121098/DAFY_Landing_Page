@@ -4,7 +4,7 @@ include '../database/connection.php';
 
 $session = $_SESSION['id'];
 
-$sql = mysqli_query($conn, "SELECT * FROM `admin` WHERE `sno`='$session'");
+$sql = mysqli_query($conn, "SELECT * FROM `admin` WHERE `a_id`='$session'");
 if ($sql->num_rows > 0) {
     while ($view = mysqli_fetch_array($sql)) {
        
@@ -186,7 +186,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <a href="../new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
            
                 <li class="nav-item dropdown">
-                    <?php $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `sno`='$session'");  while ($pro= mysqli_fetch_array($sql)){ ?>
+                    <?php $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");  while ($pro= mysqli_fetch_array($sql)){ ?>
                     <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <!-- <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle"> -->
@@ -350,7 +350,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
 
     if ($pass == $conpass) {
         $up = mysqli_query($conn, "UPDATE `admin` SET `a_name`='$user', `a_mobile`='$mobile', `a_mail`='$mail',
-             `a_position`='$design', `a_date`='$date', `password`='$pass', `password_confirm`='$conpass' WHERE `sno`='$session'");
+             `a_position`='$design', `a_date`='$date', `password`='$pass', `password_confirm`='$conpass' WHERE `id`='$session'");
 
         for ($i = 0; $i < $totalFiles; $i++) {
             $img = $_FILES['photo']['name'][$i];
@@ -362,7 +362,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             if (!empty($img)) {
                 // Upload the photo file to the desired location
                 if (move_uploaded_file($tempFile, $targetFile)) {
-                    $up = mysqli_query($conn, "UPDATE `admin` SET `a_img`='$img' WHERE `sno`='$session'");
+                    $up = mysqli_query($conn, "UPDATE `admin` SET `a_img`='$img' WHERE `a_id`='$session'");
                 } else {
                     echo '<script>alert("File Upload Failed");</script>';
                 }

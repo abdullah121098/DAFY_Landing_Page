@@ -10,41 +10,60 @@ include '../database/connection.php';
         <div class="card w-100">
             <div class="card-body p-4">
                 <h5 class="card-title fw-semibold mb-4 text-center">Profile</h5>
-                <form method="POST" action="../database/profile_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
+                <form method="POST" action="../database/admin_add.php"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-6">
                         <div class="form-group">
                                     <label class="form-label">Name</label><br>
                                     <input class="form-control" type="text" name="t-name" required>
                             </div>
                         </div>
-                        <div class="col-10">
+                        <div class="col-6">
                             <div class="form-group">
-                                    <label class="form-label">Date</label><br>
-                                    <input class="form-control" type="text" name="t-date" required>
+                                    <label class="form-label">Mobile</label><br>
+                                    <input class="form-control" type="tel" name="t-mobile" max-length="10" required >
                             </div>
                         </div>
-                        <div class="col-10">
+                        <div class="col-6">
                             <div class="form-group">
-                                    <label class="form-label">Address</label><br>
-                                    <input class="form-control" type="text" name="t-address" required>
+                                    <label class="form-label">E-Mail</label><br>
+                                    <input class="form-control" type="text" name="t-email" required>
                             </div>
                         </div>
-                        <div class="col-10">
+                        <div class="col-6">
+                            <div class="form-group">
+                                    <label class="form-label">Position</label><br>
+                                    <input class="form-control" type="text" name="t-position" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
                             <div class="form-group">
                                 <label class="form-label"> Date </label><br>
                                 <input class="form-control" type="datetime-local"  name="t-date" required>
                             </div>
                         </div>
-                        <div class="col-10">
+                        <div class="col-6">
                             <div class="form-group">
                                 <label class="form-label">Photo</label><br>
+                                <!-- <img class="fw-semibold" src="../assets/images/profile/" width="70" height="90"> -->
                                 <input type="file" name="t-img" id="Upload" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                    <label class="form-label">Password</label><br>
+                                    <input class="form-control" type="text" name="t-pass" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                    <label class="form-label">Password Confim</label><br>
+                                    <input class="form-control" type="text" name="t-passcon" required>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-6">
                             <div class="form-btn">
                             <button type="submit" class="submit-btn rounded-pill btn btn-warning text-black m-3" name="t_addData">Add New </button>
                             </div>
@@ -74,7 +93,7 @@ include '../database/connection.php';
         move_uploaded_file($_FILES['t-photo']['tmp_name'], '../assets/images/profile/' . $photo);
 
         $up = mysqli_query($conn, "UPDATE `admin`SET `a_date`='$date', `a_name`='$name', `a_position`='$position', 
-        `a_img`='$photo',`password`=' $pass',`password`='$passcon' WHERE sno=$editId");
+        `a_img`='$photo',`password`=' $pass',`password`='$passcon' WHERE a_id=$editId");
 
         if ($up) {
             echo '<script>alert("Update Successful");</script>';
@@ -87,7 +106,7 @@ include '../database/connection.php';
         $editId = $_GET['id'];
 
         // Retrieve the file name from the database before deleting the row
-        $fileResult = mysqli_query($conn, "SELECT `a_img` FROM `admin` WHERE sno=$editId");
+        $fileResult = mysqli_query($conn, "SELECT `a_img` FROM `admin` WHERE a_id=$editId");
         if (mysqli_num_rows($fileResult) > 0) {
             $fileRow = mysqli_fetch_assoc($fileResult);
             $fileName = $fileRow['a_img'];
@@ -99,7 +118,7 @@ include '../database/connection.php';
             }
         }
 
-        $del = mysqli_query($conn, "DELETE FROM `admin` WHERE `sno`=$editId");
+        $del = mysqli_query($conn, "DELETE FROM `admin` WHERE `a_id`=$editId");
         if ($del) {
             echo '<script>alert("Delete Successful");</script>';
            
@@ -109,7 +128,7 @@ include '../database/connection.php';
         }
     }
 
-    $sql = mysqli_query($conn, "SELECT * FROM `admin` WHERE `sno`=$editId");
+    $sql = mysqli_query($conn, "SELECT * FROM `admin` WHERE `a_id`=$editId");
 
     if (mysqli_num_rows($sql) > 0) {
         while ($row = mysqli_fetch_assoc($sql)) {
@@ -127,7 +146,7 @@ include '../database/connection.php';
                                                 <th class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">Id</h6>
                                                 </th><td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0 col-6" name="t-id"><?php echo $row['sno']; ?></h6>
+                                                    <h6 class="fw-semibold mb-0 col-6" name="t-id"><?php echo $row['a_id']; ?></h6>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -217,7 +236,7 @@ include '../database/connection.php';
     $end = $start + $rowsPerPage; // Calculate the ending row index
 
     // Fetch data from the 'review' table
-    $sql = "SELECT * FROM `admin` ORDER BY sno DESC LIMIT $start, $rowsPerPage";
+    $sql = "SELECT * FROM `admin` ORDER BY a_id DESC LIMIT $start, $rowsPerPage";
     $result = $conn->query($sql);
 
     $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
@@ -288,7 +307,7 @@ include '../database/connection.php';
                                                                 <h6 class="fw-semibold mb-1"><?php echo $row['password_confirm']; ?></h6>
                                                             </td> -->
                                                             <td class="border-bottom-0">
-                                                                <a href="?id=<?php echo $row['sno']; ?>" name='edit' class="btn btn-primary text-black">
+                                                                <a href="?id=<?php echo $row['a_id']; ?>" name='edit' class="btn btn-primary text-black">
                                                                 <i class="fa-sharp fa-solid fa-eye eye" ></i></a>
                                                             </td>
                                                         </tr>                                       
