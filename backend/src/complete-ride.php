@@ -169,12 +169,6 @@ require_once "header.php";
             </div>
         </div>
     </div>
-    <style>
-       .page-link{
-            background: black;
-            font-style: bold;
-            color: white;
-          }
-        </style>
+    <style> .page-link{ background: black; font-style: bold; color: white; } </style>
         <!-- ================================================== Footer  =======================================-->
             <?php  require_once "footer.php"; ?>

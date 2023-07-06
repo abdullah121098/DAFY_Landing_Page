@@ -17,7 +17,7 @@ if(isset($_POST['access'])){
   // echo $no;
   
   if($no ==1){ while ($v=mysqli_fetch_array($check)) {
-    $_SESSION['user']=$v['a_name']; $_SESSION['id']=$v['sno']; 
+    $_SESSION['user']=$v['a_name']; $_SESSION['id']=$v['a_id']; 
     // header('Location:sample.php');
     header('Location:main.php');
   } }
