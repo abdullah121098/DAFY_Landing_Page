@@ -22,26 +22,16 @@
                                         <h4 class="text-c-red"><?php echo $a1; ?></h4>
                                         <h6 class=" m-b-0 h5">One Ride Trip</h6>
                                     </div>
-                                    <!-- <div class="col-4 text-right">
-                                        <i style="font-size:24px" class="fa">&#xf201;</i>
-                                    </div> -->
+                                    <div class="col-4 text-right">
+                                        <i style="font-size:34px" class="fa">&#xf201;</i>
+                                    </div>
                                 </div>
                             </div>
-                            <div id="support-chart2"></div>
-                            <div class="card-footer bg-c-red">
-                                <!-- <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class="m-b-0 h5"></p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-down  f-16"></i>
-                                    </div>
-                                </div> -->
-                            </div>
+                            
                         </div>
                     </div>
-                        <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
-                    <?php 
+                    <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } 
+
                         $sql2 = "SELECT * FROM `complete_ride` WHERE `ride_type`='round_trip' AND `time_ride`='immediate_trip'";
                         $result2 = mysqli_query($conn, $sql2); 
                         if ($a2 = mysqli_num_rows($result2)) { 
@@ -55,25 +45,15 @@
                                         <h6 class=" m-b-0 h5">Round Trip</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i style="font-size:24px" class="fa">&#xf201;</i>
+                                         <i class="ti ti-a-b-2" style="font-size:34px"></i>
                                     </div>
                                 </div>
                             </div>
-                        <div id="support-chart1"></div>
-                            <div class="card-footer bg-c-green">
-                                <!-- <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class=" m-b-0 h5">Round Trip</p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-up  f-16"></i>
-                                    </div>
-                                </div> -->
-                            </div>
+                        
                         </div>
                     </div>
-                <?php } else { echo '<tr><tdcolspan="4">No data found.</td></tr>'; } ?>
-                <?php 
+                <?php } else { echo '<tr><tdcolspan="4">No data found.</td></tr>'; } 
+
                     $sql3 = "SELECT * FROM `customer` WHERE `ride_type`='hospital_trip' AND `time_ride`='immediate_trip'";
                     $result3 = mysqli_query($conn, $sql3); 
                     if ($a3 = mysqli_num_rows($result3)) { 
@@ -88,25 +68,17 @@
                                     <h4 class=" m-b-0">Hospital Assistance</h4>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <i style="font-size:24px" class="fa">&#xf201;</i>
+                                    <i class="ti ti-ambulance" style="font-size:34px"></i>
                                 </div>
                             </div>
                         </div>
-                        <div id="support-chart"></div>
-                        <div class="card-footer bg-c-blue">
-                            <!-- <div class="row align-items-center">
-                                <div class="col-9">
-                                    <p class=" m-b-0 h5 text-black">Hospital Assistance</p>
-                                </div>
-                                <div class="col-3 text-right">
-                                    <i class="feather icon-trending-up  f-16"></i>
-                                </div>
-                            </div> -->
-                        </div>
+                        
                     </div>
                 </div>
                 <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
-                        <!--- Schedule Trip --->
+                        
+                <!--- Schedule Trip --->
+
                 <div class="row align-items-center">
                     <div class="col-8">
                         <h4 class="text-c-red">Schedule Trip</h4>
@@ -128,25 +100,15 @@
                                         <h6 class=" m-b-0 h5">One Ride Trip</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i style="font-size:24px" class="fa">&#xf201;</i>
+                                        <i style="font-size:34px" class="fa">&#xf201;</i>
                                     </div>
                                 </div>
                             </div>
-                            <div id="support-chart2"></div>
-                            <div class="card-footer bg-c-red">
-                                <!-- <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class="m-b-0 h5"></p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-down  f-16"></i>
-                                    </div>
-                                </div> -->
-                            </div>
+                           
                         </div>
                     </div>
-                        <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
-                    <?php 
+                    <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; }
+
                         $sql5 = "SELECT * FROM `customer` WHERE `ride_type`='round_trip' AND `time_ride`='schedule_trip'";
                         $result5 = mysqli_query($conn, $sql5); 
                         if ($a5 = mysqli_num_rows($result5)) { 
@@ -160,25 +122,15 @@
                                         <h6 class=" m-b-0 h5">Round Trip</h6>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <i style="font-size:24px" class="fa">&#xf201;</i>
+                                        <i class="ti ti-a-b-2" style="font-size:34px"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div id="support-chart1"></div>
-                            <div class="card-footer bg-c-green">
-                                <!-- <div class="row align-items-center">
-                                    <div class="col-9">
-                                        <p class=" m-b-0 h5">Round Trip</p>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <i class="feather icon-trending-up  f-16"></i>
-                                    </div>
-                                </div> -->
-                            </div>
+                           
                         </div>
                     </div>
-                <?php } else { echo '<tr><tdcolspan="4">No data found.</td></tr>'; } ?>
-                <?php 
+                <?php } else { echo '<tr><tdcolspan="4">No data found.</td></tr>'; } 
+
                     $sql6 = "SELECT * FROM `customer` WHERE `ride_type`='hospital_trip' AND `time_ride`='schedule_trip'";
                     $result6 = mysqli_query($conn, $sql6); 
                     if ($a3 = mysqli_num_rows($result6)) { 
@@ -192,52 +144,40 @@
                                     <h4 class=" m-b-0">Hospital Assistance</h4>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <i style="font-size:24px" class="fa">&#xf201;</i>
+                                    <i class="ti ti-ambulance" style="font-size:34px"></i>
                                 </div>
                             </div>
                         </div>
-                        <div id="support-chart"></div>
-                        <div class="card-footer bg-c-blue">
-                            <!-- <div class="row align-items-center">
-                                <div class="col-9">
-                                    <p class=" m-b-0 h5 text-black">Hospital Assistance</p>
-                                </div>
-                                <div class="col-3 text-right">
-                                    <i class="feather icon-trending-up  f-16"></i>
-                                </div>
-                            </div> -->
-                        </div>
+                        
                     </div>
                 </div>
                 <?php } else { echo '<tr><td colspan="4">No data found.</td></tr>'; } ?>
+                        
+              
+
             </div>
+
         <!-- New form History End -->
-
-
 <?php 
- $sq = mysqli_query($conn,"SELECT * FROM customer");
- // $sq = mysqli_query($conn,"SELECT * FROM count");
- $res= mysqli_num_rows($sq);
+    $sq = mysqli_query($conn,"SELECT * FROM customer");
+    // $sq = mysqli_query($conn,"SELECT * FROM count");
+    $res= mysqli_num_rows($sq);
 
- $rowsPerPage = 5; // Number of rows to display per page
- $totalRows = $res; // Total number of rows in the table
+    $rowsPerPage = 5; // Number of rows to display per page
+    $totalRows = $res; // Total number of rows in the table
 
- $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
- 
- $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
- $end = $start + $rowsPerPage; // Calculate the ending row index
-
- // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
- $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
- $result = mysqli_query($conn,$sql); 
- 
- $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
-
-?>
-
-                                   
+    $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
     
-      <div class="row">
+    $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+    $end = $start + $rowsPerPage; // Calculate the ending row index
+
+    // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
+    $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+    $result = mysqli_query($conn,$sql); 
+    
+    $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
+?>
+        <div class="row">
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
