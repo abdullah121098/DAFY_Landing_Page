@@ -42,16 +42,16 @@
     <!-- Spinner End -->
             
             <!-- ============================================== Navbar Start ================================================= -->
-                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0" id="navbar">
-                    
+            
+                    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0" id="navbar">
                         <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-1 m-0">
                             <img src="assert/img/logo/dafy.jpeg" style="width: 4rem;" alt="icon" srcset="">
                         </a>
                         <button type="button" class="navbar-toggler me-2 justify-content-end" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-end  text-end" id="navbarCollapse">
-                            <ul class="navbar-nav p-3 p-lg-0">
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                            <ul class="navbar-nav p-3 p-lg-0 text-end">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">Home</a>
                                 </li>
@@ -73,13 +73,14 @@
                                 </li> -->
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
-                                    <div class="dropdown-menu fade-up m-0 justify-content-end">
-                                        <a href="#team" class="dropdown-item">Our Team</a>
-                                        <a href="#contact" class="dropdown-item">Contact Us</a>
-                                        <a href="#expert" class="dropdown-item">Our Expert Help</a>
-                                        <a href="#testimonial" class="dropdown-item">Testimonial</a>
+                                    <div class="dropdown-menu fade-up m-0 text-end p-2">
+                                        <a href="#expert" class="dropdown-item h6">Our Expert Help</a>
+                                        <a href="#team" class="dropdown-item h6">Our Team</a>
+                                        <a href="#testimonial" class="dropdown-item h6">Testimonial</a>
+                                        <a href="#contact" class="dropdown-item h6">Contact Us</a>
                                     </div>
                                 </li>
+                                
                                 <!-- <li class="nav-item d-none d-lg-inline-block col-sm-4 text-start">
                                     <a href="https://play.google.com/store/apps/details?id=com.dafy" class="btn btn-warning rounded-pill py-3 px-1">
                                         <b>Download App</b>

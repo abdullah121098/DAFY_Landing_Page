@@ -62,16 +62,21 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                 <span class="hide-menu">Dashboard</span>
               </a>
             </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu"></span>
-            </li>
+           
             <li class="sidebar-item">
               <a class="sidebar-link" href="new-ride.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">New Ride-Booking</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="re-schedule.php" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Re-Schedule Booking</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -135,7 +140,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
             <li class="sidebar-item">
               <a class="sidebar-link" href="team.php" aria-expanded="false">
                 <span>
-                  <i class="ti ti-aperture"></i>
+                  <i class="ti ti-ambulance"></i>
                 </span>
                 <span class="hide-menu">Team Detail</span>
               </a>

@@ -14,7 +14,8 @@
 ?>
 
 <div class="container-responsive">
-            <!--  Row 1 -->
+    <div class="container-fluid">     
+      <!--  Row 1 -->
             <div class="row g-3">
               <div class="col-lg-100 d-flex align-items-center">
                 <div class="card w-100">
@@ -135,7 +136,7 @@
                                                       <option selected disabled>Select</option>
                                                       <option>Amal</option>
                                                       <option>jijo</option>
-                                                      <option>Drive Started</option>
+                                                      <option>kanna</option>
                                                       <option>siva</option>
                                                       <option>Cancel</option>
                                                 </select>
@@ -170,6 +171,7 @@
                                                       <option>Confirm</option>
                                                       <option>Driver Assigned</option>
                                                       <option>Drive Started</option>
+                                                      <option>Re-Schedule</option>
                                                       <option>Completed</option>
                                                       <option>Cancel</option>
                                                       <span class="select-arrow"></span>
@@ -192,6 +194,7 @@
                 </div>
               </div>
             </div>
+    </div>
 </div>
       <style>.form-control{ color:black;  font-family: Arial, Helvetica, sans-serif;}</style>
   <?php } }
@@ -246,6 +249,38 @@
             } else {
               echo 'Update failed';
             }
+          break;
+          
+          case 'Re-Schedule':
+            $complete = mysqli_query($conn,"UPDATE `customer` SET `payment_type`='$c',`payment`='$d', `status` = '$b'  WHERE id = $g_id");
+            if($complete) {
+              echo '<script>alert("Confirm booking");</script>';
+          
+              $moveQuery = "INSERT INTO  `re_schedule` (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status)
+                            SELECT name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status
+                            FROM customer
+                            WHERE id = $g_id";
+
+              $moveResult = mysqli_query($conn, $moveQuery);
+
+              if ($moveResult) {
+                // Delete the record from the 'customer' table
+                $deleteQuery = "DELETE FROM customer WHERE id = $g_id";
+                $deleteResult = mysqli_query($conn, $deleteQuery);
+
+                if ($deleteResult) {
+                  echo '<script>alert("Data moved to completed table.");</script>';
+                } else {
+                  echo 'Failed to delete the record.';
+                }
+              } else {
+                echo 'Failed to move data to the completed table.';
+              }  
+              header("Location:main.php");
+              exit();
+            } else {
+                echo 'Update failed';
+              }
           break;
 
           case 'Completed':

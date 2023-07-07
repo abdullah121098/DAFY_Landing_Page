@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div>
    
 </html>
-<script>
+    <script>
         var data = <?php echo json_encode($data); ?>;
         var data1 = <?php echo json_encode($data1); ?>;
         var labels = Object.keys(data);
