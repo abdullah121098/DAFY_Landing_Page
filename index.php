@@ -43,7 +43,7 @@
             
             <!-- ============================================== Navbar Start ================================================= -->
             
-                    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0" id="navbar">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0" id="navbar">
                         <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-1 m-0">
                             <img src="assert/img/logo/dafy.jpeg" style="width: 4rem;" alt="icon" srcset="">
                         </a>
@@ -129,11 +129,13 @@
                                                             <span class="">professional driver</span>
                                                             <span class="">on demand</span>
                                                         </h1>  
-                                                        <a class="d-inline-flex align-items-center bg-warning rounded-pill py-3 px-4 animated slideInLeft"
+                                                        <a class="d-inline-flex align-items-center btn btn-warning rounded-pill py-3 px-4 animated slideInLeft"
                                                             href="tel:917592933933">
                                                             <!-- <span class="btn-lg-square" style="width: 55px; height: 55px;">
                                                                 <i class="fa fa-phone-alt text-white"></i></span> -->
-                                                                <span class="fs-5 fw-medium mx-4" style="color:black;">Call Now</span>
+                                                                <i class='fa fa-solid fa-phone-alt  text-white'></i>
+                                                                <span class="fs-5 fw-medium mx-4" style="color:black;">
+                                                               Call Now</span>
                                                             </a>
                                                         <!-- <a href="" class="btn btn-light rounded-pill py-3 px-4 animated slideInLeft"
                                                         data-bs-toggle="modal" data-bs-target="#book1"
@@ -800,9 +802,9 @@
                             <a class="btn btn-link" href="#about">About Us</a>
                             <a class="btn btn-link" href="#expert">Contact Us</a>
                             <a class="btn btn-link" href="#service">Our Services</a>
-                            <a class="btn btn-link" href="notes/term.php">Terms & Condition</a>
+                            <a class="btn btn-link" href="assert/notes/term.php">Terms & Condition</a>
                             <a class="btn btn-link" href="">Support</a>
-                            <a class="btn btn-link" href="notes/policy.php">Policy</a>
+                            <a class="btn btn-link" href="assert/notes/policy.php">Policy</a>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <h4 class="text-white mb-4">Business Hours</h4>

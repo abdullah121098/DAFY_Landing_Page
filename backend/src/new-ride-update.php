@@ -252,11 +252,34 @@
           break;
           
           case 'Re-Schedule':
+            // Retrieve the current date, time, ride type, and time ride
+            $currentDate = date('Y-m-d');
+            $currentTime = date('H:i:s');
+            $currentRideType = $edit['ride_type'];
+            $currentTimeRide = $edit['time_ride'];
+        
+            // Check if the conditions for re-scheduling are met
+            if ($date > $currentDate || ($date == $currentDate && $time > $currentTime) || $ridetype != $currentRideType || $time > $currentTimeRide) {
+                $complete = mysqli_query($conn, "UPDATE `customer` SET `payment_type`='$c', `payment`='$d', `status`='$b' WHERE id = $g_id");
+                if ($complete) {
+                  echo '<script>alert("Re-Schedule booking");</script>';
+          
+                  header("Location: main.php");
+                  exit();
+                  } else {
+                      echo 'Update failed';
+                  }
+                } else {
+                  echo 'Re-scheduling conditions are not met.';
+              }
+              break;
+
+          case 'Completed':
             $complete = mysqli_query($conn,"UPDATE `customer` SET `payment_type`='$c',`payment`='$d', `status` = '$b'  WHERE id = $g_id");
             if($complete) {
               echo '<script>alert("Confirm booking");</script>';
           
-              $moveQuery = "INSERT INTO  `re_schedule` (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status)
+              $moveQuery = "INSERT INTO complete_ride (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status)
                             SELECT name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status
                             FROM customer
                             WHERE id = $g_id";
@@ -283,96 +306,83 @@
               }
           break;
 
-          case 'Completed':
-            $complete = mysqli_query($conn,"UPDATE `customer` SET `payment_type`='$c',`payment`='$d', `status` = '$b'  WHERE id = $g_id");
-            if($complete) {
-              echo '<script>alert("Confirm booking");</script>';
-          
-              // $moveQuery = "INSERT INTO complete_ride (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status)
-              //               SELECT name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status
-              //               FROM customer
-              //               WHERE id = $g_id";
-
-              // $moveResult = mysqli_query($conn, $moveQuery);
-
-              // if ($moveResult) {
-              //   // Delete the record from the 'customer' table
-              //   $deleteQuery = "DELETE FROM customer WHERE id = $g_id";
-              //   $deleteResult = mysqli_query($conn, $deleteQuery);
-
-              //   if ($deleteResult) {
-              //     echo '<script>alert("Data moved to completed table.");</script>';
-              //   } else {
-              //     echo 'Failed to delete the record.';
-              //   }
-              // } else {
-              //   echo 'Failed to move data to the completed table.';
-              // }  
-              header("Location:main.php");
-              exit();
-            } else {
-                echo 'Update failed';
-              }
-          break;
-
           case 'Cancel':
             $cancel = mysqli_query($conn,"UPDATE `customer` SET `status` = '$b' WHERE id = $g_id");
             if($cancel) {
               echo '<script>alert("Confirm booking");</script>';
             
-              // $moveQuery = "INSERT INTO cancel (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status)
-              //               SELECT name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status
-              //               FROM customer WHERE id = $g_id";
+              $moveQuery = "INSERT INTO cancel (name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status)
+                            SELECT name, email, phone, pick_up, drop_in, ride_type, time_ride, date, time, v_name, v_type, driver_name, payment_type, payment, status
+                            FROM customer WHERE id = $g_id";
 
-              // $moveResult = mysqli_query($conn, $moveQuery);
+              $moveResult = mysqli_query($conn, $moveQuery);
 
-              // if ($moveResult) {
-              //   // Delete the record from the 'customer' table
-              //   $deleteQuery = "DELETE FROM customer WHERE id = $g_id";
-              //   $deleteResult = mysqli_query($conn, $deleteQuery);
+              if ($moveResult) {
+                // Delete the record from the 'customer' table
+                $deleteQuery = "DELETE FROM customer WHERE id = $g_id";
+                $deleteResult = mysqli_query($conn, $deleteQuery);
 
-              //   if ($deleteResult) {
-              //     echo '<script>alert("Data moved to completed table.");</script>';
+                if ($deleteResult) {
+                  echo '<script>alert("Data moved to completed table.");</script>';
                 
-              //   } else {
-              //     echo 'Failed to delete the record.';
-              //   }
-              // } else {
-              //   echo 'Failed to move data to the completed table.';
-              // }
+                } else {
+                  echo 'Failed to delete the record.';
+                }
+              } else {
+                echo 'Failed to move data to the completed table.';
+              }
               header("Location:main.php");
               exit();
             } else {
               echo 'Update failed';
             }
           break; 
+          default:
+              $updateQuery = "UPDATE `customer` SET
+                  `name`='$name', `email`='$email', `phone`='$phone', `pick_up`='$pick', `drop_in`='$drop',
+                  `ride_type`='$ride', `time_ride`='$ridetype', `date`='$date', `time`='$time', `v_name`='$vname',
+                  `v_type`='$vtype' 
+                  -- ,`driver_name`='$a', `payment_type`='$c', `payment`='$d', `status`='$b'
+                  WHERE id = $g_id";
+
+              $updateResult = mysqli_query($conn, $updateQuery);
+
+              if ($updateResult) {
+                  echo '<script>alert("Update successful");</script>';
+                  header("Location: main.php");
+                  exit();
+              } else {
+                  echo 'Update failed';
+              }
+            break;
+
         }
-      } else if(isset($_POST['updateall'])){
-          $name=$_POST['e-name'];
-          $email=$_POST['e-email'];
-          $phone=$_POST['e-phone'];
-          $drop=$_POST['e-drop'];
-          $pick=$_POST['e-pick'];
-          $ride=$_POST['e-ride'];
-          $ridetype=$_POST['e-service'];
-          $date=$_POST['e-date'];
-          $time=$_POST['e-time'];
-          $vname=$_POST['e-vname'];
-          $vtype=$_POST['e-vtype'];
-          $a = $_POST['driver'];
-          $b = $_POST['status'];
-          $c=$_POST['paytype'];
-          $d=$_POST['payment'];
-          $all = "UPDATE `customer` SET `name`='$name',`email`='$email',`phone`='$phone',`pick_up`='$pick',`drop_in`='$drop',`ride_type`='$ride',`time_ride`='$ridetype',
-          `date`='$date',`time`='$time',`v_name`='$vname',`v_type`='$vtype',`driver_name`='$a',
-          `payment_type`='$c',`payment`='$d',`status`='$b' WHERE id = $g_id";
-          if($all) {
-            echo '<script>alert("Confirm booking");</script>';
-            header("Location:main.php");
-            exit();
-          } else {
-            echo 'Update failed';
-          }
+      // } else {//if(isset($_POST['updateall'])){
+      //     $name=$_POST['e-name'];
+      //     $email=$_POST['e-email'];
+      //     $phone=$_POST['e-phone'];
+      //     $drop=$_POST['e-drop'];
+      //     $pick=$_POST['e-pick'];
+      //     $ride=$_POST['e-ride'];
+      //     $ridetype=$_POST['e-service'];
+      //     $date=$_POST['e-date'];
+      //     $time=$_POST['e-time'];
+      //     $vname=$_POST['e-vname'];
+      //     $vtype=$_POST['e-vtype'];
+      //     $a = $_POST['driver'];
+      //     $b = $_POST['status'];
+      //     $c=$_POST['paytype'];
+      //     $d=$_POST['payment'];
+      //     $all = "UPDATE `customer` SET `name`='$name',`email`='$email',`phone`='$phone',`pick_up`='$pick',`drop_in`='$drop',`ride_type`='$ride',`time_ride`='$ridetype',
+      //     `date`='$date',`time`='$time',`v_name`='$vname',`v_type`='$vtype',`driver_name`='$a',
+      //     `payment_type`='$c',`payment`='$d',`status`='$b' WHERE id = $g_id";
+      //     if($all) {
+      //       echo '<script>alert("Confirm booking");</script>';
+      //       header("Location:main.php");
+      //       exit();
+      //     } else {
+      //       echo 'Update failed';
+      //     }
         }
 
     // if(isset($_POST['delete'])){
