@@ -21,15 +21,17 @@ require_once "header.php";
 
                             </select>
                             <input type="text" name="name" id="">
-                            <input type="submit" name="show" value="search">
-                            <button onclick="exportToExcel()"><i class="fa-solid fa-file-export btn btn-primary text-black"></i></button>
+                            <button type="submit" name="show" class="rounded-pill px-3 py-2 btn btn-primary text-black">
+                                <i class="ti ti-search"></i></button>
+                            <button onclick="exportToExcel()" class="rounded-pill px-3 py-2 btn btn-primary text-black">
+                            <i class="fa-solid fa-file-export"></i></button>
                         </form>
                         <?php
-                                        if(isset($_POST['show'])){
-                                                $get=$_POST['choose'];
-                                                $a=$_POST['date2'];
-                                                $b=$_POST['date3'];
-                                                $c=$_POST['name']
+                              if(isset($_POST['show'])){
+                                $get=$_POST['choose'];
+                                $a=$_POST['date2'];
+                                $b=$_POST['date3'];
+                                $c=$_POST['name']
                         ?>                       
                                          <h5 class="card-title fw-semibold mb-4 text-center"> <?php echo $get;  ?></h5>
                                         <div class="table-responsive">

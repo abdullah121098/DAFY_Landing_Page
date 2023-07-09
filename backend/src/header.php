@@ -55,50 +55,40 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="main.php" aria-expanded="false">
+              <a  class="sidebar-link" href="main.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
                 <span class="hide-menu">Dashboard</span>
               </a>
             </li>
-           
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="new-ride.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-article"></i>
-                </span>
-                <span class="hide-menu">New Ride-Booking</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="re-schedule.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-article"></i>
-                </span>
-                <span class="hide-menu">Re-Schedule Booking</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="cancel-ride.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Cancelled Bookings</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="complete-ride.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Completed-Booking</span>
-              </a>
-            </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
+                  <i class="ti ti-car"></i ><span class="hide-menu">Ride Details</span></a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-ride.php" class="sidebar-link"><i class="ti ti-clipboard-list"></i>
+                    <span class="hide-menu">New Ride-Booking</span></a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="re-schedule.php" class="sidebar-link"><i class="ti ti-note"></i>
+                    <span class="hide-menu"> Re-Schedule Booking </span></a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="cancel-ride.php" class="sidebar-link"><i class="ti ti-copyright"></i>
+                    <span class="hide-menu"> Cancelled Bookings </span></a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="complete-ride.php" class="sidebar-link"><i class="ti ti-check"></i>
+                    <span class="hide-menu"> Completed-Booking </span></a>
+                  </li>
+                </ul>
+              </li>
+        
             <li class="sidebar-item">
               <a class="sidebar-link" href="summary.php" aria-expanded="false">
                 <span>
-                  <i class="ti ti-cards"></i>
+                  <i class="ti ti-clipboard"></i>
                 </span>
                 <span class="hide-menu">Summary</span>
               </a>
@@ -130,6 +120,26 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
               <span class="hide-menu">EXTRA</span>
             </li>
             <li class="sidebar-item">
+                <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
+                  <i class="ti ti-cards"></i ><span class="hide-menu">Website Details</span></a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a  href="testimonial.php" class="sidebar-link"><i class="ti ti-message-2"></i>
+                    <span class="hide-menu">Testimonial</span></a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="team.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
+                    <span class="hide-menu"> Team Detail </span></a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="banner.php" class="sidebar-link"><i class="ti ti-photo-edit"></i>
+                    <span class="hide-menu"> Banner </span></a>
+                  </li>
+                  
+                </ul>
+              </li>
+
+            <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="testimonial.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-mood-happy"></i>
@@ -152,7 +162,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                 </span>
                 <span class="hide-menu">Banner</span>
               </a>
-            </li>
+            </li> -->
           </ul>
           
         </nav>

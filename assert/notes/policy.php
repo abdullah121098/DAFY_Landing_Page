@@ -44,68 +44,72 @@
     <!-- Spinner End -->
     
    
-    <!-- Navbar Start sticky-top-->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top" style="height:90px;">
-            <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-3 m-0">
-                <img src="../img/logo/dafy.jpeg" style="height: 70px; object-items:fit;" alt="icon" srcset="">
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse nav-link" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="../index.php" class="nav-item nav-link ">Home</a>
-                
-                            <!-- Drop down menu start-->
-                     <div class="nav-item dropdown">
-                         <a href="#service" class="nav-item nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu fade-up m-0">
-                            <a href="#service" class="dropdown-item">Chauffeur Service</a>
-                             <a href="#service" class="dropdown-item">Hospital Assistance</a>
-                        </div>
-                    </div>
-
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-item nav-link dropdown-toggle" data-bs-toggle="dropdown">Join Us</a>
-                        <div class="dropdown-menu fade-up m-0 p-0">
-                            <a href="#" class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#book5">Join as Driver Partner</a>
-                            <!--a href="#" class="dropdown-item">Join as Business Partner</a-->
-                        </div>
-                    </div>
-                    
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
-                        <div class="dropdown-menu fade-up m-0">
-                            <a href="#team" class="dropdown-item">Our Team</a>
-                            <a href="#contact" class="dropdown-item">Contact Us</a>
-                            <a href="#expert" class="dropdown-item">Our Expert Help</a>
-                            <a href="#testimonial" class="dropdown-item">Testimonial</a>
-                        </div>
-                    </div>
-                
-                    <div class="ms-auto d-none d-lg-block col-sm-4 text-start">
-                    <a href="https://play.google.com/store/apps/details?id=com.dafy" 
-                    class="btn btn-warning rounded-pill py-3 px-3"> <b> Download App</b></a>
+   <!-- Navbar Start sticky-top-->
+   <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0" id="navbar">
+                <a href="../../index.php" class="navbar-brand d-flex align-items-center py-1 px-1 p-1 m-0">
+                    <img src="../img/logo/dafy.jpeg" style="width: 4rem;" alt="icon" srcset="">
+                </a>
+                <button type="button" class="navbar-toggler me-2 justify-content-end" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <ul class="navbar-nav p-3 p-lg-0 text-end">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Home</a>
+                        </li>
+                        <!-- Drop down menu start-->
+                        <li class="nav-item dropdown">
+                            <a href="../../index.php?id=#service" class="nav-link">Services</a>
+                            <!--a href="#service" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu fade-up m-0">
+                                <a href="#service" class="dropdown-item">Chauffeur Service</a>
+                                <a href="#service" class="dropdown-item">Hospital Assistance</a>
+                            </div-->
+                        </li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Join Us</a>
+                                    <div class="dropdown-menu fade-up m-0 p-0">
+                                        <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#book5">Join as Driver Partner</a>
+                                        <a href="#" class="dropdown-item">Join as Business Partner</a>
+                            </div>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                            <div class="dropdown-menu fade-up m-0 text-end p-2">
+                                <a href="../../index.php?id=#expert" class="dropdown-item h6">Our Expert Help</a>
+                                <a href="../../index.php?id=#team" class="dropdown-item h6">Our Team</a>
+                                <a href="../../index.php?id=#testimonial" class="dropdown-item h6">Testimonial</a>
+                                <a href="../../index.php?id=#contact" class="dropdown-item h6">Contact Us</a>
+                            </div>
+                        </li>
+                        
+                        <!-- <li class="nav-item d-none d-lg-inline-block col-sm-4 text-start">
+                            <a href="https://play.google.com/store/apps/details?id=com.dafy" class="btn btn-warning rounded-pill py-3 px-1">
+                                <b>Download App</b>
+                            </a>
+                        </li> -->
+                    </ul>
                 </div>
-            </div>
-            </div>
+            
         </nav>
    
     <!-- Navbar End -->
          <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-2  mb-4 animated slideInDown">Privacy and Policy</h1>
+            <h1 class="display-2 mb-4 animated slideInDown">Privacy and Policy</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item text-dark"><a href="../index.php">Home</a></li>
-                    <li class="breadcrumb-item text-dark"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary" aria-current="page">Privacy and Policy</li>
+                    <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Privacy and Policy</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
+
+    
 
     <div class="container" style="width: 1000px; font-size:15px;font-family: 'Times New Roman', Times, serif; color: black;">
 
@@ -148,23 +152,23 @@
     
 
     </div>
-     <!-- Footer Start -->  
- 
-     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" id="contact" >
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Our Office</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> 34/192C
-                            PNRA – 67
-                            Melthara Lane, Padivattom
-                            Edappally, Kochi
-                            Kerala - 682024</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7592933933</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>www.dafy.in</p>
-                        <div class="d-flex pt-3"> 
-                            <a class="btn btn-square btn-light rounded-circle me-1" href="https://twitter.com/dafyindia">
-                                 <i class="fab fa-twitter"></i></a>
+            
+    <!-- ====================================== Footer Start ================================================ -->  
+           <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" id="contact">
+                <div class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-4">Our Office</h4>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> 34/192C
+                                PNRA – 67
+                                Melthara Lane, Padivattom
+                                Edappally, Kochi
+                                Kerala - 682024</p>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7592933933</p>
+                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>www.dafy.in</p>
+                            <div class="d-flex pt-3"> 
+                                <a class="btn btn-square btn-light rounded-circle me-1" href="https://twitter.com/dafyindia">
+                                    <i class="fab fa-twitter"></i></a>
                             <a class="btn btn-square btn-light rounded-circle me-1" href="https://www.facebook.com/dafyonline">
                                 <i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-light rounded-circle me-1" href="https://www.youtube.com/channel/UCaDXn5tA7A4-pX1srS1fJ6A"><i
@@ -175,54 +179,52 @@
                             <i class='fab fa-whatsapp'></i></a>
                             <a class="btn btn-square btn-light rounded-circle me-1" href="https://www.linkedin.com/company/dafyonline/">
                             <i class='fab fa-linkedin-in'></i></a>
-    
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Quick Links</h4>
-                        <a class="btn btn-link" href="../index.php">About Us</a>
-                        <a class="btn btn-link" href="../index.php">Contact Us</a>
-                        <a class="btn btn-link" href="../index.php">Our Services</a>
-                        <a class="btn btn-link" href="term.php">Terms & Condition</a>
-                        <a class="btn btn-link" href="#">Support</a>
-                        <a class="btn btn-link" href="#">Policy</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Business Hours</h4>
-                        <p class="mb-1">Monday - Sunday</p>
-                        <p class="mb-4">Any Time</p>
-                        <p class="mb-4">Ready for Services</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-4">Subscribe</h4>
-                        <p>Need Asisstance for drive home, anytime anywhere we are here to help</p>
-                        <div class="position-relative w-100">
-                            <a type="button" class="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2" data-bs-toggle="modal" data-bs-target="#book4"
-                             href="">Subscribe Us</a>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <a class="btn btn-link" href="../../index.php?id=#about">About Us</a>
+                            <a class="btn btn-link" href="../../index.php?id=#expert">Contact Us</a>
+                            <a class="btn btn-link" href="../../index.php?id=#service">Our Services</a>
+                            <a class="btn btn-link" href="assert/notes/term.php">Terms & Condition</a>
+                            <!-- <a class="btn btn-link" href="">Support</a> -->
+                            <a class="btn btn-link" href="assert/notes/policy.php">Policy</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-4">Business Hours</h4>
+                            <p class="mb-1">Monday - Sunday</p>
+                            <p class="mb-4">Any Time</p>
+                            <p class="mb-4">Ready for Services</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-4">Subscribe</h4>
+                            <p>Need Asisstance for drive home, anytime anywhere we are here to help</p>
+                            <div class="position-relative w-100">
+                                <a type="button" class="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2" data-bs-toggle="modal" data-bs-target="#book4"
+                                href="">Subscribe Us</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Footer End -->
-    
-    
-        <!-- <b> Copyright</b> Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="fw-medium text-light" href="#">2023</a>, All Right Reserved.
+            <!-- ======================================= Footer End ================================================== -->
+            
+            <!-- ======================================= Copyright Start ================================================== -->
+            <div class="container-fluid copyright py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="fw-medium text-light" href="#">2023</a>, All Right Reserved.
+                        </div>
+                        <!--div class="col-md-6 text-center text-md-end">
+
+                            Designed By <a class="fw-medium text-light" href="#team">Dafy Team</a>
+                            Distributed By <a class="fw-medium text-light" href="#about">Dafy Online pvt. ltd.</a>
+                        </div-->
                     </div>
-                    <!--div class="col-md-6 text-center text-md-end">
-    
-                        Designed By <a class="fw-medium text-light" href="#team">Dafy Team</a>
-                        Distributed By <a class="fw-medium text-light" href="#about">Dafy Online pvt. ltd.</a>
-                    </div-->
                 </div>
             </div>
-        </div>
-        <!-- Copyright End -->
+            <!-- ======================================== Copyright End =============================================== -->
     
     
         <!-- Back to Top -->

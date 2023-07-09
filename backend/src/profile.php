@@ -269,28 +269,29 @@ if ($sql->num_rows > 0) {
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="inputpassword3"  class="h5">Password</label>
-                                                <div class="input-group">
-                                                    <input type="password" class="form-control h6" id="inputpassword3" value="<?php echo $view['password']; ?>" name="pass" maxlength="15">
-                                                    <span class="input-group-text center">
-                                                        <i class="fa-sharp fa-solid fa-eye eye" onclick="myFunction()" name="hide4"  id="hide"></i>
-                                                        <i class="fa-sharp fa-solid fa-eye-slash eye" onclick="myFunction()" name="hide3"  id="show"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputpassword3" class="h5">Password</label>
+                                        <div class="input-group">
+                                        <input type="password" class="form-control h6" id="inputpassword3" value="<?php echo $view['password']; ?>" name="pass" maxlength="15">
+                                        <span class="input-group-text center">
+                                            <i class="fa-sharp fa-solid fa-eye eye" onclick="togglePasswordVisibility('inputpassword3', 'eye')" id="hide"></i>
+                                            <!-- <i class="fa-sharp fa-solid fa-eye-slash eye" onclick="togglePasswordVisibility('inputpassword3', 'eye')" id="show"></i> -->
+                                        </span>
                                         </div>
+                                    </div>
+                                    </div>
+
                                     <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputconpassword4"  class="h5">Confirm Password</label>
-                                            <div class="input-group">
-                                                <input type="password" class="form-control h6" id="inputconpassword4" value="<?php echo $view['password_confirm']; ?>" name="conpass" maxlength="15">
-                                                <span class="input-group-text center">
-                                                        <i class="fa-sharp fa-solid fa-eye eye" onclick="myFunction()" name="hide2"  id="hide"></i>
-                                                        <i class="fa-sharp fa-solid fa-eye-slash eye" onclick="myFunction()" name="hide1"  id="show"></i>
-                                                </span>
-                                            </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputconpassword4" class="h5">Confirm Password</label>
+                                        <div class="input-group">
+                                        <input type="password" class="form-control h6" id="inputconpassword4" value="<?php echo $view['password_confirm']; ?>" name="conpass" maxlength="15">
+                                        <span class="input-group-text center">
+                                            <i class="fa-sharp fa-solid fa-eye eye" onclick="togglePasswordVisibility('inputconpassword4', 'eye2')" id="hide2"></i>
+                                            <!-- <i class="fa-sharp fa-solid fa-eye-slash eye" onclick="togglePasswordVisibility('inputconpassword4', 'eye2')" id="show2"></i> -->
+                                        </span>
                                         </div>
+                                    </div>
                                     </div> <br><br>
                                     <div class="form-row">
                                         <div class="form-group col-md-6 text-center">
@@ -305,37 +306,29 @@ if ($sql->num_rows > 0) {
                 </div>
             </div>
         </div>
-        <style>#hide {  display: none;} .eye{ position: relative;}</style>
-        <script>
-        function myFunction() {
-            var p = document.getElementById("inputconpassword3");
-            var q = document.getElementById("show1");
-            var r = document.getElementById("hide1");
-            if (p.type === 'password') {
-                p.type = "text";
-                q.style.display = "none";
-            r.style.display = "block";
-            }else {
-                p.type = "password";
-                q.style.display = "block";
-                r.style.display = "none";
-            } 
+        <style>
+  .eye { position: relative; }
+  .hide { display: none; }
+</style>
 
-            var x = document.getElementById("inputconpassword4");
-            var y = document.getElementById("show");
-            var z = document.getElementById("hide");
+<script>
+  function togglePasswordVisibility(inputId, eyeId) {
+    var input = document.getElementById(inputId);
+    var eye = document.getElementById(eyeId);
+    var showEye = document.getElementById('show' + eyeId.slice(3));
+    var hideEye = document.getElementById('hide' + eyeId.slice(3));
 
-            if (x.type === 'password') {
-                x.type = "text";
-                y.style.display = "none";
-                z.style.display = "block";
-            }else {
-                x.type = "password";
-                y.style.display = "block";
-                z.style.display = "none";
-            }
-        }
-    </script>
+    if (input.type === 'password') {
+      input.type = 'text';
+      eye.classList.add('hide-icon');
+      hideEye.style.display = 'block';
+    } else {
+      input.type = 'password';
+      eye.classList.remove('hide-icon');
+      showEye.style.display = 'block';
+    }
+  }
+</script>
 
     <?php 
     if (isset($_POST['update'])) {
@@ -396,7 +389,7 @@ if ($sql->num_rows > 0) {
   <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
   <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="../assets/js/dashboard.js"></script>
-  <script src="export.js"></script>
+  <script src="../assets/js/export.js"></script>
 </body>
 
 </html>

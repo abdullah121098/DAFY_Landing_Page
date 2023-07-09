@@ -79,7 +79,7 @@
                         
                 <!--- Schedule Trip --->
 
-                <div class="row align-items-center">
+                <div class="row align-items-center m-2">
                     <div class="col-8">
                         <h4 class="text-c-red">Schedule Trip</h4>
                     </div>
@@ -163,7 +163,7 @@
     // $sq = mysqli_query($conn,"SELECT * FROM count");
     $res= mysqli_num_rows($sq);
 
-    $rowsPerPage = 5; // Number of rows to display per page
+    $rowsPerPage = 10; // Number of rows to display per page
     $totalRows = $res; // Total number of rows in the table
 
     $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
@@ -171,7 +171,7 @@
     $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
     $end = $start + $rowsPerPage; // Calculate the ending row index
 
-    // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
+    
     $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
     $result = mysqli_query($conn,$sql); 
     
@@ -181,45 +181,44 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title text-center">New Ride Status</h4>
-                    <!-- <p class="card-description"> Add class <code>.table-bordered</code> -->
-                    </p>
-                    <div class="table-responsive">
+                    <h4 class="card-title text-center m-2">New Ride Status</h4>
+                    
+                    <div class="table-responsive m-2">
                       <table class="table table-bordered">
                         <thead class="fw-bold text-black">
                           <tr>
-                            <th>#</th>
-                            <th>User name</th>
-                            <th>Driver Name</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                                <th scope="col">#</th>
+                                <th scope="col">User name</th>
+                                <th scope="col">Driver Name</th>
+                                <th scope="col">Ride</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Action</th>
                           </tr>
                         </thead>
                         <?php if (mysqli_num_rows($result)> 0) { while ($row=mysqli_fetch_array($result)) { // Display each row of data ?>
                         <tbody>
                           <tr class="fw-semibold text-black">
-                            <td><?php echo $index++; ?></td>
-                            <td><?php echo  $row['name']; ?></td>
+                            <th scope="row"><?php echo $index++; ?></th>
+                            <td> <?php echo  $row['name']; ?></td>
                             <td> <?php echo $row['driver_name']; ?></td>
-                            <td> <?php //if($row['status'] == 'complete'){ echo '<label class=" bg-success"> Confirm</label>'; } ?>
-                            
-                            <?php 
-                                if( $row['status']=='Completed'){
-                                    echo "<p><a href='status.php?id=".$row['id']."&status=Completed' class='btn btn-success text-black'>".$row['status']."</a></p>"; 
-                                }elseif( $row['status']=='Confirm'){ 
-                                    echo "<p><a href='status.php?id=".$row['id']."&status=Confirm' class='btn btn-warning text-black'>".$row['status']."</a></p>"; 
-                                }elseif( $row['status']=='Driver Assigned'){ 
-                                    echo "<p><a href='status.php?id=".$row['id']."&status=Driver Assigned' class='btn btn-primary text-black'>".$row['status']."</a></p>"; 
-                                }elseif( $row['status']=='Drive Started'){ 
-                                    echo "<p><a href='status.php?id=".$row['id']."&status=Drive Started' class='btn btn-secondary text-black'>".$row['status']."</a></p>"; 
-                                }elseif( $row['status']=='Cancel'){ 
-                                    echo "<p><a href='status.php?id=".$row['id']."&status=Cancel' class='btn btn-danger text-black'>".$row['status']."</a></p>"; 
-                                }else{ 
-                                    echo "<p><a href='status.php?id=".$row['id']."&status=?' class='btn btn-info text-black'>".$row['status']."</a></p>"; 
-                                }
-                            ?>
-
-                        
+                            <td> <?php echo $row['ride_type']; ?></td>
+                            <td> <?php echo $row['time_ride']; ?></td>
+                            <td> <?php 
+                                    if( $row['status']=='Completed'){
+                                        echo "<p><a href='status.php?id=".$row['id']."&status=Completed' class='btn btn-success text-black'>".$row['status']."</a></p>"; 
+                                    }elseif( $row['status']=='Confirm'){ 
+                                        echo "<p><a href='status.php?id=".$row['id']."&status=Confirm' class='btn btn-warning text-black'>".$row['status']."</a></p>"; 
+                                    }elseif( $row['status']=='Driver Assigned'){ 
+                                        echo "<p><a href='status.php?id=".$row['id']."&status=Driver Assigned' class='btn btn-primary text-black'>".$row['status']."</a></p>"; 
+                                    }elseif( $row['status']=='Drive Started'){ 
+                                        echo "<p><a href='status.php?id=".$row['id']."&status=Drive Started' class='btn btn-secondary text-black'>".$row['status']."</a></p>"; 
+                                    }elseif( $row['status']=='Cancel'){ 
+                                        echo "<p><a href='status.php?id=".$row['id']."&status=Cancel' class='btn btn-danger text-black'>".$row['status']."</a></p>"; 
+                                    }else{ 
+                                        echo "<p><a href='status.php?id=".$row['id']."&status=?' class='btn btn-info text-black'>".$row['status']."</a></p>"; 
+                                    }
+                                ?>
                             </td>
                             <td>  
                               <!-- <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride-update.php?id=<?php //echo $row['id']; ?>"> -->
@@ -250,8 +249,219 @@
                 </div>
             </div>
       </div> 
-         
-     
+            
+    
+            <div class="card">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active text-bg-secondary"  data-bs-toggle="tab"  href="#home"  role="tab">
+                      <span class="hidden-sm-up"></span>
+                      <span class="hidden-xs-down">One Trip</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-bg-success" data-bs-toggle="tab" href="#profile" role="tab">
+                        <span class="hidden-sm-up"></span>
+                      <span class="hidden-xs-down ">Round Trip</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-bg-primary" data-bs-toggle="tab"  href="#messages"  role="tab">
+                      <span class="hidden-sm-up"></span>
+                      <span class="hidden-xs-down">Hospital Trip</span></a
+                    >
+                  </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabcontent-border">
+                    <div class="tab-pane active" id="home" role="tabpanel">
+                        <div class="p-20">
+                            <?php 
+                              $sql = "SELECT * FROM customer WHERE `ride_type` ='one_trip' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+                                $result = mysqli_query($conn,$sql);
+                            ?>
+                            <div class="table-responsive m-2">
+                            <table class="table table-bordered">
+                                <thead class="fw-bold text-black">
+                                <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">User name</th>
+                                        <th scope="col">Driver Name</th>
+                                        <th scope="col">Ride</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <?php if (mysqli_num_rows($result)> 0) { while ($row=mysqli_fetch_array($result)) { // Display each row of data ?>
+                                <tbody>
+                                <tr class="fw-semibold text-black">
+                                    <th scope="row"><?php echo $index++; ?></th>
+                                    <td>  <?php echo  $row['name']; ?></td>
+                                    <td> <?php echo $row['driver_name']; ?></td>
+                                    <td> <?php echo $row['ride_type']; ?></td>
+                                    <td> <?php echo $row['time_ride']; ?></td>
+                                    <td> <?php if($row['status'] == 'complete'){ echo '<label class=" bg-success"> Confirm</label>'; } ?>
+                                    
+                                    <?php 
+                                        if( $row['status']=='Completed'){
+                                            echo "<p><a href='status.php?id=".$row['id']."&status=Completed' class='btn btn-success text-black'>".$row['status']."</a></p>"; 
+                                        }elseif( $row['status']=='Confirm'){ 
+                                            echo "<p><a href='status.php?id=".$row['id']."&status=Confirm' class='btn btn-warning text-black'>".$row['status']."</a></p>"; 
+                                        }elseif( $row['status']=='Driver Assigned'){ 
+                                            echo "<p><a href='status.php?id=".$row['id']."&status=Driver Assigned' class='btn btn-primary text-black'>".$row['status']."</a></p>"; 
+                                        }elseif( $row['status']=='Drive Started'){ 
+                                            echo "<p><a href='status.php?id=".$row['id']."&status=Drive Started' class='btn btn-secondary text-black'>".$row['status']."</a></p>"; 
+                                        }elseif( $row['status']=='Cancel'){ 
+                                            echo "<p><a href='status.php?id=".$row['id']."&status=Cancel' class='btn btn-danger text-black'>".$row['status']."</a></p>"; 
+                                        }else{ 
+                                            echo "<p><a href='status.php?id=".$row['id']."&status=?' class='btn btn-info text-black'>".$row['status']."</a></p>"; 
+                                        }
+                                    ?>
+
+                                
+                                    </td>
+                                    <td>  
+                                    <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride.php">
+                                        <i class="fa-sharp fa-solid fa-eye eye" ></i></a></td>
+                                </tr>
+                                
+                                </tbody>
+                                <?php  } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>
+                            </table>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane p-20" id="profile" role="tabpanel">
+                        <div class="p-20">
+                            <?php   $sql = "SELECT * FROM customer WHERE `ride_type` ='round_trip' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+                                $result = mysqli_query($conn,$sql);
+                            ?>
+                            <div class="table-responsive m-2">
+                                <table class="table table-bordered">
+                                    <thead class="fw-bold text-black">
+                                    <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">User name</th>
+                                            <th scope="col">Driver Name</th>
+                                            <th scope="col">Ride</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <?php if (mysqli_num_rows($result)> 0) { while ($row=mysqli_fetch_array($result)) { // Display each row of data ?>
+                                    <tbody>
+                                    <tr class="fw-semibold text-black">
+                                        <th scope="row"><?php echo $index++; ?></th>
+                                        <td><?php echo  $row['name']; ?></td>
+                                        <td> <?php echo $row['driver_name']; ?></td>
+                                        <td> <?php echo $row['ride_type']; ?></td>
+                                        <td> <?php echo $row['time_ride']; ?></td>
+                                        <td>
+                                            <?php 
+                                                if( $row['status']=='Completed'){
+                                                    echo "<p><a href='status.php?id=".$row['id']."&status=Completed' class='btn btn-success text-black'>".$row['status']."</a></p>"; 
+                                                }elseif( $row['status']=='Confirm'){ 
+                                                    echo "<p><a href='status.php?id=".$row['id']."&status=Confirm' class='btn btn-warning text-black'>".$row['status']."</a></p>"; 
+                                                }elseif( $row['status']=='Driver Assigned'){ 
+                                                    echo "<p><a href='status.php?id=".$row['id']."&status=Driver Assigned' class='btn btn-primary text-black'>".$row['status']."</a></p>"; 
+                                                }elseif( $row['status']=='Drive Started'){ 
+                                                    echo "<p><a href='status.php?id=".$row['id']."&status=Drive Started' class='btn btn-secondary text-black'>".$row['status']."</a></p>"; 
+                                                }elseif( $row['status']=='Cancel'){ 
+                                                    echo "<p><a href='status.php?id=".$row['id']."&status=Cancel' class='btn btn-danger text-black'>".$row['status']."</a></p>"; 
+                                                }else{ 
+                                                    echo "<p><a href='status.php?id=".$row['id']."&status=?' class='btn btn-info text-black'>".$row['status']."</a></p>"; 
+                                                }
+                                            ?>
+
+                                            </td>
+                                            <td>  
+                                            <!-- <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride-update.php?id=<?php //echo $row['id']; ?>"> -->
+                                            <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride.php">
+                                                <i class="fa-sharp fa-solid fa-eye eye" ></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                    <?php  } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>
+                                </table>
+                                       
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane p-20" id="messages" role="tabpanel">
+                        <div class="p-20">
+                                <?php   $sql = "SELECT * FROM customer WHERE `ride_type` ='hospital_trip' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+                                    $result = mysqli_query($conn,$sql);
+                                ?>
+                            <div class="table-responsive m-2">
+                                <table class="table table-bordered">
+                                        <thead class="fw-bold text-black">
+                                            <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">User name</th>
+                                                    <th scope="col">Driver Name</th>
+                                                    <th scope="col">Ride</th>
+                                                    <th scope="col">Time</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                            <?php if (mysqli_num_rows($result)> 0) { while ($row=mysqli_fetch_array($result)) { // Display each row of data ?>
+                                    <tbody>
+                                        <tr class="fw-semibold text-black">
+                                            <th scope="row"><?php echo $index++; ?></th>
+                                            <td><?php echo  $row['name']; ?></td>
+                                            <td> <?php echo $row['driver_name']; ?></td>
+                                            <td> <?php echo $row['ride_type']; ?></td>
+                                            <td> <?php echo $row['time_ride']; ?></td>
+                                            <td><?php 
+                                                    if( $row['status']=='Completed'){
+                                                        echo "<p><a href='status.php?id=".$row['id']."&status=Completed' class='btn btn-success text-black'>".$row['status']."</a></p>"; 
+                                                    }elseif( $row['status']=='Confirm'){ 
+                                                        echo "<p><a href='status.php?id=".$row['id']."&status=Confirm' class='btn btn-warning text-black'>".$row['status']."</a></p>"; 
+                                                    }elseif( $row['status']=='Driver Assigned'){ 
+                                                        echo "<p><a href='status.php?id=".$row['id']."&status=Driver Assigned' class='btn btn-primary text-black'>".$row['status']."</a></p>"; 
+                                                    }elseif( $row['status']=='Drive Started'){ 
+                                                        echo "<p><a href='status.php?id=".$row['id']."&status=Drive Started' class='btn btn-secondary text-black'>".$row['status']."</a></p>"; 
+                                                    }elseif( $row['status']=='Cancel'){ 
+                                                        echo "<p><a href='status.php?id=".$row['id']."&status=Cancel' class='btn btn-danger text-black'>".$row['status']."</a></p>"; 
+                                                    }else{ 
+                                                        echo "<p><a href='status.php?id=".$row['id']."&status=?' class='btn btn-info text-black'>".$row['status']."</a></p>"; 
+                                                    }
+                                                ?>
+                                            </td>
+                                            <td>  
+                                            <!-- <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride-update.php?id=<?php //echo $row['id']; ?>"> -->
+                                            <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride.php">
+                                                <i class="fa-sharp fa-solid fa-eye eye" ></i></a></td>
+                                        </tr>                              
+                                    </tbody>
+                                        <?php  } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+                    <nav aria-label="Page navigation example" >
+                        <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                            <?php if ($page > 1): ?>
+                            <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span></a></li>
+                            <?php endif; ?>
+                            <?php for ($i = 1; $i <= ceil($totalRows / $rowsPerPage); $i++): ?>
+                            <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>" class="page-link rounded-pill py-2 px-3"><?php echo $i; ?></a></li>
+                        <?php endfor; ?>
+                            <?php if ($end < $totalRows): ?>
+                            <li class="page-item"><a href="?page=<?php echo ($page + 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span></a></li>
+                            <?php endif; ?>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
     </div>
     <style> .page-link{
               background:darkgrey;
