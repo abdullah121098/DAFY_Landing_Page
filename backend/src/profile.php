@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include '../database/connection.php';
 
 include 'header.php';
@@ -20,9 +20,9 @@ if ($sql->num_rows > 0) {
             <div class="row-6">
                 <div class="col-lg-100 d-flex">
                     <div class="card w-100">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-semibold mb-4">Profile Detail</h5>
-                            <div class="col-xl-12 col-md-12">
+                        <div class="card-body p-4 ">
+                            <h5 class="card-title fw-semibold mb-4 text-center">Profile Detail</h5>
+                            <div class="col-md-12">
                                 <form method="post" action="#" enctype="multipart/form-data">
                                     <div class="form-row">
                                         <div class="form-group col-md-6 text-center bg-dark">
@@ -53,12 +53,7 @@ if ($sql->num_rows > 0) {
                                             <input type="text" class="form-control h6" id="inputaddress4" value="<?php echo $view['a_position']; ?>" name="position">
                                         </div>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputdate4"  class="h5">Date-Time</label>
-                                            <input type="datetime" class="form-control h6" id="inputdate4" value="<?php echo $view['a_date']; ?>" name="date">
-                                        </div>
-                                    </div>
+                                    
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputimg4"  class="h5">Photo</label>
@@ -146,7 +141,7 @@ if ($sql->num_rows > 0) {
             for ($i = 0; $i < $totalFiles; $i++) {
                 $img = $_FILES['photo']['name'][$i];
                 $tempFile = $_FILES['photo']['tmp_name'][$i];
-                $targetPath = '../assets/images/profile/';
+                $targetPath = '../assets/images/team/';
                 $targetFile = $targetPath . $img;
 
                 // Check if a new photo was uploaded

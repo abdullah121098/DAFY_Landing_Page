@@ -79,8 +79,7 @@ include '../database/connection.php';
 
 <div class="container-fluid"> 
 <?php
-    if (isset($_GET['id'])) {
-    $editId = $_GET['id'];
+    if (isset($_GET['id'])) { $editId = $_GET['id'];
 
     if (isset($_POST['update'])) {
         $date = $_POST['t-date'];

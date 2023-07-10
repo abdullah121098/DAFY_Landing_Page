@@ -51,91 +51,96 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
-            </li>
-            <li class="sidebar-item">
-              <a  class="sidebar-link" href="main.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Dashboard</span>
-              </a>
-            </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                  <i class="ti ti-car"></i ><span class="hide-menu">Ride Details</span></a>
+              <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
+                  <i class="ti ti-cards"></i ><span class="hide-menu">Home</span></a>
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="new-ride.php" class="sidebar-link"><i class="ti ti-clipboard-list"></i>
-                    <span class="hide-menu">New Ride-Booking</span></a>
+                    <a  class="sidebar-link" href="main.php" aria-expanded="false">
+                      <span>
+                        <i class="ti ti-layout-dashboard"></i>
+                      </span>
+                      <span class="hide-menu">Dashboard</span>
+                    </a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="re-schedule.php" class="sidebar-link"><i class="ti ti-note"></i>
-                    <span class="hide-menu"> Re-Schedule Booking </span></a>
+                    <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
+                      <i class="ti ti-car"></i ><span class="hide-menu">Ride Details</span></a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                      <li class="sidebar-item">
+                        <a href="new-ride.php" class="sidebar-link"><i class="ti ti-clipboard-list"></i>
+                        <span class="hide-menu">New Ride-Booking</span></a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a href="re-schedule.php" class="sidebar-link"><i class="ti ti-note"></i>
+                        <span class="hide-menu"> Re-Schedule Booking </span></a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a href="cancel-ride.php" class="sidebar-link"><i class="ti ti-copyright"></i>
+                        <span class="hide-menu"> Cancelled Bookings </span></a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a href="complete-ride.php" class="sidebar-link"><i class="ti ti-check"></i>
+                        <span class="hide-menu"> Completed-Booking </span></a>
+                      </li>
+                    </ul>
                   </li>
-                  <li class="sidebar-item">
-                    <a href="cancel-ride.php" class="sidebar-link"><i class="ti ti-copyright"></i>
-                    <span class="hide-menu"> Cancelled Bookings </span></a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="complete-ride.php" class="sidebar-link"><i class="ti ti-check"></i>
-                    <span class="hide-menu"> Completed-Booking </span></a>
-                  </li>
-                </ul>
-              </li>
-        
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="summary.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-clipboard"></i>
-                </span>
-                <span class="hide-menu">Summary</span>
-              </a>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="summary.php" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-clipboard"></i>
+                    </span>
+                    <span class="hide-menu">Summary</span>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="nav-small-cap">
-           
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">AUTHOR</span>
-            </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./login.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./register.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                <span class="hide-menu">Register</span>
-              </a>
+              <!-- <i class="ti ti-dots nav-small-cap-icon fs-4"></i> -->
+              <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
+                  <i class="ti ti-cards"></i ><span class="hide-menu">AUTHOR</span></a>
+            
+                    <ul aria-expanded="false" class="collapse first-level">
+                      <li class="sidebar-item">
+                        <a class="sidebar-link" href="./login.php" aria-expanded="false">
+                          <span>
+                            <i class="ti ti-login"></i>
+                          </span>
+                          <span class="hide-menu">Login</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link" href="./register.php" aria-expanded="false">
+                          <span>
+                            <i class="ti ti-user-plus"></i>
+                          </span>
+                          <span class="hide-menu">Register</span>
+                        </a>
+                      </li>
+                    </ul>
             </li>
             <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">EXTRA</span>
-            </li>
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                  <i class="ti ti-cards"></i ><span class="hide-menu">Details</span></a>
+            <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
+                  <i class="ti ti-cards"></i ><span class="hide-menu">EXTRA DETAILS</span></a>                
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
                     <a  href="testimonial.php" class="sidebar-link"><i class="ti ti-message-2"></i>
                     <span class="hide-menu">Testimonial</span></a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="team.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
-                    <span class="hide-menu"> Team Member </span></a>
+                    <a href="javascript:void(0)" class="sidebar-link" aria-expanded="false"><i class="ti ti-cards"></i>
+                    <span class="hide-menu"> Member </span></a>
+                      <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                          <a  href="team.php" class="sidebar-link"><i class="ti ti-message-2"></i>
+                          <span class="hide-menu">Team Member</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                          <a href="driver.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
+                          <span class="hide-menu"> Driver Member </span></a>
+                        </li>
+                      </ul>
                   </li>
-                  <li class="sidebar-item">
-                    <a href="driver.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
-                    <span class="hide-menu"> Driver Member </span></a>
-                  </li>
-                  <li class="sidebar-item">
+                 <li class="sidebar-item">
                     <a href="banner.php" class="sidebar-link"><i class="ti ti-photo-edit"></i>
                     <span class="hide-menu"> Banner </span></a>
                   </li>
@@ -190,7 +195,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
-                    <a href="adduser.php" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="add_new_members.php" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-mail fs-6"></i>
                       <p class="mb-0 fs-3">My Account</p>
                     </a>
