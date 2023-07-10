@@ -121,7 +121,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
             </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                  <i class="ti ti-cards"></i ><span class="hide-menu">Website Details</span></a>
+                  <i class="ti ti-cards"></i ><span class="hide-menu">Details</span></a>
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
                     <a  href="testimonial.php" class="sidebar-link"><i class="ti ti-message-2"></i>
@@ -129,7 +129,11 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                   </li>
                   <li class="sidebar-item">
                     <a href="team.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
-                    <span class="hide-menu"> Team Detail </span></a>
+                    <span class="hide-menu"> Team Member </span></a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="driver.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
+                    <span class="hide-menu"> Driver Member </span></a>
                   </li>
                   <li class="sidebar-item">
                     <a href="banner.php" class="sidebar-link"><i class="ti ti-photo-edit"></i>
@@ -138,31 +142,6 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                   
                 </ul>
               </li>
-
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="testimonial.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                <span class="hide-menu">Testimonial</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="team.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-ambulance"></i>
-                </span>
-                <span class="hide-menu">Team Detail</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="banner.php" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                <span class="hide-menu">Banner</span>
-              </a>
-            </li> -->
           </ul>
           
         </nav>

@@ -70,12 +70,12 @@ include_once "header.php"; ?>
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Time</h6>
                                   </th>
-                                  <th class="border-bottom-0">
+                                  <!-- <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Vechicle name</h6>
                                   </th>
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Vechicle Type</h6>
-                                  </th>
+                                  </th> -->
                                   <!-- <th class="border-bottom-0 ">
                                     <h6 class="fw-semibold mb-0">Driver Name</h6>
                                   </th>
@@ -111,9 +111,9 @@ include_once "header.php"; ?>
                                           <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['time_ride']; ?></h6></td>
                                           <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['date']; ?></h6></td>
                                           <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['time']; ?></h6></td>
-                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['v_name']; ?></h6></td>
-                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php echo $row['v_type']; ?></h6> </td>
-                                          <!-- <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php // echo $row['driver_name']; ?></h6></td>
+                                          <!-- <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php //echo $row['v_name']; ?></h6></td>
+                                          <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php //echo $row['v_type']; ?></h6> </td>
+                                           <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php // echo $row['driver_name']; ?></h6></td>
                                           <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php// echo $row['payment_type']; ?></h6></td>
                                           <td class="border-bottom-0"><h6 class="mb-0 fw-normal"><?php //echo $row['payment']; ?></h6></td> -->
                                           <td class="border-bottom-0"><div class="d-flex align-items-center" style="background-color:skyblue;">
@@ -124,7 +124,7 @@ include_once "header.php"; ?>
                                           </td>
                                           <td class="border-bottom-0">
                                           <div class="d-flex align-items-center">
-                                          <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride-update.php?id=<?php echo $row['id']; ?>">
+                                          <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="customer_update.php?id=<?php echo $row['id']; ?>">
                                           <i class="fa-sharp fa-solid fa-eye eye" ></i>
                                           </a>
                                             
