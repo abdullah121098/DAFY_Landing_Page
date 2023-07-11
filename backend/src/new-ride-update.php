@@ -131,16 +131,13 @@
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                <label class="form-label">Driver Name</label>
-                                                <select name="driver" id="" class="form-control badge bg-warning fw-semibold">
-                                                      <option selected disabled>Select</option>
-                                                      <option>Amal</option>
-                                                      <option>jijo</option>
-                                                      <option>kanna</option>
-                                                      <option>siva</option>
-                                                      <option>Cancel</option>
-                                                </select>
-                                                <span class="select-arrow"></span>
+                                                  <label class="form-label">Driver Name</label>
+                                                    <select name="driver" id="" class="form-control badge bg-warning fw-semibold">
+                                                          <option selected disabled>Select</option>
+                                                          <option>Amal</option>
+                                                          <option>Cancel</option>
+                                                    </select>
+                                                  <span class="select-arrow"></span>
                                                 </div>
                                             </div>
                                             <div class="col-6">

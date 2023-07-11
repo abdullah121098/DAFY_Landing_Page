@@ -159,12 +159,25 @@ include '../database/connection.php';  require_once "header.php";?>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Driver Name</label>
-                                <div class="col-sm-9">
-                                <input type="text" class="form-control" name="u-driver" value="<?php echo $edit['driver_name']; ?>"  />
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Driver Name</label>
+                                    <!-- <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="u-driver" value="<?php echo $edit['driver_name']; ?>"  />
+                                    </div> -->
+                                    <?php   $a=5;
+                                            $drive = mysqli_query($conn, "SELECT `d_name` FROM `driver` WHERE `d_id`='$a'");
+                                            if (mysqli_num_rows($drive) > 0) {
+                                            while ($view = mysqli_fetch_array($drive)) {
+                                    ?>
+                                    <div class="col-sm-9">
+                                        <select name="u-driver" id="" class="form-control fw-semibold">
+                                                <option selected>Select</option>
+                                                <option><?php echo $view['d_name']; ?></option>
+                                                <option>Cancel</option>
+                                        </select>
+                                    </div>
+                                    <?php } }?>
                                 </div>
-                            </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group row">
@@ -186,8 +199,8 @@ include '../database/connection.php';  require_once "header.php";?>
                         </div>
                         <div class="row g-1 m-1">
                             <div class="col-md-6">
-                                <div class="form-group row ">
-                                    <button href="" class="col-sm-3 btn btn-success px-4 py-3" name="u-update"> Update</button>
+                                <div class="form-group row">
+                                    <a href="" class="col-sm-3 btn btn-success px-4 py-3" name="u-update"> Update</a>
                                 </div>
                             </div>
                         </div>
