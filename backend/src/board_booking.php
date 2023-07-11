@@ -158,22 +158,8 @@
             </div>
 
         <!-- New form History End -->
-<?php 
-    $sq = mysqli_query($conn,"SELECT * FROM customer");
-    // $sq = mysqli_query($conn,"SELECT * FROM count");
-    $res= mysqli_num_rows($sq);
-
-    $rowsPerPage = 10; // Number of rows to display per page
-    $totalRows = $res; // Total number of rows in the table
-
-    $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
-    
-    $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
-    $end = $start + $rowsPerPage; // Calculate the ending row index
-?>
-        
-            
-    <!-- ==================== Tab-Type Table ==================== -->
+ <!-- ==================== Tab-Type Table ==================== -->
+        <!-- <div class="row"> -->
             <div class="card">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
@@ -206,6 +192,18 @@
                     <div class="tab-pane active" id="one-trip" role="tabpanel">
                         <div class="p-20">
                             <?php 
+                                $sq = mysqli_query($conn,"SELECT * FROM customer WHERE `ride_type` ='one_trip'");
+                                // $sq = mysqli_query($conn,"SELECT * FROM count");
+                                $res= mysqli_num_rows($sq);
+                            
+                                $rowsPerPage = 10; // Number of rows to display per page
+                                $totalRows = $res; // Total number of rows in the table
+                            
+                                $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                
+                                $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+                                $end = $start + $rowsPerPage; // Calculate the ending row index
+                       
                               $sql = "SELECT * FROM customer WHERE `ride_type` ='one_trip' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
                                 $result = mysqli_query($conn,$sql);
                                 $index = ($page - 1) * $rowsPerPage + 1;
@@ -263,6 +261,18 @@
                     <div class="tab-pane p-20" id="round-trip" role="tabpanel">
                         <div class="p-20">
                             <?php   
+                                $sq = mysqli_query($conn,"SELECT * FROM customer WHERE `ride_type` ='round_trip'");
+                                // $sq = mysqli_query($conn,"SELECT * FROM count");
+                                $res= mysqli_num_rows($sq);
+                            
+                                $rowsPerPage = 10; // Number of rows to display per page
+                                $totalRows = $res; // Total number of rows in the table
+                            
+                                $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                
+                                $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+                                $end = $start + $rowsPerPage; // Calculate the ending row index
+
                                 $sql = "SELECT * FROM customer WHERE `ride_type` ='round_trip' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
                                 $result = mysqli_query($conn,$sql);
                                 $index2 = ($page - 1) * $rowsPerPage + 1;
@@ -320,10 +330,22 @@
                     </div>
                     <div class="tab-pane p-20" id="hospital" role="tabpanel">
                         <div class="p-20">
-                                <?php   
-                                    $sql = "SELECT * FROM customer WHERE `ride_type` ='hospital_trip' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
-                                    $result = mysqli_query($conn,$sql);
-                                    $index3 = ($page - 1) * $rowsPerPage + 1;
+                        <?php   
+                                $sq = mysqli_query($conn,"SELECT * FROM customer WHERE `ride_type` ='hospital_trip'");
+                                // $sq = mysqli_query($conn,"SELECT * FROM count");
+                                $res= mysqli_num_rows($sq);
+                            
+                                $rowsPerPage = 10; // Number of rows to display per page
+                                $totalRows = $res; // Total number of rows in the table
+                            
+                                $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                
+                                $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+                                $end = $start + $rowsPerPage; // Calculate the ending row index   
+                                    
+                                $sql = "SELECT * FROM customer WHERE `ride_type` ='hospital_trip' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+                                $result = mysqli_query($conn,$sql);
+                                $index3 = ($page - 1) * $rowsPerPage + 1;
                                 ?>
                             <div class="table-responsive m-2">
                                 <table class="table table-bordered">
@@ -376,6 +398,18 @@
                     <div class="tab-pane p-20" id="re-schedule" role="tabpanel">
                         <div class="p-20">
                                 <?php   
+                                  $sq = mysqli_query($conn,"SELECT * FROM customer WHERE `status` ='Re_Schedule'");
+                                  // $sq = mysqli_query($conn,"SELECT * FROM count");
+                                  $res= mysqli_num_rows($sq);
+                              
+                                  $rowsPerPage = 10; // Number of rows to display per page
+                                  $totalRows = $res; // Total number of rows in the table
+                              
+                                  $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                                  
+                                  $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
+                                  $end = $start + $rowsPerPage; // Calculate the ending row index   
+
                                     $sql = "SELECT * FROM customer WHERE `status` ='Re_Schedule' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
                                     $result = mysqli_query($conn,$sql);
                                     $index4 = ($page - 1) * $rowsPerPage + 1;
@@ -446,7 +480,7 @@
                     </nav>
                 </div>
             </div>
-
+        <!-- </div> -->
 
     </div>
     <style> .page-link{

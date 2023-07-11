@@ -109,52 +109,65 @@ include '../database/connection.php';  require_once "header.php";?>
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Payment Type</label>
                                     <div class="col-sm-9" >
-                                    <select class="form-control" name="u-paytype">
-                                        <option selected><?php echo $edit['payment_type']; ?></option>
-                                        <option value="G-pay">G-pay</option>
-                                        <option value="Phonepe">Phonepe</option>
-                                        <option value="Paytm">Paytm</option>
-                                        <option value="Cash">Cash</option>
-                                    </select>
+                                        <select class="form-control" name="u-paytype">
+                                            <option selected><?php echo $edit['payment_type']; ?></option>
+                                            <option value="G-pay">G-pay</option>
+                                            <option value="Phonepe">Phonepe</option>
+                                            <option value="Paytm">Paytm</option>
+                                            <option value="Cash">Cash</option>
+                                        </select>
                                     </div>
                                 </div>
-                            </div> 
-                           
+                            </div>   
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Destination</label>
-                                <div class="col-sm-9">
-                                <input type="text" class="form-control" name="u-destination" value="<?php echo $edit['drop_in']; ?>" />
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Destination</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="u-destination" value="<?php echo $edit['drop_in']; ?>" />
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Payment</label>
-                                <div class="col-sm-9">
-                                <input type="text" class="form-control" name="u-payment" value="₹ <?php echo $edit['payment']; ?>" />
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Payment</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="u-payment" value="₹ <?php echo $edit['payment']; ?>" />
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Vechile</label>
-                                <div class="col-sm-9">
-                                <input type="text" class="form-control" name="u-vechile" value="<?php echo $edit['v_name']; ?>" />
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Vechile</label>
+                                    <div class="col-sm-9">
+                                            <select name="u-vechile" id="" class="form-control fw-semibold">
+                                                <option selected><?php echo $edit['v_name']; ?></option>
+                                                <?php $car = mysqli_query($conn, "SELECT `car_name` FROM `car`");
+                                                        if (mysqli_num_rows($car) > 0) {
+                                                        while ($car_name= mysqli_fetch_array($car)) { ?>
+                                                <option><?php echo $car_name['car_name']; ?></option>
+                                                            <?php } }?>
+                                            </select>
+                                        <!-- <input type="text" class="form-control" name="u-vechile" value="<?php //echo $edit['v_name']; ?>" /> -->
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Vechicle Type</label>
-                                <div class="col-sm-9">
-                                <input type="text" class="form-control" name="u-vechile-type" value="<?php echo $edit['v_type']; ?>" />
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Vechicle Type</label>
+                                    <div class="col-sm-9">
+                                        <select name="u-vechile-type" id="" class="form-control fw-semibold">
+                                                <option selected><?php echo $edit['v_type']; ?></option>
+                                                <option>Automatic</option>
+                                                <option>Manual</option>
+                                                <option>Both</option>
+                                        </select>
+                                        <!-- <input type="text" class="form-control" name="u-vechile-type" value="<?php// echo $edit['v_type']; ?>" /> -->
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                         <div class="row">
@@ -162,21 +175,20 @@ include '../database/connection.php';  require_once "header.php";?>
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Driver Name</label>
                                     <!-- <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="u-driver" value="<?php echo $edit['driver_name']; ?>"  />
+                                    <input type="text" class="form-control" name="u-driver" value="<?php //echo $edit['driver_name']; ?>"  />
                                     </div> -->
-                                    <?php   $a=5;
-                                            $drive = mysqli_query($conn, "SELECT `d_name` FROM `driver` WHERE `d_id`='$a'");
-                                            if (mysqli_num_rows($drive) > 0) {
-                                            while ($view = mysqli_fetch_array($drive)) {
-                                    ?>
                                     <div class="col-sm-9">
                                         <select name="u-driver" id="" class="form-control fw-semibold">
                                                 <option selected>Select</option>
+                                                <?php   $drive = mysqli_query($conn, "SELECT `d_name` FROM `driver`");
+                                                        if (mysqli_num_rows($drive) > 0) {
+                                                        while ($view = mysqli_fetch_array($drive)) { ?>
                                                 <option><?php echo $view['d_name']; ?></option>
+                                                            <?php } }?>
                                                 <option>Cancel</option>
                                         </select>
                                     </div>
-                                    <?php } }?>
+                                   
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -184,9 +196,7 @@ include '../database/connection.php';  require_once "header.php";?>
                                     <label class="col-sm-3 col-form-label">Status</label>
                                     <div class="col-sm-9">
                                     <select class="form-control" name="u-status">
-                                        <option active>
-                                            <?php echo $edit['status']; ?></option>
-                                            <option></option>
+                                        <option active><?php echo $edit['status']; ?></option>
                                         <option>Confirm</option>
                                         <option>Driver Assigned</option>
                                         <option>Re-Schedule</option>
@@ -200,7 +210,8 @@ include '../database/connection.php';  require_once "header.php";?>
                         <div class="row g-1 m-1">
                             <div class="col-md-6">
                                 <div class="form-group row">
-                                    <a href="" class="col-sm-3 btn btn-success px-4 py-3" name="u-update"> Update</a>
+                                    <a href="" class="col-sm-3 btn btn-success px-4 py-3 m-2" name="u-update"> Update</a>
+                                    <a href="main.php" class="col-sm-3 btn btn-danger px-4 py-3 m-2" > Cancel</a>
                                 </div>
                             </div>
                         </div>

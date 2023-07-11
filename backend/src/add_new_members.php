@@ -7,107 +7,8 @@
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4 text-center">Add New Member</h5>
-                        <!-- <form method="POST"  enctype="multipart/form-data"  onsubmit="showConfirmation()">
-                            <h6 class="card-description m-2"></h6>
-                            <div class="row">    
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="add-name" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">E-mail</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="add-email" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Mobile</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="add-mobile" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Date</label>
-                                        <div class="col-sm-9">
-                                            <input type="date" class="form-control" name="add-date" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Designation</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="add-postion" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row ">
-                                        <label class="col-sm-3 col-form-label">Photo</label>
-                                        <div class="col-sm-9">
-                                            <input type="file" class="form-control " name="add-img" id="Upload" required />
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Password</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group">
-                                                    <input type="password" class="form-control" name="add-pass" id="add-pass" />
-                                                    <span class="input-group-text center">
-                                                    <i class="fa-sharp fa-solid fa-eye eye" onclick="togglePasswordVisibility('add-pass', 'eye')" id="hide"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 g-1">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Confirm Password</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group">
-                                                <input type="password" class="form-control" name="add-passcon" id="add-passcon" />
-                                                <span class="input-group-text center">
-                                                <i class="fa-sharp fa-solid fa-eye eye" onclick="togglePasswordVisibility('add-passcon', 'eye2')" id="hide2"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row"> <label class="col-sm-3 col-form-label">Choose member Type</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" name="add-table">
-                                                <option>-- Select -- </option>
-                                                <option>Team</option>
-                                                <option>Driver</option>
-                                                </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-9 text-center">
-                                    <button type="submit" class="submit-btn rounded-pill text btn btn-warning px-3 py-2" name="add_drive">Add Member</button>
-                                </div> 
-                            </div>
-                        </form> -->
-                        <form method="POST" enctype="multipart/form-data" onsubmit="showConfirmation()">
+                    
+                        <form method="POST"  enctype="multipart/form-data" onsubmit="showConfirmation()">
                             <h6 class="card-description m-2"></h6>
                             <div class="row">
                                 <div class="col-md-6 g-1">
@@ -213,22 +114,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Choose member Type</label>
-                                        <div class="col-sm-9">
-
-                                            <select class="form-control" name="add-table">
-                                                <option>-- Select -- </option>
-                                                <option value="Admin">Admin</option>
-                                                <option value="Team">Team</option>
-                                                <option value="Driver">Driver</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div> -->
+                               
                                 <div class="col-sm-9 text-center">
-                                    <button type="submit" class="submit-btn rounded-pill text btn btn-warning px-3 py-2" name="add_drive">Add Member</button>
+                                    <button type="submit" class="submit-btn rounded-pill btn btn-warning px-3 py-2 m-2" name="add_drive">Add Member</button>
+                                    <a type="submit" href="main.php" class="submit-btn rounded-pill  btn btn-danger px-3 py-2 m-2" name="add_cancel">Cancel</a>
                                 </div>
                             </div>
                         </form>
@@ -271,77 +160,7 @@
 <?php require_once 'footer.php'; ?>
 
     <?php 
-        // if(isset($_POST['add_drive'])){
-        //     $drive_name = $_POST['add-name'];
-        //     $drive_email = $_POST['add-email'];
-        //     $drive_mobile = $_POST['add-mobile'];
-        //     $drive_postion = $_POST['add-postion'];
-        //     $drive_date = $_POST['add-date'];
-        //     $drive_pass = $_POST['add-pass'];
-        //     $drive_passcon = $_POST['add-passcon'];
-        //     $table=$_POST['add-table'];
-        //     $drive_img= $_FILES ['add-img']['name'];
-        //     if (empty($drive_name) || empty($drive_email) || empty($drive_mobile) || empty($drive_postion) || empty($drive_date) || empty($drive_pass) || empty($drive_passcon) || empty($drive_img)) {
-        //         echo '<script>alert("Please fill all the fields.");</script>';
-        //         } elseif ($drive_pass != $drive_passcon) {
-        //             echo '<script>alert("Password does not match.");</script>';
-        //         } else {
-        //     switch ($table){
-        //         case 'Driver':
-        //             //$drive_img= $_FILES ['add-img']['name'];
-        //             $img_tmp = $_FILES ['add-img']['tmp_name'];
-        //             $img_loc = '../assets/images/driver/';
-        //             $move=move_uploaded_file($img_tmp,$img_loc.$img);
-        //                 $driveadd = mysqli_query($conn, 
-        //                 "INSERT INTO `driver`(`d_name`, `d_mail`, `d_mobile`, `d_position`, `d_img`, `d_joining`, `d_password`, `d_password_confirm`)
-        //                     VALUES ('$drive_name','$drive_email','$drive_mobile','$drive_postion','$drive_img','$drive_date','$drive_pass','$drive_passcon')");
-        //                 echo '<script>alert("Data Added");</script>';
-                   
-        //         break;
-        //         case 'Team':
-
-        //             // $drive_img= $_FILES ['t-img']['name'];
-        //             $img_tmp1 = $_FILES ['t-img']['tmp_name'];
-        //             $img_loc1 = '../assets/images/team/';
-        //             $move1=move_uploaded_file($img_tmp,$img_loc.$img);
-                
-                   
-        //                 $teamadd = mysqli_query($conn,"INSERT INTO `team`(`t_joining`, `t_name`,`t_mail`,`t_mobile` `t_position`, `t_img`,`t_password`, `t_password_confirm`) VALUES
-        //                 ('$drive_date','$drive_name','$drive_email','$drive_mobile','$drive_postion','$drive_img','$drive_pass','$drive_passcon')");
-                        
-        //                 // Execute the prepared statement
-        //                 if ( $teamadd) {
-        //                     echo '<script>alert("Team Data inserted successfully");</script>';
-                        
-        //                 } else {
-        //                     echo '<script>alert("Failed to insert data.");</script>';
-        //                 }
-                   
-                   
-        //             break;
-        //             default:
-        //                 $img_tmp = $_FILES['t-img']['tmp_name'];
-        //                 $img_loc = '../assets/images/team/';
-        //                 $img_destination = $img_loc . $img;
-        //                 $move = move_uploaded_file($img_tmp, $img_destination);
-                        
-        //                 $stmt = $conn->prepare("INSERT INTO `admin`(`a_name`, `a_mobile`, `a_mail`, `a_position`, `a_img`, `a_date`,`password`,`password_confirm`) VALUES (?, ?, ?, ?, ?, ?,?,?)");
-        //                 $stmt->bind_param("ssssssss", $name, $mobile, $mail, $designation, $img, $date,$password,$confirm);
-                  
-        //                 // Execute the prepared statement
-        //                 if ($stmt->execute()) {
-        //                   echo "Data inserted successfully.";
-        //                 } else {
-        //                   echo "Failed to insert data.";
-        //                 }
-        //                 $stmt->close();
-                      
-        //             break;
-        //         }
-        //     }
-        // } //else {  echo '<script>alert("Data Failed");</script>'; }
-   
-       
+        
     if(isset($_POST['add_drive'])){
         $drive_name = $_POST['add-name'];
         $drive_email = $_POST['add-email'];
@@ -370,8 +189,10 @@
                               VALUES ('$drive_name','$drive_email','$drive_mobile','$drive_position','$drive_img','$drive_date','$drive_pass','$drive_passcon','$table')";
                     break;
                 case 'Driver':
-                    $query = "INSERT INTO `driver`(`d_name`, `d_mail`, `d_mobile`, `d_position`, `d_img`, `d_joining`, `d_password`, `d_password_confirm`,`d_type`) 
+                    $query = "INSERT INTO `admin`(`a_name`, `a_mail`, `a_mobile`, `a_position`, `a_img`, `a_joining`, `password`, `password_confirm`, `type`)
                               VALUES ('$drive_name','$drive_email','$drive_mobile','$drive_position','$drive_img','$drive_date','$drive_pass','$drive_passcon','$table')";
+                    $query = "INSERT INTO `driver`(`d_name`, `d_mail`, `d_mobile`, `d_position`, `d_img`, `d_joining`,`d_type`) 
+                              VALUES ('$drive_name','$drive_email','$drive_mobile','$drive_position','$drive_img','$drive_date','$table')";
                     break;
                 case 'Team':
                     $query = "INSERT INTO `team`(`t_joining`, `t_name`, `t_mail`, `t_mobile`, `t_position`, `t_img`, `t_password`, `t_password_confirm`,`t_type`) 

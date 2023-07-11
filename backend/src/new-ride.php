@@ -4,11 +4,11 @@ include '../database/connection.php';
 include_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
 <?php 
- $sq = mysqli_query($conn,"SELECT * FROM customer");
+ $sq = mysqli_query($conn,"SELECT * FROM customer WHERE `status` ='' OR `status` ='Confirm'");
  // $sq = mysqli_query($conn,"SELECT * FROM count");
  $res= mysqli_num_rows($sq);
 
- $rowsPerPage = 5; // Number of rows to display per page
+ $rowsPerPage = 10; // Number of rows to display per page
  $totalRows = $res; // Total number of rows in the table
 
  $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
@@ -17,7 +17,7 @@ include_once "header.php"; ?>
  $end = $start + $rowsPerPage; // Calculate the ending row index
 
  // $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC ";
- $sql = "SELECT * FROM  customer ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
+ $sql = "SELECT * FROM  customer WHERE `status` ='' OR `status` ='Driver Assigned' OR `status` ='Confirm' ORDER BY id DESC, Date DESC Limit $start,$rowsPerPage";
  $result = mysqli_query($conn,$sql); 
  
  $index = ($page - 1) * $rowsPerPage + 1; // Calculate the starting index for the current page
@@ -140,7 +140,7 @@ include_once "header.php"; ?>
                                 </tbody>
                             </table>
                                   <nav aria-label="Page navigation example" >
-                                    <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                                    <ul class="pagination justify-content-start left" style="position: relative;border-box: 500px;">
                                         <?php if ($page > 1): ?>
                                         <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span></a></li>

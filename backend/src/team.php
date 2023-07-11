@@ -206,9 +206,9 @@ if (isset($_GET['id'])) {
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Id</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <!-- <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Date</h6>
-                                        </th>
+                                        </th> -->
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Name</h6>
                                         </th>
@@ -232,9 +232,9 @@ if (isset($_GET['id'])) {
                                     <tr>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0"><?php echo $index++; ?></h6></td>
-                                            <td class="border-bottom-0">
+                                        <!-- <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-1"><?php echo $row['t_date']; ?></h6>
-                                        </td>
+                                        </td> -->
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-1"><?php echo $row['t_name']; ?></h6>
                                         </td>
