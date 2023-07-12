@@ -93,8 +93,13 @@ include_once 'header.php';?>
 if(isset($_POST['add_leave'])){
     $a=$_POST['name']; $b=$_POST['email']; $c=$_POST['mobile']; $d=$_POST['leave']; $e=$_POST['doc'];
     $f=$_POST['date1']; $g=$_POST['date2']; $h=$_POST['city']; $i=$_POST['reason'];
-    
-    //"INSERT INTO `casual_leave`(`l_id`, `l_name`, `l_mail`, `l_mobile`, `l_days`, `l_reason`, `l_type`, `l_start`, `l_end`, `l_city`, `l_file`, `l_status`) VALUES"
+    $date=date(d-m-Y);
+    $sql="INSERT INTO `casual_leave`(`l_name`, `l_mail`, `l_mobile`, `l_days`, `l_reason`, `l_type`, `l_start`, `l_end`, `l_city`, `l_file`) VALUES
+    (  '$a',' $b', '$c', '$date', '$i', '$d', '$f', '$g', '$e', '$h')";
+    $leave=mysqli_query($conn,$sql);
+    if($leave){
+      echo "<script>alert('success');</script>";
+    }else{ echo "<script>alert('failed');</script>"; }
 }
 
 ?>
