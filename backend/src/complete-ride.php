@@ -72,7 +72,7 @@ require_once "header.php";
                                                 $sq = mysqli_query($conn,"SELECT * FROM complete_ride");
                                                
                                                 $res= mysqli_num_rows($sq);
-                                                $rowsPerPage = 3; // Number of rows to display per page
+                                                $rowsPerPage = 10; // Number of rows to display per page
                                                 $totalRows = $res; // Total number of rows in the table
                                                
                                                 $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
@@ -149,7 +149,7 @@ require_once "header.php";
                                 </table>
                             </form>
                                 <nav aria-label="Page navigation example" >
-                                    <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                                    <ul class="pagination justify-content-start left" style="position: relative;border-box: 500px;">
                                         <?php if ($page > 1): ?>
                                         <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span></a></li>

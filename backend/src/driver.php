@@ -13,18 +13,18 @@ require_once "header.php"; ?>
 
  $start = ($page - 1) * $rowsPerPage; // Calculate the starting row index
 
- $end = $start + $rowsPerPage; // Calculate the ending row index
+ $end = $start + $rowsPerPage; // Calculate the ending row index `driver_name`=
  
  $sql = "SELECT * FROM  `driver` ORDER BY d_id DESC LIMIT $start, $rowsPerPage";
  $result = $conn->query($sql);
 
- $index = ($page - 1) * $rowsPerPage + 1;
+  $index = ($page - 1) * $rowsPerPage + 1;
 
 ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
 <div class="container-fluid">
         <!--  Row 1 -->
-        <div class="col-xl-10 stretch-card grid-margin">
+              <div class="col-xl-10 stretch-card grid-margin">
                 <div class="card">
                   <div class="card-body pb-0">
                     <h4 class="card-title text-center">Driver Profiles</h4>
@@ -47,27 +47,27 @@ require_once "header.php"; ?>
                           <?php if ($result->num_rows > 0) { while ($views = $result->fetch_assoc()) { ?>
                           <tbody>
                             <tr>
-                              <td><?php echo $index++;?></td>
+                              <td><h5><?php echo $index++;?></h5></td>
                               <td>
                                 <img src="../assets/images/team/<?php echo $views['d_img'];?>" class="me-2 rounded-pill" alt="image" width="60"/> 
                               </td>
                               <td>  
-                                <label><?php echo $views['d_name'];?></label> 
+                                <h5><?php echo $views['d_name'];?></h5> 
                               </td>
-                              <td><label  maxlength="10">+91-<?php echo $views['d_mobile'];?></label> </td>
+                              <td><h5>+91-<?php echo $views['d_mobile'];?></h5> </td>
                               <td>
                                 <div class="d-flex">
-                                  <span class="pe-2 d-flex align-items-center">453</span>
+                                  <span class="pe-2 d-flex align-items-center">10</span>
                                 </div>
                               </td>
-                              <td><input type="text" name="status" id="" value="<?php echo $views['d_status'];?>"></td>
+                              <td><h5><?php echo $views['d_status'];?></h5></td>
                               <td>
                                 <div class="d-flex align-items-center gap-2">
                                   <!-- <a class="btn btn-primary" href="?id=<?php// echo $views['d_id']; ?>&action=edit" name="update"> -->
-                                  <a class="btn btn-primary" href="?id=<?php echo $views['d_id']; ?>&action=edit" name="update">
+                                  <a class="btn btn-primary" href="?id=<?php echo $views['d_id']; ?>" name="update">
                                     <i class="fa-solid fa-pen-to-square fs-2"></i>
                                   </a>
-                                  <a class="btn btn-primary" href="?id=<?php echo $views['d_id']; ?>&action=delete" name="delete">
+                                  <a class="btn btn-primary" href="?id=<?php echo $views['d_id']; ?>" name="delete">
                                     <i class="fa-solid fa-trash fs-2"></i>
                                   </a>
                                 </div>
@@ -93,7 +93,87 @@ require_once "header.php"; ?>
                   </div>
                 </div>
               </div>
+                    <!--  Row 2 -->
+                  <?php
+                        if (isset($_GET['id'])) {
+                            $id = $_GET['id'];
+                            $sql = "SELECT * FROM `driver` WHERE `d_id` = $id";
+                            $result = $conn->query($sql);
+                        }
 
+                        if (isset($_POST['update'])) {
+                          
+                            $ride = $_POST['ride'];
+                            $sat = $_POST['status'];
+
+                            $drive_up = "UPDATE `driver` SET `d_status` = '$sat', `d_complete` = '$ride' WHERE `d_id` = '$id'";
+                            $up = mysqli_query($conn, $drive_up);
+                            if ($up) {
+                                echo '<script>alert("Successful");</script>';
+                            } else {
+                                echo '<script>alert("Failed");</script>';
+                            }
+                        }
+                      if ($result->num_rows > 0) { while ($views = $result->fetch_assoc()) { ?>
+              <div class="col-xl-10 stretch-card grid-margin">
+                <div class="card">
+                  <div class="card-body pb-0">
+                    <h4 class="card-title text-center">Profiles</h4>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="table-responsive">
+                      <form method="POST">
+                          <!-- <table class="table custom-table text-dark">
+                            <thead class="text-dark fs-4">
+                              <tr>
+                                <th class="border-bottom-0">#</th>
+                                <th class="border-bottom-0">profile</th>
+                                <th class="border-bottom-0">Name</th>
+                                <th class="border-bottom-0">Mobile</th>
+                                <th class="border-bottom-0">Ride Complete</th>
+                                <th class="border-bottom-0">Status</th>
+                                <th class="border-bottom-0">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><label for="" name="up_id"><?php echo $id;?></label></td>
+                                <td><input type="file" name="load" /></td> 
+                                <!-- <td><img src="../assets/images/team/<?php echo $views['d_img'];?>" class="me-2 rounded-pill" alt="image" width="60"/> </td> 
+                                <td>  
+                                  <input type="text" class="fw-semibold mb-1" name="name" value="<?php echo $views['d_name'];?>" /> 
+                                </td>
+                                <td><input type="tel" class="fw-semibold mb-1" name="mobile" maxlength="10" value="<?php echo $views['d_mobile'];?>" /></td>
+                                <td>
+                                  <div class="d-flex">
+                                  <input type="text" class="fw-semibold mb-1" name="ride" value="<?php echo $views['d_complete'];?>"/>
+                                  </div>
+                                </td>
+                                <td><input type="text" name="status" id="" value="<?php echo $views['d_status'];?>">
+                                </td>
+                                <td>
+                                  <div class="d-flex align-items-center gap-2">
+                                    <!-- <a class="btn btn-primary" href="?id=<?php// echo $views['d_id']; ?>&action=edit" name="update"> 
+                                    <button type="submit" class="btn btn-primary" name="update">
+                                                      <i class="fa-solid fa-pen-to-square fs-2"></i>
+                                                  </button>
+                                    <!-- <a class="btn btn-primary" href="?id=<?php echo $views['d_id']; ?>" name="delete">
+                                      <i class="fa-solid fa-trash fs-2"></i>
+                                    </a> 
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          
+                          </table> -->
+                      </form>
+                      
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>            
+              <?php   } } else { echo '<tr><td colspan="12">No data found.</td></tr>'; } ?>         
         <!-- ========= Script =========== -->
         <style>.page-link{ background: black; font-style: bold; color: white; }</style>
 
@@ -120,34 +200,7 @@ require_once "header.php"; ?>
         }
     </script>
 </div>
-<?php
-if (isset($_GET['id'])) {
-    $editId = $_GET['id'];
 
-    if (isset($_GET['action']) && $_GET['action'] == 'edit') {
-        $c = $_POST['status'];
-        if (isset($_POST['update'])) {
-            $up = mysqli_query($conn, "UPDATE `driver` SET `d_status`='$c' WHERE d_id = $editId");
-
-            if ($up) {
-                echo '<script>alert("Update Successful");</script>';
-            } else {
-                echo '<script>alert("Update failed");</script>';
-            }
-        }
-    } elseif (isset($_GET['action']) && $_GET['action'] == 'delete') {
-        if (isset($_POST['delete'])) {
-            $del = mysqli_query($conn, "DELETE FROM `driver` WHERE `d_id`= $editId");
-
-            if ($del) {
-                echo '<script>alert("Delete Successful");</script>';
-            } else {
-                echo '<script>alert("Delete failed");</script>';
-            }
-        }
-    }
-}
-?>
 
 
 <?php require_once 'footer.php'; ?>

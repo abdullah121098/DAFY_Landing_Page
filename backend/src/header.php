@@ -41,19 +41,27 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="./main.php" class="text-nowrap logo-img">
-            <img src="../assets/images/logos/loader.png" width="180" alt="" />
+            <img src="../assets/images/logos/loader.png" width="120" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>
           </div>
         </div>
+            <!-- <form class="d-flex align-items-center" action="#">
+              <div class="input-group">
+                <input type="text" class="form-control border-2" placeholder="Search" />
+                <div class="input-group-prepend">
+                  <i class="input-group-text border-0 ti ti-search"></i>
+                </div>              
+              </div>
+            </form> -->
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
-              <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                  <i class="ti ti-cards"></i ><span class="hide-menu">Home</span></a>
-                <ul aria-expanded="false" class="collapse first-level">
+              <a class="sidebar-link text-warning" href="javascript:void(0)" aria-expanded="false">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i><span class="hide-menu">Home</span></a>
+            </li>
                   <li class="sidebar-item">
                     <a  class="sidebar-link" href="main.php" aria-expanded="false">
                       <span>
@@ -92,12 +100,10 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                     <span class="hide-menu">Summary</span>
                   </a>
                 </li>
-              </ul>
-            </li>
             <li class="nav-small-cap">
               <!-- <i class="ti ti-dots nav-small-cap-icon fs-4"></i> -->
-              <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                  <i class="ti ti-cards"></i ><span class="hide-menu">AUTHOR</span></a>
+              <a class="sidebar-link text-warning" href="javascript:void(0)" aria-expanded="false">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i><span class="hide-menu">AUTHOR</span></a>
             
                     <ul aria-expanded="false" class="collapse first-level">
                       <li class="sidebar-item">
@@ -118,17 +124,13 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                       </li>
                     </ul>
             </li>
-            <li class="nav-small-cap">
-            <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                  <i class="ti ti-cards"></i ><span class="hide-menu">EXTRA DETAILS</span></a>                
-                <ul aria-expanded="false" class="collapse first-level">
-                  <li class="sidebar-item">
-                    <a  href="testimonial.php" class="sidebar-link"><i class="ti ti-message-2"></i>
-                    <span class="hide-menu">Testimonial</span></a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="javascript:void(0)" class="sidebar-link" aria-expanded="false"><i class="ti ti-cards"></i>
-                    <span class="hide-menu"> Member </span></a>
+              <li class="nav-small-cap">
+                <a class="sidebar-link text-warning" href="javascript:void(0)" aria-expanded="false">
+                <i class="ti ti-dots nav-small-cap-icon fs-4"></i><span class="hide-menu">MEMBERS</span></a>
+              <!-- </li>
+              <li class="sidebar-item">
+                          <a  href="javascript:void(0)" class="sidebar-link"><i class="ti ti-message-2"></i>
+                          <span class="hide-menu">Member</span></a> -->
                       <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
                           <a  href="team.php" class="sidebar-link"><i class="ti ti-message-2"></i>
@@ -138,7 +140,19 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                           <a href="driver.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
                           <span class="hide-menu"> Driver Member </span></a>
                         </li>
+                        <li class="sidebar-item">
+                          <a href="holiday.php" class="sidebar-link"><i class="ti ti-brand-open-source"></i>
+                          <span class="hide-menu"> Holiday </span></a>
+                        </li>
                       </ul>
+            </li>
+            <li class="nav-small-cap">
+            <a class="sidebar-link text-warning" href="javascript:void(0)" aria-expanded="false">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i><span class="hide-menu">EXTRA DETAILS</span></a>                
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a  href="testimonial.php" class="sidebar-link"><i class="ti ti-message-2"></i>
+                    <span class="hide-menu">Testimonial</span></a>
                   </li>
                  <li class="sidebar-item">
                     <a href="banner.php" class="sidebar-link"><i class="ti ti-photo-edit"></i>
@@ -148,7 +162,6 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
                 </ul>
               </li>
           </ul>
-          
         </nav>
         <!-- End Sidebar navigation -->
       </div>
@@ -176,7 +189,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-            <a href="new-booking.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
+            <a href="add_customer.php"  class="btn btn-primary d-flex align-items-center gap-2 " >Add New booking</a>
              
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
@@ -210,6 +223,7 @@ $sql=mysqli_query($conn,"SELECT * FROM `admin` WHERE `a_id`='$session'");
             </ul>
           </div>
         </nav>
+        
       </header>
       <!--  Header End -->
-     
+      

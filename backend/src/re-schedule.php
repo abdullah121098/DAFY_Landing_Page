@@ -1,10 +1,12 @@
+
 <?php
 include '../database/connection.php';
 
 include_once "header.php"; ?>
 <!-- ============== ==================== Main -Body Start- ======================================================================= -->
 <?php 
- $sq = mysqli_query($conn,"SELECT * FROM `customer`");
+// $schedule="Re_Schedule";
+ $sq = mysqli_query($conn,"SELECT * FROM `customer` WHERE `status`='Re_Schedule'");
  // $sq = mysqli_query($conn,"SELECT * FROM count");
  $res= mysqli_num_rows($sq);
 
@@ -37,8 +39,7 @@ include_once "header.php"; ?>
                         <form action="" method="post">
                             <table class="table text-nowrap table-bordered mb-0 align-middle" id="data-table">
                               <thead class="text-dark fs-4">
-                            
-                                  </tr>
+                              
                                   <tr>
                                   <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Id</h6>
@@ -124,7 +125,7 @@ include_once "header.php"; ?>
                                           </td>
                                           <td class="border-bottom-0">
                                           <div class="d-flex align-items-center">
-                                          <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="new-ride-update.php?id=<?php echo $row['id']; ?>">
+                                          <a type="button" class="btn btn-center btn-primary text-black" name="update" type="submit" href="customer_update.php?id=<?php echo $row['id']; ?>">
                                           <i class="fa-sharp fa-solid fa-eye eye" ></i>
                                           </a>
                                             
@@ -140,7 +141,7 @@ include_once "header.php"; ?>
                                 </tbody>
                             </table>
                                   <nav aria-label="Page navigation example" >
-                                    <ul class="pagination justify-content-end left" style="position: relative;border-box: 500px;">
+                                    <ul class="pagination justify-content-start left" style="position: relative;border-box: 500px;">
                                         <?php if ($page > 1): ?>
                                         <li class="page-item"><a href="?page=<?php echo ($page - 1); ?>" class="page-link rounded-pill py-2 px-3" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span></a></li>
