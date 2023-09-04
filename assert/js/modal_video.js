@@ -44,7 +44,7 @@
           items: 1,
           loop: true,
           autoplay: true,
-          autoplayTimeout: 50, // Adjust the value to control the speed (in milliseconds)
+          autoplayTimeout: 50, 
           autoplayHoverPause: true
       });
 

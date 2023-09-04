@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>Dafy Online pvt.lmt.</title>
-    <link rel="icon" type="image/x-icon" href="assert/img/logo/loader.png" >
+    <link rel="icon" type="image/x-icon" href="assert/img/logo/dafy-logo-1.png" >
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -37,7 +37,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 
         vh-100 top-50 start-50 d-flex align-items-center justify-content-center" data-delay="50000s">
-                    <span><img src="assert/img/logo/dafy.jpeg" class="" width="100px" alt="" srcset=""> </span>
+                    <span><img src="assert/img/logo/dafy-logo-1.png" class="" width="100px" alt="" srcset=""> </span>
     </div>
     <!-- Spinner End -->
             
@@ -45,7 +45,7 @@
             
                 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 m-0" id="navbar">
                         <a href="#" class="navbar-brand d-flex align-items-center py-1 px-1 p-1 m-0">
-                            <img src="assert/img/logo/dafy.jpeg" style="width: 4rem;" alt="icon" srcset="">
+                            <img src="assert/img/logo/dafy-logo-1.png" style="width: 4rem;" alt="icon" srcset="">
                         </a>
                         <button type="button" class="navbar-toggler me-2 justify-content-end" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
@@ -98,7 +98,7 @@
                     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                        <img class="w-100 h-100" src="assert/img/banner/a.jpg" alt="breeze-street-image">
+                                        <img class="w-100 h-100" src="assert/img/banner/eye.jpg" alt="breeze-street-image">
                                         <!-- <div class="carousel-caption">
                                             <div class="container">
                                                 <div class="row justify-content-end">
